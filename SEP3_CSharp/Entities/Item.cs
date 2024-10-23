@@ -1,4 +1,4 @@
-using Utilities;
+using Entities.Utilities;
 
 namespace Entities;
 

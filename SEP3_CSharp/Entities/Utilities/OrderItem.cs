@@ -1,4 +1,4 @@
-namespace Entities;
+namespace Entities.Utilities;
 
 public class OrderItem
 {

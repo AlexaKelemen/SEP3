@@ -4,8 +4,8 @@ namespace Entities;
 
 public class Cart
 {
-    public float totalPrice { get; set; }
-    public ArrayList products { get; set; }
-    
-    
+    public float TotalPrice { get; set; }
+    public ArrayList items;
+
+
 }

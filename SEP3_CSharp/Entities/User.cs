@@ -1,3 +1,6 @@
+using System.Collections;
+using Entities.Utilities;
+
 namespace Entities;
 
 public class User
@@ -10,4 +13,8 @@ public class User
     public string ShippingAddress { get; set; }
     public string BillingAddress { get; set; }
     public string PaymentInformation { get; set; }
+    public Cart Cart { get; set; }
+    public ArrayList orders;
+    public Credit Credit { get; set; }
+    
 }

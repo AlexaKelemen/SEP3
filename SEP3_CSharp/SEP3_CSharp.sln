@@ -8,8 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managers", "Managers\Managers.csproj", "{7398D428-74BA-4534-A100-E57B8A7F0223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{2044ACFD-CAE6-47E1-81BC-082104814B76}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +30,6 @@ Global
 		{7398D428-74BA-4534-A100-E57B8A7F0223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7398D428-74BA-4534-A100-E57B8A7F0223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7398D428-74BA-4534-A100-E57B8A7F0223}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2044ACFD-CAE6-47E1-81BC-082104814B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2044ACFD-CAE6-47E1-81BC-082104814B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2044ACFD-CAE6-47E1-81BC-082104814B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2044ACFD-CAE6-47E1-81BC-082104814B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
