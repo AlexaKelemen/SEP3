@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace Entities;
 
 public class Order
@@ -6,4 +8,5 @@ public class Order
     public string PaymentMethod { get; set; }
     public float TotalAmount { get; set; }
     public string DeliveryOption { get; set; }
+    public ArrayList items;
 }
