@@ -1,20 +1,20 @@
 package Utlities;
 
 import java.time.LocalDate;
-
+import java.util.Date;
 
 public class Credit
 {
   private int amount;
-  private LocalDate expirationDate;
+  private Date expirationDate;
 
-  public Credit(int amount, LocalDate expirationDate)
+  public Credit(int amount, Date expirationDate)
   {
     this.amount = amount;
     this.expirationDate = expirationDate;
   }
 
-  public LocalDate getExpirationDate()
+  public Date getExpirationDate()
   {
     return expirationDate;
   }
@@ -29,7 +29,7 @@ public class Credit
     this.amount = amount;
   }
 
-  public void setExpirationDate(LocalDate expirationDate)
+  public void setExpirationDate(Date expirationDate)
   {
     this.expirationDate = expirationDate;
   }
