@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d71595-0321-4c51-b795-5d583e84d1cf" name="Changes" comment="" />
+    <list default="true" id="ea8bedaa-cc37-4c2e-9075-c2675936a2f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/proto/UserServices.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/proto/UserServices.proto" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,12 +29,13 @@
     &quot;assignee&quot;: &quot;BattyAlex&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AlexaKelemen/SEP3.git&quot;,
-    &quot;accountId&quot;: &quot;8b04a197-eba9-4be2-bd35-40994d8f8146&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AlexaKelemen/SEP3.git",
+    "accountId": "878ff679-cdb2-4b1d-8c65-593aecaa6004"
   }
-}</component>
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -185,6 +191,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />

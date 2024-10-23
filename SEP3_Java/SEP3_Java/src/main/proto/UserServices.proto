@@ -2,3 +2,18 @@ syntax = "proto3";
 option java_multiple_files = true;
 package src.main;
 
+message GetUserResponse
+{
+  string username = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string shippingAddress = 5;
+  string billingAddress = 6;
+  string paymentInformation = 7;
+}
+
+message CartDTO
+{
+
+}
