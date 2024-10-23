@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Order
 {
-  private LocalDate date;
+  private Date date;
   private String paymentMethod;
   private double totalAmount;
   private String deliveryOption;
@@ -15,7 +15,8 @@ public class Order
   {
     this.items = items;
     totalAmount = amount;
-    date = java.time.LocalDate.now();
+
+    date = new Date(java.time.LocalDate.now().getYear(),java.time.LocalDate.now().getMonthValue(), java.time.LocalDate.now().getDayOfMonth());
   }
 
   public ArrayList<Item> getItems()
@@ -28,7 +29,7 @@ public class Order
     return totalAmount;
   }
 
-  public LocalDate getDate()
+  public Date getDate()
   {
     return date;
   }
