@@ -1,4 +1,5 @@
 package Entities;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,7 +17,7 @@ public class Order
     this.items = items;
     totalAmount = amount;
 
-    date = new Date(java.time.LocalDate.now().getYear(),java.time.LocalDate.now().getMonthValue(), java.time.LocalDate.now().getDayOfMonth());
+    date = new Date(LocalDate.now().getYear(),LocalDate.now().getMonthValue(), LocalDate.now().getDayOfMonth());
   }
 
   public ArrayList<Item> getItems()
