@@ -1,4 +1,13 @@
 using BlazorApp1.Components;
+using Grpc.Net.Client;
+using SourceCode;
+
+
+using var channel = GrpcChannel.ForAddress("http://localhost:8080");
+    var client = new UserService.UserServiceClient(channel);
+    var reply = await client.getUserAsync(new GetUserRequest() { Password = "something", Username = "Placeholder" });
+    Console.WriteLine(reply);
+
 
 var builder = WebApplication.CreateBuilder(args);
 
