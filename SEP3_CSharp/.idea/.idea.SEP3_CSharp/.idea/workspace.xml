@@ -9,29 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea8bedaa-cc37-4c2e-9075-c2675936a2f4" name="Changes" comment="">
+    <list default="true" id="ea8bedaa-cc37-4c2e-9075-c2675936a2f4" name="Changes" comment="?">
+      <change afterPath="$PROJECT_DIR$/BlazorApp1/ViewControllers/EditUserInterInfoController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlazorApp1/ViewControllers/IEditUserInfoController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlazorApp1/BlazorApp1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/BlazorApp1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorApp1/Components/Pages/Counter.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Components/Pages/Counter.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlazorApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/IManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/IManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/IUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/IUserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/Server/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Server/proto/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/UserManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +210,7 @@
       <workItem from="1729671016380" duration="1375000" />
       <workItem from="1729765539616" duration="5947000" />
       <workItem from="1729838160537" duration="605000" />
-      <workItem from="1729838811169" duration="5529000" />
+      <workItem from="1729838811169" duration="11398000" />
     </task>
     <task id="LOCAL-00001" summary="???">
       <option name="closed" value="true" />
@@ -231,7 +220,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729692265613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="IT WORKS">
+      <option name="closed" value="true" />
+      <created>1729844470955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729844470956</updated>
+    </task>
+    <task id="LOCAL-00003" summary="?">
+      <option name="closed" value="true" />
+      <created>1729844559452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729844559452</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +248,8 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="???" />
-    <option name="LAST_COMMIT_MESSAGE" value="???" />
+    <MESSAGE value="IT WORKS" />
+    <MESSAGE value="?" />
+    <option name="LAST_COMMIT_MESSAGE" value="?" />
   </component>
 </project>

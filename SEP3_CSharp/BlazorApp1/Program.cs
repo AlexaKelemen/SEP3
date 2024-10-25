@@ -1,12 +1,12 @@
 using BlazorApp1.Components;
 using Grpc.Net.Client;
+using Managers;
 using SourceCode;
 
 
-using var channel = GrpcChannel.ForAddress("http://localhost:8080");
-    var client = new UserService.UserServiceClient(channel);
-    var reply = await client.getUserAsync(new GetUserRequest() { Password = "something", Username = "Placeholder" });
-    Console.WriteLine(reply);
+//using var channel = GrpcChannel.ForAddress("http://localhost:8080");
+//var client = new UserService.UserServiceClient(channel);
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
+builder.Services.AddScoped<IManager, Manager>();
 
 var app = builder.Build();
 

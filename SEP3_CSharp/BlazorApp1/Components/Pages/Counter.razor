@@ -1,5 +1,9 @@
 ﻿@page "/counter"
+@using Entities
+@using Managers
+@inject IManager manager
 @rendermode InteractiveServer
+
 
 <PageTitle>Counter</PageTitle>
 
@@ -10,11 +14,12 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
-    private int currentCount = 0;
+    private string currentCount = "none";
 
     private void IncrementCount()
     {
-        currentCount++;
+        User user = manager.getUser("hello", "hiiii");
+        currentCount = user.Email;
     }
 
 }
