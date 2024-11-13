@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {}
+    "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {}
   },
   "projects": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,6 +42,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
