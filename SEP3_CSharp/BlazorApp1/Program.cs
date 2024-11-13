@@ -4,11 +4,6 @@ using Managers;
 using SourceCode;
 
 
-//using var channel = GrpcChannel.ForAddress("http://localhost:8080");
-//var client = new UserService.UserServiceClient(channel);
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

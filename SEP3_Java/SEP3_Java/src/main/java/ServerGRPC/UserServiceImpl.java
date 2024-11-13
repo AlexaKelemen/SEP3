@@ -1,5 +1,5 @@
 
-package Server;
+package ServerGRPC;
 
 import SourceCode.GetUserRequest;
 import SourceCode.GetUserResponse;
