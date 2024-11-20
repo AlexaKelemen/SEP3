@@ -1,7 +1,30 @@
 ﻿@page "/"
-
+@inject NavigationManager NavMgr
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Welcome to Kassa!</h1>
 
-Welcome to your new app.
+<p>What are you looking for today?</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th> <button @onclick='() => NavMgr.NavigateTo("Shopping")'>Shop</button></th>
+        <th> <button @onclick='() => NavMgr.NavigateTo("Return")'>Return Clothes</button></th>
+        <th> <button @onclick='() => NavMgr.NavigateTo("EditUser")'>User Profile</button></th>
+        <th> <button @onclick='() => NavMgr.NavigateTo("Contact")'>Contact</button></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    {
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    }
+    </tbody>
+</table>

@@ -1,10 +1,16 @@
 using BlazorApp1.Components;
+using Grpc.Net.Client;
+using Managers;
+using SourceCode;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
+builder.Services.AddScoped<IManager, Manager>();
 
 var app = builder.Build();
 

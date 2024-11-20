@@ -1,0 +1,32 @@
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.AssemblyReference.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.Up2Date
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\refint\Managers.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\obj\Debug\net8.0\ref\Managers.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.deps.json
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.AssemblyReference.cache
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfoInputs.cache
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfo.cs
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.CoreCompileInputs.cache
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.sourcelink.json
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.Up2Date
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\refint\Managers.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\ref\Managers.dll

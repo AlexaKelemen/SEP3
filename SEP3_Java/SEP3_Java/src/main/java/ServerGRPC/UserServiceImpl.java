@@ -1,14 +1,17 @@
-package Server;
 
+package ServerGRPC;
+
+import SourceCode.GetUserRequest;
+import SourceCode.GetUserResponse;
+import SourceCode.UserServiceGrpc;
 import io.grpc.stub.StreamObserver;
-import src.main.UserServiceGrpc;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 {
-  public void getUser(src.main.GetUserRequest request,
-      StreamObserver<src.main.GetUserResponse> responseObserver)
+  public void getUser(GetUserRequest request,
+      StreamObserver<GetUserResponse> responseObserver)
   {
-    src.main.GetUserResponse response = src.main.GetUserResponse.newBuilder()
+    GetUserResponse response = GetUserResponse.newBuilder()
         .setUsername(request.getUsername()).setEmail("placeholder@gmail.com")
         .setFirstName("Jane").setLastName("Doe")
         .setShippingAddress("some place in the world")
@@ -19,3 +22,4 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
     responseObserver.onCompleted();
   }
 }
+

@@ -1,0 +1,24 @@
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.deps.json
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll
