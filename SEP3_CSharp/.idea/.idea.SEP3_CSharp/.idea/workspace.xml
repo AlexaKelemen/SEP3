@@ -10,61 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8bedaa-cc37-4c2e-9075-c2675936a2f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/Database/DAOInterface/UserDAOInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/Database/DatabaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/Database/Implementation/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp1/Components/Pages/Counter.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Components/Pages/Counter.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorApp1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/bin/Debug/net8.0/DatabaseConnection.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/bin/Debug/net8.0/DatabaseConnection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/bin/Debug/net8.0/DatabaseConnection.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.sourcelink.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/ref/DatabaseConnection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/refint/DatabaseConnection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net8.0/Entities.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net8.0/Entities.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net8.0/Entities.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.sourcelink.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/ref/Entities.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/refint/Entities.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/bin/Debug/net8.0/Managers.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/bin/Debug/net8.0/Managers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/bin/Debug/net8.0/Managers.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/1e2d06c524e64a8c_UserService.protodep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.sourcelink.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/ref/Managers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/refint/Managers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/Server/ServerStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/ServerGRPC/ServerStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/Server/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SEP3_Java/SEP3_Java/src/main/java/ServerGRPC/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +211,8 @@
       <workItem from="1730193151185" duration="238000" />
       <workItem from="1730274132647" duration="2771000" />
       <workItem from="1730882966910" duration="3748000" />
+      <workItem from="1731495408494" duration="161000" />
+      <workItem from="1731499658914" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="???">
       <option name="closed" value="true" />

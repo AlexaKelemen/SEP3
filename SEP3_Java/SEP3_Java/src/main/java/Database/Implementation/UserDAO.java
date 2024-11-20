@@ -32,19 +32,19 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
       return null;
     }
   }
-  @Override public User addUser(User user)
+  @Override public synchronized User addUser(User user)
   {
     //placeholder
     return user;
   }
 
-  @Override public User editUser(User user)
+  @Override public synchronized User editUser(User user)
   {
 
     return user;
   }
 
-  @Override public User deleteUser(String username)
+  @Override public synchronized User deleteUser(String username)
   {
     return new User(username, "placeholder");
   }
