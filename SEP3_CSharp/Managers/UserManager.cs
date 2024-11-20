@@ -30,7 +30,7 @@ public class UserManager : IUserManager
             FirstName = response.FirstName,
             LastName = response.FirstName,
             Address = response.BillingAddress,
-            PaymentInformation = response.PaymentInformation
+            Card = response.Card
         };
         return user;
     }
