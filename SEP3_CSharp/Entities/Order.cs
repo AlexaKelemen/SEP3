@@ -4,9 +4,10 @@ namespace Entities;
 
 public class Order
 {
-    public DateOnly Date { get; set; }
-    public string PaymentMethod { get; set; }
-    public float TotalAmount { get; set; }
-    public string DeliveryOption { get; set; }
-    public ArrayList items;
+    public int OrderId { get; set; }
+    public double Price { get; set; }
+    public DateTime PlacedOn { get; set; }
+    public PaymentMethod PaymentMethod { get; set; } = null!;
+    public User PlacedBy { get; set; } = null!;
+    public DeliveryOption DeliveryOption { get; set; } = null!;
 }
