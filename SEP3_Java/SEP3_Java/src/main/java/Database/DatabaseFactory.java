@@ -1,7 +1,8 @@
-﻿package Database;
+package Database;
 
 import Database.DAOInterface.UserDAOInterface;
 import Database.Implementation.UserDAO;
+import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,12 +10,7 @@ import java.sql.SQLException;
 
 public class DatabaseFactory
 {
-  public UserDAOInterface usrDAO;
 
-  public DatabaseFactory()
-  {
-    usrDAO = UserDAO.getInstance();
-  }
   public Connection establishConnection()
   {
     try
@@ -27,4 +23,5 @@ public class DatabaseFactory
       return null;
     }
   }
+
 }

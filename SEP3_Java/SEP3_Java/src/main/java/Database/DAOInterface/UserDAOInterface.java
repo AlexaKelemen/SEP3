@@ -1,4 +1,4 @@
-﻿package Database.DAOInterface;
+package Database.DAOInterface;
 
 import Entities.User;
 

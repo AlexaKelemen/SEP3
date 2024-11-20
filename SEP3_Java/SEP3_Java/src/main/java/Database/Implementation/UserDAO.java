@@ -3,6 +3,7 @@ package Database.Implementation;
 import Database.DAOInterface.UserDAOInterface;
 import Database.DatabaseFactory;
 import Entities.User;
+import org.springframework.stereotype.Service;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -51,7 +52,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
 
   @Override public User getUser(String username)
   {
-    return null;
+    return new User("hello", "hi");
   }
 
   @Override public ArrayList<User> getAllUsers()
