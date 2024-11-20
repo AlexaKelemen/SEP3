@@ -13,6 +13,15 @@ public class UserManager : IUserManager
     }
     public User getUser(string username, string password)
     {
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            throw new ArgumentException("Username cannot be null or empty", nameof(username));
+        }
+        if (string.IsNullOrWhiteSpace(password))
+        {
+            throw new ArgumentException("Password cannot be null or empty", nameof(password));
+        }
+
         GetUserResponse response = stub.getUser(new GetUserRequest(){Password = password, Username = username});
         User user = new User
         {
@@ -22,7 +31,6 @@ public class UserManager : IUserManager
             LastName = response.FirstName,
             ShippingAddress = response.ShippingAddress,
             BillingAddress = response.BillingAddress,
-            PaymentInformation = response.PaymentInformation
         };
         return user;
     }
