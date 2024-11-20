@@ -31,6 +31,8 @@ public class UserManager : IUserManager
             LastName = response.FirstName,
             ShippingAddress = response.ShippingAddress,
             BillingAddress = response.BillingAddress,
+            Address = response.BillingAddress,
+            PaymentInformation = response.PaymentInformation
         };
         return user;
     }
