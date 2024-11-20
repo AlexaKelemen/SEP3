@@ -11,9 +11,34 @@
   <component name="ChangeListManager">
     <list default="true" id="ea8bedaa-cc37-4c2e-9075-c2675936a2f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP3_CSharp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorApp1/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Components/Layout/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorApp1/Components/Pages/EditUser.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorApp1/Components/Pages/EditUser.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/DatabaseConnection.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/DatabaseConnection.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/DatabaseConnection.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/DatabaseConnection.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/Debug/net8.0/DatabaseConnection.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DatabaseConnection/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net8.0/Entities.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Debug/net8.0/Managers.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/Managers.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +72,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2npXVBhbhBmKXg7QaI6qNTkCSvY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -211,8 +239,6 @@
       <workItem from="1730193151185" duration="238000" />
       <workItem from="1730274132647" duration="2771000" />
       <workItem from="1730882966910" duration="3748000" />
-      <workItem from="1731495408494" duration="161000" />
-      <workItem from="1731499658914" duration="134000" />
     </task>
     <task id="LOCAL-00001" summary="???">
       <option name="closed" value="true" />
