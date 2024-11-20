@@ -29,8 +29,6 @@ public class UserManager : IUserManager
             Email = response.Email,
             FirstName = response.FirstName,
             LastName = response.FirstName,
-            ShippingAddress = response.ShippingAddress,
-            BillingAddress = response.BillingAddress,
             Address = response.BillingAddress,
             PaymentInformation = response.PaymentInformation
         };
