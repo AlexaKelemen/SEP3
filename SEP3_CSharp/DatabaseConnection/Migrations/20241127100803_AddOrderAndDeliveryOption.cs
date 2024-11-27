@@ -43,7 +43,7 @@ namespace DatabaseConnection.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "User",
                 columns: table => new
                 {
                     Username = table.Column<string>(type: "TEXT", nullable: false),
@@ -56,9 +56,9 @@ namespace DatabaseConnection.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Username);
+                    table.PrimaryKey("PK_User", x => x.Username);
                     table.ForeignKey(
-                        name: "FK_Users_Card_CardId",
+                        name: "FK_User_Card_CardId",
                         column: x => x.CardId,
                         principalTable: "Card",
                         principalColumn: "CardId");
@@ -85,9 +85,9 @@ namespace DatabaseConnection.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Orders_Users_PlacedByUsername",
+                        name: "FK_Orders_User_PlacedByUsername",
                         column: x => x.PlacedByUsername,
-                        principalTable: "Users",
+                        principalTable: "User",
                         principalColumn: "Username",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -128,8 +128,8 @@ namespace DatabaseConnection.Migrations
                 column: "PlacedByUsername");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_CardId",
-                table: "Users",
+                name: "IX_User_CardId",
+                table: "User",
                 column: "CardId");
         }
 
@@ -146,7 +146,7 @@ namespace DatabaseConnection.Migrations
                 name: "PaymentMethod");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "User");
 
             migrationBuilder.DropTable(
                 name: "Card");

@@ -1,10 +1,12 @@
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using Entities.Utilities;
 
 namespace Entities;
 
 public class User
 {
+    [Key]
     public string Username { get; set; } = null!;
     public string Password { get; set; } = null!;
     public string Email { get; set; } = null!;

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20241127092627_AddItemAndCategory")]
+    [Migration("20241127100555_AddItemAndCategory")]
     partial class AddItemAndCategory
     {
         /// <inheritdoc />
