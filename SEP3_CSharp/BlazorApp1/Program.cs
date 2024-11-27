@@ -1,5 +1,6 @@
 using BlazorApp1.Auth;
 using BlazorApp1.Components;
+using BlazorApp1.Services;
 using Grpc.Net.Client;
 using Managers;
 using Microsoft.AspNetCore.Authentication;
@@ -18,6 +19,7 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
 builder.Services.AddScoped<IManager, Manager>();
+builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 
 var app = builder.Build();
