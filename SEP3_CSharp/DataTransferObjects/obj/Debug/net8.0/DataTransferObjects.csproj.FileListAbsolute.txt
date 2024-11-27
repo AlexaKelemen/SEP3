@@ -10,18 +10,6 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTran
 D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\refint\DataTransferObjects.dll
 D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.pdb
 D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\ref\DataTransferObjects.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.deps.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.GeneratedMSBuildEditorConfig.editorconfig
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.AssemblyInfoInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.AssemblyInfo.cs
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.csproj.CoreCompileInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.sourcelink.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\refint\DataTransferObjects.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\ref\DataTransferObjects.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.deps.json
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.pdb
@@ -34,3 +22,15 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\refint\DataTransferObjects.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.pdb
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\ref\DataTransferObjects.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\refint\DataTransferObjects.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\ref\DataTransferObjects.dll

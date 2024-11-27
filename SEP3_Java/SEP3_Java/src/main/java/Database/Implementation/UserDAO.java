@@ -35,7 +35,14 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
   }
   @Override public synchronized User addUser(User user)
   {
-    //placeholder
+    try(Connection connection = super.establishConnection())
+    {
+      PreparedStatement statement = connection.prepareStatement("insert into customer(username, password, e_mail, f_name, l_name, billing_address) VALUES (?, ?, ?, 'Emily', 'Hansen', 'Horsens, 8700, Marsalle 12, 1st');");
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException("Something went wrong while adding a user to the database: " + e.getMessage());
+    }
     return user;
   }
 
