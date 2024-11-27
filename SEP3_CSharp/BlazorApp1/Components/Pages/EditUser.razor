@@ -1,38 +1,71 @@
 ﻿@page "/EditUser"
-@using System.Reflection.Metadata
-@attribute [StreamRendering]
+@using Microsoft.AspNetCore.Components.Authorization
+@attribute [Authorize]
+@using System.Security.Claims
+@using BlazorApp1.Services
+@using Microsoft.AspNetCore.Authorization
+@inject AuthenticationStateProvider AuthProvider
+@inject IUserService UserService
 
 <PageTitle>Edit User</PageTitle>
 
 <h1>User Information</h1>
+<AuthorizeView>
+    <Authorized>
+        <h3>Hello </h3>
 
-<p><label>First name:</label>
-<input type="text" @bind="firstName"/></p>
-<p><label>Last name:</label>
-<input type="text" @bind="lastName"/></p>
-<p><label>Username:</label>
-<input type="text" @bind="username"/></p>
-<p><label>Email:</label>
-<input type="text" @bind="email"/></p>
-<p><label>Address:</label>
-<input type="text" @bind="address"/></p>
-<p><label>Card information:</label>
-<input type="text" @bind="paymentInfo"/></p>
-<p><label>Password:</label>
-<input type="password" @bind="password"/></p>
+
+        <p><label>First name:</label>
+            <input type="text" @bind="firstName"/></p>
+        <p><label>Last name:</label>
+            <input type="text" @bind="lastName"/></p>
+        <p><label>Username:</label>
+            <input type="text" @bind="username"/></p>
+        <p><label>Email:</label>
+            <input type="text" @bind="email"/></p>
+        <p><label>Address:</label>
+            <input type="text" @bind="address"/></p>
+        <p><label>Card information:</label>
+            <input type="text" @bind="paymentInfo"/></p>
+        <button class="btn btn-primary w-100" @onclick="SaveChanges">Save Changes</button>
+
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in</p>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
+    [CascadingParameter] public Task<AuthenticationState> State { get; set; }
     private string username;
-    private string password;
-    private string email;
-    private string firstName;
-    private string lastName;
-    private string address;
-    private string paymentInfo;
-    private string errorLabel;
+    private string? email;
+    private string? firstName;
+    private string? lastName;
+    private string? address;
+    private string? paymentInfo;
+    private string? errorLabel;
 
     protected override async Task OnInitializedAsync()
     {
+        AuthenticationState authenticationState = await State;
+        ClaimsPrincipal claimsPrincipal = authenticationState.User;
+        if (claimsPrincipal.Identity is null || !claimsPrincipal.Identity.IsAuthenticated)
+        {
+            // the user is not logged in
+            return;
+        }
+        username = claimsPrincipal.Identity?.Name;
+        IEnumerable<Claim> claims = claimsPrincipal.Claims;
+    }
+
+    private async Task SaveChanges()
+    {
+        AuthenticationState authenticationState = await State;
+        ClaimsPrincipal claimsPrincipal = authenticationState.User;
+        if (!string.IsNullOrEmpty(username))
+        {
+            
+        }
     }
 
 }
