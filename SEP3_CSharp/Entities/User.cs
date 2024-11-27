@@ -11,4 +11,5 @@ public class User
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
     public string Address { get; set; } = null!;
+    public Card? Card { get; set; } = null!;
 }
