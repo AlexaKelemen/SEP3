@@ -9,5 +9,5 @@ public class Order
     public DateTime PlacedOn { get; set; }
     public PaymentMethod PaymentMethod { get; set; } = null!;
     public User PlacedBy { get; set; } = null!;
-    public DeliveryOption DeliveryOption { get; set; } = null!;
+    public List<DeliveryOption> DeliveryOptions { get; set; } = [];
 }
