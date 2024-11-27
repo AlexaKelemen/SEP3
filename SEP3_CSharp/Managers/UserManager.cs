@@ -1,5 +1,6 @@
 using Entities;
-//using SourceCode;
+using Proto;
+
 
 namespace Managers;
 
@@ -29,8 +30,7 @@ public class UserManager : IUserManager
             Email = response.Email,
             FirstName = response.FirstName,
             LastName = response.FirstName,
-            Address = response.BillingAddress,
-            Card = response.Card
+            Address = response.BillingAddress
         };
         return user;
     }

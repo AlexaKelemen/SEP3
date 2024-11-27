@@ -47,7 +47,14 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
 
   @Override public synchronized void deleteUser(String username)
   {
+    try(Connection connection = super.establishConnection())
+    {
 
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException("Something went wrong during deleting from the database.");
+    }
   }
 
   @Override public User getUser(String username)
@@ -76,7 +83,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     }
     catch (SQLException e)
     {
-      throw new RuntimeException("Something went wrong during getting a user in the database");
+      throw new RuntimeException("Something went wrong during getting a user in the database: " + e.getMessage());
     }
     return response;
   }

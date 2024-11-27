@@ -1,16 +1,4 @@
 <<<<<<< Updated upstream
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.deps.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.GeneratedMSBuildEditorConfig.editorconfig
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.AssemblyInfoInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.AssemblyInfo.cs
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.csproj.CoreCompileInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.sourcelink.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\refint\DatabaseConnection.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\ref\DatabaseConnection.dll
 =======
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.deps.json
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.runtimeconfig.json
@@ -28,3 +16,18 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\obj\
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\ref\DatabaseConnection.dll
 >>>>>>> Stashed changes
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.runtimeconfig.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DatabaseConnection.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.csproj.AssemblyReference.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\refint\DatabaseConnection.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\DatabaseConnection.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\ref\DatabaseConnection.dll

@@ -12,12 +12,18 @@ public class HttpUserService:IUserService
 
     public async Task<UserDTO> AddUserAsync(CreateUserDTO request)
     {
+        //needs implementing
+        return null;
     }
     public async Task<UserDTO> GetUserAsync(int id)
     {
+        //needs implementing
+        return null;
     }
     public async Task<List<UserDTO>> GetUsersAsync()
     {
+        //needs implementing
+        return null;
     }
 
    

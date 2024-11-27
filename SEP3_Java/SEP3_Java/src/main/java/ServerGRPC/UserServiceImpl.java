@@ -1,9 +1,9 @@
 
 package ServerGRPC;
 
-import SourceCode.GetUserRequest;
-import SourceCode.GetUserResponse;
-import SourceCode.UserServiceGrpc;
+import proto.GetUserRequest;
+import proto.GetUserResponse;
+import proto.UserServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase

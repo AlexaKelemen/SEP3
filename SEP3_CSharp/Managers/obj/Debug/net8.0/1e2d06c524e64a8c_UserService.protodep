@@ -1,2 +1,2 @@
-obj\Debug\net8.0\ServerREST\proto/UserService.cs \
-obj\Debug\net8.0\ServerREST\proto/UserServiceGrpc.cs: ServerREST/proto/UserService.proto
+obj\Debug\net8.0\Server\proto/UserService.cs \
+obj\Debug\net8.0\Server\proto/UserServiceGrpc.cs: Server/proto/UserService.proto

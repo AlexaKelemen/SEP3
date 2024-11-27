@@ -23,5 +23,6 @@ public class SimpleAuthProvider : AuthenticationStateProvider
 
     public override async Task<AuthenticationState> GetAuthenticationStateAsync()
     {
+        return null;
     }
 }
