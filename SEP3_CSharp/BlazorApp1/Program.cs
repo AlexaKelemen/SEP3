@@ -15,12 +15,13 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("http://localhost:5286")
+    BaseAddress = new Uri("http://localhost:8080")
 });
 builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
+builder.Services.AddAuthorizationCore();
 
 var app = builder.Build();
 

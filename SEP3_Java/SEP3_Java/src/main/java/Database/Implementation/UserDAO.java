@@ -40,6 +40,11 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
       PreparedStatement statement = connection.prepareStatement("insert into customer(username, password, e_mail, f_name, l_name, billing_address) VALUES (?, ?, ?, ?, ?, ?);");
       statement.setString(1, user.getUsername());
       statement.setString(2, user.getPassword());
+      statement.setString(3, user.getEmail());
+      statement.setString(4, user.getFirstName());
+      statement.setString(5, user.getLastName());
+      statement.setString(6, user.getBillingAddress());
+      statement.executeUpdate();
     }
     catch (SQLException e)
     {
