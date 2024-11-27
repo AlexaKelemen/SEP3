@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import Entities.User;
 import org.springframework.stereotype.Service;
 
 
@@ -79,7 +80,39 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         }
     }
 
+    @Override
+    public Card getCard(int cardId) {
+        Card response = null;
+        String query = "SELECT card_id, card_number, expiration_date, cvc, f_name, l_name, username FROM card WHERE card_id = ?";
 
+        try (Connection connection = super.establishConnection()) {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, cardId);
+
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                int id = rs.getInt("card_id");
+                String cardNumber = rs.getString("card_number");
+                Date expirationDate = rs.getDate("expiration_date");
+                String cvc = rs.getString("cvc");
+                String fName = rs.getString("f_name");
+                String lName = rs.getString("l_name");
+                String username = rs.getString("username");
+
+                response = new Card(id, cardNumber, expirationDate, cvc, fName, lName, username);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Something went wrong during getting a card from the database: " + e.getMessage(), e);
+        }
+
+        return response;
+    }
+
+    @Override
+    public ArrayList<Card> getAllCards()
+    {
+        return null;
+    }
 
 
 
