@@ -10,7 +10,6 @@ public class User
   private String email;
   private String firstName;
   private String lastName;
-  private String shippingAddress;
   private String billingAddress;
 
   public User(String username, String password)
@@ -29,9 +28,6 @@ public class User
   public String getFirstName(){return firstName;}
   public void setLastName(String lastName){this.lastName = lastName;}
   public String getLastName(){return lastName;}
-  public void setShippingAddress(String shippingAddress){this.shippingAddress = shippingAddress;}
-
-  public String getShippingAddress(){return shippingAddress;}
   public void setBillingAddress(String billingAddress){this.billingAddress = billingAddress;}
   public String getBillingAddress(){return billingAddress;}
 

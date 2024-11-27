@@ -1,12 +1,12 @@
 package Database.Implementation;
 
+import DataTransferObjects.UserDTO;
 import Database.DAOInterface.UserDAOInterface;
 import Database.DatabaseFactory;
 import Entities.User;
 import org.springframework.stereotype.Service;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class UserDAO extends DatabaseFactory implements UserDAOInterface
@@ -45,14 +45,40 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return user;
   }
 
-  @Override public synchronized User deleteUser(String username)
+  @Override public synchronized void deleteUser(String username)
   {
-    return new User(username, "placeholder");
+
   }
 
   @Override public User getUser(String username)
   {
-    return new User("hello", "hi");
+    User response = new User("", "");
+    try(Connection connection = super.establishConnection())
+    {
+      PreparedStatement statement = connection.prepareStatement("SELECT username, password, e_mail, f_name, l_name, billing_address\n"
+          + "FROM customer\n" + "WHERE username = ?;");
+      statement.setString(1, username);
+      ResultSet rs = statement.executeQuery();
+      while (rs.next())
+      {
+        username = rs.getString("username");
+        String password = rs.getString("password");
+        String e_mail = rs.getString("e_mail");
+        String f_name = rs.getString("f_name");
+        String l_name = rs.getString("l_name");
+        String billingAddress = rs.getString("billing_address");
+        response = new User(username, password);
+        response.setEmail(e_mail);
+        response.setFirstName(f_name);
+        response.setLastName(l_name);
+        response.setBillingAddress(billingAddress);
+      }
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException("Something went wrong during getting a user in the database");
+    }
+    return response;
   }
 
   @Override public ArrayList<User> getAllUsers()

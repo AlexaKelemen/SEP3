@@ -10,7 +10,6 @@ public class UserDTO
   private String email;
   private String firstName;
   private String lastName;
-  private String shippingAddress;
   private String billingAddress;
   private static final ObjectMapper mapper = new ObjectMapper();
 
@@ -21,7 +20,6 @@ public class UserDTO
     email = user.getEmail();
     firstName = user.getFirstName();
     lastName = user.getLastName();
-    shippingAddress = user.getShippingAddress();
     billingAddress = user.getBillingAddress();
   }
 
@@ -38,9 +36,6 @@ public class UserDTO
   public void setLastName(String lastName){this.lastName = lastName;}
   @JsonGetter("lastname")
   public String getLastName(){return lastName;}
-  public void setShippingAddress(String shippingAddress){this.shippingAddress = shippingAddress;}
-  @JsonGetter("shippingaddress")
-  public String getShippingAddress(){return shippingAddress;}
   public void setBillingAddress(String billingAddress){this.billingAddress = billingAddress;}
   @JsonGetter("billingaddress")
   public String getBillingAddress(){return billingAddress;}
