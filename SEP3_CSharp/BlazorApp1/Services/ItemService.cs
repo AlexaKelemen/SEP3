@@ -21,9 +21,9 @@ public class ItemService : IItemService
         {
             var dummyItems = new List<ItemDTOs>
             {
-                new ItemDTOs { itemId = 1, name = "Item1", price = 10.00 },
-                new ItemDTOs { itemId = 2, name = "Item2", price = 15.49 },
-                new ItemDTOs { itemId = 3, name  = "Item3", price = 20.00 }
+                new ItemDTOs { itemId = 1, name = "Comfy cotton T-shirt", price = 10.00 },
+                new ItemDTOs { itemId = 2, name = "Baggy jeans", price = 15.49 },
+                new ItemDTOs { itemId = 3, name  = "Vegan backpack", price = 20.00 }
             };
             return dummyItems;
         }

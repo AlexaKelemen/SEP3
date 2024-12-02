@@ -1,16 +1,23 @@
-﻿using DataTransferObjects;
+﻿using DatabaseConnection;
+using DataTransferObjects;
 using Entities;
 using Entities.Utilities;
+using Microsoft.EntityFrameworkCore;
 using Proto;
 
 namespace Managers;
 
 public class ItemManager:IItemManager
 {
-    
-    public Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
+    private readonly ApplicationAppContext _context;
+
+    public ItemManager(ApplicationAppContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
+    }
+    public async Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
+    {
+        return await _context.Items.Where(i => i.ItemId == itemDTOs.getItemId()).ToListAsync();
     }
 
 
