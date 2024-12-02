@@ -1,6 +1,5 @@
 ﻿@page "/EditUser"
-@using Microsoft.AspNetCore.Components.Authorization
-@attribute [Authorize]
+
 @using System.Security.Claims
 @using BlazorApp1.Services
 @using Microsoft.AspNetCore.Authorization
@@ -9,12 +8,12 @@
 
 <PageTitle>Edit User</PageTitle>
 
-<h1>User Information</h1>
+
 <AuthorizeView>
     <Authorized>
-        <h3>Hello </h3>
+        <h1>Hello </h1>
 
-
+        <h3>User Information</h3>
         <p><label>First name:</label>
             <input type="text" @bind="firstName"/></p>
         <p><label>Last name:</label>
