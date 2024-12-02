@@ -6,11 +6,11 @@ using Proto;
 
 namespace BlazorApp1.Services;
 
-public class ItemService : IItemService
+public class HttpItemService : IItemService
 {
     private readonly HttpClient _httpClient;
 
-    public ItemService(HttpClient httpClient)
+    public HttpItemService(HttpClient httpClient)
     {
         _httpClient = httpClient;
     }
