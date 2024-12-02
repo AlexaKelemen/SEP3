@@ -1,6 +1,6 @@
 ﻿namespace DataTransferObjects;
 
-public class ItemDTO
+public class ItemDTOs
 {
     public int itemId;
     public String name;
@@ -11,7 +11,7 @@ public class ItemDTO
     public String categoryName;
     public String imageURL;
 
-    public ItemDTO()
+    public ItemDTOs()
     {
     }
 
@@ -95,7 +95,7 @@ public class ItemDTO
         this.imageURL = imageURL;
     }
 
-    public ItemDTO(int itemId, String name, String description, double price, int quantity, int categoryId,
+    public ItemDTOs(int itemId, String name, String description, double price, int quantity, int categoryId,
         String categoryName, String imageURL)
     {
         this.itemId = itemId;
