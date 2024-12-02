@@ -1,5 +1,6 @@
 package DataTransferObjects;
 
+import Entities.Card;
 import Entities.User;
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,6 +12,7 @@ public class UserDTO
   private String firstName;
   private String lastName;
   private String billingAddress;
+  private Card card;
   private static final ObjectMapper mapper = new ObjectMapper();
 
   public UserDTO(){}
@@ -21,6 +23,16 @@ public class UserDTO
     firstName = user.getFirstName();
     lastName = user.getLastName();
     billingAddress = user.getBillingAddress();
+  }
+
+  public UserDTO(User user, Card card)
+  {
+    username = user.getUsername();
+    email = user.getEmail();
+    firstName = user.getFirstName();
+    lastName = user.getLastName();
+    billingAddress = user.getBillingAddress();
+    this.card = card;
   }
 
   public void setUsername(String username){this.username = username;}
@@ -39,6 +51,13 @@ public class UserDTO
   public void setBillingAddress(String billingAddress){this.billingAddress = billingAddress;}
   @JsonGetter("billingaddress")
   public String getBillingAddress(){return billingAddress;}
+  public void setCard(Card card)
+  {
+    this.card = card;
+  }
+
+  @JsonGetter("card")
+  public Card getCard(){return card;}
 
   public String toJson()
   {

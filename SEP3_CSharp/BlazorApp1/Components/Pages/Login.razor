@@ -17,7 +17,7 @@
         {
         <label style="color: red"> @errorLabel </label>
         }
-        <button @onclick="HandleLoginAsync">Log in</button> 
+        <button type="button" class="btn btn-primary" @onclick="HandleLoginAsync">Log in</button>
     </NotAuthorized>
     <Authorized>
         <h3>Hello, @context.User.Identity.Name</h3>
@@ -33,16 +33,21 @@
 
     private async Task HandleLoginAsync()
     {
-        errorLabel = "";
-        try
+        errorLabel = "hi";
+        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
-            await ((SimpleAuthProvider)AuthProvider).Login(username, password);
-            navMgr.NavigateTo("/");
+            try
+            {
+                await ((SimpleAuthProvider)AuthProvider).Login(username, password);
+                navMgr.NavigateTo("/");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                errorLabel = $"Error: {e.Message}";
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            errorLabel = $"Error: {e.Message}";
-        }
+        else
+            errorLabel = "You need to fill in username and password";
     }
 }

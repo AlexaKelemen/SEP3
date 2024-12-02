@@ -1,5 +1,6 @@
 package ServerREST.Controllers;
 
+import DataTransferObjects.LoginRequestDTO;
 import DataTransferObjects.UserDTO;
 import Database.DAOInterface.UserDAOInterface;
 import Database.Implementation.UserDAO;
@@ -23,7 +24,7 @@ public class AuthController
   }
 
   @PostMapping("auth/login")
-  public synchronized ResponseEntity<UserDTO> login(@RequestBody User request)
+  public synchronized ResponseEntity<UserDTO> login(@RequestBody LoginRequestDTO request)
   {
     User user;
     try
