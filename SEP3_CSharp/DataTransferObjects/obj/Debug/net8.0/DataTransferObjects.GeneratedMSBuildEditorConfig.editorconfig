@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataTransferObjects
-build_property.ProjectDir = D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\
+build_property.ProjectDir = C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\DataTransferObjects\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
