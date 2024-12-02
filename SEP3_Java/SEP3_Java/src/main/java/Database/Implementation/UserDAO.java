@@ -55,7 +55,22 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
 
   @Override public synchronized User editUser(User user)
   {
-
+    try(Connection connection = super.establishConnection())
+    {
+      PreparedStatement statement = connection.prepareStatement("UPDATE customer\n"
+          + "SET e_mail = ?, f_name = ?, l_name = ?, billing_address = ?\n"
+          + "WHERE username = ?;");
+      statement.setString(1, user.getEmail());
+      statement.setString(2, user.getFirstName());
+      statement.setString(3, user.getLastName());
+      statement.setString(4, user.getBillingAddress());
+      statement.setString(5, user.getUsername());
+      statement.executeUpdate();
+    }
+    catch (SQLException e)
+    {
+      throw new RuntimeException("Something whent wrong while updating the user in the database: " + e.getMessage());
+    }
     return user;
   }
 
@@ -63,7 +78,10 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
   {
     try(Connection connection = super.establishConnection())
     {
-
+      PreparedStatement statement = connection.prepareStatement("DELETE FROM customer\n"
+          + "WHERE username = ?;");
+      statement.setString(1, username);
+      statement.executeUpdate();
     }
     catch (SQLException e)
     {
