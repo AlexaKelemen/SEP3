@@ -13,8 +13,8 @@ public class EditUserInterInfoController : IEditUserInfoController
         this.manager = manager;
     }
     
-    public User getUser(string username, string password)
+    public User getUser(string username)
     {
-        return manager.getUser(username, password);
+        return manager.getUser(username);
     }
 }

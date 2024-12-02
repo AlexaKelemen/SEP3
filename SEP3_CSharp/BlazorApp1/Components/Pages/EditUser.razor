@@ -2,9 +2,13 @@
 
 @using System.Security.Claims
 @using BlazorApp1.Services
+@using DataTransferObjects
+@using Entities
+@using Managers
 @using Microsoft.AspNetCore.Authorization
 @inject AuthenticationStateProvider AuthProvider
 @inject IUserService UserService
+@inject IUserManager UserManager
 
 <PageTitle>Edit User</PageTitle>
 
@@ -25,9 +29,58 @@
         <p><label>Address:</label>
             <input type="text" @bind="address"/></p>
         <p><label>Card information:</label>
-            <input type="text" @bind="paymentInfo"/></p>
-        <button class="btn btn-primary w-100" @onclick="SaveChanges">Save Changes</button>
+            <label>@paymentInfo</label> </p>
 
+        @if (isPopupVisible)
+
+        {
+        <div class="modal fade show" style="display: block;" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5> Change card</h5>
+                        <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
+                        <button type="button" class="btn btn-primary" @onclick="SaveCard">Save card</button>
+                    </div>
+                    <div class="modal-body">
+                        <EditForm Model="cardToChange" Context="editcard">
+
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <div class="mb-3">
+                                <label>First name</label>
+                                <Input @bind="cardToChange.FirstName"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Last name</label>
+                                <Input @bind="cardToChange.LastName"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Card Number</label>
+                                <Input @bind="cardToChange.CardNumber"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>Date</label>
+                                <InputDate @bind-Value="cardToChange.ExpirationDate" />
+                            </div>
+                            <div class="mb-3">
+                                <label>Cvc</label>
+                                <InputNumber @bind-Value="cardToChange.Cvc"/>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
+                            <button type="button" class="btn btn-primary" @onclick="SaveCard">Save card</button>
+
+                        </EditForm>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop fade show"></div>
+
+        }
     </Authorized>
     <NotAuthorized>
         <p>You are not logged in</p>
@@ -43,6 +96,11 @@
     private string? address;
     private string? paymentInfo;
     private string? errorLabel;
+    private Card? cardOnProfile;
+    private CardDTO cardToChange;
+    private bool isPopupVisible, isDeletePopupVisible = false;
+
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -53,6 +111,7 @@
             // the user is not logged in
             return;
         }
+       
         username = claimsPrincipal.Identity?.Name;
         IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
@@ -63,8 +122,36 @@
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (!string.IsNullOrEmpty(username))
         {
-            
+
         }
+    }
+
+    private void ChangeCard()
+
+    {
+        cardOnProfile = UserManager.getUser(username).Card;
+        cardToChange = new CardDTO()
+        {
+            CardNumber = cardOnProfile.CardNumber,
+            Cvc = cardOnProfile.Cvc,
+            ExpirationDate = cardOnProfile.ExpirationDate,
+            FirstName = cardOnProfile.FirstName,
+            LastName = cardOnProfile.LastName
+        }; 
+        isPopupVisible = true;
+
+    }
+
+    private void ClosePopup()
+
+    {
+        isPopupVisible = false;
+    }
+
+    private async Task SaveCard()
+
+    {
+        ClosePopup();
     }
 
 }
