@@ -19,6 +19,7 @@
         <Protobuf Include="Server\proto\UserService.proto" GrpcServices="Client" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\DataTransferObjects\DataTransferObjects.csproj" />
       <ProjectReference Include="..\Entities\Entities.csproj" />
     </ItemGroup>
 </Project>
