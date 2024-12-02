@@ -8,7 +8,7 @@
 @using Microsoft.AspNetCore.Authorization
 @inject AuthenticationStateProvider AuthProvider
 @inject IUserService UserService
-@inject IUserManager usermanager
+@inject IUserManager UserManager
 
 <PageTitle>Edit User</PageTitle>
 
@@ -96,7 +96,7 @@
     private string? address;
     private string? paymentInfo;
     private string? errorLabel;
-    private Card cardOnProfile;
+    private Card? cardOnProfile;
     private CardDTO cardToChange;
     private bool isPopupVisible, isDeletePopupVisible = false;
 
@@ -113,7 +113,6 @@
         }
        
         username = claimsPrincipal.Identity?.Name;
-       
         IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
 
@@ -130,6 +129,7 @@
     private void ChangeCard()
 
     {
+        cardOnProfile = UserManager.getUser(username).Card;
         cardToChange = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,
@@ -137,7 +137,7 @@
             ExpirationDate = cardOnProfile.ExpirationDate,
             FirstName = cardOnProfile.FirstName,
             LastName = cardOnProfile.LastName
-        };
+        }; 
         isPopupVisible = true;
 
     }
