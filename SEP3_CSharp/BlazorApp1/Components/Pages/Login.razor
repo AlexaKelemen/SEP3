@@ -17,7 +17,7 @@
         {
         <label style="color: red"> @errorLabel </label>
         }
-        <button @onclick="HandleLoginAsync">Log in</button> 
+        <button type="button" class="btn btn-primary" @onclick="HandleLoginAsync">Log in</button>
     </NotAuthorized>
     <Authorized>
         <h3>Hello, @context.User.Identity.Name</h3>
@@ -33,7 +33,7 @@
 
     private async Task HandleLoginAsync()
     {
-        errorLabel = "";
+        errorLabel = "hi";
         if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
             try
