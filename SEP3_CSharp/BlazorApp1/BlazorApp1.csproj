@@ -22,4 +22,10 @@
       <ProjectReference Include="..\Managers\Managers.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\Images\Accessories\" />
+      <Folder Include="wwwroot\Images\Clothes\" />
+      <Folder Include="wwwroot\Images\Shoes\" />
+    </ItemGroup>
+
 </Project>
