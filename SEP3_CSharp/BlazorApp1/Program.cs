@@ -22,7 +22,7 @@ builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhos
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
-builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<IItemService, HttpItemService>();
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 
