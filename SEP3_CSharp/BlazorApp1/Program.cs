@@ -1,7 +1,10 @@
+using BlazorApp1.Auth;
 using BlazorApp1.Components;
 using Grpc.Net.Client;
 using Managers;
-//using SourceCode;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Components.Authorization;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,8 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:5286")
+});
 builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
 builder.Services.AddScoped<IManager, Manager>();
+builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 
 var app = builder.Build();
 
