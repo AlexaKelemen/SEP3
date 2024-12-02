@@ -1,5 +1,5 @@
 ﻿@page "/Product"
-@using ItemDTO = Proto.ItemDTO
+@using ItemDTO = DataTransferObjects.ItemDTOs
 @using Proto
 @inherits ProductBase
 
@@ -15,7 +15,7 @@ else
     @if (productCount > 0)
     {
         const int itemsPerRow = 4;
-        var productsRowList = new List<ItemDTOs>();
+        var productsRowList = new List<ItemDTO>();
 
         @for (int i = 0; i < productCount; i++)
         {

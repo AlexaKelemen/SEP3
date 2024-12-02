@@ -1,5 +1,6 @@
 ﻿using BlazorApp1.Components.Pages;
 using BlazorApp1.Services.Contracts;
+using DataTransferObjects;
 using Entities;
 using Proto;
 
@@ -14,12 +15,17 @@ public class ItemService : IItemService
         _httpClient = httpClient;
     }
 
-    public async Task<IEnumerable<ItemDTO>> GetItems()
+    public async Task<IEnumerable<ItemDTOs>> GetItems()
     {
         try
         {
-            var products = await this._httpClient.GetFromJsonAsync<IEnumerable<ItemDTO>>("api/Product");
-            return products;
+            var dummyItems = new List<ItemDTOs>
+            {
+                new ItemDTOs { itemId = 1, name = "Item1", price = 10.00 },
+                new ItemDTOs { itemId = 2, name = "Item2", price = 15.49 },
+                new ItemDTOs { itemId = 3, name  = "Item3", price = 20.00 }
+            };
+            return dummyItems;
         }
         catch (Exception e)
         {
