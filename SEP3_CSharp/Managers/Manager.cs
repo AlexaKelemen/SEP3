@@ -17,8 +17,8 @@ public class Manager : IManager
         UserManager = new UserManager(stub);
         
     }
-    public User getUser(string username, string password)
+    public User getUser(string username)
     {
-        return UserManager.getUser(username, password);
+        return UserManager.getUser(username);
     }
 }

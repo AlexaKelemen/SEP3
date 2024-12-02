@@ -12,18 +12,14 @@ public class UserManager : IUserManager
     {
         this.stub = stub;
     }
-    public User getUser(string username, string password)
+    public User getUser(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
         {
             throw new ArgumentException("Username cannot be null or empty", nameof(username));
         }
-        if (string.IsNullOrWhiteSpace(password))
-        {
-            throw new ArgumentException("Password cannot be null or empty", nameof(password));
-        }
 
-        GetUserResponse response = stub.getUser(new GetUserRequest(){Password = password, Username = username});
+        GetUserResponse response = stub.getUser(new GetUserRequest(){ Username = username});
         User user = new User
         {
             Username = response.Username,
