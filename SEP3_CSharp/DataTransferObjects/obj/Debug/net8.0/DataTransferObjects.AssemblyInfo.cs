@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataTransferObjects")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6ebd55470f7634edfd358a1f200f265cd47af0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efa0a8331d6b9eb00c65fbc71cb8ca100be4e2ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataTransferObjects")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataTransferObjects")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
