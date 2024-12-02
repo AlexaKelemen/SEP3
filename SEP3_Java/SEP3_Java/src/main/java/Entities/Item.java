@@ -9,15 +9,16 @@ public class Item
   private String description;
   private String name;
   private Category category;
-
   private String ImageURL;
+  private int quantity;
 
-  public Item(String name, Category category, double price, String ImageURL)
+  public Item(String name, Category category, double price, String ImageURL, int quantity)
   {
     this.name = name;
     this.category = category;
     this.price = price;
     this.ImageURL = ImageURL;
+    this.quantity = quantity;
   }
 
   public String getName()
@@ -76,5 +77,13 @@ public class Item
 
   public void setImageURL(String imageURL) {
     ImageURL = imageURL;
+  }
+
+  public int getQuantity(){
+    return quantity;
+  }
+
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
   }
 }
