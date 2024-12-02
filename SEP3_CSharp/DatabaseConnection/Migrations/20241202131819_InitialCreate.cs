@@ -36,9 +36,14 @@ namespace DatabaseConnection.Migrations
                     { 5, "Trainers", "Black and white running shoes. Healthy feet in pretty shoes", "/Images/shoes/shoes5", 30m, 120 },
                     { 6, "Trainers", "Black shoes. Perfect for making your friends jealous ", "/Images/shoes/shoes6", 90m, 102 },
                     { 7, "Cahhrrn",  "Let your friends know you are rich. Crazy rich.", "/Images/shoes/shoes7", 90m, 120 },
-                    { 8, "Abracadbra", "Kick your enemies asses with these awesome brand new shoes", "/Images/shoes/shoes8", 90m, 87 },
+                    { 8, "Abracadbra", "Kick your enemies asses with these awesome brand new shoes", "/Images/shoes/shoes8", 49m, 87 },
                     { 9, "Original", "Black and White shoes for you to go to school. And then to work. Everyday. For the rest of your life",  "/Images/shoes/shoes9", 90m, 87},
-                    { 10, "Just shoes", "I know these look like tires but what do I know about today's fashion?",  "/Images/shoes/shoes10", 90m, 87},
+                    { 10, "Just shoes", "I know these look like tires but what do I know about today's fashion?",  "/Images/shoes/shoes10", 90m, 37},
+                    { 11, "Black hole", "Let your feet breathe. They stinck",  "/Images/shoes/shoes11", 90m, 77},
+                    { 12, "Newspaper", "Way to cheat on your exam. Thank me later",  "/Images/shoes/shoes12", 78m, 55},
+                    { 13, "White sandals", "They go well with your white nails",  "/Images/shoes/shoes13", 90m, 77},
+                    
+                    
                     
                     
                     
