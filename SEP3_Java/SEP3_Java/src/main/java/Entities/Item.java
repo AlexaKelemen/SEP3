@@ -9,7 +9,7 @@ public class Item
   private String description;
   private String name;
   private Category category;
-  private String ImageURL;
+  private String imageURL;
   private int quantity;
 
   public Item(String name, Category category, double price, String ImageURL, int quantity)
@@ -17,7 +17,7 @@ public class Item
     this.name = name;
     this.category = category;
     this.price = price;
-    this.ImageURL = ImageURL;
+    this.imageURL = ImageURL;
     this.quantity = quantity;
   }
 
@@ -72,11 +72,11 @@ public class Item
   }
 
   public String getImageURL(){
-    return ImageURL;
+    return imageURL;
   }
 
   public void setImageURL(String imageURL) {
-    ImageURL = imageURL;
+    imageURL = imageURL;
   }
 
   public int getQuantity(){
