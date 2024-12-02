@@ -17,22 +17,22 @@ public class ItemManager:IItemManager
     }
     public async Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
     {
-        return await _context.Items.Where(i => i.ItemId == itemDTOs.getItemId()).ToListAsync();
+        return await _context.Items.ToListAsync();
     }
 
 
-    public Task<Item> GetItem(string id)
+    public async Task<Item> GetItem(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Items.FirstOrDefaultAsync(i => i.ItemId == id);
     }
 
-    public Task<Category> GetCategory(int CategoryId)
+    public async Task<Category> GetCategory(int CategoryId)
     {
-        throw new NotImplementedException();
+      return await _context.Categories.FirstOrDefaultAsync(c => c.CategoryId == CategoryId);
     }
 
-    public Task<IEnumerable<Category>> GetCategories()
+    public async Task<IEnumerable<Category>> GetCategories()
     {
-        throw new NotImplementedException();
+       return await _context.Categories.ToListAsync();
     }
 }

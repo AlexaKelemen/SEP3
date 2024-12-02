@@ -8,7 +8,7 @@ namespace Managers;
 public interface IItemManager
 {
     Task<IEnumerable <Item>> GetItems(ItemDTOs itemDtos);
-    Task<Item> GetItem(string id);
+    Task<Item> GetItem(int id);
     Task<Category> GetCategory(int CategoryId);
     Task<IEnumerable<Category>> GetCategories();
   
