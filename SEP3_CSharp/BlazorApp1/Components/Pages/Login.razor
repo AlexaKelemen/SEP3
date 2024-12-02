@@ -34,15 +34,20 @@
     private async Task HandleLoginAsync()
     {
         errorLabel = "";
-        try
+        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
         {
-            await ((SimpleAuthProvider)AuthProvider).Login(username, password);
-            navMgr.NavigateTo("/");
+            try
+            {
+                await ((SimpleAuthProvider)AuthProvider).Login(username, password);
+                navMgr.NavigateTo("/");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                errorLabel = $"Error: {e.Message}";
+            }
         }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            errorLabel = $"Error: {e.Message}";
-        }
+        else
+            errorLabel = "You need to fill in username and password";
     }
 }
