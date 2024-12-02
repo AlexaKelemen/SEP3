@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Entities.Utilities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DatabaseConnection;
 
@@ -15,5 +16,4 @@ public class ApplicationAppContext : DbContext
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<DeliveryOption> DeliveryOptions => Set<DeliveryOption>();
-    
 }
