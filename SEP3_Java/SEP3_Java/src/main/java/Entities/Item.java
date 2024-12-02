@@ -10,11 +10,14 @@ public class Item
   private String name;
   private Category category;
 
-  public Item(String name, Category category, double price)
+  private String ImageURL;
+
+  public Item(String name, Category category, double price, String ImageURL)
   {
     this.name = name;
     this.category = category;
     this.price = price;
+    this.ImageURL = ImageURL;
   }
 
   public String getName()
@@ -65,5 +68,13 @@ public class Item
   public void setItemtype(String itemtype)
   {
     this.itemtype = itemtype;
+  }
+
+  public String getImageURL(){
+    return ImageURL;
+  }
+
+  public void setImageURL(String imageURL) {
+    ImageURL = imageURL;
   }
 }
