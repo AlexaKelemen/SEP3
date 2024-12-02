@@ -29,10 +29,12 @@ namespace DatabaseConnection.Migrations
                 columns: new[] { "ItemId", "Name", "Description", "ImageURL", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1,  "Comfy, thick base and lace, beige-coloured shoes", "/Images/shoes/shoes1", 30m, 70 },
-                    { 2,  "Everyday, super comfortable shoes ", "/Images/shoes/shoes2", 30m, 78 },
-                    { 3,  "Black shoes. Your feet will thank you ", "/Images/shoes/shoes3", 30m, 100 },
-                    { 4,  "Black and white trainers with thick laces", "/Images/shoes/shoes4", 30m, 120 },
+                    { 1, "Trainers", "Comfy, thick base and lace, beige-coloured shoes", "/Images/shoes/shoes1", 30m, 70 },
+                    { 2, "Trainers", "Everyday, super comfortable shoes ", "/Images/shoes/shoes2", 30m, 78 },
+                    { 3, "Trainers", "Black shoes. Your feet will thank you ", "/Images/shoes/shoes3", 30m, 100 },
+                    { 4, "Trainers", "Black and white trainers with thick laces", "/Images/shoes/shoes4", 35m, 120 },
+                    { 5, "Trainers", "Black and white running shoes. Healthy feet in pretty shoes", "/Images/shoes/shoes5", 30m, 120 },
+                    { 6, "Trainers", "Black shoes. Perfect for making your friends jealous ", "/Images/shoes/shoes6", 90m, 102 },
                     
                 }
             );
