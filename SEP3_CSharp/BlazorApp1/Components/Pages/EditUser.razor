@@ -1,14 +1,12 @@
 ﻿@page "/EditUser"
 
 @using System.Security.Claims
-@using BlazorApp1.Services
 @using DataTransferObjects
 @using Entities
 @using Managers
 @using Microsoft.AspNetCore.Authorization
 @inject AuthenticationStateProvider AuthProvider
-@inject IUserService UserService
-@inject IUserManager UserManager
+@inject IManager Manager
 
 <PageTitle>Edit User</PageTitle>
 
@@ -29,7 +27,7 @@
         <p><label>Address:</label>
             <input type="text" @bind="address"/></p>
         <p><label>Card information:</label>
-            <label>@paymentInfo</label> </p>
+            <label>@paymentInfo</label>  <button type="button" class="btn btn-primary" @onclick="ChangeCard">Change card </button></p>
 
         @if (isPopupVisible)
 
@@ -129,7 +127,7 @@
     private void ChangeCard()
 
     {
-        cardOnProfile = UserManager.getUser(username).Card;
+        cardOnProfile = Manager.getUser(username).Card;
         cardToChange = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,

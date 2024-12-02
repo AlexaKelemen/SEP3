@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject NavigationManager NavMgr
+@rendermode InteractiveServer
 <PageTitle>Home</PageTitle>
 
 <h1>Welcome to Kassa!</h1>
@@ -9,7 +10,6 @@
 <table class="table">
     <thead>
     <tr>
-        <th> <button @onclick='() => NavMgr.NavigateTo("Shopping")'>Shop</button></th>
         <th> <button @onclick='() => NavMgr.NavigateTo("Return")'>Return Clothes</button></th>
         <th> <button @onclick='() => NavMgr.NavigateTo("EditUser")'>User Profile</button></th>
         <th> <button @onclick='() => NavMgr.NavigateTo("Contact")'>Contact</button></th>

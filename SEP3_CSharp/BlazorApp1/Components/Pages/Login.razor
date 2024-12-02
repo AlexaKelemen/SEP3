@@ -3,6 +3,8 @@
 @using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider AuthProvider
 @inject NavigationManager navMgr
+@rendermode InteractiveServer
+
 <h3>Login</h3>
 
 <AuthorizeView>
@@ -17,6 +19,7 @@
         {
         <label style="color: red"> @errorLabel </label>
         }
+        <button type="button" class="btn btn-primary" @onclick="HandleLoginAsync">Log in</button>
         <button type="button" class="btn btn-primary" @onclick="HandleLoginAsync">Log in</button>
     </NotAuthorized>
     <Authorized>
