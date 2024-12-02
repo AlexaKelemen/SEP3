@@ -2,10 +2,13 @@
 
 @using System.Security.Claims
 @using BlazorApp1.Services
+@using DataTransferObjects
 @using Entities
+@using Managers
 @using Microsoft.AspNetCore.Authorization
 @inject AuthenticationStateProvider AuthProvider
 @inject IUserService UserService
+@inject IUserManager usermanager
 
 <PageTitle>Edit User</PageTitle>
 
@@ -108,8 +111,9 @@
             // the user is not logged in
             return;
         }
-
+       
         username = claimsPrincipal.Identity?.Name;
+       
         IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
 
