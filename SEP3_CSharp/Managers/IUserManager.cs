@@ -4,5 +4,5 @@ namespace Managers;
 
 public interface IUserManager
 {
-    User getUser(string username, string password);
+    User getUser(string username);
 }
