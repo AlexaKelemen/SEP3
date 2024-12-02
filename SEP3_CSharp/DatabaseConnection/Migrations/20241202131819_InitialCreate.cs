@@ -30,7 +30,9 @@ namespace DatabaseConnection.Migrations
                 values: new object[,]
                 {
                     { 1,  "Comfy, thick base and lace, beige-coloured shoes", "/Images/shoes/shoes1", 30m, 70 },
-                    { 2,   "Everyday, super comfortable shoes ", "/Images/shoes/shoes2", 30m, 70 },
+                    { 2,  "Everyday, super comfortable shoes ", "/Images/shoes/shoes2", 30m, 78 },
+                    { 3,  "Black shoes. Your feet will thank you ", "/Images/shoes/shoes3", 30m, 100 },
+                    { 4,  "Black and white trainers with thick laces", "/Images/shoes/shoes4", 30m, 120 },
                     
                 }
             );
