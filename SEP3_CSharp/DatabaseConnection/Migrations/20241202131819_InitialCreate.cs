@@ -86,7 +86,20 @@ namespace DatabaseConnection.Migrations
                     
                     
                 }
-            );
+            ); 
+              migrationBuilder.InsertData(
+                            table: "Clothing",
+                            columns: new[] { "ClothesId", "Name", "Description", "ImageURL", "Price", "Quantity", "Colour" },
+                            values: new object[,]
+                            {
+                                {1, "Beautiful cottagecore dress", "Lets have a nice friendly picnick together!", "/Images/Clothes/clothing1", 100m, 120, "green and white" },
+                                {2, "Show-off shoulders dress", "You will slay in this dress", "/Images/Clothes/clothing2", 100m, 120, "green and white" },
+                                {3, "Sleek black dress", "In this dress you will look like a young lady taking donations", "/Images/Clothes/clothing3", 100m, 120, "black" },
+                              
+                                
+                                
+                            }
+                        ); 
         }
 
     }
