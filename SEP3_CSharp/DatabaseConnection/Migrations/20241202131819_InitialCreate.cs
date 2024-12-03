@@ -56,7 +56,7 @@ namespace DatabaseConnection.Migrations
                 name: "Accessories",
                 columns: table => new
                 {
-                    ItemId = table.Column<int>(type: "int", nullable: false).Annotation("SqlServer:Identity", "1, 1"),
+                    AccessoriesId = table.Column<int>(type: "int", nullable: false).Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -64,13 +64,26 @@ namespace DatabaseConnection.Migrations
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Colour = table.Column<string>(type: "nvarchar(max)", nullable: false),
                 },
-                constraints: table => { table.PrimaryKey("PK_Items", x => x.ItemId); }
+                constraints: table => { table.PrimaryKey("PK_Accessories", x => x.AccessoriesId); }
             );
             migrationBuilder.InsertData(
                 table: "Accessories",
-                columns: new[] { "ItemId", "Name", "Description", "ImageURL", "Price", "Quantity", "Colour" },
+                columns: new[] { "AccessoriesId", "Name", "Description", "ImageURL", "Price", "Quantity", "Colour" },
                 values: new object[,]
                 {
+                    {1, "The adult crisis pin", "Lets suffer together", "/Images/accessories/accessory1", 100m, 120, "white" },
+                    {2, "Belt", "You're too skinny. Go eat a burger", "/Images/accessories/accessory2", 100m, 120, "black" },
+                    {3, "Apple keychain", "Someone took a bite, sorry", "/Images/accessories/accessory3", 100m, 120, "silver" },
+                    {4, "Bee hive phone case", "Pretty", "/Images/accessories/accessory4", 100m, 120, "white and blue" },
+                    {5, "Cute bears keychain", "I know you are lonely but you dont have to hate the bears. Its not their fault", "/Images/accessories/accessory5", 29m, 78, "white and brown"},
+                    {6, "bracelet", "weird looking thing",  "/Images/accessories/accessory6", 10m, 120, "black"},
+                    {7, "glasses", "Im blind too",  "/Images/accessories/accessory7", 100m, 120, "black"},
+                    {8, "watch", "You'll probably be late anyway but sure ",  "/Images/accessories/accessory8", 80m, 120, "cherry red"},
+                    {9, "wallet", "Don't pretend you have money. You don't",  "/Images/accessories/accessory9", 100m, 10, "brown"},
+                    {10, "wallet", "Don't worry. There's enough space for your 100kr", "/Images/accessories/accessory10", 100m, 20, "black and brown"},
+                    {11, "purse", "Cute, very cute",  "/Images/accessories/accessory11", 100m, 120, "gray"},
+                    {12, "scarf", "Because there's no one to keep you warm, buy a scarf",  "/Images/accessories/accessory12", 100m, 120, "autumn colours"},
+                    
                     
                 }
             );
