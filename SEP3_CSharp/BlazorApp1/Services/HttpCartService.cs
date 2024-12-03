@@ -1,4 +1,5 @@
-﻿using BlazorApp1.Services.Contracts;
+﻿using System.Text;
+using BlazorApp1.Services.Contracts;
 using DataTransferObjects;
 
 namespace BlazorApp1.Services;
@@ -7,6 +8,7 @@ public class HttpCartService : ICartService
 
 {
     private readonly HttpClient httpClient;
+    public event Action<int> OnShoppingCartChanged;
 
     public HttpCartService(HttpClient httpClient)
     {
@@ -36,15 +38,24 @@ public class HttpCartService : ICartService
 
     public async Task<CartItemDTO?> DeleteItem(int id)
     {
-        var response = await httpClient.DeleteAsync($"api/ShoppingCart/{id}");
-
-        if (response.IsSuccessStatusCode)
+        try
         {
-            return await response.Content.ReadFromJsonAsync<CartItemDTO>();
-        }
+            var response =
+                await httpClient.DeleteAsync($"api/ShoppingCart/{id}");
 
-        return default(CartItemDTO);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<CartItemDTO>();
+            }
+
+            return default(CartItemDTO);
+        }
+        catch (Exception)
+        {
+            throw;
+        }
     }
+
 
     public async Task<List<CartItemDTO>?> GetItems(int userId)
     {
@@ -65,5 +76,43 @@ public class HttpCartService : ICartService
         var message = await response.Content.ReadAsStringAsync();
         throw new Exception(
             $"Http status code: {response.StatusCode} Message: {message}");
+    }
+
+
+    /* public async Task<CartItemDTO?> UpdateQty(
+        CartItemQtyUpdateDTO cartItemQtyUpdateDto)
+    {
+        try
+        {
+            var jsonRequest = JsonConvert.SerializeObject(cartItemQtyUpdateDto);
+            var content = new StringContent(jsonRequest, Encoding.UTF8,
+                "application/json-patch+json");
+
+            var response = await httpClient.PatchAsync(
+                $"api/ShoppingCart/{cartItemQtyUpdateDto.CartItemId}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadFromJsonAsync<CartItemDTO>();
+            }
+
+            return null;
+        }
+        catch (Exception)
+        {
+            //Log exception
+            throw;
+        }
+    }*/
+
+
+    public event Action<int>? OnCartChanged;
+
+    public void RaiseEventOnCartChanged(int totalQty)
+    {
+        if (OnShoppingCartChanged != null)
+        {
+            OnShoppingCartChanged.Invoke(totalQty);
+        }
     }
 }
