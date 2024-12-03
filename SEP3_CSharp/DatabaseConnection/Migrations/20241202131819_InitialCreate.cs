@@ -83,6 +83,12 @@ namespace DatabaseConnection.Migrations
                     {10, "wallet", "Don't worry. There's enough space for your 100kr", "/Images/accessories/accessory10", 100m, 20, "black and brown"},
                     {11, "purse", "Cute, very cute",  "/Images/accessories/accessory11", 100m, 120, "gray"},
                     {12, "scarf", "Because there's no one to keep you warm, buy a scarf",  "/Images/accessories/accessory12", 100m, 120, "autumn colours"},
+                    {13, "serial killers ducks", "watch your back", "/Images/accessories/accessory13", 100m, 120, "yellow" },
+                    {14, "ducks", "watch your bellongings", "/Images/accessories/accessory14", 100m, 120, "white" },
+                    {15, "pew pew", "you're in trouble", "/Images/accessories/accessory15", 20m, 20, "yellow" },
+                    {16, "duck vader", "ducks", "/Images/accessories/accessory16", 20m, 20, "white" },
+                    {17, "trauma", "my life since 2005", "/Images/accessories/accessory17", 100m, 120, "yellow" },
+                    
                     
                     
                 }
