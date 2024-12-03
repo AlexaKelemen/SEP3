@@ -88,6 +88,13 @@ namespace DatabaseConnection.Migrations
                     {15, "pew pew", "you're in trouble", "/Images/accessories/accessory15", 20m, 20, "yellow" },
                     {16, "duck vader", "ducks", "/Images/accessories/accessory16", 20m, 20, "white" },
                     {17, "trauma", "my life since 2005", "/Images/accessories/accessory17", 100m, 120, "yellow" },
+                    {18, "student tears", "the struggle is real", "/Images/accessories/accessory18", 66m, 120, "blue" },
+                    {19, "brainless", "use it pls", "/Images/accessories/accessory19", 87m, 120, "white and black" },
+                    {20, "nerd pins", "for your bag", "/Images/accessories/accessory20", 100m, 20, "all the colours"},
+                    {21, "doormat", "for your unwanted relatives", "/Images/accessories/accessory21", 100m, 120, "brown"},
+                    {22, "pin", "for all the fragile little boys out there", "/Images/accessories/accessory22", 100m, 120, "pink" },
+                    {23, "control pin", "everything is fiiiine", "Images/accessories/accessory23", 100m, 120, "pink"},
+                    
                     
                     
                     
@@ -100,7 +107,8 @@ namespace DatabaseConnection.Migrations
                             {
                                 {1, "Beautiful cottagecore dress", "Lets have a nice friendly picnick together!", "/Images/Clothes/clothing1", 100m, 120, "green and white" },
                                 {2, "Show-off shoulders dress", "You will slay in this dress", "/Images/Clothes/clothing2", 100m, 120, "green and white" },
-                                {3, "Sleek black dress", "In this dress you will look like a young lady taking donations", "/Images/Clothes/clothing3", 100m, 120, "black" },
+                                {3, "Sleek black dress", "In this dress you will look like a young lady taking donations", "/Images/Clothes/clothing3", 38m, 19, "pink" },
+                                
                               
                                 
                                 
