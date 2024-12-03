@@ -4,5 +4,5 @@ namespace BlazorApp1.ViewControllers;
 
 public interface IEditUserInfoController
 {
-     User getUser(string username);
+     Task<User> getUser(string username);
 }

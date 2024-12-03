@@ -4,6 +4,6 @@ namespace Managers;
 
 public interface IUserManager
 {
-    User GetUser(string username);
-    void SaveUserInfo(User user);
+    Task<User> GetUser(string username);
+    Task SaveUserInfo(User user);
 }

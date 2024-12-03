@@ -13,8 +13,8 @@ public class EditUserInterInfoController : IEditUserInfoController
         this.manager = manager;
     }
     
-    public User getUser(string username)
+    public async Task<User> getUser(string username)
     {
-        return manager.GetUser(username);
+        return await manager.GetUser(username);
     }
 }
