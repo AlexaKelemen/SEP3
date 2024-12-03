@@ -9,6 +9,7 @@ public class LoginRequestDTO
   private String password;
   private static final ObjectMapper mapper = new ObjectMapper();
 
+  public LoginRequestDTO(){}
   public LoginRequestDTO(String username, String password)
   {
     this.username = username;
