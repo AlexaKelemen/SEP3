@@ -122,6 +122,15 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
 
   @Override public ArrayList<User> getAllUsers()
   {
-    return null;
+      ArrayList<User> allUsers = new ArrayList<>();
+      try(Connection connection = super.establishConnection())
+      {
+        
+      }
+      catch (SQLException e)
+      {
+        throw new RuntimeException("Something went wrong while fetching all cards: " + e.getMessage());
+      }
+      return allUsers;
   }
 }
