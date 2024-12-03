@@ -90,7 +90,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
             statement.setInt(1, cardId);
 
             ResultSet rs = statement.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 int id = rs.getInt("card_id");
                 String cardNumber = rs.getString("card_number");
                 Date expirationDate = rs.getDate("expiration_date");
@@ -111,7 +111,30 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
     @Override
     public ArrayList<Card> getAllCards()
     {
-        return null;
+        ArrayList<Card> allCards = new ArrayList<>();
+        try(Connection connection = super.establishConnection())
+        {
+            PreparedStatement statement = connection.prepareStatement("SELECT card_id, card_number, expiration_date, cvc, f_name, l_name, username FROM card;");
+            ResultSet rs = statement.executeQuery();
+            while (rs.next())
+            {
+                int id = rs.getInt("card_id");
+                String cardNumber = rs.getString("card_number");
+                Date expirationDate = rs.getDate("expiration_date");
+                String cvc = rs.getString("cvc");
+                String fName = rs.getString("f_name");
+                String lName = rs.getString("l_name");
+                String username = rs.getString("username");
+
+                Card element = new Card(id, cardNumber, expirationDate, cvc, fName, lName, username);
+                allCards.add(element);
+            }
+        }
+        catch (SQLException e)
+        {
+            throw new RuntimeException("Something went wrong while fetching all cards from the database: " + e.getMessage());
+        }
+        return allCards;
     }
 
 
