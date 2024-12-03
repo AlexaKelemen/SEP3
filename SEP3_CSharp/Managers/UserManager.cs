@@ -12,7 +12,7 @@ public class UserManager : IUserManager
     {
         this.stub = stub;
     }
-    public User getUser(string username)
+    public User GetUser(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
         {
@@ -29,5 +29,10 @@ public class UserManager : IUserManager
             Address = response.BillingAddress
         };
         return user;
+    }
+
+    public void SaveUserInfo(User user)
+    {
+        throw new NotImplementedException();
     }
 }

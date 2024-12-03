@@ -17,8 +17,13 @@ public class Manager : IManager
         UserManager = new UserManager(stub);
         
     }
-    public User getUser(string username)
+    public User GetUser(string username)
     {
-        return UserManager.getUser(username);
+        return UserManager.GetUser(username);
+    }
+
+    public void SaveUserInfo(User user)
+    {
+        UserManager.SaveUserInfo(user);
     }
 }
