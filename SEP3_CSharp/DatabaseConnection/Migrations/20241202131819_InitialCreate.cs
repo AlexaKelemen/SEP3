@@ -42,6 +42,10 @@ namespace DatabaseConnection.Migrations
                     { 11, "Black hole", "Let your feet breathe. They stinck",  "/Images/shoes/shoes11", 90m, 77},
                     { 12, "Newspaper", "Way to cheat on your exam. Thank me later",  "/Images/shoes/shoes12", 78m, 55},
                     { 13, "White sandals", "They go well with your white nails",  "/Images/shoes/shoes13", 90m, 77},
+                    { 14, "QM", "Cute, everyday shoes, for active people",  "/Images/shoes/shoes14", 88m, 37 },
+                    { 15, "Nature", "Multicolor shoes. They increase your winning chance if being chased by a chicken",  "/Images/shoes/shoes15", 90m, 77},
+                    { 16, "Black boots", "yes, black, funeral style, because your feet look dead",  "/Images/shoes/shoes13", 110m, 77}
+                    
                     
                     
                     
