@@ -15,6 +15,6 @@ public class EditUserInterInfoController : IEditUserInfoController
     
     public User getUser(string username)
     {
-        return manager.getUser(username);
+        return manager.GetUser(username);
     }
 }

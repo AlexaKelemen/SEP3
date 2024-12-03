@@ -4,5 +4,6 @@ namespace Managers;
 
 public interface IManager
 {
-    User getUser(string username);
+    User GetUser(string username);
+    void SaveUserInfo(User user);
 }
