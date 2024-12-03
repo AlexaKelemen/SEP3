@@ -41,31 +41,31 @@
                         <button type="button" class="btn btn-primary" @onclick="SaveCard">Save card</button>
                     </div>
                     <div class="modal-body">
-                        <EditForm Model="cardToChange" Context="editcard">
+                        <EditForm Model="newCard" Context="editcard">
 
                             <DataAnnotationsValidator />
                             <ValidationSummary />
                             <div class="mb-3">
                                 <label>First name</label>
-                                <Input @bind="cardToChange.FirstName"/>
+                                <Input @bind="newCard.FirstName"/>
                             </div>
 
                             <div class="mb-3">
                                 <label>Last name</label>
-                                <Input @bind="cardToChange.LastName"/>
+                                <Input @bind="newCard.LastName"/>
                             </div>
 
                             <div class="mb-3">
                                 <label>Card Number</label>
-                                <Input @bind="cardToChange.CardNumber"/>
+                                <Input @bind="newCard.CardNumber"/>
                             </div>
                             <div class="mb-3">
                                 <label>Date</label>
-                                <InputDate @bind-Value="cardToChange.ExpirationDate" />
+                                <InputDate @bind-Value="newCard.ExpirationDate" />
                             </div>
                             <div class="mb-3">
                                 <label>Cvc</label>
-                                <InputNumber @bind-Value="cardToChange.Cvc"/>
+                                <InputNumber @bind-Value="newCard.Cvc"/>
                             </div>
 
                             <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
@@ -94,8 +94,9 @@
     private string? address;
     private string? paymentInfo;
     private string? errorLabel;
+    private User user;
     private Card? cardOnProfile;
-    private CardDTO cardToChange;
+    private CardDTO newCard;
     private bool isPopupVisible, isDeletePopupVisible = false;
 
 
@@ -109,8 +110,15 @@
             // the user is not logged in
             return;
         }
-       
+        
         username = claimsPrincipal.Identity?.Name;
+        user = Manager.GetUser(username);
+        email = user.Email;
+        firstName = user.FirstName;
+        lastName = user.LastName;
+        address = user.Address;
+        cardOnProfile = user.Card;
+        paymentInfo = cardOnProfile.CardNumber;
         IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
 
@@ -127,8 +135,7 @@
     private void ChangeCard()
 
     {
-        cardOnProfile = Manager.GetUser(username).Card;
-        cardToChange = new CardDTO()
+        newCard = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,
             Cvc = cardOnProfile.Cvc,

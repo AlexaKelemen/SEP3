@@ -12,6 +12,11 @@ public class User
   private String lastName;
   private String billingAddress;
 
+  public User()
+  {
+
+  }
+
   public User(String username, String password)
   {
     this.username = username;
