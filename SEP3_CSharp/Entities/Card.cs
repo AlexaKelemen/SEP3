@@ -18,7 +18,19 @@ public class Card
             CardNumber = value;
         } } 
     public DateOnly ExpirationDate { get; set; }
-    public int Cvc { get; set; }
+    public int Cvc 
+    {
+        get
+        {
+            return Cvc;
+        }
+        set
+        {
+            if (value < 100 || value > 999 )
+                throw new ArgumentOutOfRangeException(nameof(value), "Input must consist of exactly 3 digits.");
+            Cvc = value;
+        }
+    }
     public String FirstName { get; set; } = null!;
     public String LastName { get; set; } = null!;
     public String Username { get; set; } = null!;
