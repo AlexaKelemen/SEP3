@@ -27,7 +27,7 @@ public class UserController
   }
 
   @GetMapping("/users/{username}/{cardIncluded}")
-  public ResponseEntity<UserDTO> getUser(@PathVariable(value = "username") String username, @PathVariable(value = "cardIncluded", required = false) boolean cardIncluded)
+  public ResponseEntity<UserDTO> getUserWithCard(@PathVariable(value = "username") String username, @PathVariable(value = "cardIncluded", required = false) boolean cardIncluded)
   {
     User user = userDAO.getUser(username);
     UserDTO response;
@@ -49,6 +49,20 @@ public class UserController
         }
       }
     }
+    return new ResponseEntity<>(response, HttpStatus.OK);
+  }
+
+  @GetMapping("/users/{username}")
+  public ResponseEntity<UserDTO> getUser(@PathVariable(value = "username") String username)
+  {
+    User user = userDAO.getUser(username);
+    UserDTO response;
+    if (user == null)
+    {
+      //return new UserDTO(new User("", "")).toJson();
+      return new ResponseEntity<>(new UserDTO(), HttpStatus.NOT_FOUND);
+    }
+    response = new UserDTO(user);
     return new ResponseEntity<>(response, HttpStatus.OK);
   }
 
