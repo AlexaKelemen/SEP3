@@ -15,7 +15,7 @@ public class DatabaseFactory
   {
     try
     {
-      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=hotelmanagementsystem", "postgres", "Why1sthisn33ded");
+      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=user_domain", "postgres", "Why1sthisn33ded");
     }
     catch (SQLException e)
     {
