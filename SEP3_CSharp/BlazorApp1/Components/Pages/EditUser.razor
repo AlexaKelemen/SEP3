@@ -112,7 +112,7 @@
         }
         
         username = claimsPrincipal.Identity?.Name;
-        user = Manager.GetUser(username);
+        user = await Manager.GetUser(username);
             email = user.Email;
             firstName = user.FirstName;
             lastName = user.LastName;
@@ -136,7 +136,6 @@
     private void ChangeCard()
 
     {
-        cardOnProfile = Manager.GetUser(username).Card;
         newCard = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,

@@ -12,7 +12,7 @@ public class UserManager : IUserManager
     {
         this.stub = stub;
     }
-    public User GetUser(string username)
+    public async Task<User> GetUser(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
         {
@@ -31,7 +31,7 @@ public class UserManager : IUserManager
         return user;
     }
 
-    public void SaveUserInfo(User user)
+    public async Task SaveUserInfo(User user)
     {
         throw new NotImplementedException();
     }
