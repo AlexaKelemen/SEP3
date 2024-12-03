@@ -52,3 +52,5 @@ D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnect
 D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.dll
 D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb
 D:\SEP3\Project\SourceCode\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.pdb
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb

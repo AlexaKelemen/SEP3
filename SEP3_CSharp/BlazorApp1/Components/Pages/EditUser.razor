@@ -120,14 +120,14 @@
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (!string.IsNullOrEmpty(username))
         {
-
+            
         }
     }
 
     private void ChangeCard()
 
     {
-        cardOnProfile = Manager.getUser(username).Card;
+        cardOnProfile = Manager.GetUser(username).Card;
         cardToChange = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,
@@ -141,13 +141,11 @@
     }
 
     private void ClosePopup()
-
     {
         isPopupVisible = false;
     }
 
     private async Task SaveCard()
-
     {
         ClosePopup();
     }
