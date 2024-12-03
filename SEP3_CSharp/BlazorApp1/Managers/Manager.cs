@@ -1,3 +1,4 @@
+using BlazorApp1.Services;
 using Entities;
 using Grpc.Net.Client;
 using Proto;
@@ -9,12 +10,16 @@ namespace Managers;
 public class Manager : IManager
 {
     private IUserManager UserManager;
+    
     private UserService.UserServiceClient stub;
 
-    public Manager(GrpcChannel channel)
+    private IUserService UserService;
+
+    public Manager(GrpcChannel channel, IUserService userService)
     {
         var stub = new UserService.UserServiceClient(channel);
-        UserManager = new UserManager(stub);
+        
+        UserManager = new UserManager(stub, userService);
         
     }
     public async Task<User> GetUser(string username)

@@ -1,3 +1,5 @@
+using BlazorApp1.Services;
+using DataTransferObjects;
 using Entities;
 using Proto;
 
@@ -7,10 +9,12 @@ namespace Managers;
 public class UserManager : IUserManager
 {
     private UserService.UserServiceClient stub;
+    private readonly IUserService UserService;
 
-    public UserManager(UserService.UserServiceClient stub)
+    public UserManager(UserService.UserServiceClient stub, IUserService userService)
     {
         this.stub = stub;
+        UserService = userService;
     }
     public async Task<User> GetUser(string username)
     {
@@ -19,14 +23,14 @@ public class UserManager : IUserManager
             throw new ArgumentException("Username cannot be null or empty", nameof(username));
         }
 
-        GetUserResponse response = stub.getUser(new GetUserRequest(){ Username = username});
+        UserDTO response = await UserService.GetUserAsync(username);
         User user = new User
         {
             Username = response.Username,
             Email = response.Email,
             FirstName = response.FirstName,
             LastName = response.FirstName,
-            Address = response.BillingAddress
+            Address = response.Address
         };
         return user;
     }
