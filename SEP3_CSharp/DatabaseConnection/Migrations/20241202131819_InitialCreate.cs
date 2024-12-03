@@ -39,7 +39,7 @@ namespace DatabaseConnection.Migrations
                     { 8, "Abracadbra", "Kick your enemies asses with these awesome brand new shoes", "/Images/shoes/shoes8", 49m, 87 },
                     { 9, "Original", "Black and White shoes for you to go to school. And then to work. Everyday. For the rest of your life",  "/Images/shoes/shoes9", 90m, 87},
                     { 10, "Just shoes", "I know these look like tires but what do I know about today's fashion?",  "/Images/shoes/shoes10", 90m, 37},
-                    { 11, "Black hole", "Let your feet breathe. They stinck",  "/Images/shoes/shoes11", 90m, 77},
+                    { 11, "Black hole", "Let your feet breathe. They stink",  "/Images/shoes/shoes11", 90m, 77},
                     { 12, "Newspaper", "Way to cheat on your exam. Thank me later",  "/Images/shoes/shoes12", 78m, 55},
                     { 13, "White sandals", "They go well with your white nails",  "/Images/shoes/shoes13", 90m, 77},
                     { 14, "QM", "Cute, everyday shoes, for active people",  "/Images/shoes/shoes14", 88m, 37 },
