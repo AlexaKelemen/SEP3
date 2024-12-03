@@ -17,13 +17,13 @@ public class Manager : IManager
         UserManager = new UserManager(stub);
         
     }
-    public User GetUser(string username)
+    public async Task<User> GetUser(string username)
     {
-        return UserManager.GetUser(username);
+        return await UserManager.GetUser(username);
     }
 
-    public void SaveUserInfo(User user)
+    public async Task SaveUserInfo(User user)
     {
-        UserManager.SaveUserInfo(user);
+        await UserManager.SaveUserInfo(user);
     }
 }
