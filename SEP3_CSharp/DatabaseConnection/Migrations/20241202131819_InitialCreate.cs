@@ -44,12 +44,33 @@ namespace DatabaseConnection.Migrations
                     { 13, "White sandals", "They go well with your white nails",  "/Images/shoes/shoes13", 90m, 77},
                     { 14, "QM", "Cute, everyday shoes, for active people",  "/Images/shoes/shoes14", 88m, 37 },
                     { 15, "Nature", "Multicolor shoes. They increase your winning chance if being chased by a chicken",  "/Images/shoes/shoes15", 90m, 77},
-                    { 16, "Black boots", "yes, black, funeral style, because your feet look dead",  "/Images/shoes/shoes13", 110m, 77}
+                    { 16, "Black boots", "yes, black, funeral style, because your feet look dead",  "/Images/shoes/shoes13", 110m, 77},
+                    { 17, "1 December", "Winter is here. Keep your feet warm please",  "/Images/shoes/shoes17", 59m, 70},
+                    { 18, "Cat Woman", "Pajama style. Cute and fluffy",  "/Images/shoes/shoes18", 90m, 77},
+                    { 19, "Classic", "Me, my daughter, my mother and all my sisters have been wearing these for 2 years and no complains. Trust me, you should buy them too",  "/Images/shoes/shoes19", 50m, 88},
+                    { 20, "Snow White", "Comfy like walking on a cloud",  "/Images/shoes/shoes20", 76m, 27}
                     
-                    
-                    
-                    
-                    
+                }
+            );
+            migrationBuilder.CreateTable(
+                name: "Accessories",
+                columns: table => new
+                {
+                    ItemId = table.Column<int>(type: "int", nullable: false).Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Colour = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                },
+                constraints: table => { table.PrimaryKey("PK_Items", x => x.ItemId); }
+            );
+            migrationBuilder.InsertData(
+                table: "Accessories",
+                columns: new[] { "ItemId", "Name", "Description", "ImageURL", "Price", "Quantity", "Colour" },
+                values: new object[,]
+                {
                     
                 }
             );
