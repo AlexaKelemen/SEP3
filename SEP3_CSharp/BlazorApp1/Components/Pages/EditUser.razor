@@ -113,12 +113,13 @@
         
         username = claimsPrincipal.Identity?.Name;
         user = Manager.GetUser(username);
-        email = user.Email;
-        firstName = user.FirstName;
-        lastName = user.LastName;
-        address = user.Address;
-        cardOnProfile = user.Card;
-        paymentInfo = cardOnProfile.CardNumber;
+            email = user.Email;
+            firstName = user.FirstName;
+            lastName = user.LastName;
+            address = user.Address;
+            cardOnProfile = user.Card;
+            paymentInfo = cardOnProfile.CardNumber;
+
         IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
 
@@ -135,6 +136,7 @@
     private void ChangeCard()
 
     {
+        cardOnProfile = Manager.GetUser(username).Card;
         newCard = new CardDTO()
         {
             CardNumber = cardOnProfile.CardNumber,
