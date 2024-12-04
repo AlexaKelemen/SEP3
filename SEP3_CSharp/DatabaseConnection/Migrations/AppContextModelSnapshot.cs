@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
-    [DbContext(typeof(AppContext))]
+    [DbContext(typeof(AppDbContext))]
     partial class AppContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -120,6 +120,19 @@ namespace DatabaseConnection.Migrations
                     b.HasKey("ItemId");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            ItemId = 1,
+                            Colour = "Blue",
+                            Description = "A kit provided by Glossier, containing skin care, hair care and makeup products",
+                            ImageURL = "/Images/Shoes/shoes1.png",
+                            Name = "Glossier - Beauty Kit",
+                            Price = 100f,
+                            Quantity = 100,
+                            Size = "Small"
+                        });
                 });
 
             modelBuilder.Entity("Entities.Order", b =>

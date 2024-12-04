@@ -9,30 +9,30 @@ namespace Managers;
 
 public class ItemManager:IItemManager
 {
-    private readonly ApplicationAppContext _context;
+    private readonly AppDbContext _dbContext;
 
-    public ItemManager(ApplicationAppContext context)
+    public ItemManager(AppDbContext dbContext)
     {
-        _context = context;
+        _dbContext = dbContext;
     }
     public async Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
     {
-        return await _context.Items.ToListAsync();
+        return await _dbContext.Items.ToListAsync();
     }
 
 
     public async Task<Item> GetItem(int id)
     {
-        return await _context.Items.FirstOrDefaultAsync(i => i.ItemId == id);
+        return await _dbContext.Items.FirstOrDefaultAsync(i => i.ItemId == id);
     }
 
     public async Task<Category> GetCategory(int CategoryId)
     {
-      return await _context.Categories.FirstOrDefaultAsync(c => c.CategoryId == CategoryId);
+      return await _dbContext.Categories.FirstOrDefaultAsync(c => c.CategoryId == CategoryId);
     }
 
     public async Task<IEnumerable<Category>> GetCategories()
     {
-       return await _context.Categories.ToListAsync();
+       return await _dbContext.Categories.ToListAsync();
     }
 }

@@ -42,3 +42,7 @@ D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\Enti
 D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\Entities.pdb
 D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.csproj.AssemblyReference.cache
 D:\SEP3\Project\SourceCode\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTran.AA854672.Up2Date
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\Entities.dll
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\Entities.pdb
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTran.AA854672.Up2Date
