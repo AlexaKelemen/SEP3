@@ -54,9 +54,10 @@ public class HttpUserService:IUserService
             PropertyNameCaseInsensitive = true
         })!;
     }
-    public async Task EditUserAsync(string username, UserDTO request)
+
+    public async Task UpdateUserAsync(UserDTO request)
     {
-        HttpResponseMessage response = await httpClient.PutAsJsonAsync($"users/{username}", request);
+        HttpResponseMessage response = await httpClient.PutAsJsonAsync($"users/{request.Username}", request);
         string responseString = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)

@@ -35,8 +35,9 @@ public class UserManager : IUserManager
         return user;
     }
 
-    public async Task SaveUserInfo(User user)
+    public async Task SaveUserInfo(UserDTO userdto)
     {
-        throw new NotImplementedException();
+        
+        await UserService.UpdateUserAsync(userdto);
     }
 }

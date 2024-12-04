@@ -13,15 +13,13 @@
 
 <AuthorizeView>
     <Authorized>
-        <h1>Hello </h1>
+        <h1>Hello @username</h1>
 
         <h3>User Information</h3>
         <p><label>First name:</label>
             <input type="text" @bind="firstName"/></p>
         <p><label>Last name:</label>
             <input type="text" @bind="lastName"/></p>
-        <p><label>Username:</label>
-            <input type="text" @bind="username"/></p>
         <p><label>Email:</label>
             <input type="text" @bind="email"/></p>
         <p><label>Address:</label>
@@ -39,7 +37,7 @@
                         <h5> Change card</h5>
                     </div>
                     <div class="modal-body">
-                        <EditForm Model="newCard" Context="editcard">
+                        <EditForm Model="cardOnProfile" Context="editcard">
 
                             <DataAnnotationsValidator />
                             <ValidationSummary />
@@ -99,7 +97,6 @@
     private DateOnly cardExpirationDate;
     private User user;
     private Card? cardOnProfile;
-    private CardDTO newCard;
     private bool isPopupVisible, isDeletePopupVisible = false;
 
 
@@ -136,8 +133,22 @@
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (!string.IsNullOrEmpty(username))
         {
-            
+            UserDTO userUpdate = new UserDTO()
+            {
+                BillingAddress = address,
+                Card = cardOnProfile,
+                Email = email,
+                FirstName = firstName,
+                LastName = lastName,
+                Username = username
+            };
+            await Manager.SaveUserInfo(userUpdate);
         }
+        else
+        {
+            errorLabel = "Your username cannot be null";
+        }
+        
     }
 
     private void ChangeCard()
@@ -151,7 +162,8 @@
             cardCvc = cardOnProfile.Cvc;
             cardExpirationDate = cardOnProfile.ExpirationDate;
         }
-        newCard = new CardDTO();
+       
+        cardOnProfile = new Card();
         isPopupVisible = true;
 
     }
@@ -163,14 +175,17 @@
 
     private async Task SaveCard()
     {
-        newCard = new CardDTO()
+        if (cardOnProfile.CardId == null)
         {
-            CardNumber = cardNumber,
-            Cvc = cardCvc,
-            ExpirationDate = cardExpirationDate,
-            FirstName = cardFirstName,
-            LastName = cardLastName
-        };
+            cardOnProfile.CardId = -1;
+            cardOnProfile.Username = username;
+        }
+        cardOnProfile.CardNumber = cardNumber;
+        cardOnProfile.FirstName = cardFirstName;
+        cardOnProfile.LastName = cardLastName;
+        cardOnProfile.Cvc = cardCvc;
+        cardOnProfile.ExpirationDate = cardExpirationDate;
+        
         ClosePopup();
     }
 
