@@ -67,11 +67,15 @@ public class UserController
   }
 
   @PutMapping("/users/{username}")
-  public ResponseEntity<UserDTO> updateUser(@PathVariable(value = "username") String username, @RequestBody User request)
+  public ResponseEntity<UserDTO> updateUser(@PathVariable(value = "username") String username, @RequestBody UserDTO request)
   {
     try
     {
-      return new ResponseEntity<>(new UserDTO(userDAO.editUser(request)), HttpStatus.OK) ;
+      if(request.getCard() != null)
+      {
+
+      }
+      return new ResponseEntity<>(request, HttpStatus.OK) ;
     }
     catch (Exception e)
     {
