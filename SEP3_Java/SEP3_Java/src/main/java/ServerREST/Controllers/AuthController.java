@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @RestController
 public class AuthController
@@ -34,15 +35,11 @@ public class AuthController
     catch (Exception e)
     {
       System.out.println(e.getMessage());
-      ResponseEntity<UserDTO> response = new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-      response.getHeaders().add("Something went wrong", "Exception thrown");
-      return response;
+      return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
     if(user == null)
     {
-      ResponseEntity<UserDTO> response = new ResponseEntity<>(HttpStatus.NOT_FOUND);
-      response.getHeaders().add("User not found", "User not found");
-      return response;
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     if(!user.getPassword().equals(request.getPassword()))
     {
@@ -52,13 +49,21 @@ public class AuthController
     return new ResponseEntity<>(response, HttpStatus.OK);
   }
 
-/*  @PostMapping("auth/createUser")
+  @PostMapping("auth/createUser")
   public synchronized ResponseEntity<UserDTO> createUser(@RequestBody User request)
   {
     if(request == null)
     {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
-
-  }*/
+    ArrayList<User> users = userDAO.getAllUsers();
+    for (int i = 0; i < users.size(); i++)
+    {
+      if(users.get(i).getUsername().equals(request.getUsername()))
+      {
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+      }
+    }
+    return new ResponseEntity<>(new UserDTO(userDAO.addUser(request)), HttpStatus.CREATED);
+  }
 }
