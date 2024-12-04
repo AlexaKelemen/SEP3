@@ -23,7 +23,7 @@ public class UserManager : IUserManager
             throw new ArgumentException("Username cannot be null or empty", nameof(username));
         }
 
-        UserDTO response = await UserService.GetUserAsync(username);
+        UserDTO response = await UserService.GetUserAsync(username, true);
         User user = new User
         {
             Username = response.Username,

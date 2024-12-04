@@ -17,7 +17,7 @@ public class CardDTO
             CardNumber = value;
         } } 
     public DateOnly ExpirationDate { get; set; }
-    public int Cvc { get; set; }
+    public string Cvc { get; set; }
     public String FirstName { get; set; } = null!;
     public String LastName { get; set; } = null!;
 }

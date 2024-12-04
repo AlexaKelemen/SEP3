@@ -24,9 +24,9 @@ public class HttpUserService:IUserService
             PropertyNameCaseInsensitive = true
         })!;
     }
-    public async Task<UserDTO> GetUserAsync(string username)
+    public async Task<UserDTO> GetUserAsync(string username, bool includeCard)
     {
-        HttpResponseMessage response = await httpClient.GetAsync($"users/{username}");
+        HttpResponseMessage response = await httpClient.GetAsync($"users/{username}/{includeCard}");
         string responseString = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
