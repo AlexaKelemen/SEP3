@@ -34,11 +34,15 @@ public class AuthController
     catch (Exception e)
     {
       System.out.println(e.getMessage());
-      return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+      UserDTO response = new UserDTO();
+      response.setUsername("**** A PROBLEM OCCURRED ****");
+      return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED);
     }
     if(user == null)
     {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+      UserDTO response = new UserDTO();
+      response.setUsername("**** USER NOT FOUND ****");
+      return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
     if(!user.getPassword().equals(request.getPassword()))
     {
