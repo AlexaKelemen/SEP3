@@ -37,8 +37,6 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5> Change card</h5>
-                        <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
-                        <button type="button" class="btn btn-primary" @onclick="SaveCard">Save card</button>
                     </div>
                     <div class="modal-body">
                         <EditForm Model="newCard" Context="editcard">
@@ -65,7 +63,7 @@
                             </div>
                             <div class="mb-3">
                                 <label>Cvc</label>
-                                <input type="text" @bind-Value="cardCvc"/>
+                                <input type="text" @bind="cardCvc"/>
                             </div>
 
                             <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
