@@ -47,4 +47,14 @@ public class AuthController
     UserDTO response = new UserDTO(user);
     return new ResponseEntity<>(response, HttpStatus.OK);
   }
+
+/*  @PostMapping("auth/createUser")
+  public synchronized ResponseEntity<UserDTO> createUser(@RequestBody User request)
+  {
+    if(request == null)
+    {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+  }*/
 }
