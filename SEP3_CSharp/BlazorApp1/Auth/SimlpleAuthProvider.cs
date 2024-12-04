@@ -75,4 +75,19 @@ public class SimpleAuthProvider : AuthenticationStateProvider
         return new AuthenticationState(claimsPrincipal);
 
     }
+    public async Task CreateUser(string username, string password)
+    {
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/createuser",
+            new CreateUserDTO()
+            {
+                Username = username,
+                Password = password
+            });
+        string content = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(content);
+        }
+        await Login(username, password);
+    }
 }
