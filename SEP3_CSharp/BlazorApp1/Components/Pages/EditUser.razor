@@ -143,6 +143,14 @@
     private void ChangeCard()
 
     {
+        if (cardOnProfile != null)
+        {
+            cardNumber = cardOnProfile.CardNumber;
+            cardFirstName = cardOnProfile.FirstName;
+            cardLastName = cardOnProfile.LastName;
+            cardCvc = cardOnProfile.Cvc;
+            cardExpirationDate = cardOnProfile.ExpirationDate;
+        }
         newCard = new CardDTO();
         isPopupVisible = true;
 
