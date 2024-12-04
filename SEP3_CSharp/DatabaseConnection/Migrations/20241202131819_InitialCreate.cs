@@ -29,7 +29,7 @@ namespace DatabaseConnection.Migrations
                 columns: new[] { "ItemId", "Name", "Description", "ImageURL", "Price", "Quantity" },
                 values: new object[,]
                 {
-                    { 1, "Trainers", "Comfy, thick base and lace, beige-coloured shoes", "/Images/shoes/shoes1", 30m, 70 },
+                    { 1, "Cuties", "Comfy, thick base and lace, beige-coloured shoes", "/Images/shoes/shoes1", 30m, 70 },
                     { 2, "Trainers", "Everyday, super comfortable shoes ", "/Images/shoes/shoes2", 30m, 78 },
                     { 3, "Trainers", "Black shoes. Your feet will thank you ", "/Images/shoes/shoes3", 30m, 100 },
                     { 4, "Trainers", "Black and white trainers with thick laces", "/Images/shoes/shoes4", 35m, 120 },
