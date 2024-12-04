@@ -37,7 +37,7 @@
                         <h5> Change card</h5>
                     </div>
                     <div class="modal-body">
-                        <EditForm Model="cardOnProfile" Context="editcard">
+                        <EditForm Model="user" Context="editcard">
 
                             <DataAnnotationsValidator />
                             <ValidationSummary />
@@ -154,6 +154,7 @@
     private void ChangeCard()
 
     {
+        
         if (cardOnProfile != null)
         {
             cardNumber = cardOnProfile.CardNumber;
@@ -162,8 +163,6 @@
             cardCvc = cardOnProfile.Cvc;
             cardExpirationDate = cardOnProfile.ExpirationDate;
         }
-       
-        cardOnProfile = new Card();
         isPopupVisible = true;
 
     }
