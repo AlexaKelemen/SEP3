@@ -2,11 +2,12 @@ using BlazorApp1.Auth;
 using BlazorApp1.Components;
 using BlazorApp1.Services;
 using BlazorApp1.Services.Contracts;
+using DatabaseConnection;
 using Grpc.Net.Client;
 using Managers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
-
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,10 @@ builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 builder.Services.AddScoped<IItemService, HttpItemService>();
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+var connectionString = builder.Configuration.GetConnectionString("\"Data Source=DatabaseConnection/database.db\"");
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(connectionString));
+
 
 
 builder.Services.AddAuthorizationCore();

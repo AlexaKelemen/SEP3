@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
-    [DbContext(typeof(AppContext))]
-    [Migration("20241202131819_InitialCreate")]
-    partial class InitialCreate
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20241203153819_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -123,6 +123,19 @@ namespace DatabaseConnection.Migrations
                     b.HasKey("ItemId");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            ItemId = 1,
+                            Colour = "Blue",
+                            Description = "A kit provided by Glossier, containing skin care, hair care and makeup products",
+                            ImageURL = "/Images/Shoes/shoes1.png",
+                            Name = "Glossier - Beauty Kit",
+                            Price = 100f,
+                            Quantity = 100,
+                            Size = "Small"
+                        });
                 });
 
             modelBuilder.Entity("Entities.Order", b =>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DatabaseConnection.Migrations
 {
     /// <inheritdoc />
-    public partial class AddOrderAndDeliveryOption : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,6 +27,39 @@ namespace DatabaseConnection.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Card", x => x.CardId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Categories",
+                columns: table => new
+                {
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CategoryName = table.Column<string>(type: "TEXT", nullable: false),
+                    CategoryDescription = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Items",
+                columns: table => new
+                {
+                    ItemId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Colour = table.Column<string>(type: "TEXT", nullable: false),
+                    Size = table.Column<string>(type: "TEXT", nullable: false),
+                    Price = table.Column<float>(type: "REAL", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    ImageURL = table.Column<string>(type: "TEXT", nullable: false),
+                    Quantity = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Items", x => x.ItemId);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,6 +95,30 @@ namespace DatabaseConnection.Migrations
                         column: x => x.CardId,
                         principalTable: "Card",
                         principalColumn: "CardId");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CategoryItem",
+                columns: table => new
+                {
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ItemId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryItem", x => new { x.CategoryId, x.ItemId });
+                    table.ForeignKey(
+                        name: "FK_CategoryItem_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CategoryItem_Items_ItemId",
+                        column: x => x.ItemId,
+                        principalTable: "Items",
+                        principalColumn: "ItemId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -112,6 +169,16 @@ namespace DatabaseConnection.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Items",
+                columns: new[] { "ItemId", "Colour", "Description", "ImageURL", "Name", "Price", "Quantity", "Size" },
+                values: new object[] { 1, "Blue", "A kit provided by Glossier, containing skin care, hair care and makeup products", "/Images/Shoes/shoes1.png", "Glossier - Beauty Kit", 100f, 100, "Small" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CategoryItem_ItemId",
+                table: "CategoryItem",
+                column: "ItemId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_DeliveryOptions_OrderId",
                 table: "DeliveryOptions",
@@ -137,7 +204,16 @@ namespace DatabaseConnection.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "CategoryItem");
+
+            migrationBuilder.DropTable(
                 name: "DeliveryOptions");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Items");
 
             migrationBuilder.DropTable(
                 name: "Orders");

@@ -29,8 +29,8 @@ public class UserManager : IUserManager
             Username = response.Username,
             Email = response.Email,
             FirstName = response.FirstName,
-            LastName = response.FirstName,
-            Address = response.Address
+            LastName = response.LastName,
+            BillingAddress = response.BillingAddress
         };
         return user;
     }

@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Managers", "Managers\Manage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObjects", "DataTransferObjects\DataTransferObjects.csproj", "{4D5AF068-5CD0-455B-818B-3FF10D91C4B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "DatabaseConnection\DatabaseConnection.csproj", "{8D2D1B71-695F-40BD-9E06-3DA1DDCE15D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "DatabaseConnection\DatabaseConnection.csproj", "{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +32,10 @@ Global
 		{4D5AF068-5CD0-455B-818B-3FF10D91C4B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D5AF068-5CD0-455B-818B-3FF10D91C4B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5AF068-5CD0-455B-818B-3FF10D91C4B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D2D1B71-695F-40BD-9E06-3DA1DDCE15D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D2D1B71-695F-40BD-9E06-3DA1DDCE15D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D2D1B71-695F-40BD-9E06-3DA1DDCE15D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D2D1B71-695F-40BD-9E06-3DA1DDCE15D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
