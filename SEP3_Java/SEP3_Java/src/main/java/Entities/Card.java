@@ -10,8 +10,11 @@ public class Card {
     private String lName;
     private String username;
 
-
-    public Card(int cardId, String cardNumber, Date expirationDate, String cvc, String fName, String lName, String username) {
+    public Card()
+    {
+    }
+    public Card(int cardId, String cardNumber, Date expirationDate, String cvc, String fName, String lName, String username)
+    {
         this.cardId = cardId;
         this.cardNumber = cardNumber;
         this.expirationDate = expirationDate;

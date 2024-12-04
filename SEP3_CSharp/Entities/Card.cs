@@ -8,7 +8,7 @@ public class Card
     public string CardNumber { get; set; }
     public DateOnly ExpirationDate { get; set; }
     public string Cvc { get; set; }
-    public String FirstName { get; set; } = null!;
-    public String LastName { get; set; } = null!;
-    public String Username { get; set; } = null!;
+    public string FName { get; set; } = null!;
+    public string LName { get; set; } = null!;
+    public string Username { get; set; } = null!;
 }
