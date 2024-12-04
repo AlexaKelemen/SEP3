@@ -1,59 +1,57 @@
-﻿@page "/ShoppingCart"
-@using Entities
-<h3>Shopping Cart</h3>
- @if (CartItems.Count == 0) 
-{ 
-<p>Your shopping cart is empty.</p> 
- }
- else
- {
-     @foreach (var entry in CartItems)
-     {
-         var item = entry.Value.Item;
-         var quantity = entry.Value.Quantity;
+﻿@*
+<h3>ShoppingCart</h3>
+@page "/ShoppingCart"
 
-@code {
+@inherits ShoppingCartBaseTry
 
-
-private Dictionary<int, (Item Item, int Quantity)> CartItems = new Dictionary<int, (Item, int)>();
-
-private decimal CartTotal => (decimal)CartItems.Sum(entry => entry.Value.Item.Price * entry.Value.Quantity);
-
-private void AddToCart(Item product, int quantity)
+@if (CartItems.Count > 0)
 {
-    if (CartItems.ContainsKey(product.ItemId))
-    {
-        CartItems[product.ItemId] = (product, CartItems[product.ItemId].Quantity + quantity);
-    }
-    else
-    {
-        CartItems[product.ItemId] = (product, quantity);
-    }
+    <h3 class="mb-5">Shopping Cart</h3>
+    <div class="row mb-5">
+        <div class="col-md-9">
+            @foreach (var item in CartItems)
+            {
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <img src="@item.Value.Item.ImageURL" width="300" class="img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                        <h5>@item.Value.Item.Name</h5>
+                        <div class="mb-4">@item.Value.Item.Description</div>
+                        <span>
+                            Price: <b>@item.Value.Item.Price.ToString("C")</b>
+                            <input type="number" @bind="@item.Value.Quantity" 
+                                   @onchange="(e) => UpdateQuantity(item.Key, Convert.ToInt32(e.Value))" />
+                            <button class="btn btn-info btn-sm update-qty"
+                                    @onclick="(() => UpdateQuantity(item.Key, item.Value.Quantity))">
+                                Update Qty
+                            </button>
+                        </span>
+                        <div>
+                            <button @onclick="(() => RemoveFromCart(item.Key))"
+                                    class="btn btn-danger sm">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-3">
+            <h5>Cart Summary</h5>
+            <div class="mt-2">
+                <div>Total - (@CartItems.Values.Sum(i => i.Quantity) items)&nbsp;
+                    <b>@CartTotal.ToString("C")</b>
+                </div>
+                <button class="btn btn-success" @onclick="Checkout">
+                    <span class="oi oi-credit-card"></span>&nbsp; Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
 }
-
-
-private void UpdateQuantity(int id, int quantity)
+else
 {
-if (CartItems.ContainsKey(id) && quantity > 0)
-{
-CartItems[id] = (CartItems[id].Item, quantity);
+    <h4>There are currently no items in your shopping cart</h4>
 }
-}
-
-private void RemoveFromCart(int itemId)
-{
-    if (CartItems.ContainsKey(itemId))
-    {
-        CartItems.Remove(itemId);
-    }
-}
-
-
-private void Checkout()
-{
-CartItems.Clear();
-StateHasChanged();
-}
-}
-}
- }
+*@
