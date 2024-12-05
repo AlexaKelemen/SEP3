@@ -58,3 +58,23 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Managers\bin\Debug\net8
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.deps.json
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.AssemblyReference.cache
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfoInputs.cache
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.AssemblyInfo.cs
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.CoreCompileInputs.cache
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.sourcelink.json
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.Up2Date
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\refint\Managers.dll
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.pdb
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\ref\Managers.dll

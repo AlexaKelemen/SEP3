@@ -27,6 +27,7 @@
         <p><label>Card information:</label>
             <label>@paymentInfo</label>  <button type="button" class="btn btn-primary" @onclick="ChangeCard">Change card </button></p>
         <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save</button>
+        <p><label style="color: red"> @errorLabel </label></p>
 
         @if (isPopupVisible)
 
@@ -67,6 +68,7 @@
 
                             <button type="button" class="btn btn-primary" @onclick="ClosePopup">Close</button>
                             <button type="button" class="btn btn-primary" @onclick="SaveCard">Save card</button>
+                            <p><label style="color: red"> @popupError </label></p>
 
                         </EditForm>
                     </div>
@@ -91,6 +93,7 @@
     private string? address;
     private string? paymentInfo;
     private string? errorLabel;
+    private string popupError;
     private string cardFirstName;
     private string cardLastName;
     private string cardCvc;
@@ -125,6 +128,7 @@
                 paymentInfo = cardOnProfile.CardNumber;
             }
 
+            errorLabel = "";
             IEnumerable<Claim> claims = claimsPrincipal.Claims;
     }
 
@@ -132,22 +136,23 @@
     {
         AuthenticationState authenticationState = await State;
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
-        if (!string.IsNullOrEmpty(username))
+        UserDTO userUpdate = new UserDTO()
         {
-            UserDTO userUpdate = new UserDTO()
-            {
-                BillingAddress = address,
-                Card = cardOnProfile,
-                Email = email,
-                FirstName = firstName,
-                LastName = lastName,
-                Username = username
-            };
+            BillingAddress = address,
+            Card = cardOnProfile,
+            Email = email,
+            FirstName = firstName,
+            LastName = lastName,
+            Username = username
+        };
+        try
+        {
             await Manager.SaveUserInfo(userUpdate);
         }
-        else
+        catch (Exception e)
         {
-            errorLabel = "Your username cannot be null";
+            errorLabel = ($"Error: {e.Message}");
+            Console.WriteLine(e);
         }
         
     }
@@ -155,7 +160,7 @@
     private void ChangeCard()
 
     {
-        
+        errorLabel = "";   
         if (cardOnProfile != null)
         {
             cardNumber = cardOnProfile.CardNumber;
@@ -174,19 +179,36 @@
     }
 
     private void SaveCard()
-    {
-        if (cardOnProfile.CardId == null)
+    { if (string.IsNullOrEmpty(cardNumber) || cardNumber.Length != 16 || !IsDigitsOnly(cardNumber))
         {
-            cardOnProfile.CardId = -1;
-            cardOnProfile.Username = username;
+            popupError = "Card number must be exactly 16 digits.";
         }
-        cardOnProfile.CardNumber = cardNumber;
-        cardOnProfile.FName = cardFirstName;
-        cardOnProfile.LName = cardLastName;
-        cardOnProfile.Cvc = cardCvc;
-        cardOnProfile.ExpirationDate = cardExpirationDate;
-        
-        ClosePopup();
+        else if (string.IsNullOrEmpty(cardCvc) || cardCvc.Length != 3 || !IsDigitsOnly(cardCvc))
+        {
+            popupError = "Cvc must be exactly 3 digits.";
+        }
+        else
+        {
+            cardOnProfile.CardNumber = cardNumber;
+            cardOnProfile.FName = cardFirstName;
+            cardOnProfile.LName = cardLastName;
+            cardOnProfile.Cvc = cardCvc;
+            cardOnProfile.ExpirationDate = cardExpirationDate;
+
+            ClosePopup();
+        }
+    }
+    
+     private bool IsDigitsOnly(string str)
+    {
+        foreach (char c in str)
+        {
+            if (!char.IsDigit(c))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
