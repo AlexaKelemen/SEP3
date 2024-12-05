@@ -8,14 +8,14 @@ public class ItemDTOs
     public double Price{get;set;}
     public int Quantity{get;set;}
     public int CategoryId{get;set;}
-    public String CategoryName{get;set;}
-    public String ImageUrl{get;set;}
+    public string CategoryName{get;set;}
+    public string ImageUrl{get;set;}
 
     public ItemDTOs()
     {
     }
-    public ItemDTOs(int itemId, String name, String description, double price, int quantity, int categoryId,
-        String categoryName, String imageURL)
+    public ItemDTOs(int itemId, string name, string description, double price, int quantity, int categoryId,
+        string categoryName, string imageURL)
     {
         this.ItemId = itemId;
         this.Name = name;
