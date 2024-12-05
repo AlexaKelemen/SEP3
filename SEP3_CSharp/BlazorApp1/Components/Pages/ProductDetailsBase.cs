@@ -15,6 +15,7 @@ public class ProductDetailsBase
 
         [Inject]
         public ICartService cartService { get; set; }
+        
 
         [Inject]
         public IManageItemsLocalStorageService ManageItemsLocalStorageService { get; set; }
