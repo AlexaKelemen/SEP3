@@ -169,6 +169,10 @@
             cardCvc = cardOnProfile.Cvc;
             cardExpirationDate = cardOnProfile.ExpirationDate;
         }
+        else
+        {
+            cardOnProfile = new Card();
+        }
         isPopupVisible = true;
 
     }
