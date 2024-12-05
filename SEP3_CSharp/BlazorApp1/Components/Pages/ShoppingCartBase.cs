@@ -6,7 +6,7 @@ using Microsoft.JSInterop;
 namespace BlazorApp1.Components.Pages
 
 {
-    public class ShoppingCartBaseTry : ComponentBase
+    public class ShoppingCartBase : ComponentBase
     {
         [Inject] public IJSRuntime Js { get; set; }
 

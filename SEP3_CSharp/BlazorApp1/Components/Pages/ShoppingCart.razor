@@ -1,7 +1,7 @@
 ﻿<h3>ShoppingCart</h3>
 @page "/ShoppingCart"
 
-@inherits ShoppingCartBaseTry
+@inherits ShoppingCartBase
 
 @if (CartItems.Count > 0)
 {
@@ -11,7 +11,7 @@
 
             @foreach (var item in CartItems)
             {
-            var cartItem = item.Value; // Create a mutable local variable for item.Value
+            var cartItem = item.Value; 
 
             <div class="row mb-4">
                 <div class="col-md-4">
