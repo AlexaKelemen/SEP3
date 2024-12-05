@@ -25,7 +25,7 @@ builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source= C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+    options.UseSqlite("Data Source= D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 builder.Services.AddScoped<IItemService, HttpItemService>();
 
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
