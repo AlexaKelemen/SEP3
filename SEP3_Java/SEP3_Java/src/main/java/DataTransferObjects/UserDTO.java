@@ -2,18 +2,25 @@ package DataTransferObjects;
 
 import Entities.Card;
 import Entities.User;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class UserDTO
 {
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private String username;
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private String email;
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private String firstName;
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private String lastName;
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private String billingAddress;
+  @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
   private Card card;
-  private static final ObjectMapper mapper = new ObjectMapper();
 
   public UserDTO(){}
   public UserDTO(User user)
@@ -59,29 +66,4 @@ public class UserDTO
   @JsonGetter("card")
   public Card getCard(){return card;}
 
-  public String toJson()
-  {
-    try
-    {
-      return mapper.writeValueAsString(this);
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-      return null;
-    }
-  }
-
-  public static UserDTO fromJson(String json)
-  {
-    try
-    {
-      return mapper.readValue(json, UserDTO.class);
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-      return null;
-    }
-  }
 }

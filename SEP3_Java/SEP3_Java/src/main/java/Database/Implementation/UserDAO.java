@@ -53,7 +53,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return user;
   }
 
-  @Override public synchronized User editUser(User user)
+  @Override public UserDTO editUser(UserDTO user)
   {
     try(Connection connection = super.establishConnection())
     {

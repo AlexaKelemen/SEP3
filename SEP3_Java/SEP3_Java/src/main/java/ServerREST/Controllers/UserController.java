@@ -73,9 +73,16 @@ public class UserController
     {
       if(request.getCard() != null)
       {
-
+        if(request.getCard().getCardId() == -1)
+        {
+          request.setCard(cardDAO.addCard(request.getCard()));
+        }
+        else
+        {
+          cardDAO.editCard(request.getCard());
+        }
       }
-      return new ResponseEntity<>(request, HttpStatus.OK) ;
+      return new ResponseEntity<>(userDAO.editUser(request), HttpStatus.OK) ;
     }
     catch (Exception e)
     {
