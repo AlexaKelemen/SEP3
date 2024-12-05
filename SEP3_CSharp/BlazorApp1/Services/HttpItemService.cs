@@ -21,9 +21,9 @@ public class HttpItemService : IItemService
     {
         return await _appDbContext.Items.Select(item => new ItemDTOs
         {
-            name = item.Name,
-            price = item.Price,
-            imageURL = item.ImageURL,
+            Name = item.Name,
+            Price = item.Price,
+            ImageUrl = item.ImageURL,
         }).ToListAsync();
     }
 
