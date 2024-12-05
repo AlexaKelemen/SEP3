@@ -17,7 +17,7 @@ public class ProductDetailsBase
         public ICartService cartService { get; set; }
 
         [Inject]
-        public IManageProductsLocalStorageService ManageProductsLocalStorageService { get; set; }
+        public IManageItemsLocalStorageService ManageItemsLocalStorageService { get; set; }
 
         [Inject]
         public IManageCartItemsLocalStorageService ManageCartItemsLocalStorageService { get; set; }
@@ -32,7 +32,7 @@ public class ProductDetailsBase
 
         private List<CartItemDTO> ShoppingCartItems { get; set; }
 
-        protected override async Task OnInitializedAsync()
+        protected async Task OnInitializedAsync()
         {
             try
             {
@@ -68,7 +68,7 @@ public class ProductDetailsBase
 
         private async Task<ItemDTO> GetProductById(int id)
         {
-            var productDtos = await ManageProductsLocalStorageService.GetCollection();
+            var productDtos = await ManageItemsLocalStorageService.GetCollection();
 
             if(productDtos!=null)
             {
