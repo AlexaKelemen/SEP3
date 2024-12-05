@@ -37,7 +37,16 @@ public class ProductDetailsBase
             try
             {
                 ShoppingCartItems = await ManageCartItemsLocalStorageService.GetCollection();
-                Item = await GetProductById(Id);
+                var product = await GetProductById(Id);
+                if (product != null)
+                {
+                    Item = new Proto.ItemDTO()
+                    {
+                        Name = product.Name,
+                        Description = product.Description,
+                        Price = product.Price
+                    };
+                }
             }
             catch (Exception ex)
             {
@@ -66,14 +75,20 @@ public class ProductDetailsBase
             }
         }
 
-        private async Task<ItemDTO> GetProductById(int id)
+        private async Task<DataTransferObjects.ItemDTOs> GetProductById(int id)
         {
             var productDtos = await ManageItemsLocalStorageService.GetCollection();
 
-            if(productDtos!=null)
+            if (productDtos != null)
             {
-                return productDtos.SingleOrDefault(p => p.Id == id);
+                var itemDto = productDtos.SingleOrDefault(p => p.ItemId == id);
+
+                if (itemDto != null)
+                {
+                    return itemDto; // Return directly since it's already the correct type
+                }
             }
+
             return null;
         }
 
