@@ -19,25 +19,12 @@ public class HttpItemService : IItemService
 
     public async Task<IEnumerable<ItemDTOs>> GetItems()
     {
-        try
+        return await _appDbContext.Items.Select(item => new ItemDTOs
         {
-            var dummyItems = await _appDbContext.Items.Select(item => new ItemDTOs
-                {
-                    itemId = item.ItemId,
-                    name = item.Name,
-                    price = item.Price,
-                    imageURL = item.ImageURL,
-                    description =   item.Description,
-                    quantity = item.Quantity,
-                })
-                .ToListAsync();
-            return dummyItems;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
+            Name = item.Name,
+            Price = item.Price,
+            ImageUrl = item.ImageURL,
+        }).ToListAsync();
     }
 
 }

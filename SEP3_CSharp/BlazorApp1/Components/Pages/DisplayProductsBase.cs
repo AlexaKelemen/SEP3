@@ -7,4 +7,9 @@ public class DisplayProductsBase:ComponentBase
 {
     [Parameter]
     public IEnumerable<ItemDTOs> Products { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
 }

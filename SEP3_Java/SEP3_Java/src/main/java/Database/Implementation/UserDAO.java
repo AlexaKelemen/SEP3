@@ -125,7 +125,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
       ArrayList<User> allUsers = new ArrayList<>();
       try(Connection connection = super.establishConnection())
       {
-        PreparedStatement statement = connection.prepareStatement("SELECT username, e_mail, f_name, l_name, billing_address\n"
+        PreparedStatement statement = connection.prepareStatement("SELECT username, password, e_mail, f_name, l_name, billing_address\n"
             + "FROM customer");
         ResultSet rs = statement.executeQuery();
         while (rs.next())

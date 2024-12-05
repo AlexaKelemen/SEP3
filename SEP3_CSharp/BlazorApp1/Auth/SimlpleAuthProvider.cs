@@ -1,4 +1,6 @@
-﻿namespace BlazorApp1.Auth;
+﻿using Entities;
+
+namespace BlazorApp1.Auth;
 using System.Security.Claims;
 using System.Text.Json;
 using DataTransferObjects;
@@ -77,8 +79,8 @@ public class SimpleAuthProvider : AuthenticationStateProvider
     }
     public async Task CreateUser(string username, string password)
     {
-        HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/createuser",
-            new CreateUserDTO()
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/createUser",
+            new User()
             {
                 Username = username,
                 Password = password
