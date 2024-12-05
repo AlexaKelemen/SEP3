@@ -5,6 +5,8 @@ import Database.DatabaseFactory;
 import Entities.Card;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,19 +36,24 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
     public synchronized Card addCard(Card card) {
         try (Connection connection = super.establishConnection()) {
             PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO card (card_number, expiration_date, cvc, f_name, l_name, username) VALUES (?, ?, ?, ?, ?, ?);"
+                    "INSERT INTO card (card_number, expiration_date, cvc, f_name, l_name, username) VALUES (?, ?, ?, ?, ?, ?);", PreparedStatement.RETURN_GENERATED_KEYS
             );
             statement.setString(1, card.getCardNumber());
-            statement.setDate(2, card.getExpirationDate());
+            statement.setDate(2, convertToSqlDate(card.getExpirationDate()));
             statement.setString(3, card.getCvc());
             statement.setString(4, card.getFName());
             statement.setString(5, card.getLName());
             statement.setString(6, card.getUsername());
             statement.executeUpdate();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next())
+            {
+                card.setCardId(generatedKeys.getInt("cardId"));
+            }
         } catch (SQLException e) {
             throw new RuntimeException("Why don't you try again, huh? Cause something went wrong during adding a card to the database: " + e.getMessage());
         }
-        return card;
+        return getCard(card.getCardId());
     }
     @Override
     public synchronized Card editCard(Card card) {
@@ -55,7 +62,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
                     "UPDATE card SET card_number = ?, expiration_date = ?, cvc = ?, f_name = ?, l_name = ?, username = ? WHERE card_id = ?;"
             );
             statement.setString(1, card.getCardNumber());
-            statement.setDate(2, card.getExpirationDate());
+            statement.setDate(2, convertToSqlDate(card.getExpirationDate()));
             statement.setString(3, card.getCvc());
             statement.setString(4, card.getFName());
             statement.setString(5, card.getLName());
@@ -65,7 +72,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         } catch (SQLException e) {
             throw new RuntimeException("Something went wrong during editing a card in the database: " + e.getMessage());
         }
-        return card;
+        return getCard(card.getCardId());
     }
     @Override
     public synchronized void deleteCard(int cardId) {
@@ -99,7 +106,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
                 String lName = rs.getString("l_name");
                 String username = rs.getString("username");
 
-                response = new Card(id, cardNumber, expirationDate, cvc, fName, lName, username);
+                response = new Card(id, cardNumber, expirationDate.toLocalDate(), cvc, fName, lName, username);
             }
         } catch (SQLException e) {
             throw new RuntimeException("Something went wrong during getting a card from the database: " + e.getMessage(), e);
@@ -126,7 +133,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
                 String lName = rs.getString("l_name");
                 String username = rs.getString("username");
 
-                Card element = new Card(id, cardNumber, expirationDate, cvc, fName, lName, username);
+                Card element = new Card(id, cardNumber, expirationDate.toLocalDate(), cvc, fName, lName, username);
                 allCards.add(element);
             }
         }
@@ -137,6 +144,12 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         return allCards;
     }
 
+    private Date convertToSqlDate(LocalDate date)
+    {
+        YearMonth helper = YearMonth.of(date.getYear()-1900, date.getMonthValue());
+        Date returnDate = new Date(date.getYear() - 1900, date.getMonthValue()-1, helper.atEndOfMonth().getDayOfMonth());
+        return returnDate;
+    }
 
 
 }

@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.sql.Date;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class Card {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
@@ -13,7 +14,7 @@ public class Card {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
     private String cardNumber;
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
-    private Date expirationDate;
+    private LocalDate expirationDate;
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
     private String cvc;
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
@@ -26,7 +27,7 @@ public class Card {
     public Card()
     {
     }
-    public Card(int cardId, String cardNumber, Date expirationDate, String cvc, String fName, String lName, String username)
+    public Card(int cardId, String cardNumber, LocalDate expirationDate, String cvc, String fName, String lName, String username)
     {
         this.cardId = cardId;
         this.cardNumber = cardNumber;
@@ -55,11 +56,11 @@ public class Card {
         this.cardNumber = cardNumber;
     }
     @JsonGetter("expirationdate")
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 
