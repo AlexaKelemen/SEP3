@@ -158,19 +158,18 @@
     }
 
     private void ChangeCard()
-
     {
         errorLabel = "";   
-        if (cardOnProfile != null)
+        if (cardOnProfile == null)
         {
-            cardNumber = cardOnProfile.CardNumber;
-            cardFirstName = cardOnProfile.FName;
-            cardLastName = cardOnProfile.LName;
-            cardCvc = cardOnProfile.Cvc;
-            cardExpirationDate = cardOnProfile.ExpirationDate;
+            cardOnProfile = new Card();
         }
+        cardNumber = cardOnProfile.CardNumber;
+        cardFirstName = cardOnProfile.FName;
+        cardLastName = cardOnProfile.LName;
+        cardCvc = cardOnProfile.Cvc;
+        cardExpirationDate = cardOnProfile.ExpirationDate;
         isPopupVisible = true;
-
     }
 
     private void ClosePopup()
@@ -189,11 +188,16 @@
         }
         else
         {
+            if (cardOnProfile.CardId == null || cardOnProfile.CardId == 0)
+            {
+                cardOnProfile.CardId = -1;
+            }
             cardOnProfile.CardNumber = cardNumber;
             cardOnProfile.FName = cardFirstName;
             cardOnProfile.LName = cardLastName;
             cardOnProfile.Cvc = cardCvc;
             cardOnProfile.ExpirationDate = cardExpirationDate;
+            cardOnProfile.Username = username;
 
             ClosePopup();
         }

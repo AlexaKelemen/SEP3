@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hZmr/gBefC0=",
+  "dgSpecHash": "VF5fOrQSPd8=",
   "success": true,
-  "projectFilePath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\salom\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\salom\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\salom\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
