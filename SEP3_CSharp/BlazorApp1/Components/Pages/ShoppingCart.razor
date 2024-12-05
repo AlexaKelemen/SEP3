@@ -1,5 +1,4 @@
-﻿@*
-<h3>ShoppingCart</h3>
+﻿<h3>ShoppingCart</h3>
 @page "/ShoppingCart"
 
 @inherits ShoppingCartBaseTry
@@ -9,34 +8,36 @@
     <h3 class="mb-5">Shopping Cart</h3>
     <div class="row mb-5">
         <div class="col-md-9">
+
             @foreach (var item in CartItems)
             {
-                <div class="row mb-4">
-                    <div class="col-md-4">
-                        <img src="@item.Value.Item.ImageURL" width="300" class="img-thumbnail">
-                    </div>
-                    <div class="col-md-8">
-                        <h5>@item.Value.Item.Name</h5>
-                        <div class="mb-4">@item.Value.Item.Description</div>
-                        <span>
-                            Price: <b>@item.Value.Item.Price.ToString("C")</b>
-                            <input type="number" @bind="@item.Value.Quantity" 
-                                   @onchange="(e) => UpdateQuantity(item.Key, Convert.ToInt32(e.Value))" />
-                            <button class="btn btn-info btn-sm update-qty"
-                                    @onclick="(() => UpdateQuantity(item.Key, item.Value.Quantity))">
-                                Update Qty
-                            </button>
-                        </span>
-                        <div>
-                            <button @onclick="(() => RemoveFromCart(item.Key))"
-                                    class="btn btn-danger sm">
-                                <i class="fa fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
+            var cartItem = item.Value; // Create a mutable local variable for item.Value
+
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="@cartItem.Item.ImageURL" alt="@cartItem.Item.Name" class="img-thumbnail" />
                 </div>
+                <div class="col-md-8">
+                    <h5>@cartItem.Item.Name</h5>
+                    <p>@cartItem.Item.Description</p>
+                    <p>Price: <b>@cartItem.Item.Price.ToString("C")</b></p>
+                    <p>Quantity:</p>
+                    <input type="number" value="@cartItem.Quantity"
+                           @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))" />
+                    <button class="btn btn-info btn-sm"
+                            @onclick="(() => UpdateQuantity(item.Key, cartItem.Quantity))">
+                        Update Qty
+                    </button>
+                    <button class="btn btn-danger sm"
+                            @onclick="(() => RemoveFromCart(item.Key))">
+                        <i class="fa fa-trash"></i> Remove
+                    </button>
+                </div>
+            </div>
             }
-        </div>
+
+            }
+</div>
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
@@ -54,4 +55,3 @@ else
 {
     <h4>There are currently no items in your shopping cart</h4>
 }
-*@
