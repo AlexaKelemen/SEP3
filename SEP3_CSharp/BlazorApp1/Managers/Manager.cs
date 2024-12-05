@@ -1,4 +1,5 @@
 using BlazorApp1.Services;
+using DataTransferObjects;
 using Entities;
 using Grpc.Net.Client;
 using Proto;
@@ -27,8 +28,8 @@ public class Manager : IManager
         return await UserManager.GetUser(username);
     }
 
-    public async Task SaveUserInfo(User user)
+    public async Task SaveUserInfo(UserDTO userdto)
     {
-        await UserManager.SaveUserInfo(user);
+        await UserManager.SaveUserInfo(userdto);
     }
 }

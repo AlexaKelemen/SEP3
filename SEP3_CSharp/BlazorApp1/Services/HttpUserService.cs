@@ -24,9 +24,9 @@ public class HttpUserService:IUserService
             PropertyNameCaseInsensitive = true
         })!;
     }
-    public async Task<UserDTO> GetUserAsync(string username)
+    public async Task<UserDTO> GetUserAsync(string username, bool includeCard)
     {
-        HttpResponseMessage response = await httpClient.GetAsync($"users/{username}");
+        HttpResponseMessage response = await httpClient.GetAsync($"users/{username}/{includeCard}");
         string responseString = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -54,9 +54,10 @@ public class HttpUserService:IUserService
             PropertyNameCaseInsensitive = true
         })!;
     }
-    public async Task EditUserAsync(int id, UserDTO request)
+
+    public async Task UpdateUserAsync(UserDTO request)
     {
-        HttpResponseMessage response = await httpClient.PutAsJsonAsync($"users/{id}", request);
+        HttpResponseMessage response = await httpClient.PutAsJsonAsync($"users/{request.Username}", request);
         string responseString = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)

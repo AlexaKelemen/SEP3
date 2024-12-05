@@ -1,4 +1,6 @@
-﻿namespace BlazorApp1.Auth;
+﻿using Entities;
+
+namespace BlazorApp1.Auth;
 using System.Security.Claims;
 using System.Text.Json;
 using DataTransferObjects;
@@ -74,5 +76,20 @@ public class SimpleAuthProvider : AuthenticationStateProvider
         ClaimsIdentity identity = new ClaimsIdentity(claims, "apiauth");ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
         return new AuthenticationState(claimsPrincipal);
 
+    }
+    public async Task CreateUser(string username, string password)
+    {
+        HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/createUser",
+            new User()
+            {
+                Username = username,
+                Password = password
+            });
+        string content = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(content);
+        }
+        await Login(username, password);
     }
 }

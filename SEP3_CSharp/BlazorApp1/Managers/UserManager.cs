@@ -23,20 +23,22 @@ public class UserManager : IUserManager
             throw new ArgumentException("Username cannot be null or empty", nameof(username));
         }
 
-        UserDTO response = await UserService.GetUserAsync(username);
+        UserDTO response = await UserService.GetUserAsync(username, true);
         User user = new User
         {
             Username = response.Username,
             Email = response.Email,
             FirstName = response.FirstName,
-            LastName = response.FirstName,
-            Address = response.Address
+            LastName = response.LastName,
+            BillingAddress = response.BillingAddress,
+            Card = response.Card
         };
         return user;
     }
 
-    public async Task SaveUserInfo(User user)
+    public async Task SaveUserInfo(UserDTO userdto)
     {
-        throw new NotImplementedException();
+        
+        await UserService.UpdateUserAsync(userdto);
     }
 }

@@ -13,21 +13,20 @@
 
 <AuthorizeView>
     <Authorized>
-        <h1>Hello </h1>
+        <h1>Hello @username</h1>
 
         <h3>User Information</h3>
         <p><label>First name:</label>
             <input type="text" @bind="firstName"/></p>
         <p><label>Last name:</label>
             <input type="text" @bind="lastName"/></p>
-        <p><label>Username:</label>
-            <input type="text" @bind="username"/></p>
         <p><label>Email:</label>
             <input type="text" @bind="email"/></p>
         <p><label>Address:</label>
             <input type="text" @bind="address"/></p>
         <p><label>Card information:</label>
             <label>@paymentInfo</label>  <button type="button" class="btn btn-primary" @onclick="ChangeCard">Change card </button></p>
+        <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save</button>
 
         @if (isPopupVisible)
 
@@ -39,7 +38,7 @@
                         <h5> Change card</h5>
                     </div>
                     <div class="modal-body">
-                        <EditForm Model="newCard" Context="editcard">
+                        <EditForm Model="user" Context="editcard">
 
                             <DataAnnotationsValidator />
                             <ValidationSummary />
@@ -94,12 +93,11 @@
     private string? errorLabel;
     private string cardFirstName;
     private string cardLastName;
-    private int cardCvc;
+    private string cardCvc;
     private string cardNumber;
     private DateOnly cardExpirationDate;
     private User user;
     private Card? cardOnProfile;
-    private CardDTO newCard;
     private bool isPopupVisible, isDeletePopupVisible = false;
 
 
@@ -120,7 +118,7 @@
             email = user.Email;
             firstName = user.FirstName;
             lastName = user.LastName;
-            address = user.Address;
+            address = user.BillingAddress;
             cardOnProfile = user.Card;
             if (user.Card != null)
             {
@@ -136,14 +134,36 @@
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (!string.IsNullOrEmpty(username))
         {
-            
+            UserDTO userUpdate = new UserDTO()
+            {
+                BillingAddress = address,
+                Card = cardOnProfile,
+                Email = email,
+                FirstName = firstName,
+                LastName = lastName,
+                Username = username
+            };
+            await Manager.SaveUserInfo(userUpdate);
         }
+        else
+        {
+            errorLabel = "Your username cannot be null";
+        }
+        
     }
 
     private void ChangeCard()
 
     {
-        newCard = new CardDTO();
+        
+        if (cardOnProfile != null)
+        {
+            cardNumber = cardOnProfile.CardNumber;
+            cardFirstName = cardOnProfile.FName;
+            cardLastName = cardOnProfile.LName;
+            cardCvc = cardOnProfile.Cvc;
+            cardExpirationDate = cardOnProfile.ExpirationDate;
+        }
         isPopupVisible = true;
 
     }
@@ -153,16 +173,19 @@
         isPopupVisible = false;
     }
 
-    private async Task SaveCard()
+    private void SaveCard()
     {
-        newCard = new CardDTO()
+        if (cardOnProfile.CardId == null)
         {
-            CardNumber = cardNumber,
-            Cvc = cardCvc,
-            ExpirationDate = cardExpirationDate,
-            FirstName = cardFirstName,
-            LastName = cardLastName
-        };
+            cardOnProfile.CardId = -1;
+            cardOnProfile.Username = username;
+        }
+        cardOnProfile.CardNumber = cardNumber;
+        cardOnProfile.FName = cardFirstName;
+        cardOnProfile.LName = cardLastName;
+        cardOnProfile.Cvc = cardCvc;
+        cardOnProfile.ExpirationDate = cardExpirationDate;
+        
         ClosePopup();
     }
 

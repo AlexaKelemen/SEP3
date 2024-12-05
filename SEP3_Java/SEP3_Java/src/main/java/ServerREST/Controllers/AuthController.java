@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @RestController
 public class AuthController
@@ -46,5 +47,23 @@ public class AuthController
     }
     UserDTO response = new UserDTO(user);
     return new ResponseEntity<>(response, HttpStatus.OK);
+  }
+
+  @PostMapping("auth/createUser")
+  public synchronized ResponseEntity<UserDTO> createUser(@RequestBody User request)
+  {
+    if(request == null)
+    {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    ArrayList<User> users = userDAO.getAllUsers();
+    for (int i = 0; i < users.size(); i++)
+    {
+      if(users.get(i).getUsername().equals(request.getUsername()))
+      {
+        return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+      }
+    }
+    return new ResponseEntity<>(new UserDTO(userDAO.addUser(request)), HttpStatus.CREATED);
   }
 }
