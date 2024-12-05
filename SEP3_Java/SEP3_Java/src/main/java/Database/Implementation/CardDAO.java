@@ -48,7 +48,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
             ResultSet generatedKeys = statement.getGeneratedKeys();
             if(generatedKeys.next())
             {
-                card.setCardId(generatedKeys.getInt("cardId"));
+                card.setCardId(generatedKeys.getInt("card_id"));
             }
         } catch (SQLException e) {
             throw new RuntimeException("Why don't you try again, huh? Cause something went wrong during adding a card to the database: " + e.getMessage());
