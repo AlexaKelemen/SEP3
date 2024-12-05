@@ -16,3 +16,5 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\obj\
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\Entities.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\Entities.pdb
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\obj\Debug\net8.0\Database.D893235E.Up2Date
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DataTransferObjects.dll
+C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\DatabaseConnection\bin\Debug\net8.0\DataTransferObjects.pdb

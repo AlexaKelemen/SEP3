@@ -1,4 +1,5 @@
-﻿using BlazorApp1.Services.Contracts;
+﻿using BlazorApp1.Services;
+using BlazorApp1.Services.Contracts;
 using DataTransferObjects;
 using Microsoft.AspNetCore.Components;
 using Proto;
@@ -9,11 +10,13 @@ public class ProductBase: ComponentBase
 {
     [Inject]
     public IItemService ItemService { get; set; }
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
     
-    public IEnumerable<ItemDTOs> Products { get; set; }
+    public IEnumerable<ItemDTOs> Items{ get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Products = await ItemService.GetItems();
+        Items = await ItemService.GetItems();
     }
 }

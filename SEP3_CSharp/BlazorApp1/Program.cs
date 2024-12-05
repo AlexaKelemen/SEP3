@@ -8,6 +8,7 @@ using Managers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,11 +24,11 @@ builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhos
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
-builder.Services.AddScoped<IItemService, HttpItemService>();
-builder.Services.AddRazorComponents().AddInteractiveServerComponents();
-var connectionString = builder.Configuration.GetConnectionString("\"Data Source=DatabaseConnection/database.db\"");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(connectionString));
+    options.UseSqlite("Data Source= C:\\Users\\user\\OneDrive\\Documents\\GitHub\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+builder.Services.AddScoped<IItemService, HttpItemService>();
+
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 
 
@@ -42,6 +43,11 @@ if (! app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
     app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
+}
+var directory = Path.Combine(AppContext.BaseDirectory, "DatabaseConnection");
+if (!Directory.Exists(directory))
+{
+    Directory.CreateDirectory(directory);
 }
 
 app.UseHttpsRedirection();
