@@ -1,4 +1,6 @@
 using BlazorApp1.Services;
+using BlazorApp1.Services.Contracts;
+using DatabaseConnection;
 using DataTransferObjects;
 using Entities;
 using Grpc.Net.Client;
@@ -18,13 +20,15 @@ public class Manager : IManager
     
     private IItemManager ItemManager;
     
+    
 
-    public Manager(GrpcChannel channel, IUserService userService)
+    public Manager(GrpcChannel channel, IUserService userService, AppDbContext dbContext, IItemService itemService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
         UserManager = new UserManager(stub, userService);
-        
+        ItemManager = new ItemManager(dbContext, itemService);
+
     }
     public async Task<User> GetUser(string username)
     {
