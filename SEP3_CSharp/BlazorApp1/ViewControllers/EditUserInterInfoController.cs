@@ -1,5 +1,5 @@
-﻿using Entities;
-using Managers;
+﻿using BlazorApp1.Managers;
+using Entities;
 //using SourceCode;
 
 namespace BlazorApp1.ViewControllers;

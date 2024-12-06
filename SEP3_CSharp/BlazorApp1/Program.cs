@@ -4,7 +4,7 @@ using BlazorApp1.Services;
 using BlazorApp1.Services.Contracts;
 using DatabaseConnection;
 using Grpc.Net.Client;
-using Managers;
+using BlazorApp1.Managers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.EntityFrameworkCore;

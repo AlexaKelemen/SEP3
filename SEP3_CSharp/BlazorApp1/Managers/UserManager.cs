@@ -1,10 +1,10 @@
 using BlazorApp1.Services;
+using BlazorApp1.Services.Contracts;
 using DataTransferObjects;
 using Entities;
 using Proto;
 
-
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public class UserManager : IUserManager
 {

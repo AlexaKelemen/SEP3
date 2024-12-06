@@ -36,7 +36,7 @@ public class AuthController
       System.out.println(e.getMessage());
       return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
-    if(user == null)
+    if(user.getUsername().isEmpty())
     {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -51,7 +51,7 @@ public class AuthController
   @PostMapping("auth/createUser")
   public synchronized ResponseEntity<UserDTO> createUser(@RequestBody User request)
   {
-    if(request == null)
+    if(request == null || request.getUsername().isEmpty() || request.getPassword().isEmpty())
     {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
@@ -63,6 +63,13 @@ public class AuthController
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
       }
     }
-    return new ResponseEntity<>(new UserDTO(userDAO.addUser(request)), HttpStatus.CREATED);
+    try
+    {
+      return new ResponseEntity<>(new UserDTO(userDAO.addUser(request)), HttpStatus.CREATED);
+    }
+    catch (Exception e)
+    {
+      return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+    }
   }
 }

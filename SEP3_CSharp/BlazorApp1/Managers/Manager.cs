@@ -6,7 +6,7 @@ using Proto;
 
 
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public class Manager : IManager
 {
@@ -15,6 +15,9 @@ public class Manager : IManager
     private UserService.UserServiceClient stub;
 
     private IUserService UserService;
+    
+    private IItemManager ItemManager;
+    
 
     public Manager(GrpcChannel channel, IUserService userService)
     {
@@ -31,5 +34,15 @@ public class Manager : IManager
     public async Task SaveUserInfo(UserDTO userdto)
     {
         await UserManager.SaveUserInfo(userdto);
+    }
+
+    public async Task<ItemDTOs> GetProductById(int productId)
+    {
+       return await ItemManager.GetItem(productId);
+    }
+
+    public async Task<IEnumerable<ItemDTOs>> GetItems()
+    {
+        return await ItemManager.GetItems();
     }
 }
