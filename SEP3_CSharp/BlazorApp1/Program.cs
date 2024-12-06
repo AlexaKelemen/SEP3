@@ -27,7 +27,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 builder.Services.AddScoped<ICartService, HttpCartService>();
 builder.Services.AddScoped<IItemService, HttpItemService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source= D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+    options.UseSqlite("Data Source= C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 
 
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();

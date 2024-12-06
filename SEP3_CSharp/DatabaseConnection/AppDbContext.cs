@@ -208,6 +208,27 @@ public class AppDbContext : DbContext
             Colour = "Black",
             Size = "Small",
         });
+        modelBuilder.Entity<Category>().ToTable("Categories");
+        modelBuilder.Entity<Category>().HasData(new Category
+        {
+           CategoryId = 1,
+           CategoryName = "Clothing",
+           CategoryDescription = "Different kinds of clothing"
+        });
+        modelBuilder.Entity<Category>().ToTable("Categories");
+        modelBuilder.Entity<Category>().HasData(new Category
+        {
+            CategoryId = 2,
+            CategoryName = "Shoes",
+            CategoryDescription = "Different kinds of Shoes"
+        });
+        modelBuilder.Entity<Category>().ToTable("Categories");
+        modelBuilder.Entity<Category>().HasData(new Category
+        {
+            CategoryId = 3,
+            CategoryName = "Accessories",
+            CategoryDescription = "Different kinds of accessories"
+        });
     }
     
 }
