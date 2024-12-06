@@ -21,9 +21,31 @@ public class ItemManager:IItemManager
     }
 
 
-    public async Task<Item> GetItem(int id)
+    public async Task<ItemDTOs> GetItem(int id)
     {
-        return await _dbContext.Items.FirstOrDefaultAsync(i => i.ItemId == id);
+        Item item = new Item();
+        try
+        {
+            item = await _dbContext.Items.FirstOrDefaultAsync(i => i.ItemId == id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
+
+        ItemDTOs itemDTO = new ItemDTOs()
+        {
+            ItemId = item.ItemId,
+            Name = item.Name,
+            Description = item.Description,
+            Price = item.Price,
+            CategoryId = item.CategoryId,
+            ImageUrl = item.ImageURL
+
+        };
+        return itemDTO;
     }
 
     public async Task<Category> GetCategory(int CategoryId)

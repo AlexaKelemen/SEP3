@@ -15,6 +15,9 @@ public class Manager : IManager
     private UserService.UserServiceClient stub;
 
     private IUserService UserService;
+    
+    private IItemManager ItemManager;
+    
 
     public Manager(GrpcChannel channel, IUserService userService)
     {

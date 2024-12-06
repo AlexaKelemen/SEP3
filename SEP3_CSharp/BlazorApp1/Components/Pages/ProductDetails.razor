@@ -1,7 +1,8 @@
 ﻿@page "/ProductDetails/{Id:int}"
+@using BlazorApp1.Managers
 @using DataTransferObjects
 @using BlazorApp1.Services.Contracts;
-@using global::Managers
+
 @using Microsoft.AspNetCore.Components;
 @inject NavigationManager NavigationManager
 @inject IManager Manager
@@ -47,16 +48,7 @@ else
         {
             try
             {
-                var product = await Manager.GetProductById(Id);
-                if (product != null)
-                {
-                    Item = new ItemDTOs()
-                    {
-                        Name = product.Name,
-                        Description = product.Description,
-                        Price = product.Price
-                    };
-                }
+                var Item = await Manager.GetProductById(Id);
             }
             catch (Exception ex)
             {
@@ -64,25 +56,12 @@ else
             }
         }
 
-        private async Task AddToCart_Click(CartItemToAddDTO cartItemToAddDto)
+        private async Task AddToCart_Click()
         {
-            try
-            {
-               var cartItemDto = await cartService.AddItem(cartItemToAddDto);
-
-                if (cartItemDto != null)
-                {
-                    ShoppingCartItems.Add(cartItemDto);
-                    await ManageCartItemsLocalStorageService.SaveCollection(ShoppingCartItems);
-                }
+           
 
                NavigationManager.NavigateTo("/ShoppingCart");
-            }
-            catch (Exception)
-            {
-
-                //Log Exception
-            }
+            
         }
 
     }
