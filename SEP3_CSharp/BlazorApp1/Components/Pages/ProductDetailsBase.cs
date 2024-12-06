@@ -27,7 +27,7 @@ public class ProductDetailsBase
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
-        public ItemDTO Item { get; set; }
+        public ItemDTOs Item { get; set; }
 
         public string ErrorMessage { get; set; }
 
@@ -41,11 +41,13 @@ public class ProductDetailsBase
                 var product = await GetProductById(Id);
                 if (product != null)
                 {
-                    Item = new Proto.ItemDTO()
+                    Item = new ItemDTOs()
                     {
                         Name = product.Name,
                         Description = product.Description,
-                        Price = product.Price
+                        Price = product.Price,
+                        Quantity = product.Quantity,
+                        ImageUrl = product.ImageUrl
                     };
                 }
             }

@@ -42,17 +42,18 @@ namespace DatabaseConnection.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Cvc")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Cvc")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateOnly>("ExpirationDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("FName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("LName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -119,17 +120,182 @@ namespace DatabaseConnection.Migrations
 
                     b.HasKey("ItemId");
 
-                    b.ToTable("Items");
+                    b.ToTable("Items", (string)null);
 
                     b.HasData(
                         new
                         {
                             ItemId = 1,
                             Colour = "Blue",
-                            Description = "A kit provided by Glossier, containing skin care, hair care and makeup products",
-                            ImageURL = "/Images/Shoes/shoes1.png",
-                            Name = "Glossier - Beauty Kit",
-                            Price = 100f,
+                            Description = "Tired of painful soles? Try this now!",
+                            ImageURL = "Images/Shoes/shoes1.png",
+                            Name = "Comfy shoes",
+                            Price = 10f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 2,
+                            Colour = "Red",
+                            Description = "Perfect fit for a runner",
+                            ImageURL = "Images/Shoes/shoes2.png",
+                            Name = "Running shoes",
+                            Price = 5f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 3,
+                            Colour = "Green",
+                            Description = " Comfortable, long and flowy!",
+                            ImageURL = "Images/Clothes/clothing1.jpg",
+                            Name = "Summer dress",
+                            Price = 15f,
+                            Quantity = 100,
+                            Size = "Large"
+                        },
+                        new
+                        {
+                            ItemId = 4,
+                            Colour = "Grey",
+                            Description = "Classic white lace up sneakers with a minimalist design",
+                            ImageURL = "Images/Shoes/shoes4.png",
+                            Name = "White Sneakers",
+                            Price = 10f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 5,
+                            Colour = "Red",
+                            Description = "Beautiful blend from white to black",
+                            ImageURL = "Images/Shoes/shoes5.png",
+                            Name = "White and black ankle sneakers",
+                            Price = 20f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 6,
+                            Colour = "Brown",
+                            Description = "Perfect for driving people away from your house",
+                            ImageURL = "Images/accessories/Accessory21.png",
+                            Name = "Amazing footmat",
+                            Price = 30f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 7,
+                            Colour = "Black",
+                            Description = "Stylish glasses with black, round frames",
+                            ImageURL = "Images/accessories/Accessory7.png",
+                            Name = "Eyeglasses",
+                            Price = 10f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 8,
+                            Colour = "Brown",
+                            Description = "Brown hand bag with reinforced handles",
+                            ImageURL = "Images/accessories/Accessory11.png",
+                            Name = "Small Hand bag",
+                            Price = 27f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 9,
+                            Colour = "White",
+                            Description = "Perfect gift to give to lovers of ducks!",
+                            ImageURL = "Images/accessories/Accessory14.png",
+                            Name = "Funny ducks",
+                            Price = 7f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 10,
+                            Colour = "Black & White",
+                            Description = "Good, durable quality",
+                            ImageURL = "Images/accessories/Accessory19.png",
+                            Name = "Funny clothespin",
+                            Price = 5f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 11,
+                            Colour = "Brown",
+                            Description = "Durable but easily removed glue",
+                            ImageURL = "Images/accessories/Accessory17.png",
+                            Name = "Funny sticker",
+                            Price = 5f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 12,
+                            Colour = "Black & Brown",
+                            Description = "Beautiful leather wallet",
+                            ImageURL = "Images/accessories/Accessory10.png",
+                            Name = "Small, feminine wallet",
+                            Price = 15f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 13,
+                            Colour = "Green",
+                            Description = "Comfortable cotton. One out of 10 girls recommend",
+                            ImageURL = "Images/Clothes/clothing2.jpg",
+                            Name = "Bright green dress",
+                            Price = 25f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 14,
+                            Colour = "Black",
+                            Description = "Very comfortable and stretchy material",
+                            ImageURL = "Images/Clothes/clothing3.jpg",
+                            Name = "Beautiful black dinner dress",
+                            Price = 35f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 15,
+                            Colour = "Black",
+                            Description = "Sleek black boots with low heels and a zipper",
+                            ImageURL = "Images/shoes/shoes16.png",
+                            Name = "Black ankle boots",
+                            Price = 12f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 16,
+                            Colour = "Black",
+                            Description = "Durable, stretchy bracelet",
+                            ImageURL = "Images/accessories/Accessory6.png",
+                            Name = "Black bracelet",
+                            Price = 5f,
                             Quantity = 100,
                             Size = "Small"
                         });
@@ -183,7 +349,7 @@ namespace DatabaseConnection.Migrations
                     b.Property<string>("Username")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Address")
+                    b.Property<string>("BillingAddress")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

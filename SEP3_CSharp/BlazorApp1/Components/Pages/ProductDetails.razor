@@ -1,38 +1,38 @@
-﻿@page "/ProductDetails/{Id:int}"
-@using DataTransferObjects
-@inherits ProductDetailsBase
-
-
-@if (Item == null && ErrorMessage == null)
-{
-    <DisplaySpinner/>
-}
-else if (ErrorMessage != null)
-{
-    <DisplayError ErrorMessage="@ErrorMessage"></DisplayError>
-}
-else
-{
-    <h3 class="mb-5">Product Details</h3>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <img class="img-fluid" src="@Item.ImageURL" alt="@Item.Name">
-        </div>
-        <div class="col-md-6">
-            <h3>@Item.Name</h3>
-            <p class="mb-4">@Item.Description</p>
-            <p class="mb-4">
-                <b>
-                    @Item.Price.ToString("C")&nbsp;(@Item.Quantity items in stock)
-                </b>
-            </p>
-            <div>
-                <button class="btn btn-success"
-                        @onclick="() => (AddToCart_Click(new CartItemToAddDTO() { CartId = HardCoded.CartId, ItemId = Id, Quantity = 1 }))">
-                    <b>Add to Cart</b>
-                </button>
-            </div>
-        </div>
-
-    </div>
-}
+﻿@* @page "/ProductDetails/{Id:int}" *@
+@* @using DataTransferObjects *@
+@* @inherits ProductDetailsBase *@
+@* *@
+@* *@
+@* @if (Item == null && ErrorMessage == null) *@
+@* { *@
+@*     <DisplaySpinner/> *@
+@* } *@
+@* else if (ErrorMessage != null) *@
+@* { *@
+@*     <DisplayError ErrorMessage="@ErrorMessage"></DisplayError> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <h3 class="mb-5">Product Details</h3> *@
+@*     <div class="row"> *@
+@*         <div class="col-md-6 mb-4"> *@
+@*             <img class="img-fluid" src="@Item.ImageUrl" alt="@Item.Name"> *@
+@*         </div> *@
+@*         <div class="col-md-6"> *@
+@*             <h3>@Item.Name</h3> *@
+@*             <p class="mb-4">@Item.Description</p> *@
+@*             <p class="mb-4"> *@
+@*                 <b> *@
+@*                     @Item.Price.ToString("C")&nbsp;(@Item.Quantity items in stock) *@
+@*                 </b> *@
+@*             </p> *@
+@*             <div> *@
+@*                 $1$ <button class="btn btn-success" #1# *@
+@*                 $1$         $2$ @onclick="() => (AddToCart_Click(new CartItemToAddDTO() { CartId = HardCoded.CartId, ItemId = Id, Quantity = 1 }))"> #2# #1# *@
+@*                 $1$     <b>Add to Cart</b> #1# *@
+@*                 $1$ </button> #1# *@
+@*             </div> *@
+@*         </div> *@
+@* *@
+@*     </div> *@
+@* } *@

@@ -13,12 +13,9 @@ public class HttpItemService : IItemService
     private readonly AppDbContext _appDbContext;
     private readonly HttpClient _httpClient;
 
-    public HttpItemService(AppDbContext appDbContext)
+    public HttpItemService(AppDbContext appDbContext,  HttpClient httpClient)
     {
         _appDbContext = appDbContext;
-    }
-    public HttpItemService(HttpClient httpClient)
-    {
         this._httpClient = httpClient;
     }
 
