@@ -1,6 +1,6 @@
 ﻿using Entities;
 
-namespace Managers.Server;
+namespace BlazorApp1.Managers;
 
 public interface ICartManager
 {

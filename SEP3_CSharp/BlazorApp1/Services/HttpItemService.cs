@@ -11,10 +11,15 @@ namespace BlazorApp1.Services;
 public class HttpItemService : IItemService
 {
     private readonly AppDbContext _appDbContext;
+    private readonly HttpClient _httpClient;
 
     public HttpItemService(AppDbContext appDbContext)
     {
         _appDbContext = appDbContext;
+    }
+    public HttpItemService(HttpClient httpClient)
+    {
+        this._httpClient = httpClient;
     }
 
     public async Task<IEnumerable<ItemDTOs>> GetItems()
@@ -27,4 +32,41 @@ public class HttpItemService : IItemService
         }).ToListAsync();
     }
 
+    public async Task<ItemDTOs> GetItem(int id)
+    {
+        var item = await _appDbContext.Items
+            .Where(i => i.ItemId == id)
+            .Select(i => new ItemDTOs
+            {
+                Name = i.Name,
+                Price = i.Price,
+                ImageUrl = i.ImageURL,
+            })
+            .FirstOrDefaultAsync();
+
+        if (item == null)
+        {
+            throw new KeyNotFoundException($"Item with ID {id} not found.");
+        }
+
+        return item;
+    }
+/*
+    public Task<IEnumerable<ProductCategoryDto>> GetProductCategories()
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<IEnumerable<ItemDTOs>> GetItemsByCategory(int CategoryId)
+    {
+        return await _appDbContext.Items
+            .Where(i => i.CategoryId ==categoryid)
+            .Select(i => new ItemDTOs
+            {
+                Name = i.Name,
+                Price = i.Price,
+                ImageUrl = i.ImageURL,
+            })
+            .ToListAsync();
+    }*/
 }

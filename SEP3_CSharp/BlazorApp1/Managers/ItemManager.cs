@@ -5,7 +5,7 @@ using Entities.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Proto;
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public class ItemManager:IItemManager
 {

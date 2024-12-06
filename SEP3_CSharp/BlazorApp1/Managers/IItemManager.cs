@@ -3,7 +3,7 @@ using Entities;
 using Entities.Utilities;
 using Proto;
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public interface IItemManager
 {
