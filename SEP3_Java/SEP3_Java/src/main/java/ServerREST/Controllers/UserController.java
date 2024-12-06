@@ -82,7 +82,7 @@ public class UserController
           request.setCard(cardDAO.editCard(request.getCard()));
         }
       }
-      return new ResponseEntity<>(userDAO.editUser(request), HttpStatus.OK) ;
+      return new ResponseEntity<>(new UserDTO(userDAO.editUser(request)), HttpStatus.OK) ;
     }
     catch (Exception e)
     {

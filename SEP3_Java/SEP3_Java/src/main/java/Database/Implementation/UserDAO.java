@@ -53,7 +53,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return user;
   }
 
-  @Override public UserDTO editUser(UserDTO user)
+  @Override public User editUser(UserDTO user)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -69,9 +69,9 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     }
     catch (SQLException e)
     {
-      throw new RuntimeException("Something whent wrong while updating the user in the database: " + e.getMessage());
+      throw new RuntimeException("Something went wrong while updating the user in the database: " + e.getMessage());
     }
-    return user;
+    return getUser(user.getUsername());
   }
 
   @Override public synchronized void deleteUser(String username)
