@@ -1,9 +1,13 @@
 ﻿@page "/Product"
+@using System.Collections
 @using BlazorApp1.Managers
 @using ItemDTO = DataTransferObjects.ItemDTOs
 @using DataTransferObjects
-@inject IManager Manager;
+@using Entities
+@using Entities.Utilities
+@inject IManager Manager
 @inject NavigationManager NavigationManager
+
 
 
 @if (Items == null)
@@ -33,11 +37,14 @@ else
 @code 
 {
     
+    private IEnumerable<ItemDTOs> Items{ get; set; }
+    private List<Category> categories;
     
-    public IEnumerable<ItemDTOs> Items{ get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Items = await Manager.GetItems();
+        Items = await Manager.GetItemsAsync();
+        categories = Manager.GetCategoriesAsync().Result.ToList();
+        
     }
 }

@@ -5,6 +5,6 @@ namespace BlazorApp1.Managers;
 
 public interface IUserManager
 {
-    Task<User> GetUser(string username);
-    Task SaveUserInfo(UserDTO userdto);
+    Task<User> GetUserAsync(string username);
+    Task SaveUserInfoAsync(UserDTO userdto);
 }

@@ -16,7 +16,7 @@ public class UserManager : IUserManager
         this.stub = stub;
         UserService = userService;
     }
-    public async Task<User> GetUser(string username)
+    public async Task<User> GetUserAsync(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
         {
@@ -36,7 +36,7 @@ public class UserManager : IUserManager
         return user;
     }
 
-    public async Task SaveUserInfo(UserDTO userdto)
+    public async Task SaveUserInfoAsync(UserDTO userdto)
     {
         
         await UserService.UpdateUserAsync(userdto);

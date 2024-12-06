@@ -3,6 +3,7 @@ using BlazorApp1.Services.Contracts;
 using DatabaseConnection;
 using DataTransferObjects;
 using Entities;
+using Entities.Utilities;
 using Grpc.Net.Client;
 using Proto;
 
@@ -20,33 +21,39 @@ public class Manager : IManager
     
     private IItemManager ItemManager;
     
+    private CategoryManager CategoryManager;
     
 
-    public Manager(GrpcChannel channel, IUserService userService, AppDbContext dbContext, IItemService itemService)
+    public Manager(GrpcChannel channel, IUserService userService, AppDbContext dbContext, IItemService itemService, ICategoryService categoryService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
         UserManager = new UserManager(stub, userService);
         ItemManager = new ItemManager(dbContext, itemService);
-
+        CategoryManager = new CategoryManager(dbContext, categoryService);
     }
-    public async Task<User> GetUser(string username)
+    public async Task<User> GetUserAsync(string username)
     {
-        return await UserManager.GetUser(username);
-    }
-
-    public async Task SaveUserInfo(UserDTO userdto)
-    {
-        await UserManager.SaveUserInfo(userdto);
+        return await UserManager.GetUserAsync(username);
     }
 
-    public async Task<ItemDTOs> GetProductById(int productId)
+    public async Task SaveUserInfoAsync(UserDTO userdto)
     {
-       return await ItemManager.GetItem(productId);
+        await UserManager.SaveUserInfoAsync(userdto);
     }
 
-    public async Task<IEnumerable<ItemDTOs>> GetItems()
+    public async Task<ItemDTOs> GetProductByIdAsync(int productId)
     {
-        return await ItemManager.GetItems();
+       return await ItemManager.GetItemAsync(productId);
+    }
+
+    public async Task<IEnumerable<ItemDTOs>> GetItemsAsync()
+    {
+        return await ItemManager.GetItemsAsync();
+    }
+
+    public async Task<IEnumerable<Category>> GetCategoriesAsync()
+    {
+        return await CategoryManager.GetCategoriesAsync();
     }
 }

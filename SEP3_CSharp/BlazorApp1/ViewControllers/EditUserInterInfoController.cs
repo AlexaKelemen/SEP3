@@ -15,6 +15,6 @@ public class EditUserInterInfoController : IEditUserInfoController
     
     public async Task<User> getUser(string username)
     {
-        return await manager.GetUser(username);
+        return await manager.GetUserAsync(username);
     }
 }
