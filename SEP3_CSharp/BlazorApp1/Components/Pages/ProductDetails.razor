@@ -1,9 +1,6 @@
 ﻿@page "/ProductDetails/{Id:int}"
 @using BlazorApp1.Managers
 @using DataTransferObjects
-@using BlazorApp1.Services.Contracts;
-
-@using Microsoft.AspNetCore.Components;
 @inject NavigationManager NavigationManager
 @inject IManager Manager
 
@@ -26,43 +23,36 @@ else
         <div class="col-md-6">
             <h3>@Item.Name</h3>
             <p class="mb-4">@Item.Description</p>
-            
+
             <div>
-                <button class="btn btn-success"
-                        @onclick="() => (AddToCart_Click()">
-                    <b>Add to Cart</b>
-                </button>
+                <button type="button" class="btn btn-primary" @onclick="AddToCart_Click"> Add to cart </button>
             </div>
         </div>
-
     </div>
-   
-    
-    }
+}
+
 @code
+{
+    public int Id { get; set; }
+    public ItemDTOs Item { get; set; }
+    public string ErrorMessage { get; set; }
+
+    protected async Task OnInitializedAsync()
     {
-        public int Id { get; set; }
-        public ItemDTOs Item { get; set; }
-        public string ErrorMessage { get; set; }
-        protected async Task OnInitializedAsync()
+        ErrorMessage = "";
+        try
         {
-            ErrorMessage = "";
-            try
-            {
-                var Item = await Manager.GetProductById(Id);
-            }
-            catch (Exception ex)
-            {
-                ErrorMessage = ex.Message;
-            }
+            var Item = await Manager.GetProductById(Id);
         }
-
-        private async Task AddToCart_Click()
+        catch (Exception ex)
         {
-           
-
-               NavigationManager.NavigateTo("/ShoppingCart");
-            
+            ErrorMessage = ex.Message;
         }
-
     }
+
+    private async Task AddToCart_Click()
+    {
+        NavigationManager.NavigateTo("/ShoppingCart");
+    }
+
+}

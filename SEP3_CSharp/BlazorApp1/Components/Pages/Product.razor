@@ -17,13 +17,13 @@ else
     @if (productCount > 0)
     {
         const int itemsPerRow = 4;
-        var productsRowList = Items.FirstOrDefault();
+        var productsRowList = new List<ItemDTO>();
 
         @for (int i = 0; i < productCount; i++)
         {
             productsRowList = Items.Skip(i * itemsPerRow).Take(itemsPerRow).ToList();
             <div class="row mt-3">
-                <DisplayProducts Products="@productsRowList.FirstOrDefault()"></DisplayProducts>
+                <DisplayProducts Products="@productsRowList"></DisplayProducts>
             </div>
         }
     }
