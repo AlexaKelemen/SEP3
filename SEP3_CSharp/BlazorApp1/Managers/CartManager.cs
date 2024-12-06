@@ -7,7 +7,7 @@ public class CartManager : ICartManager
 {
     Dictionary<Item, int> cart = new Dictionary<Item, int>();
     
-    public void AddToCart(Item addedItem, int quantity)
+    public void AddToCartAsync(Item addedItem, int quantity)
     {
         if (quantity <= 0)
         {
@@ -24,7 +24,7 @@ public class CartManager : ICartManager
         }
     }
 
-    public void RemoveFromCart(Item removedItem, int quantity)
+    public void RemoveFromCartAsync(Item removedItem, int quantity)
     {
         if (!cart.ContainsKey(removedItem))
         {
@@ -46,12 +46,12 @@ public class CartManager : ICartManager
         }
     }
 
-    public void ClearCart()
+    public void ClearCartAsync()
     {
         cart.Clear();
     }
 
-    public float GetTotal()
+    public float GetTotalAsync()
     {
         float totalPrice = 0;
         foreach (var item in cart)

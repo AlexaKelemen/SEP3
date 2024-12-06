@@ -116,7 +116,7 @@
         }
        
         username = claimsPrincipal.Identity?.Name;
-        user = await Manager.GetUser(username);
+        user = await Manager.GetUserAsync(username);
         
             email = user.Email;
             firstName = user.FirstName;
@@ -147,7 +147,7 @@
         };
         try
         {
-            await Manager.SaveUserInfo(userUpdate);
+            await Manager.SaveUserInfoAsync(userUpdate);
         }
         catch (Exception e)
         {

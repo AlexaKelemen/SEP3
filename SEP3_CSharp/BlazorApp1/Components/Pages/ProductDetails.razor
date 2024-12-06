@@ -42,7 +42,7 @@ else
         ErrorMessage = "";
         try
         {
-            var Item = await Manager.GetProductById(Id);
+            var Item = await Manager.GetProductByIdAsync(Id);
         }
         catch (Exception ex)
         {
