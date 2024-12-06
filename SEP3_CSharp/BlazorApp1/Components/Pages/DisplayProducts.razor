@@ -1,5 +1,7 @@
-﻿<h3>DisplayProducts</h3>
-@inherits DisplayProductsBase
+﻿@using DataTransferObjects;
+@using Microsoft.AspNetCore.Components;
+
+<h3>DisplayProducts</h3>
 
 @foreach (var item in Products)
 {
@@ -19,6 +21,7 @@
     </a>
 </div>
 }
-@code {
-    
+@code 
+{
+    public IEnumerable<ItemDTOs> Products { get; set; }   
 }
