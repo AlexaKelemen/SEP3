@@ -3,6 +3,7 @@ using System;
 using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20241206090537_Update")]
+    partial class Update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -148,9 +151,9 @@ namespace DatabaseConnection.Migrations
                         new
                         {
                             ItemId = 3,
-                            Colour = "Green",
+                            Colour = "Yellow",
                             Description = " Comfortable, long and flowy!",
-                            ImageURL = "Images/Clothes/clothing1.jpg",
+                            ImageURL = "Images/Clothing/clothing1.jpg",
                             Name = "Summer dress",
                             Price = 15f,
                             Quantity = 100,
@@ -229,72 +232,6 @@ namespace DatabaseConnection.Migrations
                             Description = "Good, durable quality",
                             ImageURL = "Images/accessories/Accessory19.png",
                             Name = "Funny clothespin",
-                            Price = 5f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 11,
-                            Colour = "Brown",
-                            Description = "Durable but easily removed glue",
-                            ImageURL = "Images/accessories/Accessory17.png",
-                            Name = "Funny sticker",
-                            Price = 5f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 12,
-                            Colour = "Black & Brown",
-                            Description = "Beautiful leather wallet",
-                            ImageURL = "Images/accessories/Accessory10.png",
-                            Name = "Small, feminine wallet",
-                            Price = 15f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 13,
-                            Colour = "Green",
-                            Description = "Comfortable cotton. One out of 10 girls recommend",
-                            ImageURL = "Images/Clothes/clothing2.jpg",
-                            Name = "Bright green dress",
-                            Price = 25f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 14,
-                            Colour = "Black",
-                            Description = "Very comfortable and stretchy material",
-                            ImageURL = "Images/Clothes/clothing3.jpg",
-                            Name = "Beautiful black dinner dress",
-                            Price = 35f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 15,
-                            Colour = "Black",
-                            Description = "Sleek black boots with low heels and a zipper",
-                            ImageURL = "Images/shoes/shoes16.png",
-                            Name = "Black ankle boots",
-                            Price = 12f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 16,
-                            Colour = "Black",
-                            Description = "Durable, stretchy bracelet",
-                            ImageURL = "Images/accessories/Accessory6.png",
-                            Name = "Black bracelet",
                             Price = 5f,
                             Quantity = 100,
                             Size = "Small"
