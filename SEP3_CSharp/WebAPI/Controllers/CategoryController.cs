@@ -33,7 +33,7 @@ public class CategoryController : ControllerBase
         }
     }
 
-    [HttpGet("{categoryId}/items")]
+    [HttpGet("{categories}")]
     public async Task<IResult> GetCategory()
     {
         Task<List<Category>> categories = _categoryRepository.GetCategories().ToListAsync();

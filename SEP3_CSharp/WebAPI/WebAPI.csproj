@@ -4,16 +4,19 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>WebAPI2</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DataTransferObjects\DataTransferObjects.csproj" />
-      <ProjectReference Include="..\Entities\Entities.csproj" />
-      <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+      <ProjectReference Include="..\BlazorApp1\BlazorApp1.csproj" />
+      <ProjectReference Include="..\DatabaseConnection\DatabaseConnection.csproj" />
+      <ProjectReference Include="..\DataTransferObjects\DataTransferObjects.csproj" />
+      <ProjectReference Include="..\Entities\Entities.csproj" />
+      <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
     </ItemGroup>
 
 </Project>

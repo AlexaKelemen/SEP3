@@ -1,35 +1,37 @@
+using DatabaseConnection;
+using Microsoft.EntityFrameworkCore;
 using RepositoryContracts.CategoryContracts;
 using RepositoryContracts.ItemContracts;
-using WebAPI.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source= C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 
 var app = builder.Build();
 
 app.MapControllers();
+
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
-app.UseAntiforgery();
+app.UseAuthorization();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapControllers();
 
 app.Run();

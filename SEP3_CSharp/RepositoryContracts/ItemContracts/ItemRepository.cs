@@ -1,53 +1,61 @@
-﻿using Entities;
+﻿using DatabaseConnection;
+using Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace RepositoryContracts.ItemContracts;
 
 public class ItemRepository : IItemRepository
 {
-    private List<Item> items;
-    
-    public Task<Item> AddItemAsync(Item item)
+    private readonly AppDbContext _ctx;
+
+    public ItemRepository(AppDbContext ctx)
     {
-        item.ItemId = items.Any() ? items.Max(i => i.ItemId) + 1 : 1;
-        items.Add(item);
-        return Task.FromResult(item);
+        _ctx = ctx;
+    }
+    public async Task<Item> AddItemAsync(Item item)
+    {
+        EntityEntry<Item> entityEntry = await _ctx.Items.AddAsync(item);
+        await _ctx.SaveChangesAsync();
+        return entityEntry.Entity;
     }
 
-    public Task UpdateItemAsync(Item item)
+    public async Task UpdateItemAsync(Item item)
     {
-        Item itemToUpdate = items.SingleOrDefault(i => i.ItemId == item.ItemId);
-        if (itemToUpdate is null)
+        if (!(await _ctx.Items.AnyAsync(i => i.ItemId == item.ItemId)))
         {
-            throw new InvalidOperationException($"Item '{item.ItemId}' does not exist");
+            throw new ArgumentException($"Item with id {item} not found");
         }
-        items.Remove(itemToUpdate);
-        items.Add(item);
-        return Task.CompletedTask;
+        _ctx.Items.Update(item);
+        await _ctx.SaveChangesAsync();
     }
 
-    public Task DeleteItemAsync(int id)
+    public async Task DeleteItemAsync(int id)
     {
-        Item itemToDelete = items.SingleOrDefault(i => i.ItemId == id);
-        if (itemToDelete is null)
+        Item? existing = await _ctx.Items.SingleOrDefaultAsync(i => i.ItemId== id);
+        if (existing == null)
         {
-            throw new InvalidOperationException($"Item '{itemToDelete.ItemId}' does not exist");
+            throw new ArgumentException($"Post with id {id} not found");
         }
-        items.Remove(itemToDelete);
-        return Task.CompletedTask;
+
+        _ctx.Items.Remove(existing);
+        await _ctx.SaveChangesAsync();
     }
 
-    public Task<Item> GetSingleItemAsync(int id)
+    public async Task<Item> GetSingleItemAsync(int id)
     {
-        Item item = items.SingleOrDefault(i => i.ItemId == id);
-        if (item is null)
+        Item? item = await _ctx.Items.SingleOrDefaultAsync(i => i.ItemId == id);
+
+        if (item == null)
         {
-            throw new InvalidOperationException($"Item with Id {id} was not found");
+            throw new ArgumentException($"Post with ID {id} not found");
         }
-        return Task.FromResult(item);
+
+        return item;
     }
 
     public IQueryable<Item> GetItems()
     {
-        return items.AsQueryable();
+        return _ctx.Items.AsQueryable();
     }
 }

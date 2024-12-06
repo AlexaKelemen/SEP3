@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryContracts", "RepositoryContracts\RepositoryContracts.csproj", "{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{409FE34E-9354-4910-9D81-3AFB9931BD2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{17797FEE-0672-4B14-A1EA-3D1FAB2B1EC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +44,10 @@ Global
 		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{409FE34E-9354-4910-9D81-3AFB9931BD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{409FE34E-9354-4910-9D81-3AFB9931BD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{409FE34E-9354-4910-9D81-3AFB9931BD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{409FE34E-9354-4910-9D81-3AFB9931BD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17797FEE-0672-4B14-A1EA-3D1FAB2B1EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17797FEE-0672-4B14-A1EA-3D1FAB2B1EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17797FEE-0672-4B14-A1EA-3D1FAB2B1EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17797FEE-0672-4B14-A1EA-3D1FAB2B1EC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

@@ -1,52 +1,62 @@
-﻿using Entities.Utilities;
+﻿using DatabaseConnection;
+using Entities.Utilities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace RepositoryContracts.CategoryContracts;
 
 public class CategoryRepository : ICategoryRepository
 {
-   private List<Category> categories;
-    public Task<Category> AddCategoryAsync(Category category)
+    private readonly AppDbContext _context;
+
+    public CategoryRepository(AppDbContext context)
     {
-      category.CategoryId = categories.Any() ? categories.Max(c => c.CategoryId) + 1 : 1;
-      categories.Add(category);
-      return Task.FromResult(category);
+        _context = context;
+    }
+    
+    public async Task<Category> AddCategoryAsync(Category category)
+    {
+      EntityEntry<Category> entry = await _context.Categories.AddAsync(category);
+      await _context.SaveChangesAsync();
+      return entry.Entity;
     }
 
-    public Task UpdateCategoryAsync(Category category)
+    public async Task UpdateCategoryAsync(Category category)
     {
-      Category categoryToUpdate = categories.SingleOrDefault(c => c.CategoryId == category.CategoryId);
-      if (categoryToUpdate is null)
-      {
-          throw new InvalidOperationException($"Category '{category.CategoryId}' does not exist");
-      }
-      categories.Remove(categoryToUpdate);
-      categories.Add(category);
-      return Task.CompletedTask;
-    }
-
-    public Task DeleteCategoryAsync(int id)
-    {
-     Category categoryToDelete = categories.SingleOrDefault(c => c.CategoryId == id);
-     if (categoryToDelete is null)
-     {
-         throw new InvalidOperationException($"Category '{categoryToDelete.CategoryId}' does not exist");
-     }
-     categories.Remove(categoryToDelete);
-     return Task.CompletedTask;
-    }
-
-    public Task<Category> GetSingleCategoryAsync(int id)
-    {
-        Category? category = categories.SingleOrDefault(c => c.CategoryId == id);
-        if (category is null)
+        if (!(await _context.Categories.AnyAsync(c => c.CategoryId == category.CategoryId)))
         {
-            throw new InvalidOperationException($"Category with Id {id} was not found");
+          throw new ArgumentException("Category does not exist");  
         }
-        return Task.FromResult(category);
+        _context.Categories.Update(category);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteCategoryAsync(int id)
+    {
+        Category? existing = await _context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
+        if (existing == null)
+        {
+            throw new ArgumentException($"Category with id {id} not found");
+        }
+
+        _context.Categories.Remove(existing);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<Category> GetSingleCategoryAsync(int id)
+    {
+        Category? category = await _context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
+
+        if (category == null)
+        {
+            throw new ArgumentException($"Category with ID {id} not found");
+        }
+
+        return category;
     }
 
     public IQueryable<Category> GetCategories()
     {
-     return categories.AsQueryable();
+     return _context.Categories.AsQueryable();
     }
 }

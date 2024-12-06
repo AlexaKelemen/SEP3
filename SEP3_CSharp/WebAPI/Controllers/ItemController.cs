@@ -19,7 +19,7 @@ namespace WebAPI.Controllers;
             _itemRepository = itemRepository;
         }
 
-        [HttpGet("{itemId}")]
+        [HttpGet("items/{itemId}")]
         public async Task<IResult> GetItemByIdAsync([FromRoute] int itemId)
         {
             try
@@ -34,7 +34,7 @@ namespace WebAPI.Controllers;
             }
         }
 
-        [HttpGet("{itemId}/{categoryId}")]
+        [HttpGet("items")]
         public async Task<IResult> GetItems()
         {
             Task<List<Item>> items = _itemRepository.GetItems().ToListAsync();
