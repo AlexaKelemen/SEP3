@@ -1,7 +1,7 @@
 using DataTransferObjects;
 using Entities;
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public interface IUserManager
 {

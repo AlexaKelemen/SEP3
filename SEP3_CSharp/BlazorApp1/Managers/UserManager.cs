@@ -4,7 +4,7 @@ using Entities;
 using Proto;
 
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public class UserManager : IUserManager
 {
