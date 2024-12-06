@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObjects", "Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnection", "DatabaseConnection\DatabaseConnection.csproj", "{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryContracts", "RepositoryContracts\RepositoryContracts.csproj", "{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B1A5ADD-A2BF-463D-8489-2DE3274D5B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD7EBBB-1784-4CB5-B7C1-A22DD8D6E93B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
