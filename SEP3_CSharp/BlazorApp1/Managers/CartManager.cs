@@ -1,7 +1,7 @@
 ﻿using Entities;
-using Managers.Server;
 
-namespace Managers;
+
+namespace BlazorApp1.Managers;
 
 public class CartManager : ICartManager
 {

@@ -6,7 +6,7 @@ using Proto;
 
 
 
-namespace Managers;
+namespace BlazorApp1.Managers;
 
 public class Manager : IManager
 {
@@ -31,5 +31,10 @@ public class Manager : IManager
     public async Task SaveUserInfo(UserDTO userdto)
     {
         await UserManager.SaveUserInfo(userdto);
+    }
+
+    public async Task<ItemDTOs> GetProductById(int productId)
+    {
+       return await ItemManager.GetItem(productId);
     }
 }
