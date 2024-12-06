@@ -11,6 +11,7 @@ public interface IItemManager
     Task<ItemDTOs> GetItem(int id);
     Task<Category> GetCategory(int CategoryId);
     Task<IEnumerable<Category>> GetCategories();
+    Task <IEnumerable<ItemDTOs>> GetItems();
   
     
     

@@ -40,4 +40,9 @@ public class Manager : IManager
     {
        return await ItemManager.GetItem(productId);
     }
+
+    public async Task<IEnumerable<ItemDTOs>> GetItems()
+    {
+        return await ItemManager.GetItems();
+    }
 }

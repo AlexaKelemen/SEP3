@@ -1,8 +1,8 @@
 using BlazorApp1.Services;
+using BlazorApp1.Services.Contracts;
 using DataTransferObjects;
 using Entities;
 using Proto;
-
 
 namespace BlazorApp1.Managers;
 

@@ -1,4 +1,5 @@
-﻿using DatabaseConnection;
+﻿using BlazorApp1.Services.Contracts;
+using DatabaseConnection;
 using DataTransferObjects;
 using Entities;
 using Entities.Utilities;
@@ -10,10 +11,12 @@ namespace BlazorApp1.Managers;
 public class ItemManager:IItemManager
 {
     private readonly AppDbContext _dbContext;
+    private readonly IItemService itemService;
 
-    public ItemManager(AppDbContext dbContext)
+    public ItemManager(AppDbContext dbContext, IItemService itemService)
     {
         _dbContext = dbContext;
+        this.itemService = itemService;
     }
     public async Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
     {
@@ -56,5 +59,9 @@ public class ItemManager:IItemManager
     public async Task<IEnumerable<Category>> GetCategories()
     {
        return await _dbContext.Categories.ToListAsync();
+    }
+    public async Task<IEnumerable<ItemDTOs>> GetItems()
+    {
+        return await itemService.GetItems();
     }
 }

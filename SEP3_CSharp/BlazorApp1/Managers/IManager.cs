@@ -8,4 +8,5 @@ public interface IManager
     Task<User> GetUser(string username);
     Task SaveUserInfo(UserDTO userdto);
     Task<ItemDTOs> GetProductById(int id);
+    Task <IEnumerable<ItemDTOs>> GetItems();
 }

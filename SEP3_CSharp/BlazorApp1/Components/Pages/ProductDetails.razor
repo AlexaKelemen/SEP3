@@ -46,6 +46,7 @@ else
         public string ErrorMessage { get; set; }
         protected async Task OnInitializedAsync()
         {
+            ErrorMessage = "";
             try
             {
                 var Item = await Manager.GetProductById(Id);
