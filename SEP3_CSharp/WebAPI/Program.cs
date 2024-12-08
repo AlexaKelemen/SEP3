@@ -1,5 +1,6 @@
 using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
+using RepositoryContracts.CartContracts;
 using RepositoryContracts.CategoryContracts;
 using RepositoryContracts.ItemContracts;
 
@@ -14,8 +15,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source= C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+    options.UseSqlite(
+        "Data Source=C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 
 var app = builder.Build();
 
