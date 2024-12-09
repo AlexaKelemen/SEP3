@@ -24,4 +24,14 @@ public class ItemDTOs
         this.CategoryId = categoryId;
         this.ImageUrl = imageURL;
     }
+
+    public bool hasCategory(Category category)
+    {
+        foreach (var categoryid in CategoryId)
+        {
+            if (category.CategoryId == categoryid.CategoryId)
+                return true;
+        }
+        return false;
+    }
 }
