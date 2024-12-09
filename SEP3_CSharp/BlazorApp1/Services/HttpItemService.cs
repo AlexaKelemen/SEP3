@@ -1,4 +1,5 @@
-﻿using BlazorApp1.Components.Pages;
+﻿using System.Text.Json;
+using BlazorApp1.Components.Pages;
 using BlazorApp1.Services.Contracts;
 using DatabaseConnection;
 using DataTransferObjects;
@@ -20,50 +21,34 @@ public class HttpItemService : IItemService
     }
 
     public async Task<IEnumerable<ItemDTOs>> GetItems()
-    {
-        return await _appDbContext.Items.Select(item => new ItemDTOs
         {
-            Name = item.Name,
-            Price = item.Price,
-            ImageUrl = item.ImageURL,
-        }).ToListAsync();
-    }
+            HttpResponseMessage response = await _httpClient.GetAsync("items");
+            string responseString = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception(responseString);
+            }
+
+            return JsonSerializer.Deserialize<List<ItemDTOs>>(responseString, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            })!;
+        }
 
     public async Task<ItemDTOs> GetItem(int id)
     {
-        var item = await _appDbContext.Items
-            .Where(i => i.ItemId == id)
-            .Select(i => new ItemDTOs
-            {
-                Name = i.Name,
-                Price = i.Price,
-                ImageUrl = i.ImageURL,
-            })
-            .FirstOrDefaultAsync();
+            HttpResponseMessage response = await _httpClient.GetAsync($"items/{id}");
+            string responseString = await response.Content.ReadAsStringAsync();
 
-        if (item == null)
-        {
-            throw new KeyNotFoundException($"Item with ID {id} not found.");
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception(responseString);
+            }
+
+            return JsonSerializer.Deserialize<ItemDTOs>(responseString, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            })!;
         }
-
-        return item;
-    }
-/*
-    public Task<IEnumerable<ProductCategoryDto>> GetProductCategories()
-    {
-        throw new NotImplementedException();
-    }
-
-    public async Task<IEnumerable<ItemDTOs>> GetItemsByCategory(int CategoryId)
-    {
-        return await _appDbContext.Items
-            .Where(i => i.CategoryId ==categoryid)
-            .Select(i => new ItemDTOs
-            {
-                Name = i.Name,
-                Price = i.Price,
-                ImageUrl = i.ImageURL,
-            })
-            .ToListAsync();
-    }*/
 }

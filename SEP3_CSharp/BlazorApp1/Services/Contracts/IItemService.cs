@@ -8,7 +8,5 @@ public interface IItemService
 {
     Task<IEnumerable<ItemDTOs>> GetItems();
     Task<ItemDTOs> GetItem(int id);
-   /* Task<IEnumerable<ItemCategoryDTO>> GetProductCategories();
-    Task<IEnumerable<ItemDTOs>> GetItemsByCategory(int CategoryId);*/
     
 }

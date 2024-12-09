@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,14 +21,15 @@ builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri("http://localhost:8080")
 });
+
 builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
 builder.Services.AddScoped<ICartService, HttpCartService>();
 builder.Services.AddScoped<IItemService, HttpItemService>();
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source= C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+builder.Services.AddScoped<ICategoryService, HttpCategoryService>();
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(@"Data Source=D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 
 
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();

@@ -1,0 +1,544 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\WebAPI2\\WebAPI2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "projectName": "BlazorApp1",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.28.3, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.66.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.67.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectName": "DatabaseConnection",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectName": "DataTransferObjects",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectName": "Managers",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Managers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.28.3, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.66.0, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.66.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.67.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectName": "RepositoryContracts",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\WebAPI2\\WebAPI2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\WebAPI2\\WebAPI2.csproj",
+        "projectName": "WebAPI2",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\WebAPI2\\WebAPI2.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\WebAPI2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+                "projectPath": "C:\\Users\\user\\RiderProjects\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

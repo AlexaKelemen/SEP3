@@ -1,11 +1,18 @@
 ﻿@page "/Product"
+@using System.Collections
 @using BlazorApp1.Managers
 @using ItemDTO = DataTransferObjects.ItemDTOs
 @using DataTransferObjects
-@inject IManager Manager;
+@using Entities
+@using Entities.Utilities
+@inject IManager Manager
 @inject NavigationManager NavigationManager
 
 
+@foreach(Category category in categories)
+{
+    <button type="button" class="btn btn-primary" @onclick="() => FilterProducts(category)">@category.CategoryName</button>
+}
 @if (Items == null)
 {
     <h3>No products can be displayed right now, sorry for the inconvenience</h3>
@@ -33,11 +40,29 @@ else
 @code 
 {
     
+    private IEnumerable<ItemDTOs> Items{ get; set; }
+    private List<Category> categories = new List<Category>();
     
-    public IEnumerable<ItemDTOs> Items{ get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Items = await Manager.GetItems();
+        Items = await Manager.GetItemsAsync();
+        categories = Manager.GetCategoriesAsync().Result.ToList();
+        
+    }
+
+    private void FilterProducts(Category category)
+    {
+        List<ItemDTO> temp = new List<ItemDTO>();
+        foreach (var item in Items)
+        {
+            if (item.hasCategory(category))
+            {
+                temp.Add(item);
+            }
+        }
+
+        Items = temp;
+        
     }
 }

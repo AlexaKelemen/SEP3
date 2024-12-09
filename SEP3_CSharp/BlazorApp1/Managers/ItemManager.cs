@@ -18,13 +18,13 @@ public class ItemManager:IItemManager
         _dbContext = dbContext;
         this.itemService = itemService;
     }
-    public async Task<IEnumerable<Item>> GetItems(ItemDTOs itemDTOs)
+    public async Task<IEnumerable<Item>> GetItemsAsync(ItemDTOs itemDTOs)
     {
         return await _dbContext.Items.ToListAsync();
     }
 
 
-    public async Task<ItemDTOs> GetItem(int id)
+    public async Task<ItemDTOs> GetItemAsync(int id)
     {
         Item item = new Item();
         try
@@ -51,16 +51,16 @@ public class ItemManager:IItemManager
         return itemDTO;
     }
 
-    public async Task<Category> GetCategory(int CategoryId)
+    public async Task<Category> GetCategoryAsync(int CategoryId)
     {
       return await _dbContext.Categories.FirstOrDefaultAsync(c => c.CategoryId == CategoryId);
     }
 
-    public async Task<IEnumerable<Category>> GetCategories()
+    public async Task<IEnumerable<Category>> GetCategoriesAsync()
     {
        return await _dbContext.Categories.ToListAsync();
     }
-    public async Task<IEnumerable<ItemDTOs>> GetItems()
+    public async Task<IEnumerable<ItemDTOs>> GetItemsAsync()
     {
         return await itemService.GetItems();
     }

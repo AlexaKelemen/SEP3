@@ -7,11 +7,11 @@ namespace BlazorApp1.Managers;
 
 public interface IItemManager
 {
-    Task<IEnumerable <Item>> GetItems(ItemDTOs itemDtos);
-    Task<ItemDTOs> GetItem(int id);
-    Task<Category> GetCategory(int CategoryId);
-    Task<IEnumerable<Category>> GetCategories();
-    Task <IEnumerable<ItemDTOs>> GetItems();
+    Task<IEnumerable <Item>> GetItemsAsync(ItemDTOs itemDtos);
+    Task<ItemDTOs> GetItemAsync(int id);
+    Task<Category> GetCategoryAsync(int CategoryId);
+    Task<IEnumerable<Category>> GetCategoriesAsync();
+    Task <IEnumerable<ItemDTOs>> GetItemsAsync();
   
     
     

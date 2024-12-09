@@ -79,33 +79,6 @@ public class HttpCartService : ICartService
     }
 
 
-    /* public async Task<CartItemDTO?> UpdateQty(
-        CartItemQtyUpdateDTO cartItemQtyUpdateDto)
-    {
-        try
-        {
-            var jsonRequest = JsonConvert.SerializeObject(cartItemQtyUpdateDto);
-            var content = new StringContent(jsonRequest, Encoding.UTF8,
-                "application/json-patch+json");
-
-            var response = await httpClient.PatchAsync(
-                $"api/ShoppingCart/{cartItemQtyUpdateDto.CartItemId}", content);
-
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadFromJsonAsync<CartItemDTO>();
-            }
-
-            return null;
-        }
-        catch (Exception)
-        {
-            //Log exception
-            throw;
-        }
-    }*/
-
-
     public event Action<int>? OnCartChanged;
 
     public void RaiseEventOnCartChanged(int totalQty)

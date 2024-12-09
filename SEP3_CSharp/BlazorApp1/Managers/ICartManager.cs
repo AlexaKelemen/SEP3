@@ -4,8 +4,8 @@ namespace BlazorApp1.Managers;
 
 public interface ICartManager
 {
-    void AddToCart(Item addedItem, int quantity);
-    void RemoveFromCart(Item removedItem, int quantity);
-    void ClearCart();
-    float GetTotal();
+    void AddToCartAsync(Item addedItem, int quantity);
+    void RemoveFromCartAsync(Item removedItem, int quantity);
+    void ClearCartAsync();
+    float GetTotalAsync();
 }

@@ -14,6 +14,8 @@ public class AppDbContext : DbContext
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<DeliveryOption> DeliveryOptions => Set<DeliveryOption>();
+    public DbSet<Cart> Carts => Set<Cart>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Item>().ToTable("Items");
