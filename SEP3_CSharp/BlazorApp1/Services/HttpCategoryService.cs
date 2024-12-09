@@ -8,12 +8,12 @@ namespace BlazorApp1.Services;
 public class HttpCategoryService: ICategoryService
 {
     private readonly AppDbContext _appDbContext;
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient httpClient;
 
-    public HttpCategoryService(AppDbContext appDbContext,  HttpClient httpClient)
+    public HttpCategoryService(AppDbContext appDbContext,  IHttpClientFactory httpClientFactory)
     {
         _appDbContext = appDbContext;
-        _httpClient = httpClient;
+        httpClient = httpClientFactory.CreateClient("Products");
     }
     public async Task<IEnumerable<Category>> GetCategoriesAsync()
     {

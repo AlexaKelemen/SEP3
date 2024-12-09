@@ -29,9 +29,9 @@ builder.Services.AddHttpClient("Users", sp =>
 {
     sp.BaseAddress = new Uri("http://localhost:8080");
 });
-builder.Services.AddHttpClient("Products", sp => new HttpClient
+builder.Services.AddHttpClient("Products", sp =>
 {
-    BaseAddress = new Uri("http://localhost:8080")
+    sp.BaseAddress = new Uri("http://localhost:5150");
 });
 builder.Services.AddHttpClient();
 

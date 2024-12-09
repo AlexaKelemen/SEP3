@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿/*using System.Linq;
 using System.Threading.Tasks;
 using DatabaseConnection;
 using Entities;
@@ -84,4 +84,4 @@ namespace RepositoryContracts.CartContracts
             return cart.Items.AsQueryable();
         }
     }
-}
+}*/

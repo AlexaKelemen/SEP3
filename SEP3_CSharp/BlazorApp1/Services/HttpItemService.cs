@@ -12,22 +12,22 @@ namespace BlazorApp1.Services;
 public class HttpItemService : IItemService
 {
     private readonly AppDbContext _appDbContext;
-    private readonly HttpClient _httpClient;
+    private readonly HttpClient httpClient;
 
-    public HttpItemService(AppDbContext appDbContext,  HttpClient httpClient)
+    public HttpItemService(AppDbContext appDbContext,  IHttpClientFactory httpClientFactory)
     {
         _appDbContext = appDbContext;
-        this._httpClient = httpClient;
+        this.httpClient = httpClientFactory.CreateClient("Products");
     }
 
     public async Task<IEnumerable<ItemDTOs>> GetItems()
         {
-            HttpResponseMessage response = await _httpClient.GetAsync("items");
+            HttpResponseMessage response = await httpClient.GetAsync("items");
             string responseString = await response.Content.ReadAsStringAsync();
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception(responseString);
+                throw new Exception(responseString + " " + response.StatusCode);
             }
 
             return JsonSerializer.Deserialize<List<ItemDTOs>>(responseString, new JsonSerializerOptions
@@ -38,7 +38,7 @@ public class HttpItemService : IItemService
 
     public async Task<ItemDTOs> GetItem(int id)
     {
-            HttpResponseMessage response = await _httpClient.GetAsync($"items/{id}");
+            HttpResponseMessage response = await httpClient.GetAsync($"items/{id}");
             string responseString = await response.Content.ReadAsStringAsync();
 
             if (!response.IsSuccessStatusCode)

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using RepositoryContracts.CategoryContracts;
 using RepositoryContracts.ItemContracts;
 
-namespace WebAPI.Controllers;
+namespace WebAPI2.Controllers;
 
     [ApiController]
     [Route("[controller]")]
