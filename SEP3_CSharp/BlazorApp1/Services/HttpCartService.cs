@@ -10,9 +10,9 @@ public class HttpCartService : ICartService
     private readonly HttpClient httpClient;
     public event Action<int> OnShoppingCartChanged;
 
-    public HttpCartService(HttpClient httpClient)
+    public HttpCartService(IHttpClientFactory httpClientFactory)
     {
-        this.httpClient = httpClient;
+        httpClient = httpClientFactory.CreateClient("Products");
     }
 
     public async Task<CartItemDTO?> AddItem(CartItemToAddDTO cartItemToAddDto)
