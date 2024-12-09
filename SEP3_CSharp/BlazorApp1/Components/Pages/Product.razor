@@ -53,7 +53,7 @@ else
 
     private async Task FilterProducts(Category category)
     {
-        Items = await Manager.GetItemsAsync();
+        await ClearFilters();
         List<ItemDTO> temp = new List<ItemDTO>();
         foreach (var item in Items)
         {
