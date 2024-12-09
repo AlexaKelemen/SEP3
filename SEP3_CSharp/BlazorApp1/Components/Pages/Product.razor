@@ -13,6 +13,7 @@
 {
     <button type="button" class="btn btn-primary" @onclick="() => FilterProducts(category)">@category.CategoryName</button>
 }
+<button type="button" class="btn btn-secondary" @onclick="ClearFilters">Clear Filters</button>
 @if (Items == null)
 {
     <h3>No products can be displayed right now, sorry for the inconvenience</h3>
@@ -51,8 +52,9 @@ else
         
     }
 
-    private void FilterProducts(Category category)
+    private async Task FilterProducts(Category category)
     {
+        await ClearFilters();
         List<ItemDTO> temp = new List<ItemDTO>();
         foreach (var item in Items)
         {
@@ -64,5 +66,10 @@ else
 
         Items = temp;
         
+    }
+
+    private async Task ClearFilters()
+    {
+        Items = await Manager.GetItemsAsync();
     }
 }
