@@ -24,13 +24,13 @@ public class Manager : IManager
     private CategoryManager CategoryManager;
     
 
-    public Manager(GrpcChannel channel, IUserService userService, AppDbContext dbContext, IItemService itemService, ICategoryService categoryService)
+    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
         UserManager = new UserManager(stub, userService);
-        ItemManager = new ItemManager(dbContext, itemService);
-        CategoryManager = new CategoryManager(dbContext, categoryService);
+        ItemManager = new ItemManager(itemService);
+        CategoryManager = new CategoryManager(categoryService);
     }
     public async Task<User> GetUserAsync(string username)
     {

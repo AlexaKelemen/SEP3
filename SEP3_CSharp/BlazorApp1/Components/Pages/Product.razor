@@ -42,14 +42,13 @@ else
 {
     
     private IEnumerable<ItemDTOs> Items{ get; set; }
-    private List<Category> categories = new List<Category>();
+    private IEnumerable<Category> categories = new List<Category>();
     
 
     protected override async Task OnInitializedAsync()
     {
         Items = await Manager.GetItemsAsync();
-        categories = Manager.GetCategoriesAsync().Result.ToList();
-        Console.WriteLine(categories.Count);
+        categories = await Manager.GetCategoriesAsync();
     }
 
     private async Task FilterProducts(Category category)
