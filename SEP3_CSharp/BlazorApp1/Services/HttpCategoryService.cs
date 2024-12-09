@@ -1,5 +1,7 @@
-﻿using BlazorApp1.Services.Contracts;
+﻿using System.Text.Json;
+using BlazorApp1.Services.Contracts;
 using DatabaseConnection;
+using DataTransferObjects;
 using Entities.Utilities;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,21 +9,41 @@ namespace BlazorApp1.Services;
 
 public class HttpCategoryService: ICategoryService
 {
-    private readonly AppDbContext _appDbContext;
     private readonly HttpClient httpClient;
 
     public HttpCategoryService(AppDbContext appDbContext,  IHttpClientFactory httpClientFactory)
     {
-        _appDbContext = appDbContext;
         httpClient = httpClientFactory.CreateClient("Products");
     }
     public async Task<IEnumerable<Category>> GetCategoriesAsync()
     {
-        return await _appDbContext.Categories.Select(category => new Category
+        HttpResponseMessage response = await httpClient.GetAsync($"Category/categories");
+        string responseString = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
         {
-            CategoryId = category.CategoryId,
-            CategoryName = category.CategoryName,
-            CategoryDescription = category.CategoryDescription
-        }).ToListAsync();
+            throw new Exception(responseString + " " + response.StatusCode);
+        }
+
+        return JsonSerializer.Deserialize<List<Category>>(responseString, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+    }
+
+    public async Task<Category> GetCategory(int id)
+    {
+        HttpResponseMessage response = await httpClient.GetAsync($"categories/{id}");
+        string responseString = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(responseString);
+        }
+
+        return JsonSerializer.Deserialize<Category>(responseString, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
     }
 }

@@ -48,7 +48,7 @@ else
     {
         Items = await Manager.GetItemsAsync();
         categories = Manager.GetCategoriesAsync().Result.ToList();
-        
+        Console.WriteLine(categories.Count);
     }
 
     private void FilterProducts(Category category)

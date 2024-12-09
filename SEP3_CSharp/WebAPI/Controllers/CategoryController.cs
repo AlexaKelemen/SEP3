@@ -18,7 +18,7 @@ public class CategoryController : ControllerBase
         _categoryRepository = categoryRepository;
     }
 
-    [HttpGet("{categoryId}")]
+    [HttpGet("categories/{categoryId}")]
     public async Task<IResult> GetCategoryByIdAsync([FromRoute] int categoryId)
     {
         try
@@ -33,11 +33,11 @@ public class CategoryController : ControllerBase
         }
     }
 
-    [HttpGet("{categories}")]
-    public async Task<IResult> GetCategory()
+    [HttpGet("categories")]
+    public async Task<List<Category>> GetCategory()
     {
-        Task<List<Category>> categories = _categoryRepository.GetCategories().ToListAsync();
-        return Results.Ok(categories);
+        List<Category> categories = await _categoryRepository.GetCategories().ToListAsync();
+        return categories;
     }
     
 }
