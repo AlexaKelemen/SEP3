@@ -9,7 +9,7 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         var databasePath = Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\..\\DatabaseConnection\\database.db");
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionsBuilder.UseSqlite(@"Data Source=C:\Users\user\RiderProjects\SEP3\SEP3_CSharp\DatabaseConnection\database.db");
+        optionsBuilder.UseSqlite(@"Data Source=D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db");
 
         
 
