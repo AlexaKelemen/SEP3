@@ -5,9 +5,9 @@ public class HttpUserService:IUserService
 {
     private readonly HttpClient httpClient;
 
-    public HttpUserService(HttpClient httpClient)
+    public HttpUserService(IHttpClientFactory httpClientFactory)
     {
-        this.httpClient = httpClient;
+        this.httpClient = httpClientFactory.CreateClient("User");
     }
 
     public async Task<UserDTO> AddUserAsync(CreateUserDTO request)
