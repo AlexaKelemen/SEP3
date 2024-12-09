@@ -15,17 +15,28 @@ else if (ErrorMessage != null)
 }
 else
 {
-    <h3 class="mb-5">Product Details</h3>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <img class="img-fluid" src="@Item.ImageUrl" alt="@Item.Name">
-        </div>
-        <div class="col-md-6">
-            <h3>@Item.Name</h3>
-            <p class="mb-4">@Item.Description</p>
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Product Details</h2>
+        <div class="row g-4">
+          
+            <div class="col-md-6 text-center">
+                <img class="img-fluid rounded shadow" src="@Item.ImageUrl" alt="@Item.Name" />
+            </div>
 
-            <div>
-                <button type="button" class="btn btn-primary" @onclick="AddToCart_Click"> Add to cart </button>
+          
+            <div class="col-md-6">
+                <div class="card p-4 shadow-lg">
+                    <h3 class="card-title">@Item.Name</h3>
+                    <p class="card-text text-muted">@Item.Description</p>
+               <!--   <p class="card-text"><strong>Color:</strong> <span>@Item.Colour</span></p>/  -->
+                    <p class="card-text"><strong>Price:</strong> <span class="text-success">@Item.Price.ToString("C", new System.Globalization.CultureInfo("en-DK"))</span></p>
+                    
+                    <div class="d-grid mt-4">
+                        <button type="button" class="btn btn-primary btn-lg" @onclick="AddToCart_Click">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -33,23 +44,26 @@ else
 
 @code
 {
-    [Parameter]
-    public int Id { get; set; }
+    [Parameter] public int Id { get; set; }
     public ItemDTOs Item { get; set; }
     public string ErrorMessage { get; set; }
 
-    protected async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
     {
-        ErrorMessage = "";
         try
         {
             Item = await Manager.GetProductByIdAsync(Id);
+            if (Item == null)
+            {
+                ErrorMessage = "Product not found.";
+            }
         }
         catch (Exception ex)
         {
-            ErrorMessage = ex.Message;
+            ErrorMessage = "An error occurred while fetching the product details. " + ex.Message;
         }
     }
+
 
     private async Task AddToCart_Click()
     {
