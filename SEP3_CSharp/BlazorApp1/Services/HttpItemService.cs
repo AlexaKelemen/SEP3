@@ -36,7 +36,7 @@ public class HttpItemService : IItemService
 
     public async Task<ItemDTOs> GetItem(int id)
     {
-            HttpResponseMessage response = await httpClient.GetAsync($"items/{id}");
+            HttpResponseMessage response = await httpClient.GetAsync($"Item/items/{id}");
             string responseString = await response.Content.ReadAsStringAsync();
 
             if (!response.IsSuccessStatusCode)
