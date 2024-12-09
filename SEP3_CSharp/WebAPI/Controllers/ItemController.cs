@@ -35,10 +35,10 @@ namespace WebAPI2.Controllers;
         }
 
         [HttpGet("items")]
-        public async Task<IResult> GetItems()
+        public async Task<ActionResult<IEnumerable<User>>> GetItems()
         {
-            Task<List<Item>> items = _itemRepository.GetItems().ToListAsync();
-            return Results.Ok(items);
+            List<Item> items = await _itemRepository.GetItems().ToListAsync();
+            return Ok(items);
         }
     
     }
