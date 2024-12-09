@@ -1,13 +1,11 @@
 ﻿@using DataTransferObjects;
 @using Microsoft.AspNetCore.Components;
 
-
-
 @foreach (var item in Products)
 {
 <div class="col-md-3 mb-2">
-    <a href="a">
-        <div class="card">
+    <a href="@($"/ProductDetails/{item.ItemId}")">
+    <div class="card">
             <img class="img-thumbnail" src="@item.ImageUrl">
             <div class="card-body">
                 <h5 class="card-title mb-3">
@@ -21,7 +19,8 @@
     </a>
 </div>
 }
+
 @code 
 {
-    [Parameter] public IEnumerable<ItemDTOs> Products { get; set; }   
+[Parameter] public IEnumerable<ItemDTOs> Products { get; set; }
 }

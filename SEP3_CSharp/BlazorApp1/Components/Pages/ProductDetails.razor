@@ -33,6 +33,7 @@ else
 
 @code
 {
+    [Parameter]
     public int Id { get; set; }
     public ItemDTOs Item { get; set; }
     public string ErrorMessage { get; set; }
@@ -42,7 +43,7 @@ else
         ErrorMessage = "";
         try
         {
-            var Item = await Manager.GetProductByIdAsync(Id);
+            Item = await Manager.GetProductByIdAsync(Id);
         }
         catch (Exception ex)
         {
