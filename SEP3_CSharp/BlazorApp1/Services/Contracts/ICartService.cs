@@ -8,7 +8,7 @@ public interface ICartService
     Task<CartItemDTO?> DeleteItem(int id);
 
     Task<List<CartItemDTO>?> GetItems(int userId);
-    //Task<CartItemDTO?> UpdateQty(CartItemQtyUpdateDTO cartItemQtyUpdateDto);
+  
     event Action<int> OnCartChanged;
     void RaiseEventOnCartChanged(int totalQty);
 
