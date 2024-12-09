@@ -17,10 +17,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddScoped(sp => new HttpClient
+/*builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri("http://localhost:8080")
 });
+builder.Services.AddScoped( sp => new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:8080")
+});*/
+builder.Services.AddHttpClient("Users", sp =>
+{
+    sp.BaseAddress = new Uri("http://localhost:8080");
+});
+builder.Services.AddHttpClient("Products", sp => new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:8080")
+});
+builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
 builder.Services.AddScoped<IManager, Manager>();

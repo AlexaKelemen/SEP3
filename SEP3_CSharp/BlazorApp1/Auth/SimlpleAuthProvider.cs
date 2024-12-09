@@ -13,9 +13,9 @@ public class SimpleAuthProvider : AuthenticationStateProvider
     private readonly IJSRuntime jsRuntime;
 
 
-    public SimpleAuthProvider(HttpClient httpClient, IJSRuntime jsRuntime)
+    public SimpleAuthProvider(IHttpClientFactory httpClientFactory, IJSRuntime jsRuntime)
     {
-        this.httpClient = httpClient;
+        httpClient = httpClientFactory.CreateClient("Users");
         this.jsRuntime = jsRuntime;
     }
 
@@ -24,15 +24,14 @@ public class SimpleAuthProvider : AuthenticationStateProvider
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/login",
             new LoginRequestDTO()
             {
-                username = userName,
-                password = password
+                Username = userName,
+                Password = password
             });
         string content = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
         {
-            throw new Exception(content);
-
+            throw new Exception(content + response.StatusCode.ToString());
         }
 
         UserDTO userDto = JsonSerializer.Deserialize<UserDTO>(content, new JsonSerializerOptions
@@ -80,7 +79,7 @@ public class SimpleAuthProvider : AuthenticationStateProvider
     public async Task CreateUser(string username, string password)
     {
         HttpResponseMessage response = await httpClient.PostAsJsonAsync("auth/createUser",
-            new User()
+            new LoginRequestDTO()
             {
                 Username = username,
                 Password = password
