@@ -18,7 +18,7 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 //builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(
-        "Data Source=D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
+        "Data Source=C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
 
 var app = builder.Build();
 
