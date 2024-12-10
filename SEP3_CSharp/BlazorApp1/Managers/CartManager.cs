@@ -7,24 +7,23 @@ public class CartManager : ICartManager
 {
     Dictionary<Item, int> cart = new Dictionary<Item, int>();
     
-    public void AddToCartAsync(Item addedItem, int quantity)
+    public void AddToCart(Item addedItem, int quantity)
     {
         if (quantity <= 0)
         {
             throw new ArgumentException("Quantity cannot be less or equal to zero");
         }
-
         if (cart.ContainsKey(addedItem))
-        {
-          cart[addedItem] += quantity;  
+        { 
+            cart[addedItem] += quantity;  
         }
         else
         {
-            cart[addedItem] = quantity;
+            cart.Add(addedItem, quantity);
         }
     }
 
-    public void RemoveFromCartAsync(Item removedItem, int quantity)
+    public void RemoveFromCart(Item removedItem, int quantity)
     {
         if (!cart.ContainsKey(removedItem))
         {
@@ -46,12 +45,12 @@ public class CartManager : ICartManager
         }
     }
 
-    public void ClearCartAsync()
+    public void ClearCart()
     {
         cart.Clear();
     }
 
-    public float GetTotalAsync()
+    public float GetTotal()
     {
         float totalPrice = 0;
         foreach (var item in cart)
@@ -59,5 +58,10 @@ public class CartManager : ICartManager
            totalPrice += item.Key.Price * item.Value;
         }
         return totalPrice;
+    }
+
+    public Dictionary<Item, int> GetCartItems()
+    {
+        return cart;
     }
 }

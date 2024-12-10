@@ -11,4 +11,5 @@ public interface IManager
     Task<ItemDTOs> GetProductByIdAsync(int id);
     Task <IEnumerable<ItemDTOs>> GetItemsAsync();
     Task<IEnumerable<Category>> GetCategoriesAsync();
+    Dictionary<Item, int> GetCartItems();
 }

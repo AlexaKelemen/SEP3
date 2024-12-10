@@ -9,24 +9,24 @@
 <h3>ShoppingCart</h3>
 @page "/ShoppingCart"
 
-@if (CartItems.Count > 0)
+@if (CartItems2.Count > 0)
 {
     <h3 class="mb-5">Shopping Cart</h3>
     <div class="row mb-5">
         <div class="col-md-9">
 
-            @foreach (var item in CartItems)
+            @foreach (var item in CartItems2)
             {
-            var cartItem = item.Value; 
+            var cartItem = item.Key; 
 
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <img src="@cartItem.Item.ImageURL" alt="@cartItem.Item.Name" class="img-thumbnail" />
+                    <img src="@cartItem.ImageURL" alt="@cartItem.Name" class="img-thumbnail" />
                 </div>
                 <div class="col-md-8">
-                    <h5>@cartItem.Item.Name</h5>
-                    <p>@cartItem.Item.Description</p>
-                    <p>Price: <b>@cartItem.Item.Price.ToString("C")</b></p>
+                    <h5>@cartItem.Name</h5>
+                    <p>@cartItem.Description</p>
+                    <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
                     <p>Quantity:</p>
                     <input type="number" value="@cartItem.Quantity"
                            @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))" />
@@ -40,8 +40,6 @@
                     </button>
                 </div>
             </div>
-            }
-
             }
 </div>
         <div class="col-md-3">
@@ -63,32 +61,36 @@ else
 }
 @code
 {
-    private Dictionary<int, (Item Item, int Quantity)> CartItems =
-        new Dictionary<int, (Item, int)>();
+    //private Dictionary<int, (Item Item, int Quantity)> CartItems;
+    private Dictionary<Item, int> CartItems2;
 
-    private decimal CartTotal => (decimal)CartItems.Sum(entry =>
-        entry.Value.Item.Price * entry.Value.Quantity);
-    
-    private void UpdateQuantity(int id, int quantity)
+    //private decimal CartTotal => (decimal)CartItems.Sum(entry => entry.Value.Item.Price * entry.Value.Quantity);
+
+    protected override async Task OnInitializedAsync()
     {
-        if (CartItems.ContainsKey(id) && quantity > 0)
+        //CartItems = Manager.GetCartItems();
+    }
+
+    private void UpdateQuantity(Item item, int quantity)
+    {
+        if (CartItems2.ContainsKey(item) && quantity > 0)
         {
-            CartItems[id] = (CartItems[id].Item, quantity);
+            CartItems2[item] = quantity;
         }
     }
 
-    private void RemoveFromCart(int itemId)
+    private void RemoveFromCart(Item item)
     {
-        if (CartItems.ContainsKey(itemId))
+        if (CartItems2.ContainsKey(item))
         {
-            CartItems.Remove(itemId);
+            CartItems2.Remove(item);
         }
     }
 
 
     private void Checkout()
     {
-        CartItems.Clear();
+        CartItems2.Clear();
         StateHasChanged();
     }
 }
