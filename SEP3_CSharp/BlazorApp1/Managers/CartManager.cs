@@ -90,12 +90,14 @@ public class CartManager : ICartManager, INotifyPropertyChanged
 
     public void PurchaseItems()
     {
-        
+        OnPropertyChanged(nameof(cart));
     }
 
     
     protected void OnPropertyChanged(string name)
     {
-        
+        var handler = PropertyChanged;
+        if (handler != null)
+            handler(this, new PropertyChangedEventArgs(name));
     }
 }

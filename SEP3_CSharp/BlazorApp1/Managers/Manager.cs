@@ -25,7 +25,7 @@ public class Manager : IManager
     private IItemManager ItemManager;
     
     private CategoryManager CategoryManager;
-    public ICartManager CartManager { get; private set; }
+    private ICartManager CartManager;
 
 
     public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
@@ -86,5 +86,15 @@ public class Manager : IManager
     public void AddToCart(Item addedItem, int quantity)
     {
         CartManager.AddToCart(addedItem, quantity);
+    }
+
+    public float GetTotal()
+    {
+        return CartManager.GetTotal();
+    }
+
+    public void PurchaseItems()
+    {
+        CartManager.PurchaseItems();
     }
 }

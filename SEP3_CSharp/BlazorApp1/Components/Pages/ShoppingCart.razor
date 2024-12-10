@@ -4,14 +4,12 @@
 @using Microsoft.AspNetCore.Components;
 @using Microsoft.JSInterop;
 @inject IManager Manager;
-@inject IJSRuntime Js 
-
-<h3>ShoppingCart</h3>
+@inject IJSRuntime Js
+@inject NavigationManager NavMgr
 @page "/ShoppingCart"
 
 <PageTitle>ShoppingCart</PageTitle>
-
-
+<h3>ShoppingCart</h3>
 @if (CartItems != null && CartItems.Count > 0)
 {
     <h3 class="mb-5">Shopping Cart</h3>
@@ -31,7 +29,7 @@
                     <p>@cartItem.Description</p>
                     <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
                     <p>Quantity:</p>
-                    <input type="number" value="@cartItem.Quantity"
+                    <input type="number" value="@item.Value"
                            @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))" />
                     <button class="btn btn-info btn-sm"
                             @onclick="(() => UpdateQuantity(item.Key, cartItem.Quantity))">
@@ -48,7 +46,7 @@
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
-                <div>Total - (@CartItems.Values.Sum()&nbsp;
+                <div>Total - (&nbsp;
                     <b>@CartTotal.ToString("C")</b>
                 </div>
                 <button class="btn btn-success" @onclick="Checkout">
@@ -92,8 +90,10 @@ else
 
     private void Checkout()
     {
-        CartItems.Clear();
-        StateHasChanged();
+        //Manager.PurchaseItems();
+        //CartItems.Clear();
+        NavMgr.NavigateTo("/Checkout");
+        //StateHasChanged();
     }
 }
-}
+
