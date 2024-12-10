@@ -130,7 +130,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Tired of painful soles? Try this now!",
                             ImageURL = "Images/Shoes/shoes1.png",
                             Name = "Comfy shoes",
-                            Price = 270f,
+                            Price = 210f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -141,7 +141,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect fit for a runner",
                             ImageURL = "Images/Shoes/shoes2.png",
                             Name = "Running shoes",
-                            Price = 675f,
+                            Price = 700f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -163,7 +163,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Classic white lace-up sneakers with a minimalist design",
                             ImageURL = "Images/Shoes/shoes4.png",
                             Name = "White Sneakers",
-                            Price = 1100f,
+                            Price = 1200f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -174,7 +174,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Beautiful blend from white to black",
                             ImageURL = "Images/Shoes/shoes5.png",
                             Name = "White and black ankle sneakers",
-                            Price = 710f,
+                            Price = 780f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -185,7 +185,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect for driving people away from your house",
                             ImageURL = "Images/accessories/Accessory21.png",
                             Name = "Amazing footmat",
-                            Price = 250f,
+                            Price = 280f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -196,7 +196,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Stylish glasses with black, round frames",
                             ImageURL = "Images/accessories/Accessory7.png",
                             Name = "Eyeglasses",
-                            Price = 1000f,
+                            Price = 1003f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -207,7 +207,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Brown hand bag with reinforced handles",
                             ImageURL = "Images/accessories/Accessory11.png",
                             Name = "Small Hand bag",
-                            Price = 800f,
+                            Price = 98f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -218,7 +218,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect gift to give to lovers of ducks!",
                             ImageURL = "Images/accessories/Accessory14.png",
                             Name = "Funny ducks",
-                            Price = 75f,
+                            Price = 65f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -229,7 +229,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Good, durable quality",
                             ImageURL = "Images/accessories/Accessory19.png",
                             Name = "Funny clothespin",
-                            Price = 55f,
+                            Price = 60f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -240,7 +240,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Durable but easily removed glue",
                             ImageURL = "Images/accessories/Accessory17.png",
                             Name = "Funny sticker",
-                            Price = 50f,
+                            Price = 40f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -251,7 +251,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Beautiful leather wallet",
                             ImageURL = "Images/accessories/Accessory10.png",
                             Name = "Small, feminine wallet",
-                            Price = 530f,
+                            Price = 730f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -262,7 +262,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Comfortable cotton. One out of 10 girls recommend",
                             ImageURL = "Images/Clothes/clothing2.jpg",
                             Name = "Bright green dress",
-                            Price = 250f,
+                            Price = 350f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -273,7 +273,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Very comfortable and stretchy material",
                             ImageURL = "Images/Clothes/clothing3.jpg",
                             Name = "Beautiful black dinner dress",
-                            Price = 2500f,
+                            Price = 1500f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -284,7 +284,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Sleek black boots with low heels and a zipper",
                             ImageURL = "Images/shoes/shoes16.png",
                             Name = "Black ankle boots",
-                            Price = 1200f,
+                            Price = 2200f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -295,46 +295,24 @@ namespace DatabaseConnection.Migrations
                             Description = "Durable, stretchy bracelet",
                             ImageURL = "Images/accessories/Accessory6.png",
                             Name = "Black bracelet",
-                            Price = 150f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 21,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 22,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 23,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
+                            Price = 250f,
                             Quantity = 100,
                             Size = "Small"
                         },
                         new
                         {
                             ItemId = 17,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 18,
                             Colour = "White",
                             Description = "The manifestation of elegance",
                             ImageURL = "Images/Clothes/clothing4.jpg",
@@ -345,7 +323,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 18,
+                            ItemId = 19,
                             Colour = "Red",
                             Description = "Unleash your inner diva",
                             ImageURL = "Images/Clothes/clothing5.jpg",
@@ -356,7 +334,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 19,
+                            ItemId = 20,
                             Colour = "Burgundy",
                             Description = "Make the billion-dollar deal in this dress",
                             ImageURL = "Images/Clothes/clothing6.jpg",
@@ -367,7 +345,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 20,
+                            ItemId = 21,
                             Colour = "Red",
                             Description = "Be the light of the dinner party",
                             ImageURL = "Images/Clothes/clothing7.jpg",

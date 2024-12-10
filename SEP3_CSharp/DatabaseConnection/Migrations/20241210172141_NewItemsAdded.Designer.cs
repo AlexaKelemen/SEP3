@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241210150252_killll")]
-    partial class killll
+    [Migration("20241210172141_Please")]
+    partial class Please
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -304,40 +304,18 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 21,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 22,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 23,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
                             ItemId = 17,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 18,
                             Colour = "White",
                             Description = "The manifestation of elegance",
                             ImageURL = "Images/Clothes/clothing4.jpg",
@@ -348,7 +326,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 18,
+                            ItemId = 19,
                             Colour = "Red",
                             Description = "Unleash your inner diva",
                             ImageURL = "Images/Clothes/clothing5.jpg",
@@ -359,7 +337,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 19,
+                            ItemId = 20,
                             Colour = "Burgundy",
                             Description = "Make the billion-dollar deal in this dress",
                             ImageURL = "Images/Clothes/clothing6.jpg",
@@ -370,7 +348,7 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 20,
+                            ItemId = 21,
                             Colour = "Red",
                             Description = "Be the light of the dinner party",
                             ImageURL = "Images/Clothes/clothing7.jpg",

@@ -4254,20 +4254,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
-      "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4279,20 +4278,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
             },
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
             },
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
             },
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
             },
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
             }
           }
         }
@@ -4336,7 +4335,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
