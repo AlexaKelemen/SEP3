@@ -1,44 +1,46 @@
 ﻿@using BlazorApp1.Managers
-@using BlazorApp1.Services.Contracts
-@using Entities
-@using Microsoft.AspNetCore.Components
-@using Microsoft.JSInterop
-@inject IManager Manager
+@using BlazorApp1.Services.Contracts;
+@using Entities;
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.JSInterop;
+@inject IManager Manager;
 @inject IJSRuntime Js
-
+@inject NavigationManager NavMgr
 @page "/ShoppingCart"
-<PageTitle>Shopping Cart</PageTitle>
 
+<PageTitle>ShoppingCart</PageTitle>
+<h3>ShoppingCart</h3>
 @if (CartItems != null && CartItems.Count > 0)
 {
-
+    <h3 class="mb-5">Shopping Cart</h3>
     <div class="row mb-5">
         <div class="col-md-9">
+
             @foreach (var item in CartItems)
             {
-                var cartItem = item.Key;
+            var cartItem = item.Key; 
 
-                <div class="row mb-4">
-                    <div class="col-md-4">
-                        <img src="@cartItem.ImageURL" alt="@cartItem.Name" class="img-thumbnail" />
-                    </div>
-                    <div class="col-md-8">
-                        <h5>@cartItem.Name</h5>
-                        <p>@cartItem.Description</p>
-                        <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
-                        <p>Quantity:</p>
-                        <input type="number" 
-                               min="1" 
-                               value="@CartItems[cartItem]" 
-                               @oninput="@(e => OnQuantityInput(cartItem, e.Value.ToString()))" />
-                        <button class="btn btn-danger btn-sm"
-                                @onclick="(() => RemoveFromCart(cartItem))">
-                            <i class="fa fa-trash"></i> Remove
-                        </button>
-                    </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="@cartItem.ImageURL" alt="@cartItem.Name" class="img-thumbnail" />
                 </div>
+                <div class="col-md-8">
+                    <h5>@cartItem.Name</h5>
+                    <p>@cartItem.Description</p>
+                    <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
+                    <p>Quantity:</p>
+                    <input type="number" 
+                           min="1"
+                           value="@cartItem.Quantity"
+                           @oninput="@(e => OnQuantityInput(cartItem, e.Value.ToString()))" />
+                    <button class="btn btn-danger sm"
+                            @onclick="(() => RemoveFromCart(cartItem))">
+                        <i class="fa fa-trash"></i> Remove
+                    </button>
+                </div>
+            </div>
             }
-        </div>
+</div>
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
@@ -54,17 +56,12 @@ else
 {
     <h4>Your shopping cart is currently empty.</h4>
 }
+@code
+{
+    private Dictionary<Item, int> CartItems;
 
-@code {
-   
-    private Dictionary<Item, int> CartItems = new Dictionary<Item, int>();
+    private decimal CartTotal => (decimal)CartItems.Sum(entry => entry.Key.Price * entry.Value);
 
-  
-    private decimal CartTotal => 
-        CartItems?.Sum(entry => (decimal)(entry.Key?.Price ?? 0) * entry.Value) ?? 0;
-
-
-    
     protected override async Task OnInitializedAsync()
     {
         CartItems = Manager.GetCartItems() ?? new Dictionary<Item, int>();
@@ -82,7 +79,6 @@ else
         }
     }
 
-   
     private void UpdateQuantity(Item item, int quantity)
     {
         if (quantity < 1)
@@ -95,7 +91,6 @@ else
         }
     }
 
- 
     private void RemoveFromCart(Item item)
     {
         if (CartItems.ContainsKey(item))
@@ -104,12 +99,10 @@ else
         }
     }
 
-   
+
     private void Checkout()
     {
         CartItems.Clear();
         StateHasChanged();
     }
 }
-
-

@@ -1,32 +1,21 @@
 ﻿@page "/Checkout"
 @using System.ComponentModel
 @using BlazorApp1.Managers
+@using Entities
 @inject IManager Manager
 @inject NavigationManager NavigationManager
 
 <PageTitle>Checkout</PageTitle>
+<h1>@total</h1>
 
 
 @code {
+    private string total;
     
     protected override async Task OnInitializedAsync()
     {
-        Manager.CartManager.PropertyChanged += PropertyChangedHandler;
+        total = Manager.GetTotal().ToString("C");
     }
     
-    private void PropertyChangedHandler(object sender, PropertyChangedEventArgs e)
-    {
-        if (sender is CartManager)
-        {
-            var cartManager = (CartManager)sender;
-            switch (e.PropertyName)
-            {
-                case nameof(CartManager.cart):
-                {
-                    
-                    break;
-                }
-            }
-        }
-    }
+    
 }

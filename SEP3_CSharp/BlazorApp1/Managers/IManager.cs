@@ -6,7 +6,6 @@ namespace BlazorApp1.Managers;
 
 public interface IManager
 {
-    public ICartManager CartManager { get;}
     Task<User> GetUserAsync(string username);
     Task SaveUserInfoAsync(UserDTO userdto);
     Task<ItemDTOs> GetProductByIdAsync(int id);
@@ -14,4 +13,6 @@ public interface IManager
     Task<IEnumerable<Category>> GetCategoriesAsync();
     Dictionary<Item, int> GetCartItems();
     void AddToCart(Item addedItem, int quantity);
+    float GetTotal();
+    void PurchaseItems();
 }
