@@ -9,13 +9,13 @@
 <h3>ShoppingCart</h3>
 @page "/ShoppingCart"
 
-@if (CartItems2.Count > 0)
+@if (CartItems.Count > 0)
 {
     <h3 class="mb-5">Shopping Cart</h3>
     <div class="row mb-5">
         <div class="col-md-9">
 
-            @foreach (var item in CartItems2)
+            @foreach (var item in CartItems)
             {
             var cartItem = item.Key; 
 
@@ -45,7 +45,7 @@
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
-                <div>Total - (@CartItems.Values.Sum(i => i.Quantity) items)&nbsp;
+                <div>Total - (@CartItems.Values.Sum()&nbsp;
                     <b>@CartTotal.ToString("C")</b>
                 </div>
                 <button class="btn btn-success" @onclick="Checkout">
@@ -61,36 +61,35 @@ else
 }
 @code
 {
-    //private Dictionary<int, (Item Item, int Quantity)> CartItems;
-    private Dictionary<Item, int> CartItems2;
+    private Dictionary<Item, int> CartItems;
 
-    //private decimal CartTotal => (decimal)CartItems.Sum(entry => entry.Value.Item.Price * entry.Value.Quantity);
+    private decimal CartTotal => (decimal)CartItems.Sum(entry => entry.Key.Price * entry.Value);
 
     protected override async Task OnInitializedAsync()
     {
-        //CartItems = Manager.GetCartItems();
+        CartItems = Manager.GetCartItems();
     }
 
     private void UpdateQuantity(Item item, int quantity)
     {
-        if (CartItems2.ContainsKey(item) && quantity > 0)
+        if (CartItems.ContainsKey(item) && quantity > 0)
         {
-            CartItems2[item] = quantity;
+            CartItems[item] = quantity;
         }
     }
 
     private void RemoveFromCart(Item item)
     {
-        if (CartItems2.ContainsKey(item))
+        if (CartItems.ContainsKey(item))
         {
-            CartItems2.Remove(item);
+            CartItems.Remove(item);
         }
     }
 
 
     private void Checkout()
     {
-        CartItems2.Clear();
+        CartItems.Clear();
         StateHasChanged();
     }
 }

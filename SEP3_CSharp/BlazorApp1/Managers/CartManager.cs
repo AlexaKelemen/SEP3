@@ -1,10 +1,12 @@
-﻿using Entities;
+﻿using System.ComponentModel;
+using Entities;
 
 
 namespace BlazorApp1.Managers;
 
-public class CartManager : ICartManager
+public class CartManager : ICartManager, INotifyPropertyChanged
 {
+    public event PropertyChangedEventHandler PropertyChanged;
     Dictionary<Item, int> cart = new Dictionary<Item, int>();
     
     public void AddToCart(Item addedItem, int quantity)
@@ -63,5 +65,16 @@ public class CartManager : ICartManager
     public Dictionary<Item, int> GetCartItems()
     {
         return cart;
+    }
+
+    public void PurchaseItems()
+    {
+        
+    }
+
+    
+    protected void OnPropertyChanged(string name)
+    {
+        
     }
 }

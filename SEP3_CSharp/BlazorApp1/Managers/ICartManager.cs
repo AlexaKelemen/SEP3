@@ -9,4 +9,5 @@ public interface ICartManager
     void ClearCart();
     float GetTotal();
     Dictionary<Item, int> GetCartItems();
+    void PurchaseItems();
 }
