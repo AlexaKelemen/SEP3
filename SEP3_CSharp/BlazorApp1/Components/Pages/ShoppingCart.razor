@@ -29,14 +29,12 @@
                     <p>@cartItem.Description</p>
                     <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
                     <p>Quantity:</p>
-                    <input type="number" value="@item.Value"
-                           @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))" />
-                    <button class="btn btn-info btn-sm"
-                            @onclick="(() => UpdateQuantity(item.Key, cartItem.Quantity))">
-                        Update Qty
-                    </button>
+                    <input type="number" 
+                           min="1"
+                           value="@cartItem.Quantity"
+                           @oninput="@(e => OnQuantityInput(cartItem, e.Value.ToString()))" />
                     <button class="btn btn-danger sm"
-                            @onclick="(() => RemoveFromCart(item.Key))">
+                            @onclick="(() => RemoveFromCart(cartItem))">
                         <i class="fa fa-trash"></i> Remove
                     </button>
                 </div>
@@ -46,9 +44,7 @@
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
-                <div>Total - (&nbsp;
-                    <b>@CartTotal.ToString("C")</b>
-                </div>
+                <div>Total: <b>@CartTotal.ToString("C")</b></div>
                 <button class="btn btn-success" @onclick="Checkout">
                     <span class="oi oi-credit-card"></span>&nbsp; Proceed to Checkout
                 </button>
@@ -58,7 +54,7 @@
 }
 else
 {
-    <h4>There are currently no items in your shopping cart</h4>
+    <h4>Your shopping cart is currently empty.</h4>
 }
 @code
 {
@@ -68,12 +64,28 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        CartItems = Manager.GetCartItems();
+        CartItems = Manager.GetCartItems() ?? new Dictionary<Item, int>();
+    }
+
+    private void OnQuantityInput(Item item, string value)
+    {
+        if (int.TryParse(value, out int quantity))
+        {
+            if (quantity < 1) 
+            {
+                quantity = 1; 
+            }
+            CartItems[item] = quantity;
+        }
     }
 
     private void UpdateQuantity(Item item, int quantity)
     {
-        if (CartItems.ContainsKey(item) && quantity > 0)
+        if (quantity < 1)
+        {
+            CartItems[item] = 1; 
+        }
+        else
         {
             CartItems[item] = quantity;
         }
@@ -90,10 +102,7 @@ else
 
     private void Checkout()
     {
-        //Manager.PurchaseItems();
-        //CartItems.Clear();
-        NavMgr.NavigateTo("/Checkout");
-        //StateHasChanged();
+        CartItems.Clear();
+        StateHasChanged();
     }
 }
-
