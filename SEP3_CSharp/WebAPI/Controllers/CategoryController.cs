@@ -34,10 +34,10 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet("categories")]
-    public async Task<List<Category>> GetCategory()
+    public async Task<ActionResult<IEnumerable<Category>>> GetCategory()
     {
         List<Category> categories = await _categoryRepository.GetCategories().ToListAsync();
-        return categories;
+        return Ok(categories);
     }
     
 }

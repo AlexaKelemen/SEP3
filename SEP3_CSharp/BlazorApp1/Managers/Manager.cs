@@ -21,18 +21,16 @@ public class Manager : IManager
     
     private IItemManager ItemManager;
     
-    private ICategoryManager CategoryManager;
-    private ICartManager CartManager;
+    private CategoryManager CategoryManager;
     
 
-    public Manager(GrpcChannel channel, IUserService userService, AppDbContext dbContext, IItemService itemService, ICategoryService categoryService, ICartManager cartManager, IUserManager userManager)
+    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
         UserManager = new UserManager(stub, userService);
-        ItemManager = new ItemManager(dbContext, itemService);
-        CategoryManager = new CategoryManager(dbContext, categoryService);
-        CartManager = cartManager;
+        ItemManager = new ItemManager(itemService);
+        CategoryManager = new CategoryManager(categoryService);
     }
     public async Task<User> GetUserAsync(string username)
     {
@@ -57,10 +55,5 @@ public class Manager : IManager
     public async Task<IEnumerable<Category>> GetCategoriesAsync()
     {
         return await CategoryManager.GetCategoriesAsync();
-    }
-
-    public Dictionary<Item, int> GetCartItems()
-    {
-        return CartManager.GetCartItems();
     }
 }

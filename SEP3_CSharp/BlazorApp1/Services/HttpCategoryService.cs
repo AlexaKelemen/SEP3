@@ -11,7 +11,7 @@ public class HttpCategoryService: ICategoryService
 {
     private readonly HttpClient httpClient;
 
-    public HttpCategoryService(AppDbContext appDbContext,  IHttpClientFactory httpClientFactory)
+    public HttpCategoryService(IHttpClientFactory httpClientFactory)
     {
         httpClient = httpClientFactory.CreateClient("Products");
     }
