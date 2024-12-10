@@ -1,20 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {}
+    "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {}
   },
   "projects": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+        "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,11 +27,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -85,21 +86,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+    "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "projectName": "DataTransferObjects",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+        "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -111,8 +113,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -147,21 +149,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+    "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\obj\\",
+        "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+        "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -205,21 +208,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
+    "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
         "projectName": "Managers",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\obj\\",
+        "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+        "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Managers\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -231,14 +235,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -297,7 +301,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -97,4 +97,14 @@ public class Manager : IManager
     {
         CartManager.PurchaseItems();
     }
+
+    public void RemoveFromCart(Item removedItem)
+    {
+        CartManager.RemoveFromCart(removedItem);
+    }
+
+    public void ChangeItemQuantity(Item addedItem, int quantity)
+    {
+        CartManager.ChangeItemQuantity(addedItem, quantity);
+    }
 }

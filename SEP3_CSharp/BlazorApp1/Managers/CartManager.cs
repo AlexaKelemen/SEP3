@@ -35,26 +35,13 @@ public class CartManager : ICartManager, INotifyPropertyChanged
         }
     }
 
-    public void RemoveFromCart(Item removedItem, int quantity)
+    public void RemoveFromCart(Item removedItem)
     {
         if (!cart.ContainsKey(removedItem))
         {
             throw new KeyNotFoundException("Item not found in cart");
         }
-
-        if (quantity <= 0)
-        {
-           throw new ArgumentException("Quantity cannot be less or equal to zero"); 
-        }
-
-        if (cart[removedItem] > quantity)
-        {
-            cart[removedItem] -= quantity;
-        }
-        else
-        {
-            cart.Remove(removedItem);
-        }
+        cart.Remove(removedItem);
     }
 
     public void ClearCart()
@@ -88,5 +75,22 @@ public class CartManager : ICartManager, INotifyPropertyChanged
         var handler = PropertyChanged;
         if (handler != null)
             handler(this, new PropertyChangedEventArgs(name));
+    }
+
+    public void ChangeItemQuantity(Item item, int quantity)
+    {
+        if (quantity <= 0)
+        {
+            throw new ArgumentException("Quantity cannot be less or equal to zero"); 
+        }
+
+        if (cart[item] > quantity)
+        {
+            cart[item] -= quantity;
+        }
+        else
+        {
+            cart[item] += quantity;
+        }
     }
 }
