@@ -5,5 +5,5 @@ public class Category
     public int CategoryId { get; set; }
     public string CategoryName { get; set; } = null!;
     public string CategoryDescription { get; set; } = null!;
-    public List<Item> ItemId { get; set; } = new List<Item>();
+    public List<Item> ItemId { get; set; } = [];
 }

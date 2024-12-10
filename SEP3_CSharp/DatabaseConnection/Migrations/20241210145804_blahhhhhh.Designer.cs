@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241206094734_Update2")]
-    partial class Update2
+    [Migration("20241210145804_blahhhhhh")]
+    partial class blahhhhhh
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,7 +133,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Tired of painful soles? Try this now!",
                             ImageURL = "Images/Shoes/shoes1.png",
                             Name = "Comfy shoes",
-                            Price = 10f,
+                            Price = 270f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -144,7 +144,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect fit for a runner",
                             ImageURL = "Images/Shoes/shoes2.png",
                             Name = "Running shoes",
-                            Price = 5f,
+                            Price = 675f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -152,10 +152,10 @@ namespace DatabaseConnection.Migrations
                         {
                             ItemId = 3,
                             Colour = "Green",
-                            Description = " Comfortable, long and flowy!",
+                            Description = "Comfortable, long and flowy!",
                             ImageURL = "Images/Clothes/clothing1.jpg",
                             Name = "Summer dress",
-                            Price = 15f,
+                            Price = 540f,
                             Quantity = 100,
                             Size = "Large"
                         },
@@ -163,10 +163,10 @@ namespace DatabaseConnection.Migrations
                         {
                             ItemId = 4,
                             Colour = "Grey",
-                            Description = "Classic white lace up sneakers with a minimalist design",
+                            Description = "Classic white lace-up sneakers with a minimalist design",
                             ImageURL = "Images/Shoes/shoes4.png",
                             Name = "White Sneakers",
-                            Price = 10f,
+                            Price = 1100f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -177,7 +177,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Beautiful blend from white to black",
                             ImageURL = "Images/Shoes/shoes5.png",
                             Name = "White and black ankle sneakers",
-                            Price = 20f,
+                            Price = 710f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -188,7 +188,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect for driving people away from your house",
                             ImageURL = "Images/accessories/Accessory21.png",
                             Name = "Amazing footmat",
-                            Price = 30f,
+                            Price = 250f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -199,7 +199,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Stylish glasses with black, round frames",
                             ImageURL = "Images/accessories/Accessory7.png",
                             Name = "Eyeglasses",
-                            Price = 10f,
+                            Price = 1000f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -210,7 +210,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Brown hand bag with reinforced handles",
                             ImageURL = "Images/accessories/Accessory11.png",
                             Name = "Small Hand bag",
-                            Price = 27f,
+                            Price = 800f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -221,7 +221,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Perfect gift to give to lovers of ducks!",
                             ImageURL = "Images/accessories/Accessory14.png",
                             Name = "Funny ducks",
-                            Price = 7f,
+                            Price = 75f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -232,7 +232,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Good, durable quality",
                             ImageURL = "Images/accessories/Accessory19.png",
                             Name = "Funny clothespin",
-                            Price = 5f,
+                            Price = 55f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -243,7 +243,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Durable but easily removed glue",
                             ImageURL = "Images/accessories/Accessory17.png",
                             Name = "Funny sticker",
-                            Price = 5f,
+                            Price = 50f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -254,7 +254,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Beautiful leather wallet",
                             ImageURL = "Images/accessories/Accessory10.png",
                             Name = "Small, feminine wallet",
-                            Price = 15f,
+                            Price = 530f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -265,7 +265,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Comfortable cotton. One out of 10 girls recommend",
                             ImageURL = "Images/Clothes/clothing2.jpg",
                             Name = "Bright green dress",
-                            Price = 25f,
+                            Price = 250f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -276,7 +276,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Very comfortable and stretchy material",
                             ImageURL = "Images/Clothes/clothing3.jpg",
                             Name = "Beautiful black dinner dress",
-                            Price = 35f,
+                            Price = 2500f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -287,7 +287,7 @@ namespace DatabaseConnection.Migrations
                             Description = "Sleek black boots with low heels and a zipper",
                             ImageURL = "Images/shoes/shoes16.png",
                             Name = "Black ankle boots",
-                            Price = 12f,
+                            Price = 1200f,
                             Quantity = 100,
                             Size = "Small"
                         },
@@ -298,7 +298,73 @@ namespace DatabaseConnection.Migrations
                             Description = "Durable, stretchy bracelet",
                             ImageURL = "Images/accessories/Accessory6.png",
                             Name = "Black bracelet",
-                            Price = 5f,
+                            Price = 150f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 17,
+                            Colour = "White",
+                            Description = "The manifestation of elegance",
+                            ImageURL = "Images/Clothes/clothing4.jpg",
+                            Name = "The flow dress",
+                            Price = 500f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 18,
+                            Colour = "Red",
+                            Description = "Unleash your inner diva",
+                            ImageURL = "Images/Clothes/clothing5.jpg",
+                            Name = "The dress",
+                            Price = 700f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 19,
+                            Colour = "Burgundy",
+                            Description = "Make the billion-dollar deal in this dress",
+                            ImageURL = "Images/Clothes/clothing6.jpg",
+                            Name = "Ultimate slay",
+                            Price = 450f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 20,
+                            Colour = "Red",
+                            Description = "Be the light of the dinner party",
+                            ImageURL = "Images/Clothes/clothing7.jpg",
+                            Name = "Dinner served",
+                            Price = 625f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 21,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 22,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
                             Quantity = 100,
                             Size = "Small"
                         });
@@ -398,7 +464,27 @@ namespace DatabaseConnection.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryDescription = "Different kinds of clothing",
+                            CategoryName = "Clothing"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryDescription = "Different kinds of Shoes",
+                            CategoryName = "Shoes"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryDescription = "Different kinds of accessories",
+                            CategoryName = "Accessories"
+                        });
                 });
 
             modelBuilder.Entity("CategoryItem", b =>

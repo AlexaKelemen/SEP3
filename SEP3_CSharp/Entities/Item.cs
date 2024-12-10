@@ -10,7 +10,7 @@ public class Item
     public float Price { get; set; }
     public string Description { get; set; } = null!;
     public string Name { get; set; } = null!;
-    public List<Category> CategoryId { get; set; } = new List<Category>();
+    public List<Category> CategoryId { get; set; } = [];
     public string ImageURL { get; set; } = null!;
     public int Quantity { get; set; }
 

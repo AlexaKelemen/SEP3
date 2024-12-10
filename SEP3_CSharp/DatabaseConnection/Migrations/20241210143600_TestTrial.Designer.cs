@@ -3,6 +3,7 @@ using System;
 using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,27 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20241210143600_TestTrial")]
+    partial class TestTrial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
-
-            modelBuilder.Entity("CategoryItem", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CategoryId", "ItemId");
-
-                    b.HasIndex("ItemId");
-
-                    b.ToTable("CategoryItem");
-                });
 
             modelBuilder.Entity("Entities.Card", b =>
                 {
@@ -301,39 +289,6 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 21,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 22,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 23,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
                             ItemId = 17,
                             Colour = "White",
                             Description = "The manifestation of elegance",
@@ -373,6 +328,17 @@ namespace DatabaseConnection.Migrations
                             ImageURL = "Images/Clothes/clothing7.jpg",
                             Name = "Dinner served",
                             Price = 625f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 21,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
                             Quantity = 100,
                             Size = "Small"
                         });
@@ -470,7 +436,12 @@ namespace DatabaseConnection.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("ItemId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("CategoryId");
+
+                    b.HasIndex("ItemId");
 
                     b.ToTable("Categories", (string)null);
 
@@ -479,35 +450,144 @@ namespace DatabaseConnection.Migrations
                         {
                             CategoryId = 1,
                             CategoryDescription = "Different kinds of clothing",
-                            CategoryName = "Clothing"
+                            CategoryName = "Clothing",
+                            ItemId = 0
                         },
                         new
                         {
                             CategoryId = 2,
                             CategoryDescription = "Different kinds of Shoes",
-                            CategoryName = "Shoes"
+                            CategoryName = "Shoes",
+                            ItemId = 0
                         },
                         new
                         {
                             CategoryId = 3,
                             CategoryDescription = "Different kinds of accessories",
-                            CategoryName = "Accessories"
+                            CategoryName = "Accessories",
+                            ItemId = 0
                         });
                 });
 
-            modelBuilder.Entity("CategoryItem", b =>
+            modelBuilder.Entity("Entities.Utilities.ItemCategory", b =>
                 {
-                    b.HasOne("Entities.Utilities.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("ItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
-                    b.HasOne("Entities.Item", null)
-                        .WithMany()
-                        .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ItemId");
+
+                    b.ToTable("CategoryItem", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ItemId = 1,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            ItemId = 2,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            ItemId = 3,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 4,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            ItemId = 5,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            ItemId = 6,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 7,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 8,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 9,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 10,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 11,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 12,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 13,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 14,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 15,
+                            CategoryId = 2
+                        },
+                        new
+                        {
+                            ItemId = 16,
+                            CategoryId = 3
+                        },
+                        new
+                        {
+                            ItemId = 17,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 18,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 19,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 20,
+                            CategoryId = 1
+                        },
+                        new
+                        {
+                            ItemId = 21,
+                            CategoryId = 1
+                        });
                 });
 
             modelBuilder.Entity("Entities.DeliveryOption", b =>
@@ -547,6 +627,22 @@ namespace DatabaseConnection.Migrations
                         .HasForeignKey("CardId");
 
                     b.Navigation("Card");
+                });
+
+            modelBuilder.Entity("Entities.Utilities.Category", b =>
+                {
+                    b.HasOne("Entities.Item", "Item")
+                        .WithMany("CategoryId")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+                });
+
+            modelBuilder.Entity("Entities.Item", b =>
+                {
+                    b.Navigation("CategoryId");
                 });
 
             modelBuilder.Entity("Entities.Order", b =>

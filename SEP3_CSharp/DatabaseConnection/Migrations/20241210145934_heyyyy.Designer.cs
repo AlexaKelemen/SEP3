@@ -3,6 +3,7 @@ using System;
 using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20241210145934_heyyyy")]
+    partial class heyyyy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -301,39 +304,6 @@ namespace DatabaseConnection.Migrations
                         },
                         new
                         {
-                            ItemId = 21,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 22,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
-                            ItemId = 23,
-                            Colour = "White",
-                            Description = "Make an impression, shine in your light",
-                            ImageURL = "Images/Clothes/clothing8.jpg",
-                            Name = "Shine bright dress",
-                            Price = 350f,
-                            Quantity = 100,
-                            Size = "Small"
-                        },
-                        new
-                        {
                             ItemId = 17,
                             Colour = "White",
                             Description = "The manifestation of elegance",
@@ -373,6 +343,28 @@ namespace DatabaseConnection.Migrations
                             ImageURL = "Images/Clothes/clothing7.jpg",
                             Name = "Dinner served",
                             Price = 625f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 21,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
+                            Quantity = 100,
+                            Size = "Small"
+                        },
+                        new
+                        {
+                            ItemId = 22,
+                            Colour = "White",
+                            Description = "Make an impression, shine in your light",
+                            ImageURL = "Images/Clothes/clothing8.jpg",
+                            Name = "Shine bright dress",
+                            Price = 350f,
                             Quantity = 100,
                             Size = "Small"
                         });

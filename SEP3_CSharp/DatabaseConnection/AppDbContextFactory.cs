@@ -11,7 +11,7 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
             "..\\..\\..\\..\\DatabaseConnection\\database.db");
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
         optionsBuilder.UseSqlite(
-            "Data Source=\"C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db");
+            ("Data Source=\"C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db\""));
 
 
         return new AppDbContext(optionsBuilder.Options);
