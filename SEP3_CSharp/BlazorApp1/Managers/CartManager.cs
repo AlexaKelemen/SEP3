@@ -8,8 +8,13 @@ public class CartManager : ICartManager, INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
     Dictionary<Item, int> cart = new Dictionary<Item, int>();
-    
-    public void AddToCart(Item addedItem, int quantity)
+
+    public CartManager()
+    {
+        
+    }
+
+public void AddToCart(Item addedItem, int quantity)
     {
         if (quantity <= 0)
         {

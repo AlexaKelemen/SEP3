@@ -25,7 +25,7 @@ public class Manager : IManager
     private ICartManager CartManager;
     
 
-    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService, ICartManager cartManager)
+    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
