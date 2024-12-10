@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using BlazorApp1.Services;
 using BlazorApp1.Services.Contracts;
 using DatabaseConnection;
@@ -5,6 +6,7 @@ using DataTransferObjects;
 using Entities;
 using Entities.Utilities;
 using Grpc.Net.Client;
+using Microsoft.AspNetCore.Identity;
 using Proto;
 
 
@@ -13,6 +15,7 @@ namespace BlazorApp1.Managers;
 
 public class Manager : IManager
 {
+    
     private IUserManager UserManager;
     
     private UserService.UserServiceClient stub;
@@ -25,7 +28,7 @@ public class Manager : IManager
     private ICartManager CartManager;
     
 
-    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService, ICartManager cartManager)
+    public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
     {
         var stub = new UserService.UserServiceClient(channel);
         
@@ -33,6 +36,7 @@ public class Manager : IManager
         ItemManager = new ItemManager(itemService);
         CategoryManager = new CategoryManager(categoryService);
         CartManager = new CartManager();
+        CartManager.PropertyChanged += PropertyChangedHandler;
     }
     public async Task<User> GetUserAsync(string username)
     {
@@ -62,5 +66,20 @@ public class Manager : IManager
     public Dictionary<Item, int> GetCartItems()
     {
         return CartManager.GetCartItems();
+    }
+
+    private void PropertyChangedHandler(object sender, PropertyChangedEventArgs e)
+    {
+        if (sender is CartManager)
+        {
+            switch (e.PropertyName)
+            {
+                case nameof(CartManager.cart):
+                {
+                    
+                    break;
+                }
+            }
+        }
     }
 }
