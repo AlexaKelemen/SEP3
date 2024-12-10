@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "OWWGdp6w0XA=",
+  "dgSpecHash": "wFZ8eja4ZuU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+  "projectFilePath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

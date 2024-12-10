@@ -82,4 +82,9 @@ public class Manager : IManager
             }
         }
     }
+
+    public void AddToCart(Item addedItem, int quantity)
+    {
+        CartManager.AddToCart(addedItem, quantity);
+    }
 }

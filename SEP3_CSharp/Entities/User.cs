@@ -14,5 +14,5 @@ public class User
     public string LastName { get; set; } = null!;
     public string BillingAddress { get; set; } = null!;
     public Card? Card { get; set; } = null!;
-    public Cart Cart { get; set; } = null!;
+  
 }

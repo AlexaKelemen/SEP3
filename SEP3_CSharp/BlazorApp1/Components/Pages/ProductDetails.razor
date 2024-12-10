@@ -1,6 +1,8 @@
 ﻿@page "/ProductDetails/{Id:int}"
 @using BlazorApp1.Managers
 @using DataTransferObjects
+@using Entities.Utilities
+@using Entities
 @inject NavigationManager NavigationManager
 @inject IManager Manager
 
@@ -30,11 +32,51 @@ else
                     <p class="card-text text-muted">@Item.Description</p>
                <!--   <p class="card-text"><strong>Color:</strong> <span>@Item.Colour</span></p>/  -->
                     <p class="card-text"><strong>Price:</strong> <span class="text-success">@Item.Price.ToString("C", new System.Globalization.CultureInfo("en-DK"))</span></p>
+                    <p><label>Choose colour:</label></p>
+                    <p> <Button type="button" class="btn btn-info btn-sm" @onclick="() => SetColour(blue)"> Blue </Button>
+                        <Button type="button" class="btn btn-success btn-sm" @onclick="() => SetColour(green)"> Green </Button>
+                        <Button type="button" class="btn btn-warning btn-sm" @onclick="() => SetColour(yellow)"> Yellow </Button>
+                        <Button type="button" class="btn btn-danger btn-sm" @onclick="() => SetColour(red)"> Red </Button>
+                        <Button type="button" class="btn btn-secondary btn-sm" @onclick="() => SetColour(grey)"> Grey </Button>
+                        <Button type="button" class="btn btn-dark btn-sm" @onclick="() => SetColour(black)"> Black </Button>
+                        <Button type="button" class="btn btn-light btn-sm" @onclick="() => SetColour(white)"> White </Button>
+                    </p>
                     
+                    <div>
+                        @if (Item.HasCategory("Clothing"))
+                        {
+                            <p><label>Choose size:</label></p>
+                            <select class="completedstatusfield" @onchange="args => SetSize(args)">
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        }
+                        @if (Item.HasCategory("Shoes"))
+                        {
+                            <select class="completedstatusfield" @onchange="args => SetSize(args)">
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select>
+                        }
+                    </div>
+                    <label>Amount: </label>
+                    <input type="number" @bind="@quantity"/>
                     <div class="d-grid mt-4">
                         <button type="button" class="btn btn-primary btn-lg" @onclick="AddToCart_Click">
                             Add to Cart
                         </button>
+                        <label style="color: red"> @errorLabel </label>
                     </div>
                 </div>
             </div>
@@ -47,6 +89,16 @@ else
     [Parameter] public int Id { get; set; }
     public ItemDTOs Item { get; set; }
     public string ErrorMessage { get; set; }
+    public string errorLabel;
+    public Item itemToCart;
+    private string blue = "blue";
+    private string green = "green";
+    private string yellow = "yellow";
+    private string red = "red";
+    private string white = "white";
+    private string black = "black";
+    private string grey = "grey";
+    private int quantity;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -62,12 +114,44 @@ else
         {
             ErrorMessage = "An error occurred while fetching the product details. " + ex.Message;
         }
+
+        itemToCart = new Item()
+        {
+            ItemId = Item.ItemId,
+            Name = Item.Name,
+            Description = Item.Description,
+            Price = Item.Price,
+            CategoryId = Item.CategoryId,
+            ImageURL = Item.ImageUrl
+        };
     }
 
 
     private async Task AddToCart_Click()
     {
-        NavigationManager.NavigateTo("/ShoppingCart");
+        
+        /*if (itemToCart.Size == null && !Item.HasCategory("Accessories"))
+            errorLabel = "You need to select a size";*/
+        if (itemToCart.Colour == null)
+            errorLabel = "You need to select a colour";
+        else if (quantity < 1)
+            errorLabel = "You need to select a valid amount input";
+        else
+        {
+            Manager.AddToCart(itemToCart, quantity);
+            NavigationManager.NavigateTo("/ShoppingCart"); 
+        }
+        
+    }
+
+    private void SetColour(string colour)
+    {
+        itemToCart.Colour = colour;
+    }
+
+    private void SetSize(ChangeEventArgs args)
+    {
+        itemToCart.Size = args.Value.ToString();
     }
 
 }

@@ -25,11 +25,11 @@ public class ItemDTOs
         this.ImageUrl = imageURL;
     }
 
-    public bool hasCategory(Category category)
+    public bool HasCategory(string category)
     {
         foreach (var categoryid in CategoryId)
         {
-            if (category.CategoryId == categoryid.CategoryId)
+            if (category == categoryid.CategoryName)
                 return true;
         }
         return false;
