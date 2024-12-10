@@ -25,8 +25,8 @@ public class Manager : IManager
     private IItemManager ItemManager;
     
     private CategoryManager CategoryManager;
-    private ICartManager CartManager;
-    
+    public ICartManager CartManager { get; private set; }
+
 
     public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
     {

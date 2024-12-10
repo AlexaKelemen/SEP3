@@ -6,6 +6,7 @@ namespace BlazorApp1.Managers;
 
 public interface IManager
 {
+    public ICartManager CartManager { get;}
     Task<User> GetUserAsync(string username);
     Task SaveUserInfoAsync(UserDTO userdto);
     Task<ItemDTOs> GetProductByIdAsync(int id);

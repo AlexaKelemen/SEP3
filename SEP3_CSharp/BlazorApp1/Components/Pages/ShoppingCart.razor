@@ -1,15 +1,18 @@
 ﻿@using BlazorApp1.Managers
 @using BlazorApp1.Services.Contracts;
 @using Entities;
+@using Entities.Utilities
 @using Microsoft.AspNetCore.Components;
 @using Microsoft.JSInterop;
 @inject IManager Manager;
-@inject IJSRuntime Js 
-
-<h3>ShoppingCart</h3>
+@inject IJSRuntime Js
+@inject NavigationManager NavigationManager
 @page "/ShoppingCart"
 
-@if (CartItems.Count > 0)
+<PageTitle>ShoppingCart</PageTitle>
+
+
+@if (CartItems != null && CartItems.Count > 0)
 {
     <h3 class="mb-5">Shopping Cart</h3>
     <div class="row mb-5">
@@ -17,36 +20,37 @@
 
             @foreach (var item in CartItems)
             {
-            var cartItem = item.Key; 
+                var cartItem = item.Key;
 
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <img src="@cartItem.ImageURL" alt="@cartItem.Name" class="img-thumbnail" />
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <img src="@cartItem.ImageURL" alt="@cartItem.Name" class="img-thumbnail"/>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>@cartItem.Name</h5>
+                        <p>@cartItem.Description</p>
+                        <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
+                        <p>Quantity:</p>
+                        <input type="number" value="@item.Value"
+                               @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))"/>
+                        <button class="btn btn-info btn-sm"
+                                @onclick="(() => UpdateQuantity(item.Key, cartItem.Quantity))">
+                            Update Qty
+                        </button>
+                        <button class="btn btn-danger sm"
+                                @onclick="(() => RemoveFromCart(item.Key))">
+                            <i class="fa fa-trash"></i> Remove
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                    <h5>@cartItem.Name</h5>
-                    <p>@cartItem.Description</p>
-                    <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
-                    <p>Quantity:</p>
-                    <input type="number" value="@cartItem.Quantity"
-                           @oninput="@(e => UpdateQuantity(item.Key, Convert.ToInt32(e.Value)))" />
-                    <button class="btn btn-info btn-sm"
-                            @onclick="(() => UpdateQuantity(item.Key, cartItem.Quantity))">
-                        Update Qty
-                    </button>
-                    <button class="btn btn-danger sm"
-                            @onclick="(() => RemoveFromCart(item.Key))">
-                        <i class="fa fa-trash"></i> Remove
-                    </button>
-                </div>
-            </div>
             }
-</div>
+        </div>
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
-                <div>Total - (@CartItems.Values.Sum()&nbsp;
+                <div>Total - (&nbsp;
                     <b>@CartTotal.ToString("C")</b>
+                    )
                 </div>
                 <button class="btn btn-success" @onclick="Checkout">
                     <span class="oi oi-credit-card"></span>&nbsp; Proceed to Checkout
@@ -76,6 +80,7 @@ else
         {
             CartItems[item] = quantity;
         }
+        
     }
 
     private void RemoveFromCart(Item item)
@@ -89,8 +94,8 @@ else
 
     private void Checkout()
     {
-        CartItems.Clear();
-        StateHasChanged();
+        NavigationManager.NavigateTo("/Checkout");
+        //CartItems.Clear();
+        //StateHasChanged();
     }
-}
 }
