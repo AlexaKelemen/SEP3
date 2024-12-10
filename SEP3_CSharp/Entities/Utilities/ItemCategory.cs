@@ -2,8 +2,6 @@
 
 public class ItemCategory
 {
-    public int ItemId { get; set; }
-    public Item Item { get; set; } = null!;
-    public int CategoryId { get; set; }
-    public Category Category { get; set; } = null!;
+    public Item ItemId { get; set; } = null!;
+    public Category CategoryId { get; set; } = null!;
 }
