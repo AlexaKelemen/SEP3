@@ -15,12 +15,8 @@ public class DatabaseFactory
   {
     try
     {
-<<<<<<< Updated upstream
       return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=user_domain", "postgres", "1234567");
-=======
-      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=user_domain", "postgres", "fatcat");
->>>>>>> Stashed changes
-    }
+        }
     catch (SQLException e)
     {
       System.out.println("Connection failed. Try a different password perhaps.");

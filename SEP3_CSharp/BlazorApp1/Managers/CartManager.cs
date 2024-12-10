@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Data;
 using Entities;
 
 
@@ -9,10 +8,6 @@ public class CartManager : ICartManager, INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
     public Dictionary<Item, int> cart { get; set; }
-
-    public CartManager()
-    {
-    }
     
     public void AddToCart(Item addedItem, int quantity)
     {
@@ -74,18 +69,12 @@ public class CartManager : ICartManager, INotifyPropertyChanged
 
     public void PurchaseItems()
     {
-        if (cart.Count <= 0)
-        {
-            throw new ConstraintException("No items to purchase.");
-        }
-        OnPropertyChanged(nameof(cart));
+        
     }
 
     
     protected void OnPropertyChanged(string name)
     {
-        var handler = PropertyChanged;
-        if (handler != null)
-            handler(this, new PropertyChangedEventArgs(name));
+        
     }
 }
