@@ -9,11 +9,16 @@
 @inject NavigationManager NavigationManager
 
 
-@foreach(Category category in categories)
-{
-    <button type="button" class="btn btn-primary" @onclick="() => FilterProducts(category)">@category.CategoryName</button>
-}
-<button type="button" class="btn btn-secondary" @onclick="ClearFilters">Clear Filters</button>
+<div>
+    <label>Filter your search:   </label>
+    <select class="filterCategories" @onchange="args => FilterProducts(args)">
+        @foreach (Category category in categories)
+        {
+            <option value=@category>@category.CategoryName</option>
+        }
+        <option value="clear">Clear</option>
+    </select>
+</div>
 @if (Items == null)
 {
     <h3>No products can be displayed right now, sorry for the inconvenience</h3>
@@ -52,20 +57,28 @@ else
         
     }
 
-    private async Task FilterProducts(Category category)
+    private async Task FilterProducts(ChangeEventArgs args)
     {
+        string category = (string)args.Value;
         await ClearFilters();
         List<ItemDTO> temp = new List<ItemDTO>();
-        foreach (var item in Items)
+        if (category.Equals("clear"))
         {
-            if (item.hasCategory(category))
+            await ClearFilters();
+        }
+        else
+        {
+            foreach (var item in Items)
             {
-                temp.Add(item);
+                if (item.HasCategory(category))
+                {
+                    temp.Add(item);
+                }
             }
+            Items = temp;
         }
 
-        Items = temp;
-        
+    
     }
 
     private async Task ClearFilters()
