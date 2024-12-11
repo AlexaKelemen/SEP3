@@ -100,11 +100,9 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Repo
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.dll
-C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DataTransferObjects.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.pdb
-C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DataTransferObjects.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.AssemblyReference.cache
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfoInputs.cache
@@ -118,3 +116,5 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\Repo
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll
 D:\Code files\SEP\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.runtimeconfig.json
 D:\Code files\SEP\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.genruntimeconfig.cache
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.runtimeconfig.json
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.genruntimeconfig.cache

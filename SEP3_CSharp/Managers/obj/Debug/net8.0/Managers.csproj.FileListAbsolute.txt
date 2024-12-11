@@ -119,10 +119,8 @@ C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\ref\Managers.dl
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.deps.json
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.pdb
-C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.dll
-C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.AssemblyReference.cache
@@ -138,3 +136,5 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\ref\Managers.dll
 D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.runtimeconfig.json
 D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.genruntimeconfig.cache
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.runtimeconfig.json
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.genruntimeconfig.cache
