@@ -1,21 +1,85 @@
 ﻿@page "/Checkout"
 @using System.ComponentModel
+@using System.Security.Claims
 @using BlazorApp1.Managers
+@using DataTransferObjects
 @using Entities
+@using Microsoft.AspNetCore.Authorization
+@inject AuthenticationStateProvider AuthProvider
 @inject IManager Manager
 @inject NavigationManager NavigationManager
 
 <PageTitle>Checkout</PageTitle>
-<h1>@total</h1>
+<h1>@total.ToString("C", new System.Globalization.CultureInfo("en-DK"))</h1>
+<AuthorizeView>
+    <Authorized>
+        <p>Hello @context.User.Identity.Name</p>
+    </Authorized>
+</AuthorizeView>
+<div class="mb-3">
+    <label>First name</label>
+    <input type="text" @bind="cardFirstName"/>
+</div>
+
+<div class="mb-3">
+    <label>Last name</label>
+    <input type="text" @bind="cardLastName"/>
+</div>
+
+<div class="mb-3">
+    <label>Card Number</label>
+    <input type="text" @bind="cardNumber"/>
+</div>
+<div class="mb-3">
+    <label>Date</label>
+    <InputDate @bind-Value="cardExpirationDate"/>
+</div>
+<div class="mb-3">
+    <label>Cvc</label>
+    <input type="text" @bind="cardCvc"/>
+</div>
 
 
 @code {
-    private string total;
+    [CascadingParameter] public Task<AuthenticationState> State { get; set; }
+    
+    private decimal total;
+    private string? cardFirstName;
+    private string? cardLastName;
+    private string? cardCvc;
+    private string? cardNumber;
+    private DateOnly? cardExpirationDate;
+
+    private UserDTO? user;
     
     protected override async Task OnInitializedAsync()
     {
-        total = Manager.GetTotal().ToString("C");
+        user = new UserDTO();
+        total = (decimal)Manager.GetTotal();
+        AuthenticationState authenticationState = await State;
+        ClaimsPrincipal claimsPrincipal = authenticationState.User;
+        if (claimsPrincipal.Identity is null || !claimsPrincipal.Identity.IsAuthenticated)
+        {
+            // the user is not logged in
+            return;
+        }
+        
+        User temp = await Manager.GetUserAsync(claimsPrincipal.Identity?.Name);
+        user = new UserDTO()
+        {
+            Username = temp.Username,
+            BillingAddress = temp.BillingAddress,
+            Card = temp.Card,
+            Email = temp.Email,
+            FirstName = temp.FirstName,
+            LastName = temp.LastName
+        };
+        cardFirstName = user.Card.FName;
+        cardLastName = user.Card.LName;
+        cardCvc = user.Card.Cvc;
+        cardNumber = user.Card.CardNumber;
+        cardExpirationDate = user.Card.ExpirationDate;
+        
     }
-    
     
 }

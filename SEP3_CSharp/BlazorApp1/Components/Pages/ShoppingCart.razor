@@ -9,7 +9,7 @@
 @page "/ShoppingCart"
 
 <PageTitle>ShoppingCart</PageTitle>
-<h3>ShoppingCart</h3>
+
 @if (CartItems != null && CartItems.Count > 0)
 {
     <h3 class="mb-5">Shopping Cart</h3>
@@ -27,11 +27,11 @@
                 <div class="col-md-8">
                     <h5>@cartItem.Name</h5>
                     <p>@cartItem.Description</p>
-                    <p>Price: <b>@cartItem.Price.ToString("C")</b></p>
+                    <p>Price: <b>@cartItem.Price.ToString("C", new System.Globalization.CultureInfo("en-DK"))</b></p>
                     <p>Quantity:</p>
                     <input type="number" 
                            min="1"
-                           value="@cartItem.Quantity"
+                           value="@item.Value"
                            @oninput="@(e => OnQuantityInput(cartItem, e.Value.ToString()))"/>
                     <button class="btn btn-danger sm"
                             @onclick="(() => RemoveFromCart(cartItem))">
@@ -44,7 +44,7 @@
         <div class="col-md-3">
             <h5>Cart Summary</h5>
             <div class="mt-2">
-                <div>Total: <b>@CartTotal.ToString("C")</b></div>
+                <div>Total: <b>@CartTotal.ToString("C", new System.Globalization.CultureInfo("en-DK"))</b></div>
                 <button class="btn btn-success" @onclick="Checkout">
                     <span class="oi oi-credit-card"></span>&nbsp; Proceed to Checkout
                 </button>
@@ -102,7 +102,8 @@ else
 
     private void Checkout()
     {
-        CartItems.Clear();
-        StateHasChanged();
+        NavMgr.NavigateTo("/Checkout");
+        //CartItems.Clear();
+        //StateHasChanged();
     }
 }
