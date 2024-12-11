@@ -17,5 +17,5 @@ public interface IManager
     void PurchaseItems();
     void RemoveFromCart(Item addedItem);
     public void ChangeItemQuantity(Item addedItem, int quantity);
-    Task<IEnumerable<Order>> GetOrdersAsync();
+    Task<IEnumerable<ItemCategory>> GetItemCategoriesAsync();
 }
