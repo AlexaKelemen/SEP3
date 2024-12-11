@@ -82,3 +82,6 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
