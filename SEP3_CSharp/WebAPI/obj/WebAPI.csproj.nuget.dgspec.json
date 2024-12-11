@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
         "projectName": "BlazorApp1",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,17 +26,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj"
               }
             }
           }
@@ -98,17 +98,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -120,11 +120,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -183,17 +183,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "projectName": "DataTransferObjects",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -205,8 +205,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -245,17 +245,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -303,17 +303,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
         "projectName": "Managers",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Managers\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Managers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -325,14 +325,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -395,17 +395,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -417,11 +417,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -460,17 +460,17 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -482,20 +482,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
               }
             }
           }

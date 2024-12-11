@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
       "projectName": "DataTransferObjects",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+      "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -51,8 +51,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\Desktop\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
             }
           }
         }

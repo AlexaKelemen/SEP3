@@ -14,13 +14,10 @@ public class AppDbContext : DbContext
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<DeliveryOption> DeliveryOptions => Set<DeliveryOption>();
-
+    public DbSet<ItemCategory> ItemCategories => Set<ItemCategory>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
-
-        // Configure Item table and seed data
         modelBuilder.Entity<Item>().ToTable("Items");
         modelBuilder.Entity<Item>().HasData(
             new Item
@@ -175,9 +172,7 @@ public class AppDbContext : DbContext
                 Quantity = 100, Colour = "Red", Size = "Small"
             }
         );
-    
-
-    // Configure Category table and seed data
+        
         modelBuilder.Entity<Category>().ToTable("Categories");
         modelBuilder.Entity<Category>().HasData(
             new Category
@@ -196,33 +191,34 @@ public class AppDbContext : DbContext
                 CategoryDescription = "Different kinds of accessories"
             }
         );
+        modelBuilder.Entity<ItemCategory>().HasKey(ic => new { ic.CategoryId, ic.ItemId });
+        modelBuilder.Entity<ItemCategory>().ToTable("ItemCategories");
+        modelBuilder.Entity<ItemCategory>().HasData(
+            new ItemCategory { ItemId = 1, CategoryId = 2 },
+            new ItemCategory { ItemId = 2, CategoryId = 2 },
+            new ItemCategory { ItemId = 3, CategoryId = 1 },
+            new ItemCategory { ItemId = 4, CategoryId = 2 },
+            new ItemCategory { ItemId = 5, CategoryId = 2 },
+            new ItemCategory { ItemId = 6, CategoryId = 3 },
+            new ItemCategory { ItemId = 7, CategoryId = 3 },
+            new ItemCategory { ItemId = 8, CategoryId = 3 },
+            new ItemCategory { ItemId = 9, CategoryId = 3 },
+            new ItemCategory { ItemId = 10, CategoryId = 3 },
+            new ItemCategory { ItemId = 11, CategoryId = 3 },
+            new ItemCategory { ItemId = 12, CategoryId = 3 },
+            new ItemCategory { ItemId = 13, CategoryId = 1 },
+            new ItemCategory { ItemId = 14, CategoryId = 1 },
+            new ItemCategory { ItemId = 15, CategoryId = 2 },
+            new ItemCategory { ItemId = 16, CategoryId = 3 },
+            new ItemCategory { ItemId = 17, CategoryId = 1 },
+            new ItemCategory { ItemId = 18, CategoryId = 1 },
+            new ItemCategory { ItemId = 19, CategoryId = 1 },
+            new ItemCategory { ItemId = 20, CategoryId = 1 },
+            new ItemCategory { ItemId = 21, CategoryId = 1 }
+        );
     }
 }
 
-// Configure ItemCategory table (linking table)
-    //     modelBuilder.Entity<ItemCategory>().ToTable("CategoryItem");
-    //     modelBuilder.Entity<ItemCategory>().HasData(
-    //         new ItemCategory { ItemId = 1, CategoryId = 2 },
-    //         new ItemCategory { ItemId = 2, CategoryId = 2 },
-    //         new ItemCategory { ItemId = 3, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 4, CategoryId = 2 },
-    //         new ItemCategory { ItemId = 5, CategoryId = 2 },
-    //         new ItemCategory { ItemId = 6, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 7, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 8, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 9, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 10, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 11, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 12, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 13, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 14, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 15, CategoryId = 2 },
-    //         new ItemCategory { ItemId = 16, CategoryId = 3 },
-    //         new ItemCategory { ItemId = 17, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 18, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 19, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 20, CategoryId = 1 },
-    //         new ItemCategory { ItemId = 21, CategoryId = 1 }
-    //     );
-    // }
+      
+ 
 
