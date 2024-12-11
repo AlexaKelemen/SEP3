@@ -46,4 +46,21 @@ public class HttpCategoryService: ICategoryService
             PropertyNameCaseInsensitive = true
         })!;
     }
+
+    public async Task<IEnumerable<ItemCategory>> GetItemCategories()
+    {
+        HttpResponseMessage response = await httpClient.GetAsync($"Category/itemCategories");
+        string responseString = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(responseString + " " + response.StatusCode);
+        }
+
+        return JsonSerializer.Deserialize<List<ItemCategory>>(responseString, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        
+    }
 }

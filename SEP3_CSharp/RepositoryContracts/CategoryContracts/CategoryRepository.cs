@@ -7,45 +7,45 @@ namespace RepositoryContracts.CategoryContracts;
 
 public class CategoryRepository : ICategoryRepository
 {
-    private readonly AppDbContext _context;
+    private readonly AppDbContext context;
 
     public CategoryRepository(AppDbContext context)
     {
-        _context = context;
+        this.context = context;
     }
     
     public async Task<Category> AddCategoryAsync(Category category)
     {
-      EntityEntry<Category> entry = await _context.Categories.AddAsync(category);
-      await _context.SaveChangesAsync();
+      EntityEntry<Category> entry = await context.Categories.AddAsync(category);
+      await context.SaveChangesAsync();
       return entry.Entity;
     }
 
     public async Task UpdateCategoryAsync(Category category)
     {
-        if (!(await _context.Categories.AnyAsync(c => c.CategoryId == category.CategoryId)))
+        if (!(await context.Categories.AnyAsync(c => c.CategoryId == category.CategoryId)))
         {
           throw new ArgumentException("Category does not exist");  
         }
-        _context.Categories.Update(category);
-        await _context.SaveChangesAsync();
+        context.Categories.Update(category);
+        await context.SaveChangesAsync();
     }
 
     public async Task DeleteCategoryAsync(int id)
     {
-        Category? existing = await _context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
+        Category? existing = await context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
         if (existing == null)
         {
             throw new ArgumentException($"Category with id {id} not found");
         }
 
-        _context.Categories.Remove(existing);
-        await _context.SaveChangesAsync();
+        context.Categories.Remove(existing);
+        await context.SaveChangesAsync();
     }
 
     public async Task<Category> GetSingleCategoryAsync(int id)
     {
-        Category? category = await _context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
+        Category? category = await context.Categories.SingleOrDefaultAsync(c => c.CategoryId == id);
 
         if (category == null)
         {
@@ -57,6 +57,10 @@ public class CategoryRepository : ICategoryRepository
 
     public IQueryable<Category> GetCategories()
     {
-     return _context.Categories.AsQueryable();
+     return context.Categories.AsQueryable();
+    }
+    public IQueryable<ItemCategory> GetCategoryItems()
+    {
+        return context.ItemCategories.AsQueryable();
     }
 }

@@ -17,4 +17,9 @@ public class CategoryManager:ICategoryManager
         return await categoryService.GetCategoriesAsync();
         
     }
+
+    public async Task<IEnumerable<ItemCategory>> GetItemCategoriesAsync()
+    {
+        return await categoryService.GetItemCategories();
+    }
 }

@@ -109,8 +109,14 @@ public class Manager : IManager
         CartManager.ChangeItemQuantity(addedItem, quantity);
     }
 
-     public Task<IEnumerable<Order>> GetOrdersAsync()
+    public Task<IEnumerable<Order>> GetOrdersAsync()
     {
         return OrderManager.GetOrdersAsync();
+    }
+
+    public async Task<IEnumerable<ItemCategory>> GetItemCategoriesAsync()
+    {
+        return await CategoryManager.GetItemCategoriesAsync();
+
     }
 }

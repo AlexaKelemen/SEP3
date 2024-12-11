@@ -9,4 +9,5 @@ public interface ICategoryRepository
         Task DeleteCategoryAsync(int id);
         Task<Category> GetSingleCategoryAsync(int id);
         IQueryable<Category> GetCategories();
+        IQueryable<ItemCategory> GetCategoryItems();
     }
