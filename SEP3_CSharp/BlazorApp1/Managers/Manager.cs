@@ -26,6 +26,7 @@ public class Manager : IManager
     
     private CategoryManager CategoryManager;
     private ICartManager CartManager;
+    private IOrderManager OrderManager;
 
 
     public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
@@ -106,5 +107,10 @@ public class Manager : IManager
     public void ChangeItemQuantity(Item addedItem, int quantity)
     {
         CartManager.ChangeItemQuantity(addedItem, quantity);
+    }
+
+     public Task<IEnumerable<Order>> GetOrdersAsync()
+    {
+        return OrderManager.GetOrdersAsync();
     }
 }
