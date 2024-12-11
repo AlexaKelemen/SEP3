@@ -10,8 +10,7 @@ public class Order
     public PaymentMethod PaymentMethod { get; set; } = null!;
     public User PlacedBy { get; set; } = null!;
     public List<DeliveryOption> DeliveryOptions { get; set; } = [];
-<<<<<<< Updated upstream
-=======
+
     public List<Item> Items { get; set; }
 
     public bool isNew(){
@@ -25,5 +24,5 @@ public class Order
             return true;
         }
     }
->>>>>>> Stashed changes
+
 }

@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-﻿@page "/Return"
-<h3>Return</h3>
 
-@code {
-=======
-﻿@using BlazorApp1.Managers
+@using BlazorApp1.Managers
 @using Entities
 @page "/Return"
 @inject IManager Manager 
@@ -39,6 +34,6 @@ else
     {
         Orders = await Manager.GetOrdersAsync();
     }
->>>>>>> Stashed changes
+
     
 }
