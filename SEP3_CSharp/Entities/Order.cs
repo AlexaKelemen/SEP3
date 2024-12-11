@@ -10,4 +10,5 @@ public class Order
     public PaymentMethod PaymentMethod { get; set; } = null!;
     public User PlacedBy { get; set; } = null!;
     public List<DeliveryOption> DeliveryOptions { get; set; } = [];
+    public List<Item> Items { get; set; } 
 }
