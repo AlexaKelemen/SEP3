@@ -1,6 +1,28 @@
-﻿@page "/Return"
-<h3>Return</h3>
+﻿@using Entities
+@page "/Return"
+@if (Orders == null)
+{
+<h3>No products can be displayed right now. Su**s to be you I guess.</h3>
+}
+else
+{
+<h3 class="mb-5">Products</h3>
+var productCount = Orders.Count();
+@if (productCount > 0)
+{
+const int itemsPerRow = 4;
+var productsRowList = new List<Order>();
+
+@for (int i = 0; i < productCount; i++)
+{
+productsRowList = Orders.Skip(i * itemsPerRow).Take(itemsPerRow).ToList();
+<div class="row mt-3">
+    <DisplayReturns Products="@productsRowList"></DisplayReturns>
+</div>
+}
+}
+}
 
 @code {
-    
+    private IEnumerable<Order> Orders { get; set; }
 }
