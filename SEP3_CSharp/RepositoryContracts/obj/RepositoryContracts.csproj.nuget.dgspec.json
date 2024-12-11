@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {}
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {}
   },
   "projects": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -89,17 +89,17 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "projectName": "DataTransferObjects",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -111,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -151,17 +151,17 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -209,17 +209,17 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
-        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+        "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -231,11 +231,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
