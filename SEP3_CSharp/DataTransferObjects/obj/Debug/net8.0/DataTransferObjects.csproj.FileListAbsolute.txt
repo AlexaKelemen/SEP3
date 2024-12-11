@@ -110,3 +110,5 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\Data
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\refint\DataTransferObjects.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.pdb
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\ref\DataTransferObjects.dll
+D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.runtimeconfig.json
+D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.genruntimeconfig.cache
