@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Dec 2024 08:29:58 GMT"
+          "Value": "Thu, 12 Dec 2024 08:03:57 GMT"
         },
         {
           "Name": "Link",
@@ -78,7 +78,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 10 Dec 2024 08:29:58 GMT"
+          "Value": "Thu, 12 Dec 2024 08:03:57 GMT"
         },
         {
           "Name": "Link",
@@ -417,6 +417,662 @@
         {
           "Name": "integrity",
           "Value": "sha256-w6SXbbg+bW/sJ5UsSmx1xilrV7+hQp08LrRxH4QAh3Y="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing4.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6yCR+P3Z1BoNwLIeNSkNrCKSe900dYrie4EM+VOWqQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6yCR+P3Z1BoNwLIeNSkNrCKSe900dYrie4EM+VOWqQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing4.ztvqxay9r7.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6yCR+P3Z1BoNwLIeNSkNrCKSe900dYrie4EM+VOWqQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ztvqxay9r7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6yCR+P3Z1BoNwLIeNSkNrCKSe900dYrie4EM+VOWqQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Clothes/clothing4.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing5.6ob9csxwlo.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "66281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vi8ygWIytLpfEYyggX4nCAxmohVfxpZhUD2GagCLpZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ob9csxwlo"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vi8ygWIytLpfEYyggX4nCAxmohVfxpZhUD2GagCLpZE="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Clothes/clothing5.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing5.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "66281"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vi8ygWIytLpfEYyggX4nCAxmohVfxpZhUD2GagCLpZE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vi8ygWIytLpfEYyggX4nCAxmohVfxpZhUD2GagCLpZE="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing6.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sliCnRPhrX2WAh1iTa4CCXK+3Fi3kjejcFC1PyLeY4Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sliCnRPhrX2WAh1iTa4CCXK+3Fi3kjejcFC1PyLeY4Q="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing6.yreuh8rqmc.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sliCnRPhrX2WAh1iTa4CCXK+3Fi3kjejcFC1PyLeY4Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yreuh8rqmc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sliCnRPhrX2WAh1iTa4CCXK+3Fi3kjejcFC1PyLeY4Q="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Clothes/clothing6.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing7.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42819"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7sDqlwYTKuCdb5rT+cv0+KipJkbbyLYuvzFyY6CbByM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7sDqlwYTKuCdb5rT+cv0+KipJkbbyLYuvzFyY6CbByM="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing7.y856jzg2gm.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "42819"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7sDqlwYTKuCdb5rT+cv0+KipJkbbyLYuvzFyY6CbByM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y856jzg2gm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7sDqlwYTKuCdb5rT+cv0+KipJkbbyLYuvzFyY6CbByM="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Clothes/clothing7.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing8.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing8.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52821"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fhxpCtYiDnuBbxSgSeMLXrjO/ZswpFumhRo/hM++VzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fhxpCtYiDnuBbxSgSeMLXrjO/ZswpFumhRo/hM++VzM="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Clothes/clothing8.y8ofjmb8z8.jpg",
+      "AssetFile": "_content/BlazorApp1/Images/Clothes/clothing8.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "52821"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fhxpCtYiDnuBbxSgSeMLXrjO/ZswpFumhRo/hM++VzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 08:49:40 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y8ofjmb8z8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fhxpCtYiDnuBbxSgSeMLXrjO/ZswpFumhRo/hM++VzM="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Clothes/clothing8.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/Shoe-sizes.jcaugu53b6.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/Shoe-sizes.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178297"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HRjIGUedvcWb6WnBFN8E9SqBEtOcCnh3He/h7hs0eyU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 15:09:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jcaugu53b6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HRjIGUedvcWb6WnBFN8E9SqBEtOcCnh3He/h7hs0eyU="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Random/Shoe-sizes.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/Shoe-sizes.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/Shoe-sizes.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178297"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HRjIGUedvcWb6WnBFN8E9SqBEtOcCnh3He/h7hs0eyU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 15:09:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HRjIGUedvcWb6WnBFN8E9SqBEtOcCnh3He/h7hs0eyU="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/clothing-sizes.i8z3is2gi0.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/clothing-sizes.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "167195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3sghyB3XGRSw+NGN4xZ7ZeF6jeg2RhaMcrY09RUUJuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Dec 2024 07:19:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i8z3is2gi0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3sghyB3XGRSw+NGN4xZ7ZeF6jeg2RhaMcrY09RUUJuI="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Random/clothing-sizes.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/clothing-sizes.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/clothing-sizes.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "167195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3sghyB3XGRSw+NGN4xZ7ZeF6jeg2RhaMcrY09RUUJuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 11 Dec 2024 07:19:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3sghyB3XGRSw+NGN4xZ7ZeF6jeg2RhaMcrY09RUUJuI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/desktop.ini",
+      "AssetFile": "_content/BlazorApp1/Images/Random/desktop.ini",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XJl2E9clZz3NBu51SSSQD6JSAWe62xe6xNx6fswwa34=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 15:11:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XJl2E9clZz3NBu51SSSQD6JSAWe62xe6xNx6fswwa34="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/desktop.or4urinklp.ini",
+      "AssetFile": "_content/BlazorApp1/Images/Random/desktop.ini",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XJl2E9clZz3NBu51SSSQD6JSAWe62xe6xNx6fswwa34=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Dec 2024 15:11:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "or4urinklp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XJl2E9clZz3NBu51SSSQD6JSAWe62xe6xNx6fswwa34="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Random/desktop.ini"
         }
       ]
     },
