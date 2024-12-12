@@ -35,7 +35,7 @@ builder.Services.AddHttpClient("Products", sp =>
 });
 builder.Services.AddHttpClient();
 
-builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8080"));
+builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhost:8089"));
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
