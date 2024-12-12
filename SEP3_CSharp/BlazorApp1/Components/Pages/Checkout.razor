@@ -10,81 +10,93 @@
 @inject NavigationManager NavigationManager
 
 <PageTitle>Checkout</PageTitle>
-<h1>@total.ToString("C", new System.Globalization.CultureInfo("en-DK"))</h1>
-<AuthorizeView>
-    <Authorized>
-        <p>Hello @context.User.Identity.Name</p>
-    </Authorized>
-</AuthorizeView>
-<div class="mb-3">
-    <label>First name</label>
-    <input type="text" @bind="cardFirstName" />
+<div class="container mt-4">
+    <h1 class="text-center">Checkout</h1>
+    <h2 class="text-center">Total: @total.ToString("C", new System.Globalization.CultureInfo("en-DK"))</h2>
+
+    <AuthorizeView>
+        <Authorized>
+            <p class="text-center">Hello, <strong>@context.User.Identity.Name</strong></p>
+        </Authorized>
+    </AuthorizeView>
+
+    <form class="mt-4">
+        <h3 class="mb-3">Payment Details</h3>
+
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" id="firstName" class="form-control" @bind="cardFirstName" />
+        </div>
+
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" id="lastName" class="form-control" @bind="cardLastName" />
+        </div>
+
+        <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input type="text" id="cardNumber" class="form-control" @bind="cardNumber" />
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="expirationDate" class="form-label">Expiration Date</label>
+                <InputDate id="expirationDate" class="form-control" @bind-Value="cardExpirationDate" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="cvc" class="form-label">CVC</label>
+                <input type="text" id="cvc" class="form-control" @bind="cardCvc" />
+            </div>
+        </div>
+
+        <h3 class="mt-4 mb-3">Delivery Options</h3>
+        <div class="mb-3">
+            <label for="deliveryOption" class="form-label">Select Delivery Option</label>
+            <select id="deliveryOption" class="form-select" @bind="selectedDeliveryOption">
+                <option value="HomeDelivery">Home Delivery</option>
+                <option value="PickupLocation">Pickup Location</option>
+            </select>
+        </div>
+
+        @if (selectedDeliveryOption == "HomeDelivery")
+        {
+            <h4 class="mt-3">Home Delivery Details</h4>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" id="country" class="form-control" @bind="deliveryCountry" />
+            </div>
+            <div class="mb-3">
+                <label for="town" class="form-label">Town</label>
+                <input type="text" id="town" class="form-control" @bind="deliveryTown" />
+            </div>
+            <div class="mb-3">
+                <label for="street" class="form-label">Street</label>
+                <input type="text" id="street" class="form-control" @bind="deliveryStreet" />
+            </div>
+            <div class="mb-3">
+                <label for="number" class="form-label">Number</label>
+                <input type="text" id="number" class="form-control" @bind="deliveryNumber" />
+            </div>
+        }
+
+        @if (selectedDeliveryOption == "PickupLocation")
+        {
+            <h4 class="mt-3">Pickup Location</h4>
+            <div class="mb-3">
+                <label for="pickupLocation" class="form-label">Select Pickup Location</label>
+                <select id="pickupLocation" class="form-select" @bind="selectedPickupLocation">
+                    <option value="Location1">Central Post Office</option>
+                    <option value="Location2">City Mall</option>
+                    <option value="Location3">Train Station</option>
+                    <option value="Location4">University Campus</option>
+                </select>
+            </div>
+        }
+
+        <button type="button" class="btn btn-primary mt-4" @onclick="CheckoutItems">Checkout</button>
+    </form>
 </div>
-
-<div class="mb-3">
-    <label>Last name</label>
-    <input type="text" @bind="cardLastName" />
-</div>
-
-<div class="mb-3">
-    <label>Card Number</label>
-    <input type="text" @bind="cardNumber" />
-</div>
-<div class="mb-3">
-    <label>Date</label>
-    <InputDate @bind-Value="cardExpirationDate" />
-</div>
-<div class="mb-3">
-    <label>Cvc</label>
-    <input type="text" @bind="cardCvc" />
-</div>
-
-<div class="mb-3">
-    <label>Delivery Option</label>
-    <select class="form-select" @bind="selectedDeliveryOption">
-        <option value="HomeDelivery">Home Delivery</option>
-        <option value="PickupLocation">Pickup Location</option>
-    </select>
-</div>
-
-
-@if (selectedDeliveryOption == "HomeDelivery")
-{
-    <div class="mb-3">
-        <label>Country</label>
-        <input type="text" @bind="deliveryCountry" />
-    </div>
-    <div class="mb-3">
-        <label>Town</label>
-        <input type="text" @bind="deliveryTown" />
-    </div>
-    <div class="mb-3">
-        <label>Street</label>
-        <input type="text" @bind="deliveryStreet" />
-    </div>
-    <div class="mb-3">
-        <label>Number</label>
-        <input type="text" @bind="deliveryNumber" />
-    </div>
-   
-    
-}
-
-<!-- Pickup Location Options -->
-@if (selectedDeliveryOption == "PickupLocation")
-{
-    <div class="mb-3">
-        <label>Pickup Location</label>
-        <select class="form-select" @bind="selectedPickupLocation">
-            <option value="Location1">Central Post Office</option>
-            <option value="Location2">City Mall</option>
-            <option value="Location3">Train Station</option>
-            <option value="Location4">University Campus</option>
-        </select>
-    </div>
-}
-
-<button type="button" class="btn btn-primary" @onclick="CheckoutItems">Checkout</button>
 
 @code {
     [CascadingParameter] public Task<AuthenticationState> State { get; set; }
@@ -142,7 +154,7 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 2,
-                Name = $"Pickup Location: {selectedPickupLocation}", // Use pickup location directly
+                Name = $"Pickup Location: {selectedPickupLocation}",
                 OrderId = -1
             };
         }
@@ -163,5 +175,4 @@
 
         return await Manager.CheckoutAsync(order);
     }
-
 }
