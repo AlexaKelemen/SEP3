@@ -71,6 +71,10 @@
                 <input type="text" id="town" class="form-control" @bind="deliveryTown" />
             </div>
             <div class="mb-3">
+                <label for="number" class="form-label">Zipcode</label>
+                <input type="text" id="zipcode" class="form-control" @bind="deliveryZipcode" />
+            </div>
+            <div class="mb-3">
                 <label for="street" class="form-label">Street</label>
                 <input type="text" id="street" class="form-control" @bind="deliveryStreet" />
             </div>
@@ -78,6 +82,7 @@
                 <label for="number" class="form-label">Number</label>
                 <input type="text" id="number" class="form-control" @bind="deliveryNumber" />
             </div>
+            
         }
 
         @if (selectedDeliveryOption == "PickupLocation")
@@ -114,6 +119,7 @@
     private string? deliveryNumber;
     private string? deliveryCountry;
     private string? selectedPickupLocation;
+    private string? deliveryZipcode;
 
     private User? user;
 
@@ -145,7 +151,7 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 1,
-                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, ", 
+                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, {deliveryZipcode} ", 
                 OrderId = -1
             };
         }

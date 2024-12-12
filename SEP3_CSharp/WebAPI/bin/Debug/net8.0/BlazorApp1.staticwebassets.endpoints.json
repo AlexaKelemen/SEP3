@@ -741,6 +741,88 @@
       ]
     },
     {
+      "Route": "Images/Random/Captură de ecran 2024-12-12 133615.6ebkk95cok.png",
+      "AssetFile": "Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ebkk95cok"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Random/Captură de ecran 2024-12-12 133615.png"
+        }
+      ]
+    },
+    {
+      "Route": "Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "AssetFile": "Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
+        }
+      ]
+    },
+    {
       "Route": "Images/Random/Shoe-sizes.jcaugu53b6.png",
       "AssetFile": "Images/Random/Shoe-sizes.png",
       "Selectors": [],
