@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yDi9aVXfYydWG8jCOefMBcSwY+OhGeZL40XrwrFpg3M=",
+  "Hash": "i/M0e6PzUo6j898eD+1qV5b56sJ3Aiyw18Ps30ya3io=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -43,8 +43,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "aho1ot6h2o",
-      "Integrity": "Ln4rbPdNqPoW4omnrEtpM+RJ1Jze00BC7b3VnzmSjKQ=",
+      "Fingerprint": "yxsxnoimch",
+      "Integrity": "Onjip9eSBODBO4Ta2DFYHKikb+q8M4oLW0GJhJ7ghGg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
@@ -827,6 +827,27 @@
       "OriginalItemSpec": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing8.jpg"
     },
     {
+      "Identity": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "Images/Random/Captură de ecran 2024-12-12 133615#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6ebkk95cok",
+      "Integrity": "UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png"
+    },
+    {
       "Identity": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\clothing-sizes.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
@@ -1387,8 +1408,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "3w26gwzc0u",
-      "Integrity": "3etaegHL7F65XIntfQUHNY6V+8+yRapdIETB4PR5rMU=",
+      "Fingerprint": "sz6tg4p8pi",
+      "Integrity": "WAcrqZKJbLjevooIwI9O3Xfdhq+A4KKtZamzbTJ9YA8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css"
@@ -1478,51 +1499,6 @@
       ]
     },
     {
-      "Route": "_content/BlazorApp1/BlazorApp1.aho1ot6h2o.bundle.scp.css",
-      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6620"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Ln4rbPdNqPoW4omnrEtpM+RJ1Jze00BC7b3VnzmSjKQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 09:35:51 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "aho1ot6h2o"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Ln4rbPdNqPoW4omnrEtpM+RJ1Jze00BC7b3VnzmSjKQ="
-        },
-        {
-          "Name": "label",
-          "Value": "_content/BlazorApp1/BlazorApp1.bundle.scp.css"
-        }
-      ]
-    },
-    {
       "Route": "_content/BlazorApp1/BlazorApp1.bundle.scp.css",
       "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
       "Selectors": [],
@@ -1537,7 +1513,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6620"
+          "Value": "8022"
         },
         {
           "Name": "Content-Type",
@@ -1545,17 +1521,62 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ln4rbPdNqPoW4omnrEtpM+RJ1Jze00BC7b3VnzmSjKQ=\""
+          "Value": "\"Onjip9eSBODBO4Ta2DFYHKikb+q8M4oLW0GJhJ7ghGg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 09:35:51 GMT"
+          "Value": "Thu, 12 Dec 2024 11:45:20 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ln4rbPdNqPoW4omnrEtpM+RJ1Jze00BC7b3VnzmSjKQ="
+          "Value": "sha256-Onjip9eSBODBO4Ta2DFYHKikb+q8M4oLW0GJhJ7ghGg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/BlazorApp1.yxsxnoimch.bundle.scp.css",
+      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8022"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Onjip9eSBODBO4Ta2DFYHKikb+q8M4oLW0GJhJ7ghGg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 11:45:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yxsxnoimch"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Onjip9eSBODBO4Ta2DFYHKikb+q8M4oLW0GJhJ7ghGg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/BlazorApp1.bundle.scp.css"
         }
       ]
     },
@@ -4512,6 +4533,88 @@
       ]
     },
     {
+      "Route": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.6ebkk95cok.png",
+      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ebkk95cok"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
+        }
+      ]
+    },
+    {
       "Route": "_content/BlazorApp1/Images/Random/clothing-sizes.i8z3is2gi0.png",
       "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\clothing-sizes.png",
       "Selectors": [],
@@ -6644,55 +6747,6 @@
       ]
     },
     {
-      "Route": "WebAPI.3w26gwzc0u.styles.css",
-      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "71"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3etaegHL7F65XIntfQUHNY6V+8+yRapdIETB4PR5rMU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 09:35:51 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/BlazorApp1/BlazorApp1.aho1ot6h2o.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3w26gwzc0u"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-3etaegHL7F65XIntfQUHNY6V+8+yRapdIETB4PR5rMU="
-        },
-        {
-          "Name": "label",
-          "Value": "WebAPI.styles.css"
-        }
-      ]
-    },
-    {
       "Route": "WebAPI.styles.css",
       "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css",
       "Selectors": [],
@@ -6715,21 +6769,70 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3etaegHL7F65XIntfQUHNY6V+8+yRapdIETB4PR5rMU=\""
+          "Value": "\"WAcrqZKJbLjevooIwI9O3Xfdhq+A4KKtZamzbTJ9YA8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 09:35:51 GMT"
+          "Value": "Thu, 12 Dec 2024 12:53:07 GMT"
         },
         {
           "Name": "Link",
-          "Value": "<_content/BlazorApp1/BlazorApp1.aho1ot6h2o.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+          "Value": "<_content/BlazorApp1/BlazorApp1.yxsxnoimch.bundle.scp.css>; rel=\"preload\"; as=\"style\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3etaegHL7F65XIntfQUHNY6V+8+yRapdIETB4PR5rMU="
+          "Value": "sha256-WAcrqZKJbLjevooIwI9O3Xfdhq+A4KKtZamzbTJ9YA8="
+        }
+      ]
+    },
+    {
+      "Route": "WebAPI.sz6tg4p8pi.styles.css",
+      "AssetFile": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "71"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WAcrqZKJbLjevooIwI9O3Xfdhq+A4KKtZamzbTJ9YA8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:53:07 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/BlazorApp1/BlazorApp1.yxsxnoimch.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sz6tg4p8pi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WAcrqZKJbLjevooIwI9O3Xfdhq+A4KKtZamzbTJ9YA8="
+        },
+        {
+          "Name": "label",
+          "Value": "WebAPI.styles.css"
         }
       ]
     }
