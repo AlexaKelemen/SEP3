@@ -1,2 +1,3 @@
 obj\Debug\net8.0\Server\proto/UserService.cs \
-obj\Debug\net8.0\Server\proto/UserServiceGrpc.cs: Server/proto/UserService.proto
+obj\Debug\net8.0\Server\proto/UserServiceGrpc.cs: C:/Users/Kriszta/.nuget/packages/grpc.tools/2.67.0/build/native/include/google/protobuf/timestamp.proto\
+ Server/proto/UserService.proto

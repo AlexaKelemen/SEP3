@@ -38,6 +38,7 @@
     <label>Cvc</label>
     <input type="text" @bind="cardCvc"/>
 </div>
+<button type="button" class="btn btn-primary" @onclick="CheckoutItems">Checkout</button>
 
 
 @code {
@@ -50,11 +51,11 @@
     private string? cardNumber;
     private DateOnly? cardExpirationDate;
 
-    private UserDTO? user;
+    private User? user;
     
     protected override async Task OnInitializedAsync()
     {
-        user = new UserDTO();
+        user = new User();
         total = (decimal)Manager.GetTotal();
         AuthenticationState authenticationState = await State;
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
@@ -64,16 +65,7 @@
             return;
         }
         
-        User temp = await Manager.GetUserAsync(claimsPrincipal.Identity?.Name);
-        user = new UserDTO()
-        {
-            Username = temp.Username,
-            BillingAddress = temp.BillingAddress,
-            Card = temp.Card,
-            Email = temp.Email,
-            FirstName = temp.FirstName,
-            LastName = temp.LastName
-        };
+        user = await Manager.GetUserAsync(claimsPrincipal.Identity?.Name);
         cardFirstName = user.Card.FName;
         cardLastName = user.Card.LName;
         cardCvc = user.Card.Cvc;
@@ -81,5 +73,36 @@
         cardExpirationDate = user.Card.ExpirationDate;
         
     }
-    
+
+    private async Task<bool> CheckoutItems()
+    {
+        DeliveryOption deliveryOption = new DeliveryOption()
+        {
+            Id = 1,
+            Name = "To Postal Office",
+            OrderId = -1
+        };
+        Order order = new Order()
+        {
+            DeliveryOptions = new List<DeliveryOption>()
+            {
+                new DeliveryOption()
+                {
+                    Id = 1,
+                    Name = "To Postal Office",
+                    OrderId = -1
+                }
+            },
+            OrderId = -1,
+            PaymentMethod = new PaymentMethod()
+            {
+                Id = 1,
+                Name = "Card"
+            },
+            PlacedBy = user,
+            PlacedOn = DateTime.Now,
+            Price = (double)total
+        };
+        return await Manager.CheckoutAsync(order);
+    }
 }

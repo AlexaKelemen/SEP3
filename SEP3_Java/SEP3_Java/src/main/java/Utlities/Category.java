@@ -3,6 +3,8 @@ package Utlities;
 public class Category
 {
   private String name;
+  private String description;
+  private int categoryId;
 
   public Category(String name)
   {

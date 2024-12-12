@@ -1,4 +1,6 @@
 ﻿syntax = "proto3";
+option java_multiple_files = true;
+import "google/protobuf/timestamp.proto";
 package proto;
 
 message GetUserResponse
@@ -18,27 +20,42 @@ message GetUserRequest
   string password = 2;
 }
 
-message CartDTO
-{
-  float totalPrice = 1;
-  repeated ItemDTO items = 2;
-}
-
 message ItemDTO
 {
-  string itemType = 1;
-  float price = 2;
+  int32 itemId = 1;
+  double price = 2;
   string description = 3;
   string name = 4;
   CategoryDTO category = 5;
+  int32 quantity = 6;
+  string colour = 7;
 }
 
 message CategoryDTO
 {
   string name = 1;
+  string description = 2;
+  int32 categoryId = 3;
+}
+
+message GetOrderResponse
+{
+  bool success = 1;
+}
+
+message GetOrderRequest
+{
+  google.protobuf.Timestamp placedOn = 1;
+  int32 paymentMethod = 2;
+  double totalAmount = 3;
+  int32 deliveryOption = 4;
+  repeated ItemDTO items = 5;
 }
 
 service UserService
 {
   rpc getUser(GetUserRequest) returns (GetUserResponse);
+  rpc addOrder(GetOrderRequest) returns (GetOrderResponse);
 }
+
+

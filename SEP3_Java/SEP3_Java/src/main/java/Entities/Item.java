@@ -4,21 +4,19 @@ import Utlities.Category;
 
 public class Item
 {
-  private String itemtype;
+  private int itemId;
   private double price;
   private String description;
   private String name;
   private Category category;
-  private String imageURL;
   private int quantity;
+  private String colour;
 
-  public Item(String name, Category category, double price, String ImageURL, int quantity)
+  public Item(String name, Category category, double price)
   {
     this.name = name;
     this.category = category;
     this.price = price;
-    this.imageURL = ImageURL;
-    this.quantity = quantity;
   }
 
   public String getName()
@@ -61,22 +59,14 @@ public class Item
     this.description = description;
   }
 
-  public String getItemtype()
+  public int getItemtype()
   {
-    return itemtype;
+    return itemId;
   }
 
-  public void setItemtype(String itemtype)
+  public void setItemtype(int itemtype)
   {
-    this.itemtype = itemtype;
-  }
-
-  public String getImageURL(){
-    return imageURL;
-  }
-
-  public void setImageURL(String imageURL) {
-    imageURL = imageURL;
+    this.itemId = itemtype;
   }
 
   public int getQuantity(){
@@ -86,4 +76,8 @@ public class Item
   public void setQuantity(int quantity) {
     this.quantity = quantity;
   }
+
+  public String getColour(){return colour;}
+
+  public void setColour(String colour) {this.colour = colour;}
 }

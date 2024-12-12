@@ -2,22 +2,19 @@ package Entities;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Order
 {
-  private Date date;
-  private String paymentMethod;
+  private LocalDate date;
+  private int paymentMethod;
   private double totalAmount;
-  private String deliveryOption;
+  private int deliveryOption;
   private ArrayList<Item> items;
 
   public Order(ArrayList<Item> items, double amount)
   {
     this.items = items;
     totalAmount = amount;
-
-    date = new Date(LocalDate.now().getYear(),LocalDate.now().getMonthValue(), LocalDate.now().getDayOfMonth());
   }
 
   public ArrayList<Item> getItems()
@@ -30,28 +27,33 @@ public class Order
     return totalAmount;
   }
 
-  public Date getDate()
+  public LocalDate getDate()
   {
     return date;
   }
 
-  public String getDeliveryOption()
+  public int getDeliveryOption()
   {
     return deliveryOption;
   }
 
-  public String getPaymentMethod()
+  public int getPaymentMethod()
   {
     return paymentMethod;
   }
 
-  public void setDeliveryOption(String deliveryOption)
+  public void setDeliveryOption(int deliveryOption)
   {
     this.deliveryOption = deliveryOption;
   }
-  public void setPaymentMethod(String paymentMethod)
+  public void setPaymentMethod(int paymentMethod)
   {
     this.paymentMethod = paymentMethod;
+  }
+
+  public void setDate(LocalDate date)
+  {
+    this.date = date;
   }
 
 }

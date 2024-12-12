@@ -37,7 +37,7 @@ public class Manager : IManager
         ItemManager = new ItemManager(itemService);
         CategoryManager = new CategoryManager(categoryService);
         CartManager = new CartManager();
-        CartManager.PropertyChanged += PropertyChangedHandler;
+        OrderManager = new OrderManager(stub);
     }
     public async Task<User> GetUserAsync(string username)
     {
@@ -68,21 +68,7 @@ public class Manager : IManager
     {
         return CartManager.GetCartItems();
     }
-
-    private void PropertyChangedHandler(object sender, PropertyChangedEventArgs e)
-    {
-        if (sender is CartManager)
-        {
-            switch (e.PropertyName)
-            {
-                case nameof(CartManager.cart):
-                {
-                    
-                    break;
-                }
-            }
-        }
-    }
+    
 
     public void AddToCart(Item addedItem, int quantity)
     {
@@ -112,5 +98,20 @@ public class Manager : IManager
      public Task<IEnumerable<Order>> GetOrdersAsync()
     {
         return OrderManager.GetOrdersAsync();
+    }
+
+    public async Task<bool> CheckoutAsync(Order order)
+    {
+        order.Items = CartManager.GetCartItems().Keys.ToList();
+        bool orderSuccess = await OrderManager.AddOrderAsync(order);
+        if (orderSuccess)
+        {
+            CartManager.ClearCart();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
