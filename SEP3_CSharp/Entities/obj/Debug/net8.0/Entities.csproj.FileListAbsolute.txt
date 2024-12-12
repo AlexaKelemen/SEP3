@@ -88,3 +88,6 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genrun
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache

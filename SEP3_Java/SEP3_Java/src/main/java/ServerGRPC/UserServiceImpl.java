@@ -9,6 +9,8 @@ import proto.GetOrderRequest;
 import proto.GetOrderResponse;
 import io.grpc.stub.StreamObserver;
 
+import java.io.Console;
+
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 {
   public void getUser(GetUserRequest request,
