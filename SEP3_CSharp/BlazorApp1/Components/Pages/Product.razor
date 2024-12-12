@@ -8,20 +8,25 @@
 @inject IManager Manager
 @inject NavigationManager NavigationManager
 
-
-<div>
-    <label>Filter your search:   </label>
-    <select class="filterCategories" @onchange="args => FilterProducts(args)">
-        @foreach (Category category in categories)
-        {
-            <option value=@category.CategoryName>@category.CategoryName</option>
-        }
-        <option value="clear">Clear</option>
-    </select>
-</div>
-@if (Items == null)
+@if (ShowFilter)
 {
-    <h3>No products can be displayed right now, sorry for the inconvenience</h3>
+    <div>
+        <label>Filter your search: </label>
+        <select class="filterCategories" @onchange="args => FilterProducts(args)">
+            @foreach (Category category in categories)
+            {
+                <option value=@category.CategoryName>@category.CategoryName</option>
+            }
+            <option value="clear">Clear</option>
+        </select>
+    </div>
+}
+
+
+@if (IsLoading)
+{
+    <h6><i>No products can be displayed right now, sorry for the inconvenience</i></h6>
+    <div class="lds-heart"><div></div></div>
 }
 else
 {
@@ -54,13 +59,21 @@ else
     private IEnumerable<ItemDTOs> Items{ get; set; }
     private IEnumerable<Category> categories = new List<Category>();
     private IEnumerable<ItemCategory> itemCategories = new List<ItemCategory>();
+    private bool IsLoading { get; set; } = true;
+    private bool ShowFilter { get; set; }
     
 
     protected override async Task OnInitializedAsync()
     {
+        IsLoading = true;
+        await Task.Delay(2000);
+        
         Items = await Manager.GetItemsAsync();
         categories = await Manager.GetCategoriesAsync();
         itemCategories = await Manager.GetItemCategoriesAsync();
+        
+        IsLoading = false;
+        ShowFilter = true;
     }
 
     private async Task FilterProducts(ChangeEventArgs args)
