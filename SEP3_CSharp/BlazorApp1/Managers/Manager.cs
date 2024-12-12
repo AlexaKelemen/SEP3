@@ -25,6 +25,7 @@ public class Manager : IManager
     
     private CategoryManager CategoryManager;
     private ICartManager CartManager;
+    private OrderManager OrderManager;
 
 
     public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
@@ -111,4 +112,10 @@ public class Manager : IManager
             return false;
         }
     }
+    
+    public Task<IEnumerable<Order>> GetOrdersAsync()
+    {
+        return OrderManager.GetOrdersAsync();
+    }
+    
 }

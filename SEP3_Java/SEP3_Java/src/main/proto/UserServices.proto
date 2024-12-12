@@ -26,7 +26,7 @@ message ItemDTO
   double price = 2;
   string description = 3;
   string name = 4;
-  CategoryDTO category = 5;
+  repeated CategoryDTO category = 5;
   int32 quantity = 6;
   string colour = 7;
 }

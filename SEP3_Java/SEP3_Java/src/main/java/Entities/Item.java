@@ -2,17 +2,19 @@ package Entities;
 
 import Utlities.Category;
 
+import java.util.ArrayList;
+
 public class Item
 {
   private int itemId;
   private double price;
   private String description;
   private String name;
-  private Category category;
+  private ArrayList<Category> category;
   private int quantity;
   private String colour;
 
-  public Item(String name, Category category, double price)
+  public Item(String name, ArrayList<Category> category, double price)
   {
     this.name = name;
     this.category = category;
@@ -39,12 +41,12 @@ public class Item
     this.price = price;
   }
 
-  public Category getCategory()
+  public ArrayList<Category> getCategory()
   {
     return category;
   }
 
-  public void setCategory(Category category)
+  public void setCategory(ArrayList<Category> category)
   {
     this.category = category;
   }

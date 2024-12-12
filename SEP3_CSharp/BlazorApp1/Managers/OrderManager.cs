@@ -22,7 +22,10 @@ public class OrderManager : IOrderManager
         RepeatedField<ItemDTO> items = new RepeatedField<ItemDTO>();
         order.Items.ForEach(item => items.Add(new ItemDTO()
         {
-            
+            //Category = new CategoryDTO()
+            //{
+                //Name = item.CategoryId
+            //}
         }));
         Stub.addOrderAsync(new GetOrderRequest()
         {

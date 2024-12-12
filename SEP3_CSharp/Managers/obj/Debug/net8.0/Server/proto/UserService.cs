@@ -32,7 +32,7 @@ namespace Proto {
             "b3JtYXRpb24YByABKAkiNAoOR2V0VXNlclJlcXVlc3QSEAoIdXNlcm5hbWUY",
             "ASABKAkSEAoIcGFzc3dvcmQYAiABKAkikwEKB0l0ZW1EVE8SDgoGaXRlbUlk",
             "GAEgASgFEg0KBXByaWNlGAIgASgBEhMKC2Rlc2NyaXB0aW9uGAMgASgJEgwK",
-            "BG5hbWUYBCABKAkSJAoIY2F0ZWdvcnkYBSABKAsyEi5wcm90by5DYXRlZ29y",
+            "BG5hbWUYBCABKAkSJAoIY2F0ZWdvcnkYBSADKAsyEi5wcm90by5DYXRlZ29y",
             "eURUTxIQCghxdWFudGl0eRgGIAEoBRIOCgZjb2xvdXIYByABKAkiRAoLQ2F0",
             "ZWdvcnlEVE8SDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRIS",
             "CgpjYXRlZ29yeUlkGAMgASgFIiMKEEdldE9yZGVyUmVzcG9uc2USDwoHc3Vj",
@@ -753,7 +753,7 @@ namespace Proto {
       price_ = other.price_;
       description_ = other.description_;
       name_ = other.name_;
-      category_ = other.category_ != null ? other.category_.Clone() : null;
+      category_ = other.category_.Clone();
       quantity_ = other.quantity_;
       colour_ = other.colour_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -815,14 +815,13 @@ namespace Proto {
 
     /// <summary>Field number for the "category" field.</summary>
     public const int CategoryFieldNumber = 5;
-    private global::Proto.CategoryDTO category_;
+    private static readonly pb::FieldCodec<global::Proto.CategoryDTO> _repeated_category_codec
+        = pb::FieldCodec.ForMessage(42, global::Proto.CategoryDTO.Parser);
+    private readonly pbc::RepeatedField<global::Proto.CategoryDTO> category_ = new pbc::RepeatedField<global::Proto.CategoryDTO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Proto.CategoryDTO Category {
+    public pbc::RepeatedField<global::Proto.CategoryDTO> Category {
       get { return category_; }
-      set {
-        category_ = value;
-      }
     }
 
     /// <summary>Field number for the "quantity" field.</summary>
@@ -868,7 +867,7 @@ namespace Proto {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Price, other.Price)) return false;
       if (Description != other.Description) return false;
       if (Name != other.Name) return false;
-      if (!object.Equals(Category, other.Category)) return false;
+      if(!category_.Equals(other.category_)) return false;
       if (Quantity != other.Quantity) return false;
       if (Colour != other.Colour) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -882,7 +881,7 @@ namespace Proto {
       if (Price != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Price);
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (category_ != null) hash ^= Category.GetHashCode();
+      hash ^= category_.GetHashCode();
       if (Quantity != 0) hash ^= Quantity.GetHashCode();
       if (Colour.Length != 0) hash ^= Colour.GetHashCode();
       if (_unknownFields != null) {
@@ -919,10 +918,7 @@ namespace Proto {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (category_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Category);
-      }
+      category_.WriteTo(output, _repeated_category_codec);
       if (Quantity != 0) {
         output.WriteRawTag(48);
         output.WriteInt32(Quantity);
@@ -957,10 +953,7 @@ namespace Proto {
         output.WriteRawTag(34);
         output.WriteString(Name);
       }
-      if (category_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Category);
-      }
+      category_.WriteTo(ref output, _repeated_category_codec);
       if (Quantity != 0) {
         output.WriteRawTag(48);
         output.WriteInt32(Quantity);
@@ -991,9 +984,7 @@ namespace Proto {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (category_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Category);
-      }
+      size += category_.CalculateSize(_repeated_category_codec);
       if (Quantity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
       }
@@ -1024,12 +1015,7 @@ namespace Proto {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.category_ != null) {
-        if (category_ == null) {
-          Category = new global::Proto.CategoryDTO();
-        }
-        Category.MergeFrom(other.Category);
-      }
+      category_.Add(other.category_);
       if (other.Quantity != 0) {
         Quantity = other.Quantity;
       }
@@ -1072,10 +1058,7 @@ namespace Proto {
             break;
           }
           case 42: {
-            if (category_ == null) {
-              Category = new global::Proto.CategoryDTO();
-            }
-            input.ReadMessage(Category);
+            category_.AddEntriesFrom(input, _repeated_category_codec);
             break;
           }
           case 48: {
@@ -1122,10 +1105,7 @@ namespace Proto {
             break;
           }
           case 42: {
-            if (category_ == null) {
-              Category = new global::Proto.CategoryDTO();
-            }
-            input.ReadMessage(Category);
+            category_.AddEntriesFrom(ref input, _repeated_category_codec);
             break;
           }
           case 48: {
