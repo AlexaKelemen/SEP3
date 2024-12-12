@@ -1,4 +1,4 @@
-package Utlities;
+package Entities.Utlities;
 import Entities.Item;
 
 public class OrderItem

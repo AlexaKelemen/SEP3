@@ -28,10 +28,6 @@ public class CartManager : ICartManager, INotifyPropertyChanged
     
     public void AddToCart(Item addedItem, int quantity)
     {
-        if (cart == null)
-        {
-            cart = new Dictionary<Item, int>();
-        }
         if (quantity <= 0)
         {
             throw new ArgumentException("Quantity cannot be less or equal to zero");
@@ -72,7 +68,7 @@ public class CartManager : ICartManager, INotifyPropertyChanged
 
     public Dictionary<Item, int> GetCartItems()
     {
-        return cart;
+        return new Dictionary<Item, int>(cart);
     }
 
     public void PurchaseItems()

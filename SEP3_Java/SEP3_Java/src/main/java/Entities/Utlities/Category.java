@@ -1,4 +1,4 @@
-package Utlities;
+package Entities.Utlities;
 
 public class Category
 {

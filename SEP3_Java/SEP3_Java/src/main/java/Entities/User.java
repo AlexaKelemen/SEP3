@@ -1,11 +1,7 @@
 package Entities;
 
-import DataTransferObjects.UserDTO;
-import Utlities.Credit;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class User
 {

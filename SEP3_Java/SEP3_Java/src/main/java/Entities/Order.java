@@ -1,15 +1,19 @@
 package Entities;
 
+import Entities.Utlities.PaymentMethod;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Order
 {
-  private LocalDate date;
-  private int paymentMethod;
+  private int orderId;
+  private LocalDate placedOn;
+  private PaymentMethod paymentMethod;
   private double totalAmount;
-  private int deliveryOption;
+  private int deliveryOption; //This one may change
   private ArrayList<Item> items;
+  private String placedBy;
 
   public Order(ArrayList<Item> items, double amount)
   {
@@ -29,7 +33,7 @@ public class Order
 
   public LocalDate getDate()
   {
-    return date;
+    return placedOn;
   }
 
   public int getDeliveryOption()
@@ -37,7 +41,7 @@ public class Order
     return deliveryOption;
   }
 
-  public int getPaymentMethod()
+  public PaymentMethod getPaymentMethod()
   {
     return paymentMethod;
   }
@@ -46,14 +50,14 @@ public class Order
   {
     this.deliveryOption = deliveryOption;
   }
-  public void setPaymentMethod(int paymentMethod)
+  public void setPaymentMethod(PaymentMethod paymentMethod)
   {
     this.paymentMethod = paymentMethod;
   }
 
   public void setDate(LocalDate date)
   {
-    this.date = date;
+    this.placedOn = date;
   }
 
 }
