@@ -17,36 +17,71 @@
     </Authorized>
 </AuthorizeView>
 <div class="mb-3">
-    <label>First name:</label>
-    <input type="text" @bind="cardFirstName"/>
+    <label>First name</label>
+    <input type="text" @bind="cardFirstName" />
 </div>
 
 <div class="mb-3">
-    <label>Last name:</label>
-    <input type="text" @bind="cardLastName"/>
+    <label>Last name</label>
+    <input type="text" @bind="cardLastName" />
 </div>
 
 <div class="mb-3">
-    <label>Card Number:</label>
-    <input type="text" @bind="cardNumber"/>
+    <label>Card Number</label>
+    <input type="text" @bind="cardNumber" />
 </div>
 <div class="mb-3">
-    <label>Date:</label>
-    <InputDate @bind-Value="cardExpirationDate"/>
+    <label>Date</label>
+    <InputDate @bind-Value="cardExpirationDate" />
 </div>
 <div class="mb-3">
-    <label>Cvc:</label>
-    <input type="text" @bind="cardCvc"/>
+    <label>Cvc</label>
+    <input type="text" @bind="cardCvc" />
 </div>
 
-
+<!-- Delivery Option Selection -->
 <div class="mb-3">
-    <label><b>Delivery Options:</b></label>
+    <label>Delivery Option</label>
     <select class="form-select" @bind="selectedDeliveryOption">
         <option value="HomeDelivery">Home Delivery</option>
         <option value="PickupLocation">Pickup Location</option>
     </select>
 </div>
+
+<!-- Address Fields for Home Delivery -->
+@if (selectedDeliveryOption == "HomeDelivery")
+{
+    <div class="mb-3">
+        <label>Town</label>
+        <input type="text" @bind="deliveryTown" />
+    </div>
+    <div class="mb-3">
+        <label>Street</label>
+        <input type="text" @bind="deliveryStreet" />
+    </div>
+    <div class="mb-3">
+        <label>Number</label>
+        <input type="text" @bind="deliveryNumber" />
+    </div>
+    <div class="mb-3">
+        <label>Country</label>
+        <input type="text" @bind="deliveryCountry" />
+    </div>
+}
+
+<!-- Pickup Location Options -->
+@if (selectedDeliveryOption == "PickupLocation")
+{
+    <div class="mb-3">
+        <label>Pickup Location</label>
+        <select class="form-select" @bind="selectedPickupLocation">
+            <option value="Location1">Central Post Office</option>
+            <option value="Location2">City Mall</option>
+            <option value="Location3">Train Station</option>
+            <option value="Location4">University Campus</option>
+        </select>
+    </div>
+}
 
 <button type="button" class="btn btn-primary" @onclick="CheckoutItems">Checkout</button>
 
@@ -59,7 +94,13 @@
     private string? cardCvc;
     private string? cardNumber;
     private DateOnly? cardExpirationDate;
+
     private string selectedDeliveryOption = "HomeDelivery"; // Default option
+    private string? deliveryTown;
+    private string? deliveryStreet;
+    private string? deliveryNumber;
+    private string? deliveryCountry;
+    private string? selectedPickupLocation;
 
     private User? user;
 
@@ -71,7 +112,6 @@
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (claimsPrincipal.Identity is null || !claimsPrincipal.Identity.IsAuthenticated)
         {
-            // the user is not logged in
             return;
         }
 
@@ -85,21 +125,32 @@
 
     private async Task<bool> CheckoutItems()
     {
-        DeliveryOption deliveryOption = new DeliveryOption()
-        {
-            Id = selectedDeliveryOption == "HomeDelivery" ? 1 : 2,
-            Name = selectedDeliveryOption == "HomeDelivery" ? "Home Delivery" : "Pickup Location",
-            OrderId = -1
-        };
+        DeliveryOption deliveryOption;
 
-        Order order = new Order()
+        if (selectedDeliveryOption == "HomeDelivery")
         {
-            DeliveryOptions = new List<DeliveryOption>()
+            deliveryOption = new DeliveryOption
             {
-                deliveryOption
-            },
+                Id = 1,
+                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}", // Concatenated address
+                OrderId = -1
+            };
+        }
+        else
+        {
+            deliveryOption = new DeliveryOption
+            {
+                Id = 2,
+                Name = $"Pickup Location: {selectedPickupLocation}", // Use pickup location directly
+                OrderId = -1
+            };
+        }
+
+        Order order = new Order
+        {
+            DeliveryOptions = new List<DeliveryOption> { deliveryOption },
             OrderId = -1,
-            PaymentMethod = new PaymentMethod()
+            PaymentMethod = new PaymentMethod
             {
                 Id = 1,
                 Name = "Card"
@@ -111,4 +162,5 @@
 
         return await Manager.CheckoutAsync(order);
     }
+
 }
