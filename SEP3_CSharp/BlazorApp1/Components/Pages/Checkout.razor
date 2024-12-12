@@ -38,21 +38,31 @@
     <label>Cvc</label>
     <input type="text" @bind="cardCvc"/>
 </div>
-<button type="button" class="btn btn-primary" @onclick="CheckoutItems">Checkout</button>
 
+
+<div class="mb-3">
+    <label>Delivery Option</label>
+    <select class="form-select" @bind="selectedDeliveryOption">
+        <option value="HomeDelivery">Home Delivery</option>
+        <option value="PickupLocation">Pickup Location</option>
+    </select>
+</div>
+
+<button type="button" class="btn btn-primary" @onclick="CheckoutItems">Checkout</button>
 
 @code {
     [CascadingParameter] public Task<AuthenticationState> State { get; set; }
-    
+
     private decimal total;
     private string? cardFirstName;
     private string? cardLastName;
     private string? cardCvc;
     private string? cardNumber;
     private DateOnly? cardExpirationDate;
+    private string selectedDeliveryOption = "HomeDelivery"; // Default option
 
     private User? user;
-    
+
     protected override async Task OnInitializedAsync()
     {
         user = new User();
@@ -64,34 +74,29 @@
             // the user is not logged in
             return;
         }
-        
+
         user = await Manager.GetUserAsync(claimsPrincipal.Identity?.Name);
         cardFirstName = user.Card.FName;
         cardLastName = user.Card.LName;
         cardCvc = user.Card.Cvc;
         cardNumber = user.Card.CardNumber;
         cardExpirationDate = user.Card.ExpirationDate;
-        
     }
 
     private async Task<bool> CheckoutItems()
     {
         DeliveryOption deliveryOption = new DeliveryOption()
         {
-            Id = 1,
-            Name = "To Postal Office",
+            Id = selectedDeliveryOption == "HomeDelivery" ? 1 : 2,
+            Name = selectedDeliveryOption == "HomeDelivery" ? "Home Delivery" : "Pickup Location",
             OrderId = -1
         };
+
         Order order = new Order()
         {
             DeliveryOptions = new List<DeliveryOption>()
             {
-                new DeliveryOption()
-                {
-                    Id = 1,
-                    Name = "To Postal Office",
-                    OrderId = -1
-                }
+                deliveryOption
             },
             OrderId = -1,
             PaymentMethod = new PaymentMethod()
@@ -103,6 +108,7 @@
             PlacedOn = DateTime.Now,
             Price = (double)total
         };
+
         return await Manager.CheckoutAsync(order);
     }
 }
