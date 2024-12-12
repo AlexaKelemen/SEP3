@@ -26,21 +26,26 @@
 else
 {
     <h3 class="mb-5">Products</h3>
-    var productCount = Items.Count();
-    @if (productCount > 0)
-    {
-        const int itemsPerRow = 4;
-        var productsRowList = new List<ItemDTO>();
+    const int itemsPerRow = 4;
 
-        @for (int i = 0; i < productCount; i++)
-        {
-            productsRowList = Items.Skip(i * itemsPerRow).Take(itemsPerRow).ToList();
-            <div class="row mt-3">
-                <DisplayProducts Products="@productsRowList"></DisplayProducts>
-            </div>
-        }
+    @for (int i = 0; i < Items.Count(); i += itemsPerRow)
+    {
+        var productsRowList = Items.Skip(i).Take(itemsPerRow).ToList();
+        <div class="row mt-3">
+            @foreach (var product in productsRowList)
+            {
+                <div class="col-md-3">
+                    <a href="@($"/ProductDetails/{product.ItemId}")" class="card">
+                        <img src="@product.ImageUrl" alt="@product.Name" class="img-fluid"/>
+                        <div class="card-body">
+                            <h5>@product.Name</h5>
+                            <p>@product.Description</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
     }
-}
 
 
 @code 
@@ -96,4 +101,5 @@ else
     {
         Items = await Manager.GetItemsAsync();
     }
+}
 }
