@@ -43,7 +43,7 @@ else
                     </p>
 
                     <div>
-                        @if (Item.HasCategory("Clothing"))
+                        @if (HasCategory("Clothing"))
                         {
                             imgUrl = "Images/Random/clothing-sizes.png";
                             <p><label>Choose size:</label></p>
@@ -53,10 +53,10 @@ else
                                 <option value="m">M</option>
                                 <option value="l">L</option>
                                 <option value="xl">XL</option>
-                                <Button type="button" class="btn btn-primary btn-sm" @onclick="PopUp"> Sizing guide </Button>
                             </select>
+                            <Button type="button" class="btn btn-primary btn-sm" @onclick="PopUp"> Sizing guide </Button>
                         }
-                        @if (Item.HasCategory("Shoes"))
+                        @if (HasCategory("Shoes"))
                         {
                             imgUrl = "Images/Random/Shoe-sizes.png";
                             <select class="completedstatusfield" @onchange="args => SetSize(args)">
@@ -128,6 +128,7 @@ else
     private int quantity;
     private bool isPopupVisible = false;
     private string imgUrl;
+    private IEnumerable<ItemCategory> itemCategories;
 
     protected override async Task OnParametersSetAsync()
     {
@@ -144,6 +145,7 @@ else
             ErrorMessage = "An error occurred while fetching the product details. " + ex.Message;
         }
 
+        itemCategories = await Manager.GetItemCategoriesAsync();
         itemToCart = new Item()
         {
             ItemId = Item.ItemId,
@@ -159,8 +161,8 @@ else
     private async Task AddToCart_Click()
     {
         
-        /*if (itemToCart.Size == null && !Item.HasCategory("Accessories"))
-            errorLabel = "You need to select a size";*/
+        if (itemToCart.Size == null && !Item.HasCategory("Accessories"))
+            errorLabel = "You need to select a size";
         if (itemToCart.Colour == null)
             errorLabel = "You need to select a colour";
         else if (quantity < 1)
@@ -193,6 +195,27 @@ else
         isPopupVisible = false;
         imgUrl = "";
     }
+
+    private bool HasCategory(string cat)
+    {
+        int temp = 0;
+        foreach (var category in itemCategories)
+        {
+            if (Item.ItemId == category.ItemId)
+                temp = category.CategoryId;
+        }
+        if (cat.Equals("Clothing"))
+        {
+            if (temp == 1)
+                return true;
+        }
+        else if (cat.Equals("Shoes"))
+        {
+            if (temp == 2)
+                return true;
+        }
+        
+        return false;
+    }
     
 }
-

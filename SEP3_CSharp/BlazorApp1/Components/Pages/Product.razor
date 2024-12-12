@@ -14,7 +14,7 @@
     <select class="filterCategories" @onchange="args => FilterProducts(args)">
         @foreach (Category category in categories)
         {
-            <option value=@category>@category.CategoryName</option>
+            <option value=@category.CategoryName>@category.CategoryName</option>
         }
         <option value="clear">Clear</option>
     </select>
@@ -48,13 +48,14 @@ else
     
     private IEnumerable<ItemDTOs> Items{ get; set; }
     private IEnumerable<Category> categories = new List<Category>();
+    private IEnumerable<ItemCategory> itemCategories = new List<ItemCategory>();
     
 
     protected override async Task OnInitializedAsync()
     {
         Items = await Manager.GetItemsAsync();
         categories = await Manager.GetCategoriesAsync();
-        
+        itemCategories = await Manager.GetItemCategoriesAsync();
     }
 
     private async Task FilterProducts(ChangeEventArgs args)
@@ -68,11 +69,21 @@ else
         }
         else
         {
-            foreach (var item in Items)
+            foreach (var cat in categories)
             {
-                if (item.HasCategory(category))
+                if (category.Equals(cat.CategoryName))
                 {
-                    temp.Add(item);
+                    foreach (var itemCat in itemCategories)
+                    {
+                        if (cat.CategoryId == itemCat.CategoryId)
+                        {
+                            foreach (var item in Items)
+                            {
+                                if (item.ItemId == itemCat.ItemId)
+                                    temp.Add(item);
+                            }
+                        }
+                    }
                 }
             }
             Items = temp;

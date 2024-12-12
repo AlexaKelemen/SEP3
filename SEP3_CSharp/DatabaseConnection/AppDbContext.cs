@@ -12,12 +12,11 @@ public class AppDbContext : DbContext
 
     public DbSet<Item> Items => Set<Item>();
     public DbSet<Category> Categories => Set<Category>();
-    public DbSet<Order> Orders => Set<Order>();
-    public DbSet<DeliveryOption> DeliveryOptions => Set<DeliveryOption>();
     public DbSet<ItemCategory> ItemCategories => Set<ItemCategory>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<ItemCategory>().HasKey(ic => new { ic.CategoryId, ic.ItemId });
         modelBuilder.Entity<Item>().ToTable("Items");
         modelBuilder.Entity<Item>().HasData(
             new Item
@@ -191,7 +190,6 @@ public class AppDbContext : DbContext
                 CategoryDescription = "Different kinds of accessories"
             }
         );
-        modelBuilder.Entity<ItemCategory>().HasKey(ic => new { ic.CategoryId, ic.ItemId });
         modelBuilder.Entity<ItemCategory>().ToTable("ItemCategories");
         modelBuilder.Entity<ItemCategory>().HasData(
             new ItemCategory { ItemId = 1, CategoryId = 2 },
@@ -218,7 +216,3 @@ public class AppDbContext : DbContext
         );
     }
 }
-
-      
- 
-

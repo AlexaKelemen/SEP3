@@ -11,11 +11,11 @@ namespace WebAPI.Controllers;
 [Route("[controller]")]
 public class CategoryController : ControllerBase
 {
-    private readonly ICategoryRepository _categoryRepository;
+    private readonly ICategoryRepository categoryRepository;
 
     public CategoryController(ICategoryRepository categoryRepository)
     {
-        _categoryRepository = categoryRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     [HttpGet("categories/{categoryId}")]
@@ -23,8 +23,8 @@ public class CategoryController : ControllerBase
     {
         try
         {
-          Category result = await _categoryRepository.GetSingleCategoryAsync(categoryId);
-          return Results.Ok(result);
+            Category result = await categoryRepository.GetSingleCategoryAsync(categoryId);
+            return Results.Ok(result);
         }
         catch (Exception e)
         {
@@ -34,10 +34,16 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet("categories")]
-    public async Task<ActionResult<IEnumerable<Category>>> GetCategory()
+    public async Task<ActionResult<IEnumerable<Category>>> GetCategoryAsync()
     {
-        List<Category> categories = await _categoryRepository.GetCategories().ToListAsync();
+        List<Category> categories = await categoryRepository.GetCategories().ToListAsync();
         return Ok(categories);
     }
-    
+
+    [HttpGet("itemCategories")]
+    public async Task<ActionResult<IEnumerable<ItemCategory>>> GetCategoryItemAsync()
+    {
+        List<ItemCategory> itemCategories = await categoryRepository.GetCategoryItems().ToListAsync();
+        return Ok(itemCategories);
+    }
 }

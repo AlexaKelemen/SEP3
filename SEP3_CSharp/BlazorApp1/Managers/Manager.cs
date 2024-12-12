@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using BlazorApp1.Services;
 using BlazorApp1.Services.Contracts;
-using DatabaseConnection;
 using DataTransferObjects;
 using Entities;
 using Entities.Utilities;
@@ -26,7 +25,6 @@ public class Manager : IManager
     
     private CategoryManager CategoryManager;
     private ICartManager CartManager;
-    private IOrderManager OrderManager;
 
 
     public Manager(GrpcChannel channel, IUserService userService, IItemService itemService, ICategoryService categoryService)
@@ -94,10 +92,9 @@ public class Manager : IManager
     {
         CartManager.ChangeItemQuantity(addedItem, quantity);
     }
-
-     public Task<IEnumerable<Order>> GetOrdersAsync()
+    public async Task<IEnumerable<ItemCategory>> GetItemCategoriesAsync()
     {
-        return OrderManager.GetOrdersAsync();
+        return await CategoryManager.GetItemCategoriesAsync();
     }
 
     public async Task<bool> CheckoutAsync(Order order)

@@ -73,11 +73,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="database [5]" uuid="36f14594-7504-45b5-a65e-66217de11bf5">
+    <data-source source="LOCAL" name="database [5]" uuid="366aa584-8f5b-44a5-90f6-20448f47f4f5">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\SEP3\Project\SourceCode\SEP3_CSharp\DatabaseConnection\database.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\Code files\SEP\SEP3\SEP3_CSharp\DatabaseConnection\database.db</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>

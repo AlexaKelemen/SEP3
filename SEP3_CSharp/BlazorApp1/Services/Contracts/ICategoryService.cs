@@ -6,4 +6,5 @@ public interface ICategoryService
 {
     Task<IEnumerable<Category>> GetCategoriesAsync();
     Task<Category> GetCategory(int id);
+    Task<IEnumerable<ItemCategory>> GetItemCategories();
 }
