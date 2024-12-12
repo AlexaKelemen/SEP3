@@ -59,10 +59,8 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Managers\bin\Debug\net8
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.deps.json
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.pdb
-C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.dll
-C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DatabaseConnection.pdb
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\DataTransferObjects.pdb
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Entities.pdb
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.csproj.AssemblyReference.cache
@@ -138,3 +136,5 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.runtimecon
 D:\Code files\SEP\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.genruntimeconfig.cache
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.runtimeconfig.json
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.genruntimeconfig.cache
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\bin\Debug\net8.0\Managers.runtimeconfig.json
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Managers\obj\Debug\net8.0\Managers.genruntimeconfig.cache

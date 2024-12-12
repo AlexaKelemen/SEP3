@@ -114,3 +114,5 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTran
 D:\Code files\SEP\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.genruntimeconfig.cache
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.runtimeconfig.json
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.genruntimeconfig.cache
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\DataTransferObjects\bin\Debug\net8.0\DataTransferObjects.runtimeconfig.json
+C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\DataTransferObjects\obj\Debug\net8.0\DataTransferObjects.genruntimeconfig.cache
