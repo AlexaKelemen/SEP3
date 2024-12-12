@@ -1,11 +1,9 @@
-package DataTransferObjects;
+package Shared.DataTransferObject;
 
-import Entities.Card;
-import Entities.User;
+import Shared.Entities.Card;
+import Shared.Entities.User;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class UserDTO
 {

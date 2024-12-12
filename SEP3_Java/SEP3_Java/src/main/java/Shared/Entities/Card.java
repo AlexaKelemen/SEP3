@@ -1,12 +1,8 @@
-package Entities;
-import DataTransferObjects.UserDTO;
+package Shared.Entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.databind.MapperFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Card {
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)

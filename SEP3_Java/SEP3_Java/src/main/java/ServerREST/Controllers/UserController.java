@@ -1,18 +1,18 @@
 package ServerREST.Controllers;
 
-import DataTransferObjects.UserDTO;
-import Database.DAOInterface.CardDAOInterface;
-import Database.DAOInterface.UserDAOInterface;
-import Database.Implementation.CardDAO;
-import Database.Implementation.UserDAO;
-import Entities.Card;
-import Entities.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import Shared.DataTransferObject.UserDTO;
+import Shared.Database.DAOInterface.CardDAOInterface;
+import Shared.Database.DAOInterface.UserDAOInterface;
+import Shared.Database.Implementation.CardDAO;
+import Shared.Database.Implementation.UserDAO;
+import Shared.Entities.Card;
+import Shared.Entities.User;
+import Shared.ManagerImpl;
+import Shared.ManagerInterface;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 @RestController
@@ -20,10 +20,12 @@ public class UserController
 {
   private UserDAOInterface userDAO;
   private CardDAOInterface cardDAO;
+  ManagerInterface manager;
   public UserController()
   {
     userDAO = UserDAO.getInstance();
     cardDAO = CardDAO.getInstance();
+    manager = ManagerImpl.getInstance();
   }
 
   @GetMapping("/users/{username}/{cardIncluded}")

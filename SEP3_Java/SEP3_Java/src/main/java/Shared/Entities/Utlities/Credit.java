@@ -1,4 +1,4 @@
-package Entities.Utlities;
+package Shared.Entities.Utlities;
 
 import java.time.LocalDate;
 import java.util.Date;

@@ -1,6 +1,7 @@
-package Entities;
+package Shared.Entities;
 
-import Entities.Utlities.PaymentMethod;
+import Shared.Entities.Utlities.DeliveryOption;
+import Shared.Entities.Utlities.PaymentMethod;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class Order
   private LocalDate placedOn;
   private PaymentMethod paymentMethod;
   private double totalAmount;
-  private int deliveryOption; //This one may change
+  private DeliveryOption deliveryOption; // on this
   private ArrayList<Item> items;
   private String placedBy;
 
@@ -36,7 +37,7 @@ public class Order
     return placedOn;
   }
 
-  public int getDeliveryOption()
+  public DeliveryOption getDeliveryOption()
   {
     return deliveryOption;
   }
@@ -46,7 +47,7 @@ public class Order
     return paymentMethod;
   }
 
-  public void setDeliveryOption(int deliveryOption)
+  public void setDeliveryOption(DeliveryOption deliveryOption)
   {
     this.deliveryOption = deliveryOption;
   }

@@ -1,5 +1,5 @@
-package Entities.Utlities;
-import Entities.Item;
+package Shared.Entities.Utlities;
+import Shared.Entities.Item;
 
 public class OrderItem
 {

@@ -1,19 +1,13 @@
-package Database.Implementation;
+package Shared.Database.Implementation;
 
-import Database.DAOInterface.CardDAOInterface;
-import Database.DatabaseFactory;
-import Entities.Card;
+import Shared.Database.DAOInterface.CardDAOInterface;
+import Shared.Database.DatabaseFactory;
+import Shared.Entities.Card;
 
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
-import java.util.List;
-
-import Entities.User;
-import org.springframework.stereotype.Service;
-
-
 
 public class CardDAO extends DatabaseFactory implements CardDAOInterface{
     private static CardDAO instance;

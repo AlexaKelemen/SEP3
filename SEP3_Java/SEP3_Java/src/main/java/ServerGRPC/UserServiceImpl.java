@@ -1,7 +1,8 @@
 
 package ServerGRPC;
 
-import Entities.Order;
+import Shared.ManagerImpl;
+import Shared.ManagerInterface;
 import proto.GetUserRequest;
 import proto.GetUserResponse;
 import proto.UserServiceGrpc;
@@ -9,10 +10,9 @@ import proto.GetOrderRequest;
 import proto.GetOrderResponse;
 import io.grpc.stub.StreamObserver;
 
-import java.io.Console;
-
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 {
+  private ManagerInterface manager = ManagerImpl.getInstance();
   public void getUser(GetUserRequest request,
       StreamObserver<GetUserResponse> responseObserver)
   {
