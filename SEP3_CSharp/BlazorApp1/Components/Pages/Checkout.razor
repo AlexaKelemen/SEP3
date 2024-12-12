@@ -39,7 +39,6 @@
     <input type="text" @bind="cardCvc" />
 </div>
 
-<!-- Delivery Option Selection -->
 <div class="mb-3">
     <label>Delivery Option</label>
     <select class="form-select" @bind="selectedDeliveryOption">
@@ -48,9 +47,13 @@
     </select>
 </div>
 
-<!-- Address Fields for Home Delivery -->
+
 @if (selectedDeliveryOption == "HomeDelivery")
 {
+    <div class="mb-3">
+        <label>Country</label>
+        <input type="text" @bind="deliveryCountry" />
+    </div>
     <div class="mb-3">
         <label>Town</label>
         <input type="text" @bind="deliveryTown" />
@@ -63,10 +66,8 @@
         <label>Number</label>
         <input type="text" @bind="deliveryNumber" />
     </div>
-    <div class="mb-3">
-        <label>Country</label>
-        <input type="text" @bind="deliveryCountry" />
-    </div>
+   
+    
 }
 
 <!-- Pickup Location Options -->
@@ -132,7 +133,7 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 1,
-                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}", // Concatenated address
+                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, ", 
                 OrderId = -1
             };
         }
