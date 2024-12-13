@@ -4,6 +4,7 @@
 @using BlazorApp1.Managers
 @using DataTransferObjects
 @using Entities
+@inject NavigationManager NavMgr
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.Authorization
 @inject AuthenticationStateProvider AuthProvider
@@ -28,7 +29,9 @@
         <p><label>Card information:</label>
             <label>@paymentInfo</label>  <button role="card-button" type="button"  class="btn btn-primary" @onclick="ChangeCard">Change card </button></p>
         <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save</button>
+        <button type="button" class="btn btn-primary" @onclick="CancelEdit">Cancel</button>
         <p><label style="color: red"> @errorLabel </label></p>
+        <p><label style="color: green"> @confirmationMessage </label></p>
 
         @if (isPopupVisible)
 
@@ -103,6 +106,7 @@
     private User user;
     private Card? cardOnProfile;
     public bool isPopupVisible, isDeletePopupVisible = false;
+    private string confirmationMessage;
 
 
 
@@ -117,6 +121,7 @@
         }
        
         username = claimsPrincipal.Identity?.Name;
+        confirmationMessage = "";
         user = await Manager.GetUserAsync(username);
         
             email = user.Email;
@@ -155,11 +160,14 @@
             errorLabel = ($"Error: {e.Message}");
             Console.WriteLine(e);
         }
-        
+
+        confirmationMessage = "Changes saved successfully.";
+
     }
 
     private void ChangeCard()
     {
+        confirmationMessage = "";
         errorLabel = "";   
         if (cardOnProfile == null)
         {
@@ -176,6 +184,11 @@
     private void ClosePopup()
     {
         isPopupVisible = false;
+    }
+
+    private void CancelEdit()
+    {
+        NavMgr.NavigateTo("/");
     }
 
     private void SaveCard()
