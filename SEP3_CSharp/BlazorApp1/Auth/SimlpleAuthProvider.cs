@@ -12,7 +12,10 @@ public class SimpleAuthProvider : AuthenticationStateProvider
     private readonly HttpClient httpClient;
     private readonly IJSRuntime jsRuntime;
 
-
+    public SimpleAuthProvider()
+    {
+        
+    }
     public SimpleAuthProvider(IHttpClientFactory httpClientFactory, IJSRuntime jsRuntime)
     {
         httpClient = httpClientFactory.CreateClient("Users");

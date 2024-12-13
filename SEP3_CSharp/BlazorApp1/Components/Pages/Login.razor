@@ -5,7 +5,6 @@
 
 @inject AuthenticationStateProvider AuthProvider
 @inject NavigationManager NavMgr
-@rendermode InteractiveServer
 
 <div class="login-page">
     <div class="login-content">
@@ -38,6 +37,7 @@
                         </div>
 
                         <button type="button" class="btn btn-primary btn-login" @onclick="HandleLoginAsync">Log In</button>
+                        <button type="button" class="btn btn-secondary btn-register" @onclick="HandleRegisterAsync">Register</button>
                     </div>
                 </NotAuthorized>
 
@@ -122,14 +122,32 @@
     .btn-login {
         background-color: #9973e7;
         color: white;
-        padding: 10px 20px;
+        padding: 5px 8px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-size: 1rem;
+        font-family: "Apple chancery", cursive;
+        margin-right: 10px;
     }
 
     .btn-login:hover {
+        background-color: #e78ca6;
+    }
+
+    .btn-register {
+        background-color: #9973e7;
+        color: white;
+        padding: 5px 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-family: "Apple chancery", cursive;
+        margin-right: 10px;
+    }
+
+    .btn-register:hover {
         background-color: #e78ca6;
     }
 
@@ -179,4 +197,32 @@ Console.WriteLine(ex);
 _errorLabel = $"Error: {ex.Message}";
 }
 }
+
+private async Task HandleRegisterAsync()
+{
+    _errorLabel = string.Empty; 
+
+    if (string.IsNullOrEmpty(_username) || string.IsNullOrEmpty(_password))
+    {
+        _errorLabel = "You need to fill in username and password";
+        return;
+    }
+
+    try
+    {
+       
+        await ((SimpleAuthProvider)AuthProvider).CreateUser(_username, _password);
+
+ 
+        _errorLabel = "Registration successful! You can now log in.";
+        NavMgr.NavigateTo("/");
+    }
+    catch (Exception e)
+    {
+       
+        Console.WriteLine(e);
+        _errorLabel = $"Error: {e.Message}";
+    }
+}
+
 }
