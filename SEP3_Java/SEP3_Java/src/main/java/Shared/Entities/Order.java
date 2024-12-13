@@ -15,6 +15,7 @@ public class Order
   private PaymentMethod paymentMethod;
   private DeliveryOption deliveryOption;
   private String placedBy;
+  private String toAddress;
 
   public Order(ArrayList<Item> items, double amount)
   {
@@ -22,7 +23,7 @@ public class Order
     totalAmount = amount;
   }
 
-  public Order(ArrayList<Item> items, double amount, int orderId, LocalDate placedOn, PaymentMethod paymentMethod, DeliveryOption deliveryOption, String placedBy)
+  public Order(ArrayList<Item> items, double amount, int orderId, LocalDate placedOn, PaymentMethod paymentMethod, DeliveryOption deliveryOption, String placedBy, String toAddress)
   {
     this.items = items;
     this.totalAmount = amount;
@@ -31,6 +32,7 @@ public class Order
     this.paymentMethod = paymentMethod;
     this.deliveryOption = deliveryOption;
     this.placedBy = placedBy;
+    this.toAddress = toAddress;
   }
 
   public ArrayList<Item> getItems()
@@ -70,6 +72,16 @@ public class Order
   public void setDate(LocalDate date)
   {
     this.placedOn = date;
+  }
+
+  public void setPlacedBy(String placedBy)
+  {
+    this.placedBy = placedBy;
+  }
+
+  public String getPlacedBy()
+  {
+    return placedBy;
   }
 
 }
