@@ -1,7 +1,5 @@
-package Database;
+package Shared.Database;
 
-import Database.DAOInterface.UserDAOInterface;
-import Database.Implementation.UserDAO;
 import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
