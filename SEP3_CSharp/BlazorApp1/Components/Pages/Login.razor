@@ -7,70 +7,176 @@
 @inject NavigationManager NavMgr
 @rendermode InteractiveServer
 
-<h3>Login</h3>
+<div class="login-page">
+    <div class="login-content">
+        <div class="login-form-container">
+            <h3 class="login-title">Login</h3>
+            <p class="login-subtitle">Enter your credentials to access your account</p>
 
-<AuthorizeView>
+            <AuthorizeView>
+                <NotAuthorized>
+                    <div class="login-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" @bind="_username" class="form-control" placeholder="WeLoveSalomeea" />
+                        </div>
 
-    <NotAuthorized>
-        <h3>Please login or Register</h3>
-        <label>Username:</label>
-        <input type="text" @bind="_username"/>
-        <label>Password:</label>
-        <input type="password" @bind="_password"/>
-        @if (!string.IsNullOrEmpty(_errorLabel))
-        {
-        <label style="color: red"> @_errorLabel </label>
-        }
-        <button type="button" class="btn btn-primary" @onclick="HandleLoginAsync">Log in</button>
-        <button type="button" class="btn btn-primary" @onclick="HandleRegisterAsync">Register</button>
-    </NotAuthorized>
-    <Authorized>
-        <h3>Hello, @context.User.Identity.Name</h3>
-    </Authorized>
-</AuthorizeView>
-@code 
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" @bind="_password" class="form-control" placeholder="Hope you remember your password" />
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(_errorLabel))
+                        {
+                        <div class="alert alert-danger" role="alert">@_errorLabel</div>
+                        }
+
+                        <div class="form-options">
+                            <label>
+                                <input type="checkbox" /> Remember me
+                            </label>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-login" @onclick="HandleLoginAsync">Log In</button>
+                    </div>
+                </NotAuthorized>
+
+                <Authorized>
+                    <div class="welcome-message">
+                        <h4>Welcome, @context.User.Identity.Name!</h4>
+                        <p>You are now logged in. Navigate through the app to explore more features.</p>
+                    </div>
+                </Authorized>
+            </AuthorizeView>
+        </div>
+
+        <div class="login-image">
+            <img src="/images/Random/Captură de ecran 2024-12-12 192144.png" alt="Login Illustration" />
+        </div>
+    </div>
+</div>
+
+<style>
+    .login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+    }
+
+    .login-content {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .login-form-container {
+        padding: 40px;
+        flex: 1;
+    }
+
+    .login-title {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .login-subtitle {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .form-options {
+        margin-bottom: 20px;
+    }
+
+    .btn-login {
+        background-color: #9973e7;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-login:hover {
+        background-color: #e78ca6;
+    }
+
+    .alert {
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+    .login-image {
+        flex: 1;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .login-image img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+@code {
+private string? _username;
+private string? _password;
+private string? _errorLabel;
+
+private async Task HandleLoginAsync()
 {
-    private string? _username;
-    private string? _password;
-    private string? _errorLabel;
+_errorLabel = string.Empty;
 
-    private async Task HandleLoginAsync()
-    {
-        _errorLabel = "";
-        if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_password))
-        {
-            try
-            {
-                await ((SimpleAuthProvider)AuthProvider).Login(_username, _password);
-                NavMgr.NavigateTo("/");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                _errorLabel = $"Error: {e.Message}";
-            }
-        }
-        else
-            _errorLabel = "You need to fill in username and password";
-    }
+if (string.IsNullOrEmpty(_username) || string.IsNullOrEmpty(_password))
+{
+_errorLabel = "You need to fill in username and password";
+return;
+}
 
-    private async Task HandleRegisterAsync()
-    {
-        _errorLabel = "";
-        if (!string.IsNullOrEmpty(_username) && !string.IsNullOrEmpty(_password))
-        {
-            try
-            {
-                await ((SimpleAuthProvider)AuthProvider).CreateUser(_username, _password);
-                NavMgr.NavigateTo("/");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                _errorLabel = $"Error: {e.Message}";
-            }
-        }
-        else
-            _errorLabel = "You need to fill in username and password";
-    }
+try
+{
+await ((SimpleAuthProvider)AuthProvider).Login(_username, _password);
+NavMgr.NavigateTo("/");
+}
+catch (Exception ex)
+{
+Console.WriteLine(ex);
+_errorLabel = $"Error: {ex.Message}";
+}
+}
 }

@@ -1,0 +1,20 @@
+﻿body {
+    background-color: #ffb3c8;
+}
+
+.hello {
+    color: #254441;
+    font-family: "Apple chancery", cursive;  
+    font-size: 50pt;
+    text-align: center;
+}
+.hi{
+    background-color: #747C92;
+    color: white;
+}
+.privet{
+    color: #254441;
+    font-family: "Apple chancery", cursive;
+    font-size: 20pt;
+}
+
