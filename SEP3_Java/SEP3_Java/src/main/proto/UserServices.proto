@@ -48,7 +48,6 @@ message DeliveryOptionDTO
 {
   int32 id = 1;
   string name = 2;
-  string toAddress = 3;
 }
 
 message GetOrderResponse
@@ -65,6 +64,7 @@ message GetOrderRequest
   repeated ItemDTO items = 5;
   int32 orderId = 6;
   string placedBy = 7;
+  string toAddress = 8;
 }
 
 service UserService

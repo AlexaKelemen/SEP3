@@ -28,7 +28,7 @@ public class GRPCFactory
         fromTimestamp(request.getPlacedOn()),
         fromPaymentMethodDTO(request.getPaymentMethod()),
         fromDeliveryOptionDTO(request.getDeliveryOption()),
-        request.getPlacedBy());
+        request.getPlacedBy(), request.getToAddress());
 
   }
 
@@ -78,7 +78,6 @@ public class GRPCFactory
 
   public DeliveryOption fromDeliveryOptionDTO(DeliveryOptionDTO deliveryOption)
   {
-    return new DeliveryOption(deliveryOption.getId(), deliveryOption.getName(),
-        deliveryOption.getToAddress());
+    return new DeliveryOption(deliveryOption.getId(), deliveryOption.getName());
   }
 }

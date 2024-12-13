@@ -49,7 +49,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     {
       throw new RuntimeException("Something went wrong while adding a user to the database: " + e.getMessage());
     }
-    return user;
+    return getUser(user.getUsername());
   }
 
   @Override public User editUser(UserDTO user)
