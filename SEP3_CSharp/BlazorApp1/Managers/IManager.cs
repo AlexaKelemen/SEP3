@@ -20,4 +20,5 @@ public interface IManager
     Task<IEnumerable<ItemCategory>> GetItemCategoriesAsync();
     Task<IEnumerable<Order>> GetOrdersAsync();
     Task<bool> CheckoutAsync(Order order);
+   
 }

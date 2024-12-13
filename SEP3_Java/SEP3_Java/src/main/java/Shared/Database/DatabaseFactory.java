@@ -1,8 +1,4 @@
-package Database;
-
-import Database.DAOInterface.UserDAOInterface;
-import Database.Implementation.UserDAO;
-import org.springframework.stereotype.Service;
+package Shared.Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

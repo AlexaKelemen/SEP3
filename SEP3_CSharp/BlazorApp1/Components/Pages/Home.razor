@@ -2,21 +2,21 @@
 @inject NavigationManager NavMgr
 <PageTitle>Home</PageTitle>
 
+<body>
 <div class="container mt-4">
-    <h1 class="text-center">Welcome to Kassa!</h1>
+    <div class="hello">Welcome to Kassa!</div>
 
-    <p class="text-center">What are you looking for today?</p>
+    <p class="text-center privet">What are you looking for today?</p>
     <div class="banner-placeholder text-center my-5">
         <img src="Images/Random/Captură de ecran 2024-12-12 133615.png" alt="Bannerr" class="img-fluid"/>
     </div>
 
     <div class="d-flex justify-content-center my-4">
-        <button class="btn btn-primary mx-2" @onclick='() => NavMgr.NavigateTo("Return")'>Return Clothes</button>
-        <button class="btn btn-secondary mx-2" @onclick='() => NavMgr.NavigateTo("EditUser")'>User Profile</button>
-        <button class="btn btn-info mx-2" @onclick='() => NavMgr.NavigateTo("About us")'>Contact</button>
-        <button class="btn btn-success mx-2" @onclick='() => NavMgr.NavigateTo("Product")'>Shop</button>
-        <button class="btn btn-warning mx-2" @onclick='() => NavMgr.NavigateTo("ShoppingCart")'>Shopping Cart</button>
+        <button class="btn mx-2 hi"  @onclick='() => NavMgr.NavigateTo("Return")'>Return Clothes</button>
+        <button class="btn  mx-2 hi" @onclick='() => NavMgr.NavigateTo("EditUser")'>User Profile</button>
+        <button class="btn  mx-2 hi" @onclick='() => NavMgr.NavigateTo("About us")'>Contact</button>
+        <button class="btn  mx-2 hi" @onclick='() => NavMgr.NavigateTo("Product")'>Shop</button>
+        <button class="btn  mx-2 hi" @onclick='() => NavMgr.NavigateTo("ShoppingCart")'>Shopping Cart</button>
     </div>
-
-
 </div>
+</body>
