@@ -1,6 +1,6 @@
-package Entities;
+package Shared.Entities;
 
-import Utlities.Category;
+import Shared.Entities.Utlities.Category;
 
 import java.util.ArrayList;
 

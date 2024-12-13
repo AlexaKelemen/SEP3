@@ -1,6 +1,6 @@
-package Database.DAOInterface;
+package Shared.Database.DAOInterface;
 import java.util.ArrayList;
-import Entities.Card;
+import Shared.Entities.Card;
 
 
 public interface CardDAOInterface {

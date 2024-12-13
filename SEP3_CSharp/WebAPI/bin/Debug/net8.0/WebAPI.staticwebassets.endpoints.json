@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 11:45:41 GMT"
+          "Value": "Thu, 12 Dec 2024 12:53:07 GMT"
         },
         {
           "Name": "Link",
@@ -70,7 +70,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Dec 2024 11:45:41 GMT"
+          "Value": "Thu, 12 Dec 2024 12:53:07 GMT"
         },
         {
           "Name": "Link",
@@ -827,6 +827,88 @@
         {
           "Name": "label",
           "Value": "_content/BlazorApp1/Images/Clothes/clothing8.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.6ebkk95cok.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ebkk95cok"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png"
+        }
+      ]
+    },
+    {
+      "Route": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "AssetFile": "_content/BlazorApp1/Images/Random/Captură de ecran 2024-12-12 133615.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "338443"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Dec 2024 12:36:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UuHCZSWDQa3ZuRJBTPT8QqMoe4+gXoVibptTTXHAQpg="
         }
       ]
     },

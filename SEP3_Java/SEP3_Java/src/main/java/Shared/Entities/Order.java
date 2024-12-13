@@ -1,15 +1,20 @@
-package Entities;
+package Shared.Entities;
+
+import Shared.Entities.Utlities.DeliveryOption;
+import Shared.Entities.Utlities.PaymentMethod;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Order
 {
-  private LocalDate date;
-  private int paymentMethod;
+  private int orderId;
+  private LocalDate placedOn;
+  private PaymentMethod paymentMethod;
   private double totalAmount;
-  private int deliveryOption;
+  private DeliveryOption deliveryOption; // on this
   private ArrayList<Item> items;
+  private String placedBy;
 
   public Order(ArrayList<Item> items, double amount)
   {
@@ -29,31 +34,31 @@ public class Order
 
   public LocalDate getDate()
   {
-    return date;
+    return placedOn;
   }
 
-  public int getDeliveryOption()
+  public DeliveryOption getDeliveryOption()
   {
     return deliveryOption;
   }
 
-  public int getPaymentMethod()
+  public PaymentMethod getPaymentMethod()
   {
     return paymentMethod;
   }
 
-  public void setDeliveryOption(int deliveryOption)
+  public void setDeliveryOption(DeliveryOption deliveryOption)
   {
     this.deliveryOption = deliveryOption;
   }
-  public void setPaymentMethod(int paymentMethod)
+  public void setPaymentMethod(PaymentMethod paymentMethod)
   {
     this.paymentMethod = paymentMethod;
   }
 
   public void setDate(LocalDate date)
   {
-    this.date = date;
+    this.placedOn = date;
   }
 
 }

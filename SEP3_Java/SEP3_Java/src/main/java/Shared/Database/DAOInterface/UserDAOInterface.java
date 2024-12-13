@@ -1,7 +1,7 @@
-package Database.DAOInterface;
+package Shared.Database.DAOInterface;
 
-import DataTransferObjects.UserDTO;
-import Entities.User;
+import Shared.DataTransferObject.UserDTO;
+import Shared.Entities.User;
 
 import java.util.ArrayList;
 

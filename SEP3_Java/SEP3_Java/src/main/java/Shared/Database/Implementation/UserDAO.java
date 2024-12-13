@@ -1,10 +1,9 @@
-package Database.Implementation;
+package Shared.Database.Implementation;
 
-import DataTransferObjects.UserDTO;
-import Database.DAOInterface.UserDAOInterface;
-import Database.DatabaseFactory;
-import Entities.User;
-import org.springframework.stereotype.Service;
+import Shared.DataTransferObject.UserDTO;
+import Shared.Database.DAOInterface.UserDAOInterface;
+import Shared.Database.DatabaseFactory;
+import Shared.Entities.User;
 
 import java.sql.*;
 import java.util.ArrayList;

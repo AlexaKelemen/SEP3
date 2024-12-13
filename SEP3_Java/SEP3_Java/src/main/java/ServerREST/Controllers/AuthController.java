@@ -1,26 +1,29 @@
 package ServerREST.Controllers;
 
-import DataTransferObjects.LoginRequestDTO;
-import DataTransferObjects.UserDTO;
-import Database.DAOInterface.UserDAOInterface;
-import Database.Implementation.UserDAO;
-import Entities.User;
+import Shared.DataTransferObject.LoginRequestDTO;
+import Shared.DataTransferObject.UserDTO;
+import Shared.Database.DAOInterface.UserDAOInterface;
+import Shared.Database.Implementation.UserDAO;
+import Shared.Entities.User;
+import Shared.ManagerImpl;
+import Shared.ManagerInterface;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 @RestController
 public class AuthController
 {
   private UserDAOInterface userDAO;
+  private ManagerInterface manager;
   public AuthController()
   {
     userDAO = UserDAO.getInstance();
+    manager = ManagerImpl.getInstance();
   }
 
   @PostMapping("auth/login")

@@ -1,4 +1,4 @@
-package DataTransferObjects;
+package Shared.DataTransferObject;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.databind.ObjectMapper;

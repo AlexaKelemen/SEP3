@@ -1,4 +1,4 @@
-package Utlities;
+package Shared.Entities.Utlities;
 
 public class Category
 {
