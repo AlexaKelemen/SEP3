@@ -8,18 +8,29 @@ import java.util.ArrayList;
 
 public class Order
 {
+  private ArrayList<Item> items;
+  private double totalAmount;
   private int orderId;
   private LocalDate placedOn;
   private PaymentMethod paymentMethod;
-  private double totalAmount;
-  private DeliveryOption deliveryOption; // on this
-  private ArrayList<Item> items;
+  private DeliveryOption deliveryOption;
   private String placedBy;
 
   public Order(ArrayList<Item> items, double amount)
   {
     this.items = items;
     totalAmount = amount;
+  }
+
+  public Order(ArrayList<Item> items, double amount, int orderId, LocalDate placedOn, PaymentMethod paymentMethod, DeliveryOption deliveryOption, String placedBy)
+  {
+    this.items = items;
+    this.totalAmount = amount;
+    this.orderId = orderId;
+    this.placedOn = placedOn;
+    this.paymentMethod = paymentMethod;
+    this.deliveryOption = deliveryOption;
+    this.placedBy = placedBy;
   }
 
   public ArrayList<Item> getItems()

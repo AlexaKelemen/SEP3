@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Item
 {
-  private int itemId;
-  private double price;
-  private String description;
   private String name;
   private ArrayList<Category> category;
+  private double price;
+  private int itemId;
+  private String description;
   private int quantity;
   private String colour;
 
@@ -20,6 +20,19 @@ public class Item
     this.category = category;
     this.price = price;
   }
+
+  public Item(String name, ArrayList<Category> category, double price, int itemId, String description, int quantity, String colour)
+  {
+    this.name = name;
+    this.category = category;
+    this.price = price;
+    this.itemId = itemId;
+    this.description = description;
+    this.quantity = quantity;
+    this.colour = colour;
+  }
+
+
 
   public String getName()
   {
