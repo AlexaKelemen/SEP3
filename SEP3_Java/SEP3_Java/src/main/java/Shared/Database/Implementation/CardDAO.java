@@ -142,12 +142,5 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         return allCards;
     }
 
-    private Date convertToSqlDate(LocalDate date)
-    {
-        YearMonth helper = YearMonth.of(date.getYear()-1900, date.getMonthValue());
-        Date returnDate = new Date(date.getYear() - 1900, date.getMonthValue()-1, helper.atEndOfMonth().getDayOfMonth());
-        return returnDate;
-    }
-
 
 }

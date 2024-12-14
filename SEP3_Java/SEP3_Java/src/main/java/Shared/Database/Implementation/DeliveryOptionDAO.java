@@ -32,7 +32,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
       return null;
     }
   }
-  @Override public DeliveryOption addDeliveryOption(DeliveryOption deliveryOption)
+  @Override public synchronized DeliveryOption addDeliveryOption(DeliveryOption deliveryOption)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -56,7 +56,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
     return getDeliveryOption(deliveryOption.getId());
   }
 
-  @Override public DeliveryOption editDeliveryOption(DeliveryOption deliveryOption)
+  @Override public synchronized DeliveryOption editDeliveryOption(DeliveryOption deliveryOption)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -73,7 +73,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
     return getDeliveryOption(deliveryOption.getId());
   }
 
-  @Override public void deleteDeliveryOption(int deliveryOptionId)
+  @Override public synchronized void deleteDeliveryOption(int deliveryOptionId)
   {
     try(Connection connection = super.establishConnection())
     {

@@ -1,8 +1,11 @@
 package Shared.Database;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.YearMonth;
 
 public class DatabaseFactory
 {
@@ -18,6 +21,13 @@ public class DatabaseFactory
       System.out.println("Connection failed. Try a different password perhaps.");
       return null;
     }
+  }
+
+  public Date convertToSqlDate(LocalDate date)
+  {
+    YearMonth helper = YearMonth.of(date.getYear()-1900, date.getMonthValue());
+    Date returnDate = new Date(date.getYear() - 1900, date.getMonthValue()-1, helper.atEndOfMonth().getDayOfMonth());
+    return returnDate;
   }
 
 }

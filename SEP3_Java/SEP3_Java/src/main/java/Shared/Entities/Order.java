@@ -35,6 +35,8 @@ public class Order
     this.toAddress = toAddress;
   }
 
+  public Order(){}
+
   public ArrayList<Item> getItems()
   {
     return items;
@@ -43,6 +45,11 @@ public class Order
   public double getTotalAmount()
   {
     return totalAmount;
+  }
+
+  public void setTotalAmount(double totalAmount)
+  {
+    this.totalAmount = totalAmount;
   }
 
   public LocalDate getDate()
@@ -84,4 +91,23 @@ public class Order
     return placedBy;
   }
 
+  public void setToAddress(String toAddress)
+  {
+    this.toAddress = toAddress;
+  }
+
+  public String getToAddress()
+  {
+    return toAddress;
+  }
+
+  public void setOrderId(int orderId)
+  {
+    this.orderId = orderId;
+  }
+
+  public int getOrderId()
+  {
+    return orderId;
+  }
 }

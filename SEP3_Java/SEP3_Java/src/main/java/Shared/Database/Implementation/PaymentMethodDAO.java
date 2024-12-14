@@ -32,7 +32,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
       return null;
     }
   }
-  @Override public PaymentMethod addPaymentMethod(PaymentMethod paymentMethod)
+  @Override public synchronized PaymentMethod addPaymentMethod(PaymentMethod paymentMethod)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -56,7 +56,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
     return getPaymentMethod(paymentMethod.getId());
   }
 
-  @Override public PaymentMethod editPaymentMethod(PaymentMethod paymentMethod)
+  @Override public synchronized PaymentMethod editPaymentMethod(PaymentMethod paymentMethod)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -73,7 +73,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
     return getPaymentMethod(paymentMethod.getId());
   }
 
-  @Override public void deletePaymentMethod(int paymentMethodId)
+  @Override public synchronized void deletePaymentMethod(int paymentMethodId)
   {
     try(Connection connection = super.establishConnection())
     {
