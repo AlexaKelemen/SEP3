@@ -38,6 +38,18 @@ message CategoryDTO
   int32 categoryId = 3;
 }
 
+message PaymentMethodDTO
+{
+  int32 id = 1;
+  string name = 2;
+}
+
+message DeliveryOptionDTO
+{
+  int32 id = 1;
+  string name = 2;
+}
+
 message GetOrderResponse
 {
   bool success = 1;
@@ -46,10 +58,13 @@ message GetOrderResponse
 message GetOrderRequest
 {
   google.protobuf.Timestamp placedOn = 1;
-  int32 paymentMethod = 2;
+  PaymentMethodDTO paymentMethod = 2;
   double totalAmount = 3;
-  int32 deliveryOption = 4;
+  DeliveryOptionDTO deliveryOption = 4;
   repeated ItemDTO items = 5;
+  int32 orderId = 6;
+  string placedBy = 7;
+  string toAddress = 8;
 }
 
 service UserService

@@ -22,18 +22,6 @@ C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Entities\obj\Debug\net8
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\user\OneDrive\Documents\GitHub\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.deps.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.deps.json
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.pdb
@@ -88,12 +76,24 @@ C:\Users\user\Jupiter\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genrun
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
 D:\Code files\SEP\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
 C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\bin\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\refint\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Entities\obj\Debug\net8.0\ref\Entities.dll

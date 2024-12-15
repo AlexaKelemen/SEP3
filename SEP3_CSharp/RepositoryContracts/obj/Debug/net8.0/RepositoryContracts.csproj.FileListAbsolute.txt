@@ -72,26 +72,6 @@ C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\ob
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\refint\RepositoryContracts.dll
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.pdb
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.deps.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DataTransferObjects.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DataTransferObjects.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.AssemblyReference.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.GeneratedMSBuildEditorConfig.editorconfig
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfoInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfo.cs
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.CoreCompileInputs.cache
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.sourcelink.json
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\Reposito.28D4BA81.Up2Date
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\refint\RepositoryContracts.dll
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.pdb
-D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.deps.json
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
 C:\Users\user\Jupiter\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
@@ -118,3 +98,23 @@ C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\bi
 C:\Users\salom\OneDrive\Desktop\QR codes\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.runtimeconfig.json
 C:\Users\ASUS\Desktop\SEP3\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.deps.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.runtimeconfig.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\DatabaseConnection.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\bin\Debug\net8.0\Entities.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.AssemblyReference.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfoInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfo.cs
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.CoreCompileInputs.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.sourcelink.json
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\Reposito.28D4BA81.Up2Date
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\refint\RepositoryContracts.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.pdb
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.genruntimeconfig.cache
+D:\SEP3\Project\SourceCode\SEP3_CSharp\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll

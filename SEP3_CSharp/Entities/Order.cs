@@ -8,8 +8,8 @@ public class Order
     public double Price { get; set; }
     public DateTime PlacedOn { get; set; }
     public PaymentMethod PaymentMethod { get; set; } = null!;
-    public User PlacedBy { get; set; } = null!;  //This one may change
-    public List<DeliveryOption> DeliveryOptions { get; set; } = []; //This one may change
+    public string PlacedBy { get; set; } = null!;  
+    public DeliveryOption DeliveryOption { get; set; }
 
     public List<Item> Items { get; set; }
 

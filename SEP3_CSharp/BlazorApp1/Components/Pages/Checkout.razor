@@ -271,8 +271,8 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 1,
-                Name = $"Home Delivery: {deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, {deliveryZipcode} ",
-                OrderId = -1
+                Name = "Home delivery",
+                ToAddress = $"{deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, {deliveryZipcode}"
             };
         }
         else
@@ -280,21 +280,21 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 2,
-                Name = $"Pickup Location: {selectedPickupLocation}",
-                OrderId = -1
+                Name = "Pickup location",
+                ToAddress = $"{selectedPickupLocation}"
             };
         }
 
         Order order = new Order
         {
-            DeliveryOptions = new List<DeliveryOption> { deliveryOption },
+            DeliveryOption =  deliveryOption ,
             OrderId = -1,
             PaymentMethod = new PaymentMethod
             {
                 Id = 1,
-                Name = "Card"
+                Name = "By Card"
             },
-            PlacedBy = user,
+            PlacedBy = user.Username,
             PlacedOn = DateTime.Now,
             Price = (double)total
         };

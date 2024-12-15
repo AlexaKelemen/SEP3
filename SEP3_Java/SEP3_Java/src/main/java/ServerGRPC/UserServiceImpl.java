@@ -29,7 +29,7 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 
   public void addOrder(GetOrderRequest request, StreamObserver<GetOrderResponse> responseObserver)
   {
-    GetOrderResponse response = GetOrderResponse.newBuilder().setSuccess(true).build();
+    GetOrderResponse response = manager.addOrder(request);
     responseObserver.onNext(response);
     responseObserver.onCompleted();
   }

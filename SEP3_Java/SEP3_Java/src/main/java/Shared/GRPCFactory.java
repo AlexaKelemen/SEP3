@@ -10,6 +10,7 @@ import proto.ItemDTO;
 import proto.CategoryDTO;
 import proto.PaymentMethodDTO;
 import proto.DeliveryOptionDTO;
+import proto.GetOrderResponse;
 
 import com.google.protobuf.Timestamp;
 
@@ -79,5 +80,10 @@ public class GRPCFactory
   public DeliveryOption fromDeliveryOptionDTO(DeliveryOptionDTO deliveryOption)
   {
     return new DeliveryOption(deliveryOption.getId(), deliveryOption.getName());
+  }
+
+  public GetOrderResponse fromBoolean(boolean deliveryMade)
+  {
+    return GetOrderResponse.newBuilder().setSuccess(deliveryMade).build();
   }
 }

@@ -2,8 +2,9 @@ package Shared;
 
 import Shared.Entities.Order;
 import proto.GetOrderRequest;
+import proto.GetOrderResponse;
 
 public interface ManagerInterface
 {
-  public boolean addOrder(GetOrderRequest order);
+  public GetOrderResponse addOrder(GetOrderRequest order);
 }

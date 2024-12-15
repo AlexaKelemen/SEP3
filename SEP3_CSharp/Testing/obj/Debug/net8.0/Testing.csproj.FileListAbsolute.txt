@@ -234,3 +234,6 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\obj\Debug\net8.0\staticwebassets.pack
 D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\obj\Debug\net8.0\scopedcss\bundle\Testing.styles.css
 D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\bin\Debug\net8.0\Castle.Core.dll
 D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\bin\Debug\net8.0\Moq.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\obj\Debug\net8.0\Testing.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\obj\Debug\net8.0\refint\Testing.dll
+D:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\obj\Debug\net8.0\Testing.pdb

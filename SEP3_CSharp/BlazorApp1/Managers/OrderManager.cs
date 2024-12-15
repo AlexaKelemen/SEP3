@@ -24,7 +24,7 @@ public class OrderManager : IOrderManager
         DateTime replacementDate = DateTime.SpecifyKind(order.PlacedOn, DateTimeKind.Utc);
         GetOrderRequest request = new GetOrderRequest()
         {
-            DeliveryOption = order.DeliveryOptions.FirstOrDefault().Id,
+            DeliveryOption = order.DeliveryOption,
             PaymentMethod = order.PaymentMethod.Id,
             PlacedOn = replacementDate.ToTimestamp(),
             TotalAmount = order.Price
