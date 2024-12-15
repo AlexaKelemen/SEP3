@@ -33,7 +33,7 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
       return null;
     }
   }
-  @Override public Item addItem(Item item)
+  @Override public synchronized Item addItem(Item item)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -51,7 +51,7 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
     return getItem(item.getItemId());
   }
 
-  @Override public Item editItem(Item item)
+  @Override public synchronized Item editItem(Item item)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -70,7 +70,7 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
     return getItem(item.getItemId());
   }
 
-  @Override public void deleteItem(int itemId)
+  @Override public synchronized void deleteItem(int itemId)
   {
     try(Connection connection = super.establishConnection())
     {

@@ -23,6 +23,7 @@ public class ManagerImpl implements ManagerInterface
   private OrderDAOInterface orderDAO;
   private CategoryDAOInterface categoryDAO;
   private ItemDAOInterface itemDAO;
+  private ItemCategoryDAOInterface itemCategoryDAO;
 
   private ManagerImpl()
   {
@@ -33,6 +34,7 @@ public class ManagerImpl implements ManagerInterface
     orderDAO = OrderDAO.getInstance();
     categoryDAO = CategoryDAO.getInstance();
     itemDAO = ItemDAO.getInstance();
+    itemCategoryDAO = ItemCategoryDAO.getInstance();
   }
 
   public static synchronized ManagerImpl getInstance()
@@ -80,6 +82,11 @@ public class ManagerImpl implements ManagerInterface
     ArrayList<Item> itemsToSave = orderToSave.getItems();
     for (int i = 0; i < itemsToSave.size(); i++)
     {
+      Item itemAdded = itemDAO.getItem(itemsToSave.get(i).getItemId());
+      if(itemAdded == null)
+      {
+        itemAdded = itemDAO.addItem(itemsToSave.get(i));
+      }
       ArrayList<Category> categories = itemsToSave.get(i).getCategory();
       for (int j = 0; j < categories.size(); j++)
       {
@@ -88,12 +95,10 @@ public class ManagerImpl implements ManagerInterface
         {
           categoryAdded = categoryDAO.addCategory(categories.get(j));
         }
+        itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
       }
-      Item itemAdded = itemDAO.getItem(itemsToSave.get(i).getItemId());
-      if(itemAdded == null)
-      {
-        itemAdded = itemDAO.addItem(itemsToSave.get(i));
-      }
+
+
     }
 
     return true;
