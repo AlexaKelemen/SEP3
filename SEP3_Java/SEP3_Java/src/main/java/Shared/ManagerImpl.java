@@ -24,6 +24,7 @@ public class ManagerImpl implements ManagerInterface
   private CategoryDAOInterface categoryDAO;
   private ItemDAOInterface itemDAO;
   private ItemCategoryDAOInterface itemCategoryDAO;
+  private ItemsInOrderDAOInterface itemsInOrderDAO;
 
   private ManagerImpl()
   {
@@ -35,6 +36,7 @@ public class ManagerImpl implements ManagerInterface
     categoryDAO = CategoryDAO.getInstance();
     itemDAO = ItemDAO.getInstance();
     itemCategoryDAO = ItemCategoryDAO.getInstance();
+    itemsInOrderDAO = ItemsInOrderDAO.getInstance();
   }
 
   public static synchronized ManagerImpl getInstance()
@@ -97,10 +99,8 @@ public class ManagerImpl implements ManagerInterface
         }
         itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
       }
-
-
+      itemsInOrderDAO.addItemToOrder(itemsToSave.get(i), orderToSave.getOrderId());
     }
-
     return true;
   }
 }
