@@ -1,13 +1,11 @@
 package Shared;
 
-import Shared.Database.DAOInterface.DeliveryOptionDAOInterface;
-import Shared.Database.DAOInterface.PaymentMethodDAOInterface;
-import Shared.Database.DAOInterface.UserDAOInterface;
-import Shared.Database.Implementation.DeliveryOptionDAO;
-import Shared.Database.Implementation.PaymentMethodDAO;
-import Shared.Database.Implementation.UserDAO;
+import Shared.Database.DAOInterface.*;
+import Shared.Database.Implementation.*;
+import Shared.Entities.Item;
 import Shared.Entities.Order;
 import Shared.Entities.User;
+import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
 import proto.GetOrderRequest;
@@ -22,6 +20,8 @@ public class ManagerImpl implements ManagerInterface
   private UserDAOInterface userDAO;
   private DeliveryOptionDAOInterface deliveryOptionDAO;
   private PaymentMethodDAOInterface paymentMethodDAO;
+  private OrderDAOInterface orderDAO;
+  private CategoryDAOInterface categoryDAO;
 
   private ManagerImpl()
   {
@@ -29,6 +29,8 @@ public class ManagerImpl implements ManagerInterface
     userDAO = UserDAO.getInstance();
     deliveryOptionDAO = DeliveryOptionDAO.getInstance();
     paymentMethodDAO = PaymentMethodDAO.getInstance();
+    orderDAO = OrderDAO.getInstance();
+    categoryDAO = CategoryDAO.getInstance();
   }
 
   public static synchronized ManagerImpl getInstance()
@@ -72,7 +74,20 @@ public class ManagerImpl implements ManagerInterface
     {
       return false;
     }
-
+    orderDAO.addOrder(orderToSave);
+    ArrayList<Item> itemsToSave = orderToSave.getItems();
+    for (int i = 0; i < itemsToSave.size(); i++)
+    {
+      ArrayList<Category> categories = itemsToSave.get(i).getCategory();
+      for (int j = 0; j < categories.size(); j++)
+      {
+        Category categoryAdded = categoryDAO.getCategory(categories.get(j).getCategoryId());
+        if(categoryAdded == null)
+        {
+          categoryDAO.addCategory(categories.get(j));
+        }
+      }
+    }
 
     return true;
   }

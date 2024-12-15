@@ -37,7 +37,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     }
   }
 
-  @Override public Order addOrder(Order order)
+  @Override public synchronized Order addOrder(Order order)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -66,7 +66,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     return getOrder(order.getOrderId());
   }
 
-  @Override public Order editOrder(Order order)
+  @Override public synchronized Order editOrder(Order order)
   {
     try(Connection connection = super.establishConnection())
     {
@@ -83,7 +83,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     return getOrder(order.getOrderId());
   }
 
-  @Override public void deleteOrder(int orderId)
+  @Override public synchronized void deleteOrder(int orderId)
   {
     try(Connection connection = super.establishConnection())
     {
