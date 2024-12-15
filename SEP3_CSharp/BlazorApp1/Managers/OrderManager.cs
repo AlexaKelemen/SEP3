@@ -24,10 +24,21 @@ public class OrderManager : IOrderManager
         DateTime replacementDate = DateTime.SpecifyKind(order.PlacedOn, DateTimeKind.Utc);
         GetOrderRequest request = new GetOrderRequest()
         {
-            DeliveryOption = order.DeliveryOption,
-            PaymentMethod = order.PaymentMethod.Id,
+            DeliveryOption = new DeliveryOptionDTO()
+            {
+                Id = order.DeliveryOption.Id,
+                Name = order.DeliveryOption.Name
+            },
+            PaymentMethod = new PaymentMethodDTO()
+            {
+                Id = order.PaymentMethod.Id,
+                Name = order.PaymentMethod.Name
+            },
             PlacedOn = replacementDate.ToTimestamp(),
-            TotalAmount = order.Price
+            TotalAmount = order.Price,
+            OrderId = order.OrderId,
+            PlacedBy = order.PlacedBy,
+            ToAddress = order.DeliveryOption.ToAddress
         };
         order.Items.ForEach(item =>
         {
