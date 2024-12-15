@@ -32,7 +32,7 @@ public class Item
     this.colour = colour;
   }
 
-
+  public Item() {}
 
   public String getName()
   {
@@ -74,14 +74,14 @@ public class Item
     this.description = description;
   }
 
-  public int getItemtype()
+  public int getItemId()
   {
     return itemId;
   }
 
-  public void setItemtype(int itemtype)
+  public void setItemId(int itemId)
   {
-    this.itemId = itemtype;
+    this.itemId = itemId;
   }
 
   public int getQuantity(){

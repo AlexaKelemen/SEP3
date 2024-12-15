@@ -22,6 +22,7 @@ public class ManagerImpl implements ManagerInterface
   private PaymentMethodDAOInterface paymentMethodDAO;
   private OrderDAOInterface orderDAO;
   private CategoryDAOInterface categoryDAO;
+  private ItemDAOInterface itemDAO;
 
   private ManagerImpl()
   {
@@ -31,6 +32,7 @@ public class ManagerImpl implements ManagerInterface
     paymentMethodDAO = PaymentMethodDAO.getInstance();
     orderDAO = OrderDAO.getInstance();
     categoryDAO = CategoryDAO.getInstance();
+    itemDAO = ItemDAO.getInstance();
   }
 
   public static synchronized ManagerImpl getInstance()
@@ -84,8 +86,13 @@ public class ManagerImpl implements ManagerInterface
         Category categoryAdded = categoryDAO.getCategory(categories.get(j).getCategoryId());
         if(categoryAdded == null)
         {
-          categoryDAO.addCategory(categories.get(j));
+          categoryAdded = categoryDAO.addCategory(categories.get(j));
         }
+      }
+      Item itemAdded = itemDAO.getItem(itemsToSave.get(i).getItemId());
+      if(itemAdded == null)
+      {
+        itemAdded = itemDAO.addItem(itemsToSave.get(i));
       }
     }
 

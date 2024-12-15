@@ -33,7 +33,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
     }
   }
 
-  @Override public Category addCategory(Category category)
+  @Override public synchronized Category addCategory(Category category)
   {
     try (Connection connection = super.establishConnection())
     {
@@ -60,7 +60,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
     return getCategory(category.getCategoryId());
   }
 
-  @Override public Category editCategory(Category category)
+  @Override public synchronized Category editCategory(Category category)
   {
     try (Connection connection = super.establishConnection())
     {
@@ -79,7 +79,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
     return getCategory(category.getCategoryId());
   }
 
-  @Override public void deleteCategory(int categoryId)
+  @Override public synchronized void deleteCategory(int categoryId)
   {
     try (Connection connection = super.establishConnection())
     {
