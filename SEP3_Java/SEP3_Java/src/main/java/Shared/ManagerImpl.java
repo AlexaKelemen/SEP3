@@ -9,6 +9,7 @@ import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
 import proto.GetOrderRequest;
+import proto.GetOrderResponse;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class ManagerImpl implements ManagerInterface
     }
     return instance;
   }
-  @Override public boolean addOrder(GetOrderRequest order)
+  @Override public GetOrderResponse addOrder(GetOrderRequest order)
   {
     Order orderToSave = factory.fromOrderRequest(order);
 
@@ -78,7 +79,7 @@ public class ManagerImpl implements ManagerInterface
 
     if(user == null || deliveryOption == null || paymentMethod == null)
     {
-      return false;
+      return factory.fromBoolean(false);
     }
     orderDAO.addOrder(orderToSave);
     ArrayList<Item> itemsToSave = orderToSave.getItems();
@@ -101,6 +102,6 @@ public class ManagerImpl implements ManagerInterface
       }
       itemsInOrderDAO.addItemToOrder(itemsToSave.get(i), orderToSave.getOrderId());
     }
-    return true;
+    return factory.fromBoolean(true);
   }
 }
