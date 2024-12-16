@@ -90,14 +90,7 @@ public class CartManager : ICartManager, INotifyPropertyChanged
         {
             throw new ArgumentException("Quantity cannot be less or equal to zero"); 
         }
-
-        if (cart[item] > quantity)
-        {
-            cart[item] -= quantity;
-        }
-        else
-        {
-            cart[item] += quantity;
-        }
+        
+        cart[item] = quantity;
     }
 }
