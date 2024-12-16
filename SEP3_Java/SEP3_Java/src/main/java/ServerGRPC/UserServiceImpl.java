@@ -8,6 +8,8 @@ import proto.GetUserResponse;
 import proto.UserServiceGrpc;
 import proto.GetOrderRequest;
 import proto.GetOrderResponse;
+import proto.GetAllOrdersRequest;
+import proto.GetAllOrdersResponse;
 import io.grpc.stub.StreamObserver;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
@@ -32,6 +34,11 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
     GetOrderResponse response = manager.addOrder(request);
     responseObserver.onNext(response);
     responseObserver.onCompleted();
+  }
+
+  public void getAllOrdersForUser(GetAllOrdersRequest request, StreamObserver<GetAllOrdersResponse> responseStreamObserver)
+  {
+
   }
 }
 

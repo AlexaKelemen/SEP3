@@ -11,12 +11,14 @@ import proto.CategoryDTO;
 import proto.PaymentMethodDTO;
 import proto.DeliveryOptionDTO;
 import proto.GetOrderResponse;
+import proto.GetAllOrdersRequest;
+import proto.GetAllOrdersResponse;
+import proto.OrderDTO;
 
 import com.google.protobuf.Timestamp;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import java.sql.Time;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,94 @@ public class GRPCFactory
         fromDeliveryOptionDTO(request.getDeliveryOption()),
         request.getPlacedBy(), request.getToAddress());
 
+  }
+
+  public String fromGetAllOrdersRequest(GetAllOrdersRequest request)
+  {
+    return request.getUser();
+  }
+
+  public GetAllOrdersResponse fromOrder(ArrayList<Order> order)
+  {
+    return proto.GetAllOrdersResponse.newBuilder().addAllOrders(createListOfOrderDTOs(order)).build();
+  }
+
+  public ArrayList<OrderDTO> createListOfOrderDTOs(ArrayList<Order> orders)
+  {
+    ArrayList<OrderDTO> response = new ArrayList<>();
+    for (int i = 0; i < orders.size(); i++)
+    {
+      response.add(createOrderDTO(orders.get(i)));
+    }
+    return response;
+  }
+
+  public OrderDTO createOrderDTO(Order order)
+  {
+    return OrderDTO.newBuilder().setPlacedOn(createTimestamp(order.getDate()))
+        .setPaymentMethod(createPaymentMethodDTO(order.getPaymentMethod()))
+        .setTotalAmount(order.getTotalAmount())
+        .setDeliveryOption(createDeliveryOptionDTO(order.getDeliveryOption()))
+        .addAllItems(createItemDTOList(order.getItems()))
+        .setOrderId(order.getOrderId()).setPlacedBy(order.getPlacedBy())
+        .setToAddress(order.getToAddress()).build();
+  }
+
+  private Timestamp createTimestamp(LocalDate date)
+  {
+    Instant instant = date.atStartOfDay(ZoneId.systemDefault()).toInstant();
+    return Timestamp.newBuilder().setSeconds(instant.getEpochSecond())
+        .setNanos(instant.getNano()).build();
+  }
+
+  private PaymentMethodDTO createPaymentMethodDTO(PaymentMethod paymentMethod)
+  {
+    return PaymentMethodDTO.newBuilder().setId(paymentMethod.getId())
+        .setName(paymentMethod.getName()).build();
+  }
+
+  private DeliveryOptionDTO createDeliveryOptionDTO(
+      DeliveryOption deliveryOption)
+  {
+    return proto.DeliveryOptionDTO.newBuilder().setId(deliveryOption.getId())
+        .setName(deliveryOption.getName()).build();
+  }
+
+  private ArrayList<ItemDTO> createItemDTOList(ArrayList<Item> items)
+  {
+    ArrayList<ItemDTO> response = new ArrayList<>();
+    for (int i = 0; i < items.size(); i++)
+    {
+      response.add(createItemDTO(items.get(i)));
+    }
+    return response;
+  }
+
+  private ItemDTO createItemDTO(Item item)
+  {
+    return ItemDTO.newBuilder().setItemId(item.getItemId())
+        .setPrice(item.getPrice()).setDescription(item.getDescription())
+        .setName(item.getName())
+        .addAllCategory(createCategoryDTOList(item.getCategory()))
+        .setQuantity(item.getQuantity()).setColour(item.getColour()).build();
+  }
+
+  private ArrayList<CategoryDTO> createCategoryDTOList(
+      ArrayList<Category> categories)
+  {
+    ArrayList<CategoryDTO> response = new ArrayList<>();
+    for (int i = 0; i < categories.size(); i++)
+    {
+      response.add(createCategoryDTO(categories.get(i)));
+    }
+    return response;
+  }
+
+  private CategoryDTO createCategoryDTO(Category category)
+  {
+    return CategoryDTO.newBuilder().setName(category.getName())
+        .setDescription(category.getDescription())
+        .setCategoryId(category.getCategoryId()).build();
   }
 
   public ArrayList<Item> fromItemDTOList(List<ItemDTO> items)

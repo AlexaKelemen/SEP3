@@ -8,6 +8,8 @@ import Shared.Entities.User;
 import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
+import proto.GetAllOrdersRequest;
+import proto.GetAllOrdersResponse;
 import proto.GetOrderRequest;
 import proto.GetOrderResponse;
 
@@ -111,6 +113,46 @@ public class ManagerImpl implements ManagerInterface
       e.printStackTrace();
       return factory.fromBoolean(false);
     }
-
   }
+
+  @Override public GetAllOrdersResponse getAllOrdersForUser(
+      GetAllOrdersRequest user)
+  {
+    ArrayList<Order> orders = orderDAO.getAllOrders();
+    ArrayList<Order> ordersForUser = new ArrayList<>();
+    for(int i = 0; i < orders.size(); i++)
+    {
+      if(orders.get(i).getPlacedBy().equals(factory.fromGetAllOrdersRequest(user)))
+      {
+        ordersForUser.add(orders.get(i));
+      }
+    }
+
+    for (int i = 0; i < ordersForUser.size(); i++)
+    {
+      ArrayList<Item> items = itemsInOrderDAO.getAllItemsInOrder(ordersForUser.get(i).getOrderId());
+      ArrayList<Item> itemsForOrder = new ArrayList<>();
+      for (int j = 0; j < items.size(); j++)
+      {
+        itemsForOrder.add(getCompleteItem(itemsForOrder.get(i).getItemId(), ordersForUser.get(i).getOrderId()));
+      }
+      ordersForUser.get(i).setItems(itemsForOrder);
+    }
+    return factory.fromOrder(ordersForUser);
+  }
+
+  private Item getCompleteItem(int itemId, int orderId)
+  {
+    Item result = itemDAO.getItem(itemId);
+    result = itemsInOrderDAO.getItemInOrder(result, orderId);
+    ArrayList<int[]> categories = itemCategoryDAO.getCategoriesForItem(itemId);
+    ArrayList<Category> categoryForItem = new ArrayList<>();
+    for (int i = 0; i < categories.size(); i++)
+    {
+      categoryForItem.add(categoryDAO.getCategory(categories.get(i)[1]));
+    }
+    result.setCategory(categoryForItem);
+    return result;
+  }
+
 }
