@@ -23,10 +23,16 @@ public class DatabaseFactory
     }
   }
 
-  public Date convertToSqlDate(LocalDate date)
+  public Date convertToSqlCardDate(LocalDate date)
   {
     YearMonth helper = YearMonth.of(date.getYear()-1900, date.getMonthValue());
     Date returnDate = new Date(date.getYear() - 1900, date.getMonthValue()-1, helper.atEndOfMonth().getDayOfMonth());
+    return returnDate;
+  }
+
+  public Date convertToSqlDate(LocalDate date)
+  {
+    Date returnDate = new Date(date.getYear() - 1900, date.getMonthValue()-1, date.getDayOfMonth());
     return returnDate;
   }
 

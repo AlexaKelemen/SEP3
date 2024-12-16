@@ -35,7 +35,11 @@ public class Order
     this.toAddress = toAddress;
   }
 
-  public Order(){}
+  public Order(){
+    items = new ArrayList<>();
+    deliveryOption = new DeliveryOption();
+    paymentMethod = new PaymentMethod();
+  }
 
   public ArrayList<Item> getItems()
   {

@@ -50,58 +50,67 @@ public class ManagerImpl implements ManagerInterface
   }
   @Override public GetOrderResponse addOrder(GetOrderRequest order)
   {
-    Order orderToSave = factory.fromOrderRequest(order);
-
-
-    User user = userDAO.getUser(orderToSave.getPlacedBy());
-    DeliveryOption deliveryOption = null;
-    PaymentMethod paymentMethod = null;
-
-
-    ArrayList<DeliveryOption> deliveryOptions = deliveryOptionDAO.getAllDeliveryOptions();
-    ArrayList<PaymentMethod> paymentMethods = paymentMethodDAO.getAllPaymentMethods();
-    for (int i = 0; i < deliveryOptions.size(); i++)
+    try
     {
-      if(deliveryOptions.get(i).getName().equals(order.getDeliveryOption().getName()))
+      Order orderToSave = factory.fromOrderRequest(order);
+
+
+      User user = userDAO.getUser(orderToSave.getPlacedBy());
+      DeliveryOption deliveryOption = null;
+      PaymentMethod paymentMethod = null;
+
+
+      ArrayList<DeliveryOption> deliveryOptions = deliveryOptionDAO.getAllDeliveryOptions();
+      ArrayList<PaymentMethod> paymentMethods = paymentMethodDAO.getAllPaymentMethods();
+      for (int i = 0; i < deliveryOptions.size(); i++)
       {
-        deliveryOption = new DeliveryOption(deliveryOptions.get(i).getId(), deliveryOptions.get(i).getName());
-        orderToSave.setDeliveryOption(deliveryOption);
+        if(deliveryOptions.get(i).getName().equals(order.getDeliveryOption().getName()))
+        {
+          deliveryOption = new DeliveryOption(deliveryOptions.get(i).getId(), deliveryOptions.get(i).getName());
+          orderToSave.setDeliveryOption(deliveryOption);
+        }
       }
-    }
-    for (int i = 0; i < paymentMethods.size(); i++)
-    {
-      if(paymentMethods.get(i).getName().equals(order.getPaymentMethod().getName()))
+      for (int i = 0; i < paymentMethods.size(); i++)
       {
-        paymentMethod = new PaymentMethod(paymentMethods.get(i).getId(), paymentMethods.get(i).getName());
-        orderToSave.setPaymentMethod(paymentMethod);
+        if(paymentMethods.get(i).getName().equals(order.getPaymentMethod().getName()))
+        {
+          paymentMethod = new PaymentMethod(paymentMethods.get(i).getId(), paymentMethods.get(i).getName());
+          orderToSave.setPaymentMethod(paymentMethod);
+        }
       }
-    }
 
-    if(user == null || deliveryOption == null || paymentMethod == null)
+      if(user == null || deliveryOption == null || paymentMethod == null)
+      {
+        return factory.fromBoolean(false);
+      }
+      orderDAO.addOrder(orderToSave);
+      ArrayList<Item> itemsToSave = orderToSave.getItems();
+      for (int i = 0; i < itemsToSave.size(); i++)
+      {
+        Item itemAdded = itemDAO.getItem(itemsToSave.get(i).getItemId());
+        if(itemAdded == null)
+        {
+          itemAdded = itemDAO.addItem(itemsToSave.get(i));
+        }
+        ArrayList<Category> categories = itemsToSave.get(i).getCategory();
+        for (int j = 0; j < categories.size(); j++)
+        {
+          Category categoryAdded = categoryDAO.getCategory(categories.get(j).getCategoryId());
+          if(categoryAdded == null)
+          {
+            categoryAdded = categoryDAO.addCategory(categories.get(j));
+          }
+          itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
+        }
+        itemsInOrderDAO.addItemToOrder(itemAdded, orderToSave.getOrderId());
+      }
+      return factory.fromBoolean(true);
+    }
+    catch (Exception e)
     {
+      e.printStackTrace();
       return factory.fromBoolean(false);
     }
-    orderDAO.addOrder(orderToSave);
-    ArrayList<Item> itemsToSave = orderToSave.getItems();
-    for (int i = 0; i < itemsToSave.size(); i++)
-    {
-      Item itemAdded = itemDAO.getItem(itemsToSave.get(i).getItemId());
-      if(itemAdded == null)
-      {
-        itemAdded = itemDAO.addItem(itemsToSave.get(i));
-      }
-      ArrayList<Category> categories = itemsToSave.get(i).getCategory();
-      for (int j = 0; j < categories.size(); j++)
-      {
-        Category categoryAdded = categoryDAO.getCategory(categories.get(j).getCategoryId());
-        if(categoryAdded == null)
-        {
-          categoryAdded = categoryDAO.addCategory(categories.get(j));
-        }
-        itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
-      }
-      itemsInOrderDAO.addItemToOrder(itemsToSave.get(i), orderToSave.getOrderId());
-    }
-    return factory.fromBoolean(true);
+
   }
 }

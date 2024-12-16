@@ -87,7 +87,7 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
 
   @Override public Item getItem(int itemId)
   {
-    Item response = new Item();
+    Item response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT name, description, price\n"
@@ -96,6 +96,7 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
+        response = new Item();
         response.setItemId(itemId);
         response.setName(rs.getString("name"));
         response.setDescription(rs.getString("description"));

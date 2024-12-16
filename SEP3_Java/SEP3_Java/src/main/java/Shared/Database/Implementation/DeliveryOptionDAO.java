@@ -90,7 +90,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
 
   @Override public DeliveryOption getDeliveryOption(int deliveryOptionId)
   {
-    DeliveryOption response = new DeliveryOption();
+    DeliveryOption response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT id, name\n"
@@ -99,6 +99,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
+        response = new DeliveryOption();
         response.setId(rs.getInt("id"));
         response.setName(rs.getString("name"));
       }

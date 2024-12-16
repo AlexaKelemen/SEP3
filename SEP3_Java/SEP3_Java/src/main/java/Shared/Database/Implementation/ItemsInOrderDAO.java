@@ -59,7 +59,7 @@ public class ItemsInOrderDAO extends DatabaseFactory
     {
       PreparedStatement statement = connection.prepareStatement("UPDATE Items_in_Order\n"
           + "SET  item_quantity = ?, item_colour = ?\n"
-          + "WHERE item_id = ? && order_id = ?;");
+          + "WHERE item_id = ? and order_id = ?;");
       statement.setInt(1, item.getQuantity());
       statement.setString(2, item.getColour());
       statement.setInt(3, item.getItemId());
@@ -78,7 +78,7 @@ public class ItemsInOrderDAO extends DatabaseFactory
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("DELETE FROM Items_in_Order\n"
-          + "WHERE item_id = ? && order_id = ?;");
+          + "WHERE item_id = ? and order_id = ?;");
       statement.setInt(1, itemId);
       statement.setInt(2, orderId);
       statement.executeUpdate();
@@ -91,24 +91,24 @@ public class ItemsInOrderDAO extends DatabaseFactory
 
   @Override public Item getItemInOrder(Item item, int orderId)
   {
+    Item response = null;
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT item_quantity, item_colour\n"
-          + "FROM Items_in_Order\n" + "WHERE item_id = ? && order_id = ?;");
+          + "FROM Items_in_Order\n" + "WHERE item_id = ? and order_id = ?;");
       statement.setInt(1, item.getItemId());
       statement.setInt(2, orderId);
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
-        item.setQuantity(rs.getInt("item_quantity"));
-        item.setColour(rs.getString("item_colour"));
+        response = new Item(item.getName(), item.getCategory(), item.getPrice(), item.getItemId(), item.getDescription(), rs.getInt("item_quantity"), rs.getString("item_colour"));
       }
     }
     catch (SQLException e)
     {
       throw new RuntimeException("Something went wrong while getting an item for an order from the database: " + e.getMessage());
     }
-    return item;
+    return response;
   }
 
   @Override public ArrayList<Item> getAllItemsInOrder(int orderId)

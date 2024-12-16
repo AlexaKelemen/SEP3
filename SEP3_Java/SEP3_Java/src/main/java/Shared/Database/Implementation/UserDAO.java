@@ -90,7 +90,7 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
 
   @Override public User getUser(String username)
   {
-    User response = new User("", "");
+    User response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT username, password, e_mail, f_name, l_name, billing_address\n"

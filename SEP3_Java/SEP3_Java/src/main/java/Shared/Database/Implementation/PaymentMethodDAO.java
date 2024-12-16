@@ -90,7 +90,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
 
   @Override public PaymentMethod getPaymentMethod(int paymentMethodId)
   {
-    PaymentMethod response = new PaymentMethod();
+    PaymentMethod response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT id, name\n"
@@ -99,6 +99,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
+        response = new PaymentMethod();
         response.setId(rs.getInt("id"));
         response.setName(rs.getString("name"));
       }

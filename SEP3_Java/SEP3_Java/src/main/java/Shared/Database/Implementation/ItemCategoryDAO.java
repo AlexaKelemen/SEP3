@@ -52,7 +52,7 @@ public class ItemCategoryDAO extends DatabaseFactory implements
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("DELETE FROM item_category\n"
-          + "WHERE item_id = ? && category_id = ?;");
+          + "WHERE item_id = ? and category_id = ?;");
       statement.setInt(1, itemId);
       statement.setInt(2, categoryId);
       statement.executeUpdate();
@@ -65,18 +65,19 @@ public class ItemCategoryDAO extends DatabaseFactory implements
 
   @Override public int[] getItemCategory(int itemId, int categoryId)
   {
-    int[] response = new int[2];
+    int[] response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT item_id, category_id\n"
-          + "FROM item_category\n" + "WHERE item_id = ? && category_id = ?;");
+          + "FROM item_category\n" + "WHERE item_id = ? and category_id = ?;");
       statement.setInt(1, itemId);
       statement.setInt(2, categoryId);
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
-        response[1] = rs.getInt("item_id");
-        response[2] = rs.getInt("category_id");
+        response = new int[2];
+        response[0] = rs.getInt("item_id");
+        response[1] = rs.getInt("category_id");
       }
     }
     catch (SQLException e)
@@ -98,8 +99,8 @@ public class ItemCategoryDAO extends DatabaseFactory implements
       while (rs.next())
       {
         int[] element = new int[2];
-        element[1] = rs.getInt("item_id");
-        element[2] = rs.getInt("category_id");
+        element[0] = rs.getInt("item_id");
+        element[1] = rs.getInt("category_id");
         response.add(element);
       }
     }
@@ -122,8 +123,8 @@ public class ItemCategoryDAO extends DatabaseFactory implements
       while (rs.next())
       {
         int[] element = new int[2];
-        element[1] = rs.getInt("item_id");
-        element[2] = rs.getInt("category_id");
+        element[0] = rs.getInt("item_id");
+        element[1] = rs.getInt("category_id");
         response.add(element);
       }
     }

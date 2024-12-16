@@ -95,7 +95,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
 
   @Override public Category getCategory(int categoryId)
   {
-    Category response = new Category();
+    Category response = null;
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT category_id, category_name, description\n"
@@ -104,6 +104,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
+        response = new Category();
         response.setCategoryId(rs.getInt("category_id"));
         response.setName(rs.getString("category_name"));
         response.setDescription(rs.getString("description"));

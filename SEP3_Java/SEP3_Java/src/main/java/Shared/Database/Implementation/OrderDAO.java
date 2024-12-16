@@ -41,7 +41,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
   {
     try(Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("insert into Customer_Order(price, placed_on, payment_method, delivery_option, placed_by, to_address) VALUES (?,?,?,?,?,?);");
+      PreparedStatement statement = connection.prepareStatement("insert into Customer_Order(price, placed_on, payment_method, delivery_option, placed_by, to_address) VALUES (?,?,?,?,?,?);", new String[]{"order_id"});
       statement.setBigDecimal(1, new BigDecimal(order.getTotalAmount()));
       statement.setDate(2, convertToSqlDate(order.getDate()));
       statement.setInt(3, order.getPaymentMethod().getId());
@@ -100,7 +100,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
 
   @Override public Order getOrder(int orderId)
   {
-    Order response = new Order();
+    Order response = null;
     try(Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("SELECT price, placed_on, payment_method, delivery_option, order_id, placed_by, to_address\n"
@@ -109,6 +109,7 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
+        response = new Order();
         response.setTotalAmount(rs.getBigDecimal("price").doubleValue());
         response.setDate(rs.getDate("placed_on").toLocalDate());
         response.getPaymentMethod().setId(rs.getInt("payment_method"));

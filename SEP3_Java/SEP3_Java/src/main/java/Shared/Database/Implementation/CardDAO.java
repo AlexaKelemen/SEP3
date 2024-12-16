@@ -33,7 +33,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
                     "INSERT INTO card (card_number, expiration_date, cvc, f_name, l_name, username) VALUES (?, ?, ?, ?, ?, ?);", PreparedStatement.RETURN_GENERATED_KEYS
             );
             statement.setString(1, card.getCardNumber());
-            statement.setDate(2, convertToSqlDate(card.getExpirationDate()));
+            statement.setDate(2, convertToSqlCardDate(card.getExpirationDate()));
             statement.setString(3, card.getCvc());
             statement.setString(4, card.getFName());
             statement.setString(5, card.getLName());
@@ -60,7 +60,7 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
                     "UPDATE card SET card_number = ?, expiration_date = ?, cvc = ?, f_name = ?, l_name = ?, username = ? WHERE card_id = ?;"
             );
             statement.setString(1, card.getCardNumber());
-            statement.setDate(2, convertToSqlDate(card.getExpirationDate()));
+            statement.setDate(2, convertToSqlCardDate(card.getExpirationDate()));
             statement.setString(3, card.getCvc());
             statement.setString(4, card.getFName());
             statement.setString(5, card.getLName());
