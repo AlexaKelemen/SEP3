@@ -104,16 +104,23 @@ public class Manager : IManager
 
     public async Task<bool> CheckoutAsync(Order order)
     {
-        order.Items = CartManager.GetCartItems().Keys.ToList();
-        bool orderSuccess = await OrderManager.AddOrderAsync(order);
-        if (orderSuccess)
+        if (order.PlacedBy == null || order.PlacedBy.Equals(""))
         {
-            CartManager.ClearCart();
             return true;
         }
         else
         {
-            return false;
+            order.Items = CartManager.GetCartItems().Keys.ToList();
+            bool orderSuccess = await OrderManager.AddOrderAsync(order);
+            if (orderSuccess)
+            {
+                CartManager.ClearCart();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
     
