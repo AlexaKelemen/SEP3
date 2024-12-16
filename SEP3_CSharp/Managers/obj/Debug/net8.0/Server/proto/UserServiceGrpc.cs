@@ -53,6 +53,10 @@ namespace Proto {
     static readonly grpc::Marshaller<global::Proto.GetOrderRequest> __Marshaller_proto_GetOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetOrderRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Proto.GetOrderResponse> __Marshaller_proto_GetOrderResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetOrderResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Proto.GetAllOrdersRequest> __Marshaller_proto_GetAllOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAllOrdersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Proto.GetAllOrdersResponse> __Marshaller_proto_GetAllOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAllOrdersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse> __Method_getUser = new grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse>(
@@ -69,6 +73,14 @@ namespace Proto {
         "addOrder",
         __Marshaller_proto_GetOrderRequest,
         __Marshaller_proto_GetOrderResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Proto.GetAllOrdersRequest, global::Proto.GetAllOrdersResponse> __Method_getAllOrdersForUser = new grpc::Method<global::Proto.GetAllOrdersRequest, global::Proto.GetAllOrdersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getAllOrdersForUser",
+        __Marshaller_proto_GetAllOrdersRequest,
+        __Marshaller_proto_GetAllOrdersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -142,6 +154,26 @@ namespace Proto {
       public virtual grpc::AsyncUnaryCall<global::Proto.GetOrderResponse> addOrderAsync(global::Proto.GetOrderRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_addOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetAllOrdersResponse getAllOrdersForUser(global::Proto.GetAllOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getAllOrdersForUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetAllOrdersResponse getAllOrdersForUser(global::Proto.GetAllOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getAllOrdersForUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetAllOrdersResponse> getAllOrdersForUserAsync(global::Proto.GetAllOrdersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getAllOrdersForUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetAllOrdersResponse> getAllOrdersForUserAsync(global::Proto.GetAllOrdersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getAllOrdersForUser, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

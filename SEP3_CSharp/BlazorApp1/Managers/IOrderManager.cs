@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using DataTransferObjects;
+using Entities;
 
 namespace BlazorApp1.Managers;
 
@@ -7,4 +8,8 @@ public interface IOrderManager
     Task<IEnumerable<Order>> GetOrdersAsync();
     
     Task<bool> AddOrderAsync(Order order);
+    Task RefundOrderAsync(Order order);
+    Task ReturnOrderAsync(Order order, int credit);
+
+    Task<List<Order>> GetAllOrdersForUser(string username);
 }

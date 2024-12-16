@@ -67,10 +67,33 @@ message GetOrderRequest
   string toAddress = 8;
 }
 
+message OrderDTO
+{
+  google.protobuf.Timestamp placedOn = 1;
+  PaymentMethodDTO paymentMethod = 2;
+  double totalAmount = 3;
+  DeliveryOptionDTO deliveryOption = 4;
+  repeated ItemDTO items = 5;
+  int32 orderId = 6;
+  string placedBy = 7;
+  string toAddress = 8;
+}
+
+message GetAllOrdersRequest
+{
+  string user = 1;
+}
+
+message GetAllOrdersResponse
+{
+  repeated OrderDTO orders = 1;
+}
+
 service UserService
 {
   rpc getUser(GetUserRequest) returns (GetUserResponse);
   rpc addOrder(GetOrderRequest) returns (GetOrderResponse);
+  rpc getAllOrdersForUser(GetAllOrdersRequest) returns (GetAllOrdersResponse);
 }
 
 

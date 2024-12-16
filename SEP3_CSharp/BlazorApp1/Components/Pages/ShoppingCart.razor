@@ -102,6 +102,10 @@ else
 
     private void Checkout()
     {
+        foreach (var item in CartItems)
+        {
+            Manager.ChangeItemQuantity(item.Key,item.Value);
+        }
         NavMgr.NavigateTo("/Checkout");
         //CartItems.Clear();
         //StateHasChanged();
