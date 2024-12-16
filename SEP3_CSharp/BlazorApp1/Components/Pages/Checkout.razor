@@ -13,7 +13,7 @@
 
 <PageTitle>Checkout</PageTitle>
 <div class="container mt-5 p-4 shadow-lg rounded bg-light">
-    <h1 class="text-center mb-4">Checkout</h1>
+    <h1 class="text-center mb-4", style="font-family: Apple chancery, cursive">Checkout</h1>
     <h2 class="text-center mb-4 text-success">Total: @total.ToString("C", new System.Globalization.CultureInfo("en-DK"))</h2>
 
     <AuthorizeView>
@@ -26,7 +26,7 @@
 
     <form class="mt-4">
         <div class="card mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-secondary text-white">
                 <h3 class="mb-0">Payment Method</h3>
             </div>
             <div class="card-body">
@@ -43,7 +43,7 @@
         @if (selectedPaymentMethod == "Card")
         {
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-secondary text-white">
                     <h3 class="mb-0">Payment Details</h3>
                 </div>
                 <div class="card-body">
