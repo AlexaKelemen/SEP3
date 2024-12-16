@@ -29,6 +29,7 @@
                 <h3 class="mb-0">Payment Details</h3>
             </div>
             <div class="card-body">
+                <!-- Payment Fields -->
                 <div class="mb-3">
                     <label for="firstName" class="form-label">First Name</label>
                     <input type="text" id="firstName" class="form-control" @bind="cardFirstName" placeholder="Enter your first name" />
@@ -37,7 +38,6 @@
                         <span class="text-danger">@ValidationErrors["FirstName"]</span>
                     }
                 </div>
-
                 <div class="mb-3">
                     <label for="lastName" class="form-label">Last Name</label>
                     <input type="text" id="lastName" class="form-control" @bind="cardLastName" placeholder="Enter your last name" />
@@ -46,7 +46,6 @@
                         <span class="text-danger">@ValidationErrors["LastName"]</span>
                     }
                 </div>
-
                 <div class="mb-3">
                     <label for="cardNumber" class="form-label">Card Number</label>
                     <input type="text" id="cardNumber" class="form-control" @bind="cardNumber" placeholder="Enter your card number" />
@@ -55,7 +54,6 @@
                         <span class="text-danger">@ValidationErrors["CardNumber"]</span>
                     }
                 </div>
-
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="expirationDate" class="form-label">Expiration Date</label>
@@ -65,7 +63,6 @@
                             <span class="text-danger">@ValidationErrors["ExpirationDate"]</span>
                         }
                     </div>
-
                     <div class="col-md-6 mb-3">
                         <label for="cvc" class="form-label">CVC</label>
                         <input type="text" id="cvc" class="form-control" @bind="cardCvc" placeholder="3-digit code" />
@@ -85,7 +82,7 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="deliveryOption" class="form-label">Select Delivery Option</label>
-                    <select id="deliveryOption" class="form-select" @bind="selectedDeliveryOption">
+                    <select id="deliveryOption" class="form-select" @onchange="OnDeliveryOptionChanged">
                         <option value="HomeDelivery">Home Delivery</option>
                         <option value="PickupLocation">Pickup Location</option>
                     </select>
@@ -161,6 +158,15 @@
                         </div>
                     </div>
                 }
+
+                
+                <div class="mb-3">
+                    <label for="deliverySpeed" class="form-label">Delivery Speed</label>
+                    <select id="deliverySpeed" class="form-select" @bind="deliverySpeed">
+                        <option value="Standard">Standard Delivery(14 days)</option>
+                        <option value="Fast">Fast Delivery(3-5 days)</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -170,9 +176,9 @@
         {
             <div class="text-danger text-center mt-3">@ValidationErrors["Checkout"]</div>
         }
-
     </form>
 </div>
+
 <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -182,7 +188,7 @@
             </div>
             <div class="modal-body text-center">
                 <h4>Thank you for your order!</h4>
-                <p>Your order has been successfully placed. You will probably never hear from us again</p>
+                <p>Your order has been successfully placed.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
@@ -199,6 +205,7 @@
         }
     };
 </script>
+
 <style>
     .modal-content {
         border-radius: 10px;
@@ -219,6 +226,7 @@
         color: #a991dc;
     }
 </style>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -239,6 +247,7 @@
     private string? deliveryCountry;
     private string? selectedPickupLocation;
     private string? deliveryZipcode;
+    private string deliverySpeed = "Standard";
 
     private User? user;
     private Dictionary<string, string> ValidationErrors = new();
@@ -262,6 +271,11 @@
         cardExpirationDate = user.Card.ExpirationDate;
     }
 
+    private void OnDeliveryOptionChanged(ChangeEventArgs e)
+    {
+        selectedDeliveryOption = e.Value.ToString();
+    }
+
     private async Task<bool> CheckoutItems()
     {
         DeliveryOption deliveryOption;
@@ -271,7 +285,7 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 1,
-                Name = "Home delivery",
+                Name = $"{deliverySpeed} Home Delivery",
                 ToAddress = $"{deliveryStreet} {deliveryNumber}, {deliveryTown}, {deliveryCountry}, {deliveryZipcode}"
             };
         }
@@ -280,14 +294,14 @@
             deliveryOption = new DeliveryOption
             {
                 Id = 2,
-                Name = "Pickup location",
+                Name = $"{deliverySpeed} Pickup",
                 ToAddress = $"{selectedPickupLocation}"
             };
         }
 
         Order order = new Order
         {
-            DeliveryOption =  deliveryOption ,
+            DeliveryOption = deliveryOption,
             OrderId = -1,
             PaymentMethod = new PaymentMethod
             {
@@ -305,15 +319,13 @@
     private async Task HandleCheckout()
     {
         ValidationErrors.Clear();
-
-        
         ValidateForm();
 
         if (ValidationErrors.Count > 0)
         {
             return;
         }
-        
+
         bool success = await CheckoutItems();
 
         if (success)
@@ -343,7 +355,6 @@
         if (cardExpirationDate == null || cardExpirationDate < DateOnly.FromDateTime(DateTime.Now))
             ValidationErrors["ExpirationDate"] = "Card expiration date is invalid.";
 
-     
         if (selectedDeliveryOption == "HomeDelivery")
         {
             if (string.IsNullOrWhiteSpace(deliveryCountry))
