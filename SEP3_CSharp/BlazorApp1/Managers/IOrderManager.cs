@@ -7,4 +7,6 @@ public interface IOrderManager
     Task<IEnumerable<Order>> GetOrdersAsync();
     
     Task<bool> AddOrderAsync(Order order);
+
+    Task<List<Order>> GetAllOrdersForUser(string username);
 }

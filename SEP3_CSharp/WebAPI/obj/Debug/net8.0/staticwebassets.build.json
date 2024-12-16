@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "09meX4M60rM1Cc9FBPMCC84CugbmzJRaxMsw6qtuydY=",
+  "Hash": "PdsiEPrpujfXmgHqXO7TkBlhciUErOWkK/vVfz4fImU=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
       "Version": 2,
       "Source": "BlazorApp1",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,17 @@
     {
       "Name": "BlazorApp1\\wwwroot",
       "Source": "BlazorApp1",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "BlazorApp1.bundle.scp.css",
       "AssetKind": "All",
@@ -45,13 +45,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
+      "OriginalItemSpec": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\app.css",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\app.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -67,10 +67,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -86,10 +86,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -105,10 +105,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\favicon.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\favicon.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -124,10 +124,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\accessory1.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\accessory1.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/accessory1.png",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\accessory1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory10.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory10.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory10.png",
       "AssetKind": "All",
@@ -162,10 +162,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory10.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory11.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory11.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory11.png",
       "AssetKind": "All",
@@ -181,10 +181,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory11.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory12.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory12.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory12.png",
       "AssetKind": "All",
@@ -200,10 +200,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory12.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory13.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory13.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory13.png",
       "AssetKind": "All",
@@ -219,10 +219,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory13.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory14.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory14.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory14.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory14.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory15.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory15.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory15.png",
       "AssetKind": "All",
@@ -257,10 +257,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory15.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory16.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory16.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory16.png",
       "AssetKind": "All",
@@ -276,10 +276,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory16.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory17.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory17.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory17.png",
       "AssetKind": "All",
@@ -295,10 +295,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory17.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory18.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory18.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory18.png",
       "AssetKind": "All",
@@ -314,10 +314,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory18.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory19.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory19.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory19.png",
       "AssetKind": "All",
@@ -333,10 +333,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory19.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory2.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory2.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory2.png",
       "AssetKind": "All",
@@ -352,10 +352,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory20.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory20.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory20.png",
       "AssetKind": "All",
@@ -371,10 +371,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory20.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory21.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory21.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory21.png",
       "AssetKind": "All",
@@ -390,10 +390,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory21.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory22.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory22.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory22.png",
       "AssetKind": "All",
@@ -409,10 +409,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory22.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory23.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory23.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory23.png",
       "AssetKind": "All",
@@ -428,10 +428,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory23.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory24.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory24.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory24.png",
       "AssetKind": "All",
@@ -447,10 +447,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory24.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory3.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory3.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory3.png",
       "AssetKind": "All",
@@ -466,10 +466,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory4.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory4.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory4.png",
       "AssetKind": "All",
@@ -485,10 +485,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory4.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory5.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory5.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory5.png",
       "AssetKind": "All",
@@ -504,10 +504,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory5.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory6.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory6.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory6.png",
       "AssetKind": "All",
@@ -523,10 +523,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory6.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory7.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory7.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory7.png",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory7.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory8.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory8.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory8.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory8.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory9.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\Accessory9.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/Accessory9.png",
       "AssetKind": "All",
@@ -580,10 +580,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\Accessory9.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\desktop.ini",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\accessories\\desktop.ini",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/accessories/desktop.ini",
       "AssetKind": "All",
@@ -599,10 +599,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\accessories\\desktop.ini"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing1.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing1.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing1.jpg",
       "AssetKind": "All",
@@ -618,10 +618,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing1.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing2.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing2.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing2.jpg",
       "AssetKind": "All",
@@ -637,10 +637,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing2.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing3.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing3.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing3.jpg",
       "AssetKind": "All",
@@ -656,10 +656,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing3.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing4.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing4.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing4.jpg",
       "AssetKind": "All",
@@ -675,10 +675,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing4.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing5.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing5.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing5.jpg",
       "AssetKind": "All",
@@ -694,10 +694,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing5.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing6.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing6.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing6.jpg",
       "AssetKind": "All",
@@ -713,10 +713,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing6.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing7.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing7.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing7.jpg",
       "AssetKind": "All",
@@ -732,10 +732,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing7.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing8.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Clothes\\clothing8.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Clothes/clothing8.jpg",
       "AssetKind": "All",
@@ -751,10 +751,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Clothes\\clothing8.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/Captură de ecran 2024-12-12 133615.png",
       "AssetKind": "All",
@@ -770,10 +770,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 133615.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 192144.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 192144.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/Captură de ecran 2024-12-12 192144.png",
       "AssetKind": "All",
@@ -789,10 +789,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\Captură de ecran 2024-12-12 192144.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\clothing-sizes.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\clothing-sizes.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/clothing-sizes.png",
       "AssetKind": "All",
@@ -808,10 +808,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\clothing-sizes.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\desktop.ini",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\desktop.ini",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/desktop.ini",
       "AssetKind": "All",
@@ -827,10 +827,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\desktop.ini"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Shoe-sizes.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\Shoe-sizes.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/Shoe-sizes.png",
       "AssetKind": "All",
@@ -846,10 +846,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\Shoe-sizes.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\team-photo.jpg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\Random\\team-photo.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/Random/team-photo.jpg",
       "AssetKind": "All",
@@ -865,10 +865,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\Random\\team-photo.jpg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\desktop.ini",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\desktop.ini",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/desktop.ini",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\desktop.ini"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes1.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes1.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes1.png",
       "AssetKind": "All",
@@ -903,10 +903,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes1.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes10.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes10.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes10.png",
       "AssetKind": "All",
@@ -922,10 +922,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes10.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes11.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes11.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes11.png",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes11.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes12.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes12.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes12.png",
       "AssetKind": "All",
@@ -960,10 +960,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes12.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes13.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes13.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes13.png",
       "AssetKind": "All",
@@ -979,10 +979,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes13.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes14.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes14.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes14.png",
       "AssetKind": "All",
@@ -998,10 +998,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes14.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes15.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes15.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes15.png",
       "AssetKind": "All",
@@ -1017,10 +1017,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes15.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes16.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes16.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes16.png",
       "AssetKind": "All",
@@ -1036,10 +1036,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes16.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes17.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes17.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes17.png",
       "AssetKind": "All",
@@ -1055,10 +1055,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes17.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes18.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes18.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes18.png",
       "AssetKind": "All",
@@ -1074,10 +1074,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes18.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes19.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes19.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes19.png",
       "AssetKind": "All",
@@ -1093,10 +1093,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes19.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes2.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes2.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes2.png",
       "AssetKind": "All",
@@ -1112,10 +1112,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes2.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes20.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes20.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes20.png",
       "AssetKind": "All",
@@ -1131,10 +1131,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes20.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes3.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes3.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes3.png",
       "AssetKind": "All",
@@ -1150,10 +1150,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes3.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes4.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes4.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes4.png",
       "AssetKind": "All",
@@ -1169,10 +1169,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes4.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes5.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes5.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes5.png",
       "AssetKind": "All",
@@ -1188,10 +1188,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes5.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes6.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes6.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes6.png",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes6.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes7.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes7.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes7.png",
       "AssetKind": "All",
@@ -1226,10 +1226,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes7.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes8.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes8.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes8.png",
       "AssetKind": "All",
@@ -1245,10 +1245,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes8.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes9.png",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\Images\\shoes\\shoes9.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "Images/shoes/shoes9.png",
       "AssetKind": "All",
@@ -1264,10 +1264,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\shoes\\shoes9.png"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\person-fill-gear.svg",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\person-fill-gear.svg",
       "SourceId": "BlazorApp1",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "person-fill-gear.svg",
       "AssetKind": "All",
@@ -1283,10 +1283,10 @@
       "OriginalItemSpec": "wwwroot\\person-fill-gear.svg"
     },
     {
-      "Identity": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css",
+      "Identity": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css",
       "SourceId": "WebAPI",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/WebAPI",
       "RelativePath": "WebAPI.styles.css",
       "AssetKind": "All",
@@ -1299,7 +1299,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css"
+      "OriginalItemSpec": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\WebAPI.styles.css"
     }
   ]
 }

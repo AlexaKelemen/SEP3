@@ -65,4 +65,62 @@ public class OrderManager : IOrderManager
         var response = await Stub.addOrderAsync(request);
         return response.Success;
     }
+
+    public async Task<List<Order>> GetAllOrdersForUser(string username)
+    {
+        GetAllOrdersRequest request = new GetAllOrdersRequest()
+        {
+            User = username
+        };
+        var response = await Stub.getAllOrdersForUserAsync(request);
+        List<Order> result = new List<Order>();
+        foreach (OrderDTO order in response.Orders)
+        {
+            List<Item> items = new List<Item>();
+            foreach (ItemDTO item in order.Items)
+            {
+                List<Category> categories = new List<Category>();
+                foreach (CategoryDTO cat in item.Category)
+                {
+                   categories.Add(new Category()
+                   {
+                       CategoryId = cat.CategoryId,
+                       CategoryDescription = cat.Description,
+                       CategoryName = cat.Name
+                   }); 
+                }
+                items.Add(new Item()
+                {
+                    CategoryId = categories,
+                    Colour = item.Colour,
+                    Description = item.Description,
+                    ItemId = item.ItemId,
+                    Name = item.Name,
+                    Price = (float)item.Price,
+                    Quantity = item.Quantity
+                });
+            }
+
+            result.Add(new Order()
+            {
+                OrderId = order.OrderId,
+                PlacedBy = order.PlacedBy,
+                PlacedOn = order.PlacedOn.ToDateTime(),
+                Price = order.TotalAmount,
+                DeliveryOption = new DeliveryOption()
+                {
+                    Id = order.DeliveryOption.Id,
+                    Name = order.DeliveryOption.Name,
+                    ToAddress = order.ToAddress
+                },
+                PaymentMethod = new PaymentMethod()
+                {
+                    Id = order.PaymentMethod.Id,
+                    Name = order.PaymentMethod.Name
+                },
+                Items = items
+            });
+        }
+        return result;
+    }
 }
