@@ -159,12 +159,12 @@
                     </div>
                 }
 
-                
+
                 <div class="mb-3">
                     <label for="deliverySpeed" class="form-label">Delivery Speed</label>
-                    <select id="deliverySpeed" class="form-select" @bind="deliverySpeed">
-                        <option value="Standard">Standard Delivery(14 days)</option>
-                        <option value="Fast">Fast Delivery(3-5 days)</option>
+                    <select id="deliverySpeed" class="form-select" @onchange="OnDeliverySpeedChanged">
+                        <option value="Standard">Standard Delivery (14 days)</option>
+                        <option value="Fast">Fast Delivery (3-5 days)</option>
                     </select>
                 </div>
             </div>
@@ -248,6 +248,8 @@
     private string? selectedPickupLocation;
     private string? deliveryZipcode;
     private string deliverySpeed = "Standard";
+    private decimal baseTotal;
+
 
     private User? user;
     private Dictionary<string, string> ValidationErrors = new();
@@ -255,7 +257,8 @@
     protected override async Task OnInitializedAsync()
     {
         user = new User();
-        total = (decimal)Manager.GetTotal();
+        baseTotal = (decimal)Manager.GetTotal();
+        total = baseTotal; 
         AuthenticationState authenticationState = await State;
         ClaimsPrincipal claimsPrincipal = authenticationState.User;
         if (claimsPrincipal.Identity is null || !claimsPrincipal.Identity.IsAuthenticated)
@@ -275,6 +278,19 @@
     {
         selectedDeliveryOption = e.Value.ToString();
     }
+    private void OnDeliverySpeedChanged(ChangeEventArgs e)
+    {
+        deliverySpeed = e.Value.ToString();
+        if (deliverySpeed == "Fast")
+        {
+            total = baseTotal + 50;
+        }
+        else
+        {
+            total = baseTotal; 
+        }
+    }
+
 
     private async Task<bool> CheckoutItems()
     {
