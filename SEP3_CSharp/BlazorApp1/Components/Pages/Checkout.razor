@@ -27,54 +27,72 @@
     <form class="mt-4">
         <div class="card mb-4">
             <div class="card-header bg-primary text-white">
-                <h3 class="mb-0">Payment Details</h3>
+                <h3 class="mb-0">Payment Method</h3>
             </div>
             <div class="card-body">
-                <!-- Payment Fields -->
                 <div class="mb-3">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" id="firstName" class="form-control" @bind="cardFirstName" placeholder="Enter your first name" />
-                    @if (ValidationErrors.ContainsKey("FirstName"))
-                    {
-                        <span class="text-danger">@ValidationErrors["FirstName"]</span>
-                    }
-                </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" id="lastName" class="form-control" @bind="cardLastName" placeholder="Enter your last name" />
-                    @if (ValidationErrors.ContainsKey("LastName"))
-                    {
-                        <span class="text-danger">@ValidationErrors["LastName"]</span>
-                    }
-                </div>
-                <div class="mb-3">
-                    <label for="cardNumber" class="form-label">Card Number</label>
-                    <input type="text" id="cardNumber" class="form-control" @bind="cardNumber" placeholder="Enter your card number" />
-                    @if (ValidationErrors.ContainsKey("CardNumber"))
-                    {
-                        <span class="text-danger">@ValidationErrors["CardNumber"]</span>
-                    }
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="expirationDate" class="form-label">Expiration Date</label>
-                        <InputDate id="expirationDate" class="form-control" @bind-Value="cardExpirationDate" placeholder="MM/YYYY" />
-                        @if (ValidationErrors.ContainsKey("ExpirationDate"))
-                        {
-                            <span class="text-danger">@ValidationErrors["ExpirationDate"]</span>
-                        }
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="cvc" class="form-label">CVC</label>
-                        <input type="text" id="cvc" class="form-control" @bind="cardCvc" placeholder="3-digit code" />
-                        @if (ValidationErrors.ContainsKey("CVC"))
-                        {
-                            <span class="text-danger">@ValidationErrors["CVC"]</span>
-                        }
-                    </div>
+                    <label for="paymentMethod" class="form-label">Select Payment Method</label>
+                    <select id="paymentMethod" class="form-select" @onchange="OnPaymentMethodChanged">
+                        <option value="Card">Card</option>
+                        <option value="Cash">Cash</option>
+                    </select>
                 </div>
             </div>
         </div>
+
+        @if (selectedPaymentMethod == "Card")
+        {
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Payment Details</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Payment Fields -->
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-control" @bind="cardFirstName" placeholder="Enter your first name" />
+                        @if (ValidationErrors.ContainsKey("FirstName"))
+                        {
+                            <span class="text-danger">@ValidationErrors["FirstName"]</span>
+                        }
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" class="form-control" @bind="cardLastName" placeholder="Enter your last name" />
+                        @if (ValidationErrors.ContainsKey("LastName"))
+                        {
+                            <span class="text-danger">@ValidationErrors["LastName"]</span>
+                        }
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <input type="text" id="cardNumber" class="form-control" @bind="cardNumber" placeholder="Enter your card number" />
+                        @if (ValidationErrors.ContainsKey("CardNumber"))
+                        {
+                            <span class="text-danger">@ValidationErrors["CardNumber"]</span>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expirationDate" class="form-label">Expiration Date</label>
+                            <InputDate id="expirationDate" class="form-control" @bind-Value="cardExpirationDate" placeholder="MM/YYYY" />
+                            @if (ValidationErrors.ContainsKey("ExpirationDate"))
+                            {
+                                <span class="text-danger">@ValidationErrors["ExpirationDate"]</span>
+                            }
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvc" class="form-label">CVC</label>
+                            <input type="text" id="cvc" class="form-control" @bind="cardCvc" placeholder="3-digit code" />
+                            @if (ValidationErrors.ContainsKey("CVC"))
+                            {
+                                <span class="text-danger">@ValidationErrors["CVC"]</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
 
         <div class="card mb-4">
             <div class="card-header bg-secondary text-white">
@@ -160,7 +178,6 @@
                     </div>
                 }
 
-
                 <div class="mb-3">
                     <label for="deliverySpeed" class="form-label">Delivery Speed</label>
                     <select id="deliverySpeed" class="form-select" @onchange="OnDeliverySpeedChanged">
@@ -241,6 +258,7 @@
     private string? cardNumber;
     private DateOnly? cardExpirationDate;
 
+    private string selectedPaymentMethod = "Card";
     private string selectedDeliveryOption = "HomeDelivery";
     private string? deliveryTown;
     private string? deliveryStreet;
@@ -250,7 +268,6 @@
     private string? deliveryZipcode;
     private string deliverySpeed = "Standard";
     private decimal baseTotal;
-
 
     private User? user;
     private Dictionary<string, string> ValidationErrors = new();
@@ -275,6 +292,11 @@
         cardExpirationDate = user.Card.ExpirationDate;
     }
 
+    private void OnPaymentMethodChanged(ChangeEventArgs e)
+    {
+        selectedPaymentMethod = e.Value.ToString();
+    }
+
     private void OnDeliveryOptionChanged(ChangeEventArgs e)
     {
         selectedDeliveryOption = e.Value.ToString();
@@ -291,7 +313,6 @@
             total = baseTotal; 
         }
     }
-
 
     private async Task<bool> CheckoutItems()
     {
@@ -322,8 +343,8 @@
             OrderId = -1,
             PaymentMethod = new PaymentMethod
             {
-                Id = 1,
-                Name = "By Card"
+                Id = selectedPaymentMethod == "Card" ? 1 : 2,
+                Name = selectedPaymentMethod
             },
             PlacedBy = user.Username,
             PlacedOn = DateTime.Now,
@@ -357,20 +378,23 @@
 
     private void ValidateForm()
     {
-        if (string.IsNullOrWhiteSpace(cardFirstName))
-            ValidationErrors["FirstName"] = "First name is required.";
+        if (selectedPaymentMethod == "Card")
+        {
+            if (string.IsNullOrWhiteSpace(cardFirstName))
+                ValidationErrors["FirstName"] = "First name is required.";
 
-        if (string.IsNullOrWhiteSpace(cardLastName))
-            ValidationErrors["LastName"] = "Last name is required.";
+            if (string.IsNullOrWhiteSpace(cardLastName))
+                ValidationErrors["LastName"] = "Last name is required.";
 
-        if (string.IsNullOrWhiteSpace(cardNumber) || !System.Text.RegularExpressions.Regex.IsMatch(cardNumber, @"^\d{16}$"))
-            ValidationErrors["CardNumber"] = "Card number must contain exactly 16 digits.";
+            if (string.IsNullOrWhiteSpace(cardNumber) || !System.Text.RegularExpressions.Regex.IsMatch(cardNumber, @"^\d{16}$"))
+                ValidationErrors["CardNumber"] = "Card number must contain exactly 16 digits.";
 
-        if (string.IsNullOrWhiteSpace(cardCvc) || !System.Text.RegularExpressions.Regex.IsMatch(cardCvc, @"^\d{3}$"))
-            ValidationErrors["CVC"] = "CVC must be a 3-digit code.";
+            if (string.IsNullOrWhiteSpace(cardCvc) || !System.Text.RegularExpressions.Regex.IsMatch(cardCvc, @"^\d{3}$"))
+                ValidationErrors["CVC"] = "CVC must be a 3-digit code.";
 
-        if (cardExpirationDate == null || cardExpirationDate < DateOnly.FromDateTime(DateTime.Now))
-            ValidationErrors["ExpirationDate"] = "Card expiration date is invalid.";
+            if (cardExpirationDate == null || cardExpirationDate < DateOnly.FromDateTime(DateTime.Now))
+                ValidationErrors["ExpirationDate"] = "Card expiration date is invalid.";
+        }
 
         if (selectedDeliveryOption == "HomeDelivery")
         {
