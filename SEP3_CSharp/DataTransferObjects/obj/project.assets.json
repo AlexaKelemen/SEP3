@@ -5058,19 +5058,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salom\\.nuget\\packages\\": {}
+    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+      "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
       "projectName": "DataTransferObjects",
-      "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-      "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+      "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+      "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5082,8 +5083,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
             }
           }
         }
@@ -5138,8 +5139,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

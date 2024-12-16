@@ -6116,19 +6116,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salom\\.nuget\\packages\\": {}
+    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
+      "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+      "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -6140,17 +6141,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-              "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
             },
-            "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-              "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
             },
-            "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
-              "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
             }
           }
         }
@@ -6212,8 +6213,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
