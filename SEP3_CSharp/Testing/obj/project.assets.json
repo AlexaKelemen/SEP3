@@ -9857,19 +9857,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kriszta\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Testing\\Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
-      "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-      "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\obj\\",
+      "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Testing\\Testing.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\Testing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -9881,8 +9881,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+            "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+              "projectPath": "C:\\Users\\user\\Jupiter\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
             }
           }
         }
