@@ -13,7 +13,8 @@ public class Order
 
     public List<Item> Items { get; set; }
 
-    public bool isNew(){
+    public bool IsNew()
+    {
         DateTime temp = DateTime.Now.AddDays(30);
         if (PlacedOn.CompareTo(temp) > 0)
         {

@@ -1,6 +1,114 @@
 ﻿@page "/OrderDetails"
+@using BlazorApp1.Managers
+@using Entities
+@inject IManager Manager
 <h3>OrderDetails</h3>
 
-@code {
+
+
+
+
+@if (Order == null && ErrorMessage == null)
+{
+    <DisplaySpinner/>
+}
+else if (ErrorMessage != null)
+{
+    <DisplayError ErrorMessage="@ErrorMessage"></DisplayError>
+}
+else
+{
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Product Details</h2>
+        <div class="row g-4">
+            
+            @foreach (var item in Order.Items)
+            {
+                int quant = item.Quantity;
+                <div class="card p-4 shadow-lg">
+                    <h3 class="card-title">@item.Name</h3>
+                    <p class="card-text text-muted">@item.Size</p>
+                    <p class="card-text text-muted">@item.Colour</p>
+                    <input type="number" min="0" max="quant"/>
+                    <div></div></div>
+                if (Order.IsNew())
+                {
+                    <p class="card-text text-muted">@item.Price</p>
+                }
+                else
+                {
+                    <p class="card-text text-muted">@CalculateCredit(item, quant)</p>
+                }
+                <Button type="button" class="btn btn-primary btn-sm" @onclick="() => AddChanges(item, quant)" > Add changes </Button>
+            }
+            <Button type="button" class="btn btn-primary" @onclick="ProcessReturn"> Process Return </Button>
+            
+        </div>
+    </div>
     
+}
+
+
+
+@code 
+{
+    [Parameter] public int Id { get; set; }
+    public Order Order;
+    public string ErrorMessage { get; set; }
+    List<Item> items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        IEnumerable<Order> temp = await Manager.GetOrdersAsync();
+        foreach (var order in temp)
+        {
+            if (order.OrderId == Id)
+                Order = order;
+        }
+        items = Order.Items;
+    }
+
+    public int CalculateCredit(Item item, int quantity)
+    {
+        return Convert.ToInt16((item.Price * 5 / 100) * quantity);
+    }
+
+    public void AddChanges(Item item, int quantity)
+    {
+        foreach (var product in Order.Items)
+        {
+            if (item.ItemId == product.ItemId)
+                Order.Items.Remove(product);
+        }
+
+        if (item.Quantity - quantity > 0)
+        {
+            item.Quantity -= quantity;
+            items.Add(item);
+        }
+    }
+
+    public async Task ProcessReturn()
+    {
+        if (Order.IsNew())
+        {
+            float total = 0;
+            foreach (var item in items)
+            {
+                total += item.Price * item.Quantity;
+            }
+
+            Order.Price = total;
+            await Manager.RefundOrderAsync(Order);
+
+        }
+        else
+        {
+            int credit = 0;
+            foreach (var item in items)
+            {
+                
+            }
+        }
+    }
 }

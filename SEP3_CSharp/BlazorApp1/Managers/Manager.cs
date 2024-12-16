@@ -128,6 +128,14 @@ public class Manager : IManager
     {
         return OrderManager.GetOrdersAsync();
     }
-   
-    
+
+    public async Task RefundOrderAsync(Order order)
+    {
+        await OrderManager.RefundOrderAsync(order);
+    }
+
+    public async Task ReturnOrderAsync(Order order, int credit)
+    {
+        await OrderManager.ReturnOrderAsync(order, credit);
+    }
 }
