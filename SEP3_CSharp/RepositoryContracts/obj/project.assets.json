@@ -5080,19 +5080,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kriszta\\.nuget\\packages\\": {}
+    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+      "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
       "projectName": "RepositoryContracts",
-      "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
-      "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-      "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+      "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
+      "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5104,11 +5105,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
             },
-            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
             }
           }
         }
@@ -5163,8 +5164,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
