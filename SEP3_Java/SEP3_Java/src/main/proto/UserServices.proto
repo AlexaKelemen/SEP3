@@ -105,6 +105,16 @@ message GetBooleanResponse
   bool success = 1;
 }
 
+message GetCreditRequest
+{
+  string user = 1;
+}
+
+message GetCreditResponse
+{
+  int32 credit = 1;
+}
+
 service UserService
 {
   rpc getUser(GetUserRequest) returns (GetUserResponse);
@@ -112,6 +122,7 @@ service UserService
   rpc getAllOrdersForUser(GetAllOrdersRequest) returns (GetAllOrdersResponse);
   rpc refundAnOrder(GetRefundOrderRequest) returns (GetBooleanResponse);
   rpc returnAnOrder(GetReturnOrderRequest) returns (GetBooleanResponse);
+  rpc getCreditForUser()
 }
 
 

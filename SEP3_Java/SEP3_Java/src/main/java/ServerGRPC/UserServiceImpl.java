@@ -3,16 +3,8 @@ package ServerGRPC;
 
 import Shared.ManagerImpl;
 import Shared.ManagerInterface;
-import proto.GetUserRequest;
-import proto.GetUserResponse;
-import proto.UserServiceGrpc;
-import proto.GetOrderRequest;
-import proto.GetOrderResponse;
-import proto.GetAllOrdersRequest;
-import proto.GetAllOrdersResponse;
+import proto.*;
 import io.grpc.stub.StreamObserver;
-import proto.GetRefundOrderRequest;
-import proto.GetBooleanResponse;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 {
@@ -40,9 +32,11 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
     responseObserver.onCompleted();
   }
 
-  public void returnAnOrder()
+  public void returnAnOrder(GetReturnOrderRequest request, StreamObserver<GetBooleanResponse> responseObserver)
   {
-
+    GetBooleanResponse response = manager.returnAnOrder(request);
+    responseObserver.onNext(response);
+    responseObserver.onCompleted();
   }
 }
 

@@ -164,6 +164,7 @@ public class ManagerImpl implements ManagerInterface
     }
     catch (Exception e)
     {
+      e.printStackTrace();
       return factory.createBooleanResponse(false);
     }
   }
@@ -204,6 +205,7 @@ public class ManagerImpl implements ManagerInterface
     }
     catch (Exception e)
     {
+      e.printStackTrace();
       return factory.createBooleanResponse(false);
     }
   }
