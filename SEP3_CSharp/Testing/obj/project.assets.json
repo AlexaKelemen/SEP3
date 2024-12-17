@@ -9857,20 +9857,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexa\\.nuget\\packages\\": {}
+    "C:\\Users\\Kriszta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Testing\\Testing.csproj",
+      "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Testing\\Testing.csproj",
-      "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
-      "outputPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\Testing\\obj\\",
+      "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
+      "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+      "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
-        "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -9882,8 +9881,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-              "projectPath": "D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
             }
           }
         }
@@ -9944,7 +9943,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
