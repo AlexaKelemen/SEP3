@@ -12,13 +12,12 @@
 
 <AuthorizeView>
     <Authorized>
-@if (Orders == null || Orders.IsNullOrEmpty())
+@if (Orders.IsNullOrEmpty())
 {
     <h3>No products can be displayed right now. Sorry.</h3>
 }
 else
 {
-  
     var orderCount = Orders.Count();
     @if (orderCount > 0)
     {
