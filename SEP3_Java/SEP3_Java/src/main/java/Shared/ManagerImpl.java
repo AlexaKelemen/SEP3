@@ -126,9 +126,11 @@ public class ManagerImpl implements ManagerInterface
       ArrayList<Item> itemsForOrder = new ArrayList<>();
       for (int j = 0; j < items.size(); j++)
       {
-        itemsForOrder.add(getCompleteItem(itemsForOrder.get(i).getItemId(), ordersForUser.get(i).getOrderId()));
+        itemsForOrder.add(getCompleteItem(items.get(i).getItemId(), ordersForUser.get(i).getOrderId()));
       }
       ordersForUser.get(i).setItems(itemsForOrder);
+      ordersForUser.get(i).setDeliveryOption(deliveryOptionDAO.getDeliveryOption(ordersForUser.get(i).getDeliveryOption().getId()));
+      ordersForUser.get(i).setPaymentMethod(paymentMethodDAO.getPaymentMethod(ordersForUser.get(i).getPaymentMethod().getId()));
     }
     return factory.fromOrder(ordersForUser);
   }

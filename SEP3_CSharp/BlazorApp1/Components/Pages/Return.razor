@@ -4,6 +4,7 @@
 @using Entities
 
 @using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.IdentityModel.Tokens
 @inject AuthenticationStateProvider AuthProvider
 @inject IManager Manager
 
@@ -11,7 +12,7 @@
 
 <AuthorizeView>
     <Authorized>
-@if (Orders == null)
+@if (Orders == null || Orders.IsNullOrEmpty())
 {
     <h3>No products can be displayed right now. Sorry.</h3>
 }
