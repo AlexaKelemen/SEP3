@@ -11,6 +11,8 @@ import proto.GetOrderResponse;
 import proto.GetAllOrdersRequest;
 import proto.GetAllOrdersResponse;
 import io.grpc.stub.StreamObserver;
+import proto.GetRefundOrderRequest;
+import proto.GetBooleanResponse;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 {
@@ -29,6 +31,11 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
     GetAllOrdersResponse response = manager.getAllOrdersForUser(request);
     responseObserver.onNext(response);
     responseObserver.onCompleted();
+  }
+
+  public void refundAnOrder(GetRefundOrderRequest request, StreamObserver<GetBooleanResponse> responseObserver)
+  {
+
   }
 }
 

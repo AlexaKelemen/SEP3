@@ -8,10 +8,13 @@ import Shared.Entities.User;
 import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
+
+import proto.GetBooleanResponse;
 import proto.GetAllOrdersRequest;
 import proto.GetAllOrdersResponse;
 import proto.GetOrderRequest;
 import proto.GetOrderResponse;
+import proto.GetRefundOrderRequest;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -139,6 +142,29 @@ public class ManagerImpl implements ManagerInterface
       ordersForUser.get(i).setItems(itemsForOrder);
     }
     return factory.fromOrder(ordersForUser);
+  }
+
+  @Override public GetBooleanResponse refundAnOrder(
+      GetRefundOrderRequest refund)
+  {
+    try
+    {
+      Order orderToRefund = factory.fromGetRefundOrderRequest(refund);
+      orderDAO.editOrder(orderToRefund);
+      for (int i = 0; i < orderToRefund.getItems().size(); i++)
+      {
+        if (orderToRefund.getItems().get(i).getQuantity() <= 0)
+        {
+          itemsInOrderDAO.deleteItemFromOrder(orderToRefund.getItems().get(i).getItemId(), orderToRefund.getOrderId());
+        }
+        itemsInOrderDAO.editItemInOrder(orderToRefund.getItems().get(i), orderToRefund.getOrderId());
+      }
+      return factory.createBooleanResponse(true);
+    }
+    catch (Exception e)
+    {
+      return factory.createBooleanResponse(false);
+    }
   }
 
   private Item getCompleteItem(int itemId, int orderId)

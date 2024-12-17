@@ -14,6 +14,8 @@ import proto.GetOrderResponse;
 import proto.GetAllOrdersRequest;
 import proto.GetAllOrdersResponse;
 import proto.OrderDTO;
+import proto.GetRefundOrderRequest;
+import proto.GetBooleanResponse;
 
 import com.google.protobuf.Timestamp;
 
@@ -35,6 +37,21 @@ public class GRPCFactory
 
   }
 
+  public Order fromGetRefundOrderRequest(GetRefundOrderRequest request)
+  {
+    return fromOrderDTO(request.getOrder());
+  }
+
+  private Order fromOrderDTO(OrderDTO order)
+  {
+    return new Order(fromItemDTOList(order.getItemsList()),
+        order.getTotalAmount(), order.getOrderId(),
+        fromTimestamp(order.getPlacedOn()),
+        fromPaymentMethodDTO(order.getPaymentMethod()),
+        fromDeliveryOptionDTO(order.getDeliveryOption()),
+        order.getPlacedBy(), order.getToAddress());
+  }
+
   public String fromGetAllOrdersRequest(GetAllOrdersRequest request)
   {
     return request.getUser();
@@ -45,7 +62,7 @@ public class GRPCFactory
     return proto.GetAllOrdersResponse.newBuilder().addAllOrders(createListOfOrderDTOs(order)).build();
   }
 
-  public ArrayList<OrderDTO> createListOfOrderDTOs(ArrayList<Order> orders)
+  private ArrayList<OrderDTO> createListOfOrderDTOs(ArrayList<Order> orders)
   {
     ArrayList<OrderDTO> response = new ArrayList<>();
     for (int i = 0; i < orders.size(); i++)
@@ -55,7 +72,7 @@ public class GRPCFactory
     return response;
   }
 
-  public OrderDTO createOrderDTO(Order order)
+  private OrderDTO createOrderDTO(Order order)
   {
     return OrderDTO.newBuilder().setPlacedOn(createTimestamp(order.getDate()))
         .setPaymentMethod(createPaymentMethodDTO(order.getPaymentMethod()))
@@ -123,7 +140,7 @@ public class GRPCFactory
         .setCategoryId(category.getCategoryId()).build();
   }
 
-  public ArrayList<Item> fromItemDTOList(List<ItemDTO> items)
+  private ArrayList<Item> fromItemDTOList(List<ItemDTO> items)
   {
     ArrayList<Item> response = new ArrayList<>();
     for (int i = 0; i < items.size(); i++)
@@ -133,14 +150,14 @@ public class GRPCFactory
     return response;
   }
 
-  public Item fromItemDTO(ItemDTO item)
+  private Item fromItemDTO(ItemDTO item)
   {
     return new Item(item.getName(), fromCategoryDTOList(item.getCategoryList()),
         item.getPrice(), item.getItemId(), item.getDescription(),
         item.getQuantity(), item.getColour());
   }
 
-  public ArrayList<Category> fromCategoryDTOList(List<CategoryDTO> categories)
+  private ArrayList<Category> fromCategoryDTOList(List<CategoryDTO> categories)
   {
     ArrayList<Category> response = new ArrayList<>();
     for (int i = 0; i < categories.size(); i++)
@@ -150,24 +167,24 @@ public class GRPCFactory
     return response;
   }
 
-  public Category fromCategoryDTO(CategoryDTO category)
+  private Category fromCategoryDTO(CategoryDTO category)
   {
     return new Category(category.getName(), category.getDescription(),
         category.getCategoryId());
   }
 
-  public LocalDate fromTimestamp(Timestamp time)
+  private LocalDate fromTimestamp(Timestamp time)
   {
     return LocalDateTime.ofEpochSecond(time.getSeconds(), time.getNanos(),
         ZoneOffset.UTC).toLocalDate();
   }
 
-  public PaymentMethod fromPaymentMethodDTO(PaymentMethodDTO paymentMethod)
+  private PaymentMethod fromPaymentMethodDTO(PaymentMethodDTO paymentMethod)
   {
     return new PaymentMethod(paymentMethod.getId(), paymentMethod.getName());
   }
 
-  public DeliveryOption fromDeliveryOptionDTO(DeliveryOptionDTO deliveryOption)
+  private DeliveryOption fromDeliveryOptionDTO(DeliveryOptionDTO deliveryOption)
   {
     return new DeliveryOption(deliveryOption.getId(), deliveryOption.getName());
   }
@@ -175,5 +192,10 @@ public class GRPCFactory
   public GetOrderResponse fromBoolean(boolean deliveryMade)
   {
     return GetOrderResponse.newBuilder().setSuccess(deliveryMade).build();
+  }
+
+  public GetBooleanResponse createBooleanResponse(boolean refundMade)
+  {
+    return GetBooleanResponse.newBuilder().setSuccess(refundMade).build();
   }
 }
