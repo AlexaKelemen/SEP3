@@ -11,6 +11,7 @@ namespace BlazorApp1.Managers;
 public class OrderManager : IOrderManager
 {
     private UserService.UserServiceClient Stub;
+
     public OrderManager(UserService.UserServiceClient stub)
     {
         Stub = stub;
@@ -65,6 +66,7 @@ public class OrderManager : IOrderManager
 
     public async Task RefundOrderAsync(Order order)
     {
+        DateTime replacementDate = DateTime.SpecifyKind(order.PlacedOn, DateTimeKind.Utc);
         GetRefundOrderRequest request = new GetRefundOrderRequest()
         {
             Order = new OrderDTO()
@@ -81,70 +83,96 @@ public class OrderManager : IOrderManager
                     Name = order.PaymentMethod.Name
                 },
                 PlacedBy = order.PlacedBy,
-                
+                ToAddress = order.DeliveryOption.ToAddress,
+                TotalAmount = order.Price,
+                PlacedOn = replacementDate.ToTimestamp()
             }
-        }
-    }
-    public async Task ReturnOrderAsync(Order order, int credit)
-    {
-        
+        };
+        order.Items.ForEach(item =>
+        {
+            ItemDTO temp = new ItemDTO()
+            {
+                Colour = item.Colour,
+                Description = item.Description,
+                ItemId = item.ItemId,
+                Name = item.Name,
+                Price = item.Price,
+                Quantity = item.Quantity
+            };
+            item.CategoryId.ForEach(cat =>
+            {
+                temp.Category.Add(new CategoryDTO()
+                {
+                    CategoryId = cat.CategoryId,
+                    Description = cat.CategoryDescription,
+                    Name = cat.CategoryName
+                });
+            });
+            request.Order.Items.Add(temp);
+        });
     }
 
-    public async Task<List<Order>> GetAllOrdersForUser(string username)
-    {
-        GetAllOrdersRequest request = new GetAllOrdersRequest()
+    public async Task ReturnOrderAsync(Order order, int credit)
         {
-            User = username
-        };
-        var response = await Stub.getAllOrdersForUserAsync(request);
-        List<Order> result = new List<Order>();
-        foreach (OrderDTO order in response.Orders)
+        }
+
+        public async Task<List<Order>> GetAllOrdersForUser(string username)
         {
-            List<Item> items = new List<Item>();
-            foreach (ItemDTO item in order.Items)
+            GetAllOrdersRequest request = new GetAllOrdersRequest()
             {
-                List<Category> categories = new List<Category>();
-                foreach (CategoryDTO cat in item.Category)
+                User = username
+            };
+            var response = await Stub.getAllOrdersForUserAsync(request);
+            List<Order> result = new List<Order>();
+            foreach (OrderDTO order in response.Orders)
+            {
+                List<Item> items = new List<Item>();
+                foreach (ItemDTO item in order.Items)
                 {
-                   categories.Add(new Category()
-                   {
-                       CategoryId = cat.CategoryId,
-                       CategoryDescription = cat.Description,
-                       CategoryName = cat.Name
-                   }); 
+                    List<Category> categories = new List<Category>();
+                    foreach (CategoryDTO cat in item.Category)
+                    {
+                        categories.Add(new Category()
+                        {
+                            CategoryId = cat.CategoryId,
+                            CategoryDescription = cat.Description,
+                            CategoryName = cat.Name
+                        });
+                    }
+
+                    items.Add(new Item()
+                    {
+                        CategoryId = categories,
+                        Colour = item.Colour,
+                        Description = item.Description,
+                        ItemId = item.ItemId,
+                        Name = item.Name,
+                        Price = (float)item.Price,
+                        Quantity = item.Quantity
+                    });
                 }
-                items.Add(new Item()
+
+                result.Add(new Order()
                 {
-                    CategoryId = categories,
-                    Colour = item.Colour,
-                    Description = item.Description,
-                    ItemId = item.ItemId,
-                    Name = item.Name,
-                    Price = (float)item.Price,
-                    Quantity = item.Quantity
+                    OrderId = order.OrderId,
+                    PlacedBy = order.PlacedBy,
+                    PlacedOn = order.PlacedOn.ToDateTime(),
+                    Price = order.TotalAmount,
+                    DeliveryOption = new DeliveryOption()
+                    {
+                        Id = order.DeliveryOption.Id,
+                        Name = order.DeliveryOption.Name,
+                        ToAddress = order.ToAddress
+                    },
+                    PaymentMethod = new PaymentMethod()
+                    {
+                        Id = order.PaymentMethod.Id,
+                        Name = order.PaymentMethod.Name
+                    },
+                    Items = items
                 });
             }
 
-            result.Add(new Order()
-            {
-                OrderId = order.OrderId,
-                PlacedBy = order.PlacedBy,
-                PlacedOn = order.PlacedOn.ToDateTime(),
-                Price = order.TotalAmount,
-                DeliveryOption = new DeliveryOption()
-                {
-                    Id = order.DeliveryOption.Id,
-                    Name = order.DeliveryOption.Name,
-                    ToAddress = order.ToAddress
-                },
-                PaymentMethod = new PaymentMethod()
-                {
-                    Id = order.PaymentMethod.Id,
-                    Name = order.PaymentMethod.Name
-                },
-                Items = items
-            });
+            return result;
         }
-        return result;
     }
-}
