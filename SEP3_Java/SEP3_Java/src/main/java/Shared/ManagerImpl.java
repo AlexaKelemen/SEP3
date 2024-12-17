@@ -61,33 +61,23 @@ public class ManagerImpl implements ManagerInterface
 
 
       User user = userDAO.getUser(orderToSave.getPlacedBy());
-      DeliveryOption deliveryOption = null;
-      PaymentMethod paymentMethod = null;
+      DeliveryOption deliveryOption = deliveryOptionDAO.getDeliveryOption(orderToSave.getDeliveryOption().getId());
+      PaymentMethod paymentMethod = paymentMethodDAO.getPaymentMethod(orderToSave.getPaymentMethod().getId());
 
 
-      ArrayList<DeliveryOption> deliveryOptions = deliveryOptionDAO.getAllDeliveryOptions();
-      ArrayList<PaymentMethod> paymentMethods = paymentMethodDAO.getAllPaymentMethods();
-      for (int i = 0; i < deliveryOptions.size(); i++)
+      if (deliveryOption == null)
       {
-        if(deliveryOptions.get(i).getName().equals(order.getDeliveryOption().getName()))
-        {
-          deliveryOption = new DeliveryOption(deliveryOptions.get(i).getId(), deliveryOptions.get(i).getName());
-          orderToSave.setDeliveryOption(deliveryOption);
-        }
+        deliveryOption = deliveryOptionDAO.addDeliveryOption(orderToSave.getDeliveryOption());
       }
-      for (int i = 0; i < paymentMethods.size(); i++)
+      if(paymentMethod == null)
       {
-        if(paymentMethods.get(i).getName().equals(order.getPaymentMethod().getName()))
-        {
-          paymentMethod = new PaymentMethod(paymentMethods.get(i).getId(), paymentMethods.get(i).getName());
-          orderToSave.setPaymentMethod(paymentMethod);
-        }
+        paymentMethod = paymentMethodDAO.addPaymentMethod(orderToSave.getPaymentMethod());
       }
+      orderToSave.setDeliveryOption(deliveryOption);
+      orderToSave.setPaymentMethod(paymentMethod);
 
       if(user == null || deliveryOption == null || paymentMethod == null)
-      { System.out.println(user);
-        System.out.println(deliveryOption);
-        System.out.println(paymentMethod);
+      {
         return factory.fromBoolean(false);
       }
       orderDAO.addOrder(orderToSave);

@@ -57,6 +57,10 @@ namespace Proto {
     static readonly grpc::Marshaller<global::Proto.GetAllOrdersRequest> __Marshaller_proto_GetAllOrdersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAllOrdersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Proto.GetAllOrdersResponse> __Marshaller_proto_GetAllOrdersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetAllOrdersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Proto.GetRefundOrderRequest> __Marshaller_proto_GetRefundOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetRefundOrderRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Proto.GetBooleanResponse> __Marshaller_proto_GetBooleanResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetBooleanResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse> __Method_getUser = new grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse>(
@@ -81,6 +85,14 @@ namespace Proto {
         "getAllOrdersForUser",
         __Marshaller_proto_GetAllOrdersRequest,
         __Marshaller_proto_GetAllOrdersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Proto.GetRefundOrderRequest, global::Proto.GetBooleanResponse> __Method_refundAnOrder = new grpc::Method<global::Proto.GetRefundOrderRequest, global::Proto.GetBooleanResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "refundAnOrder",
+        __Marshaller_proto_GetRefundOrderRequest,
+        __Marshaller_proto_GetBooleanResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -174,6 +186,26 @@ namespace Proto {
       public virtual grpc::AsyncUnaryCall<global::Proto.GetAllOrdersResponse> getAllOrdersForUserAsync(global::Proto.GetAllOrdersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getAllOrdersForUser, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetBooleanResponse refundAnOrder(global::Proto.GetRefundOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return refundAnOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetBooleanResponse refundAnOrder(global::Proto.GetRefundOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_refundAnOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetBooleanResponse> refundAnOrderAsync(global::Proto.GetRefundOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return refundAnOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetBooleanResponse> refundAnOrderAsync(global::Proto.GetRefundOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_refundAnOrder, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

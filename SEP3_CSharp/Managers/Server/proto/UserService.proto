@@ -89,11 +89,22 @@ message GetAllOrdersResponse
   repeated OrderDTO orders = 1;
 }
 
+message GetRefundOrderRequest
+{
+  OrderDTO order = 1;
+}
+
+message GetBooleanResponse
+{
+  bool success = 1;
+}
+
 service UserService
 {
   rpc getUser(GetUserRequest) returns (GetUserResponse);
   rpc addOrder(GetOrderRequest) returns (GetOrderResponse);
   rpc getAllOrdersForUser(GetAllOrdersRequest) returns (GetAllOrdersResponse);
+  rpc refundAnOrder(GetRefundOrderRequest) returns (GetBooleanResponse);
 }
 
 
