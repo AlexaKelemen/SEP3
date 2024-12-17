@@ -65,7 +65,25 @@ public class OrderManager : IOrderManager
 
     public async Task RefundOrderAsync(Order order)
     {
-        
+        GetRefundOrderRequest request = new GetRefundOrderRequest()
+        {
+            Order = new OrderDTO()
+            {
+                DeliveryOption = new DeliveryOptionDTO()
+                {
+                    Id = order.DeliveryOption.Id,
+                    Name = order.DeliveryOption.Name
+                },
+                OrderId = order.OrderId,
+                PaymentMethod = new PaymentMethodDTO()
+                {
+                    Id = order.PaymentMethod.Id,
+                    Name = order.PaymentMethod.Name
+                },
+                PlacedBy = order.PlacedBy,
+                
+            }
+        }
     }
     public async Task ReturnOrderAsync(Order order, int credit)
     {

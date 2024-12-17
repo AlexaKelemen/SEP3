@@ -36,7 +36,7 @@ public class PaymentMethodDAO extends DatabaseFactory implements PaymentMethodDA
   {
     try(Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("insert into Payment_Methods(name) values (?);");
+      PreparedStatement statement = connection.prepareStatement("insert into Payment_Methods(name) values (?);", new String[]{"id"});
       statement.setString(1, paymentMethod.getName());
       statement.executeUpdate();
       ResultSet generatedKeys = statement.getGeneratedKeys();

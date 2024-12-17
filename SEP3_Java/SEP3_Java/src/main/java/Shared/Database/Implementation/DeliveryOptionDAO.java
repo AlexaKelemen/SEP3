@@ -36,7 +36,7 @@ public class DeliveryOptionDAO extends DatabaseFactory implements DeliveryOption
   {
     try(Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("insert into Delivery_Options(name) values (?);");
+      PreparedStatement statement = connection.prepareStatement("insert into Delivery_Options(name) values (?);", new String[]{"id"});
       statement.setString(1, deliveryOption.getName());
       statement.executeUpdate();
       ResultSet generatedKeys = statement.getGeneratedKeys();
