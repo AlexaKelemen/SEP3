@@ -26,6 +26,7 @@ public class ManagerImpl implements ManagerInterface
   private ItemDAOInterface itemDAO;
   private ItemCategoryDAOInterface itemCategoryDAO;
   private ItemsInOrderDAOInterface itemsInOrderDAO;
+  private CreditDAOInterface creditDAO;
 
   private ManagerImpl()
   {
@@ -38,6 +39,7 @@ public class ManagerImpl implements ManagerInterface
     itemDAO = ItemDAO.getInstance();
     itemCategoryDAO = ItemCategoryDAO.getInstance();
     itemsInOrderDAO = ItemsInOrderDAO.getInstance();
+    creditDAO = CreditDAO.getInstance();
   }
 
   public static synchronized ManagerImpl getInstance()
@@ -188,6 +190,16 @@ public class ManagerImpl implements ManagerInterface
       {
         itemsInOrderDAO.deleteItemFromOrder(checkToDelete.get(i).getItemId(), orderToReturn.getOrderId());
       }
+      int credit = creditDAO.getCredit(orderToReturn.getPlacedBy());
+      if(credit <= 0)
+      {
+        credit = factory.getCreditFromGetReturnRequest(request);
+      }
+      else
+      {
+        credit += factory.getCreditFromGetReturnRequest(request);
+      }
+      creditDAO.editCredit(orderToReturn.getPlacedBy(), credit);
       return factory.createBooleanResponse(true);
     }
     catch (Exception e)
