@@ -42,6 +42,16 @@ public class GRPCFactory
     return request.getUser();
   }
 
+  public String getUserFromSetCreditRequest(SetCreditRequest request)
+  {
+    return request.getUser();
+  }
+
+  public int getCreditFromSetCreditRequest(SetCreditRequest request)
+  {
+    return request.getCredit();
+  }
+
   public GetCreditResponse toCreditResponse(int credit)
   {
     return GetCreditResponse.newBuilder().setCredit(credit).build();

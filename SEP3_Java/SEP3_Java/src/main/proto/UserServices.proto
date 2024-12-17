@@ -115,6 +115,12 @@ message GetCreditResponse
   int32 credit = 1;
 }
 
+message SetCreditRequest
+{
+  string user = 1;
+  int32 credit = 2;
+}
+
 service UserService
 {
   rpc getUser(GetUserRequest) returns (GetUserResponse);
@@ -123,6 +129,7 @@ service UserService
   rpc refundAnOrder(GetRefundOrderRequest) returns (GetBooleanResponse);
   rpc returnAnOrder(GetReturnOrderRequest) returns (GetBooleanResponse);
   rpc getCreditForUser(GetCreditRequest) returns (GetCreditResponse);
+  rpc setCreditForUser(SetCreditRequest) returns (GetBooleanResponse);
 }
 
 

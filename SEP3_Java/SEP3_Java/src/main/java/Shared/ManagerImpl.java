@@ -195,12 +195,15 @@ public class ManagerImpl implements ManagerInterface
       if(credit <= 0)
       {
         credit = factory.getCreditFromGetReturnRequest(request);
+        creditDAO.addCredit(orderToReturn.getPlacedBy(), credit);
+
       }
       else
       {
         credit += factory.getCreditFromGetReturnRequest(request);
+        creditDAO.editCredit(orderToReturn.getPlacedBy(), credit);
       }
-      creditDAO.editCredit(orderToReturn.getPlacedBy(), credit);
+
       return factory.createBooleanResponse(true);
     }
     catch (Exception e)
@@ -218,6 +221,19 @@ public class ManagerImpl implements ManagerInterface
       return factory.toCreditResponse(0);
     }
     return factory.toCreditResponse(credit);
+  }
+
+  @Override public GetBooleanResponse setCreditForUser(SetCreditRequest request)
+  {
+    int credit = creditDAO.getCredit(factory.getUserFromSetCreditRequest(request));
+    if (credit <= 0)
+    {
+      creditDAO.addCredit(factory.getUserFromSetCreditRequest(request),
+          factory.getCreditFromSetCreditRequest(request));
+    }
+    creditDAO.editCredit(factory.getUserFromSetCreditRequest(request),
+        factory.getCreditFromSetCreditRequest(request));
+    return factory.createBooleanResponse(true);
   }
 
   private Item getCompleteItem(int itemId, int orderId)

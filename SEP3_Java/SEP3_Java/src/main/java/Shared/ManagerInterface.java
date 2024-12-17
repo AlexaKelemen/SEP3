@@ -10,4 +10,5 @@ public interface ManagerInterface
   public GetBooleanResponse refundAnOrder(GetRefundOrderRequest refund);
   public GetBooleanResponse returnAnOrder(GetReturnOrderRequest request);
   public GetCreditResponse getCreditForUser(GetCreditRequest request);
+  public GetBooleanResponse setCreditForUser(SetCreditRequest request);
 }
