@@ -144,4 +144,14 @@ public class Manager : IManager
     {
         await OrderManager.ReturnOrderAsync(order, credit);
     }
+
+    public async Task<int> GetCreditForUser(string username)
+    {
+        return await UserManager.GetCreditForUser(username);
+    }
+
+    public async Task SetCreditForUser(string username, int credit)
+    {
+        await UserManager.SetCreditForUser(username, credit);
+    }
 }

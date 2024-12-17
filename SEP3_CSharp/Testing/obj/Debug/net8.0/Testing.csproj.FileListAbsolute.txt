@@ -471,18 +471,18 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\obj\Debug\net8.0\Testing.pdb
 D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\obj\Debug\net8.0\Testing.genruntimeconfig.cache
 D:\Code files\SEP\SEP3\SEP3_CSharp\Testing\obj\Debug\net8.0\ref\Testing.dll
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\CoverletSourceRootsMapping_Testing
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\testhost.dll
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.deps.json
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.runtimeconfig.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\appsettings.Development.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\appsettings.json
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.staticwebassets.runtime.json
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.exe
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\testhost.exe
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\testhost.dll
+E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\Testing.staticwebassets.runtime.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.deps.json
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.runtimeconfig.json
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.staticwebassets.runtime.json
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\BlazorApp1.exe
-E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\Testing.staticwebassets.runtime.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\Testing.deps.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\Testing.runtimeconfig.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\Testing\bin\Debug\net8.0\Testing.dll

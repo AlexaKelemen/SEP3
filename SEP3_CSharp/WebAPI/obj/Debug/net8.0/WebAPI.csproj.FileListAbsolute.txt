@@ -1259,12 +1259,12 @@ D:\Code files\SEP\SEP3\SEP3_CSharp\WebAPI\obj\Debug\net8.0\refint\WebAPI.dll
 D:\Code files\SEP\SEP3\SEP3_CSharp\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 D:\Code files\SEP\SEP3\SEP3_CSharp\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 D:\Code files\SEP\SEP3\SEP3_CSharp\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
-E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\appsettings.Development.json
-E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\appsettings.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\BlazorApp1.deps.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\BlazorApp1.runtimeconfig.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\BlazorApp1.staticwebassets.runtime.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\BlazorApp1.exe
+E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\appsettings.Development.json
+E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\appsettings.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\WebAPI.staticwebassets.runtime.json
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\WebAPI.exe
 E:\SEP3\Project\SourceCode\SEP3_CSharp\WebAPI\bin\Debug\net8.0\WebAPI.deps.json

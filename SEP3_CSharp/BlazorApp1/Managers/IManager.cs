@@ -22,5 +22,7 @@ public interface IManager
     Task RefundOrderAsync(Order order);
     Task ReturnOrderAsync(Order order, int credit);
     Task<List<Order>> GetAllOrdersForUser(string username);
+    Task<int> GetCreditForUser(string username);
+    Task SetCreditForUser(string username, int credit);
 
 }

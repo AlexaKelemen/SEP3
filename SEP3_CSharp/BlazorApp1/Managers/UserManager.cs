@@ -8,12 +8,12 @@ namespace BlazorApp1.Managers;
 
 public class UserManager : IUserManager
 {
-    private UserService.UserServiceClient stub;
+    private UserService.UserServiceClient Stub;
     private readonly IUserService UserService;
 
     public UserManager(UserService.UserServiceClient stub, IUserService userService)
     {
-        this.stub = stub;
+        this.Stub = stub;
         UserService = userService;
     }
     public async Task<User> GetUserAsync(string username)
@@ -40,5 +40,25 @@ public class UserManager : IUserManager
     {
         
         await UserService.UpdateUserAsync(userdto);
+    }
+
+    public async Task<int> GetCreditForUser(string username)
+    {
+        GetCreditRequest request = new GetCreditRequest()
+        {
+            User = username
+        };
+        var response = await Stub.getCreditForUserAsync(request);
+        return response.Credit;
+    }
+
+    public async Task SetCreditForUser(string username, int credit)
+    {
+        SetCreditRequest request = new SetCreditRequest()
+        {
+            User = username,
+            Credit = credit
+        };
+        var response = await Stub.setCreditForUserAsync(request);
     }
 }
