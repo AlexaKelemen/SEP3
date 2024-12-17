@@ -31,7 +31,7 @@ else
         {
             <div class="col-md-3">
                 <a href="@($"/OrderDetails/{order.OrderId}")" class="card">
-                    <img src="@order.Items[0].ImageURL"  class="img-fluid"/>
+                    <img src="@Manager.GetProductByIdAsync(order.Items[0].ItemId)"  class="img-fluid"/>
                     <div class="card-body">
                         <h5>@order.Items.Count products in order</h5>
                     </div>
@@ -49,6 +49,7 @@ else
 {
     [CascadingParameter] public Task<AuthenticationState> State { get; set; }
     private IEnumerable<Order> Orders { get; set; }
+    
 
     protected override async Task OnInitializedAsync()
     {
@@ -59,7 +60,7 @@ else
             // the user is not logged in
             return;
         }
-        Orders = await Manager.GetOrdersAsync();
+        Orders = await Manager.GetAllOrdersForUser(claimsPrincipal.Identity?.Name);
     }
 
     

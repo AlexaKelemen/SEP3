@@ -45,6 +45,10 @@ public class Order
   {
     return items;
   }
+  public void setItems(ArrayList<Item> items)
+  {
+    this.items = items;
+  }
 
   public double getTotalAmount()
   {

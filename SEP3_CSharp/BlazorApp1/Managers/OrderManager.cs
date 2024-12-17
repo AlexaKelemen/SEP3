@@ -15,10 +15,6 @@ public class OrderManager : IOrderManager
     {
         Stub = stub;
     }
-    public Task<IEnumerable<Order>> GetOrdersAsync()
-    {
-        throw new NotImplementedException();
-    }
 
     public async Task<bool> AddOrderAsync(Order order)
     {

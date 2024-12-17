@@ -123,10 +123,10 @@ public class Manager : IManager
             }
         }
     }
-    
-    public Task<IEnumerable<Order>> GetOrdersAsync()
+
+    public async Task<List<Order>> GetAllOrdersForUser(string username)
     {
-        return OrderManager.GetOrdersAsync();
+        return await OrderManager.GetAllOrdersForUser(username);
     }
 
     public async Task RefundOrderAsync(Order order)

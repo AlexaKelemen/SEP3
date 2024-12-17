@@ -1,6 +1,8 @@
 ﻿@page "/OrderDetails"
+@using System.Security.Claims
 @using BlazorApp1.Managers
 @using Entities
+@using Microsoft.AspNetCore.Components.Authorization
 @inject IManager Manager
 <h3>OrderDetails</h3>
 
@@ -24,6 +26,9 @@ else
             
             @foreach (var item in Order.Items)
             {
+                <div class="col-md-6 text-center">
+                    <img class="img-fluid rounded shadow" src="@Manager.GetProductByIdAsync(item.ItemId)" alt="@item.Name"/>
+                </div>
                 int quant = item.Quantity;
                 <div class="card p-4 shadow-lg">
                     <h3 class="card-title">@item.Name</h3>
@@ -52,14 +57,18 @@ else
 
 @code 
 {
+    [CascadingParameter] public Task<AuthenticationState> State { get; set; }
     [Parameter] public int Id { get; set; }
     public Order Order;
     public string ErrorMessage { get; set; }
     List<Item> items;
+    int credit = 0;
 
     protected override async Task OnInitializedAsync()
     {
-        IEnumerable<Order> temp = await Manager.GetOrdersAsync();
+        AuthenticationState authenticationState = await State;
+        ClaimsPrincipal claimsPrincipal = authenticationState.User;
+        IEnumerable<Order> temp = await Manager.GetAllOrdersForUser(claimsPrincipal.Identity?.Name);
         foreach (var order in temp)
         {
             if (order.OrderId == Id)
@@ -86,29 +95,30 @@ else
             item.Quantity -= quantity;
             items.Add(item);
         }
+
+        if (Order.IsNew())
+        {
+            credit += CalculateCredit(item, quantity);
+        }
     }
 
     public async Task ProcessReturn()
     {
+        float total = 0;
+        foreach (var item in items)
+        {
+            total += item.Price * item.Quantity;
+        }
+        
         if (Order.IsNew())
         {
-            float total = 0;
-            foreach (var item in items)
-            {
-                total += item.Price * item.Quantity;
-            }
-
             Order.Price = total;
             await Manager.RefundOrderAsync(Order);
 
         }
         else
         {
-            int credit = 0;
-            foreach (var item in items)
-            {
-                
-            }
+            await Manager.ReturnOrderAsync(Order, credit);
         }
     }
 }

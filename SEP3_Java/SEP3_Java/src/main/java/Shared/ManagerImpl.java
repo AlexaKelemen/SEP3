@@ -85,7 +85,9 @@ public class ManagerImpl implements ManagerInterface
       }
 
       if(user == null || deliveryOption == null || paymentMethod == null)
-      {
+      { System.out.println(user);
+        System.out.println(deliveryOption);
+        System.out.println(paymentMethod);
         return factory.fromBoolean(false);
       }
       orderDAO.addOrder(orderToSave);
