@@ -1,8 +1,9 @@
-﻿@page "/OrderDetails"
+﻿@page "/OrderDetails/{Id:int}"
 @using System.Security.Claims
 @using BlazorApp1.Managers
 @using Entities
 @using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager NavMgr;
 @inject IManager Manager
 <h3>OrderDetails</h3>
 
@@ -26,31 +27,53 @@ else
             
             @foreach (var item in Order.Items)
             {
-                <div class="col-md-6 text-center">
-                    <img class="img-fluid rounded shadow" src="@Manager.GetProductByIdAsync(item.ItemId)" alt="@item.Name"/>
-                </div>
-                int quant = item.Quantity;
-                <div class="card p-4 shadow-lg">
-                    <h3 class="card-title">@item.Name</h3>
-                    <p class="card-text text-muted">@item.Size</p>
-                    <p class="card-text text-muted">@item.Colour</p>
-                    <input type="number" min="0" max="quant"/>
-                    <div></div></div>
+                string text;
+                float price;
+                int quant=1;
                 if (Order.IsNew())
                 {
-                    <p class="card-text text-muted">@item.Price</p>
+                    text = "Price per product: ";
+                    price = item.Price;
                 }
                 else
                 {
-                    <p class="card-text text-muted">@CalculateCredit(item, quant)</p>
+                    text = "Credit per product: ";
+                    price = @CalculateCredit(item);
                 }
-                <Button type="button" class="btn btn-primary btn-sm" @onclick="() => AddChanges(item, quant)" > Add changes </Button>
+                <div class="card p-4 shadow-lg">
+                    <h3 class="card-title">@item.Name</h3>
+                    <p class="card-text text-muted">Size: @item.Size</p>
+                    <p class="card-text text-muted">Colour: @item.Colour</p>
+                    <input type="number" @bind="quant" min="0" max="@item.Quantity"/>
+                    <p class="card-text text-muted">@text  @price</p>
+                    <Button type="button"  class="btn btn-primary btn-sm" @onclick="() => AddChanges(item, quant)" > Add changes </Button>
+                    <div></div></div>
             }
             <Button type="button" class="btn btn-primary" @onclick="ProcessReturn"> Process Return </Button>
             
         </div>
     </div>
-    
+    @if (isPopupVisible)
+
+    {
+        <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-success" id="checkoutModalLabel">Return Confirmation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4>Thank you for your return!</h4>
+                        <p>Your return will now be processes.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" @onclick="ClosePopup">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 }
 
 
@@ -63,6 +86,9 @@ else
     public string ErrorMessage { get; set; }
     List<Item> items;
     int credit = 0;
+    private Dictionary<int, String> Urls;
+    private bool isPopupVisible;
+   
 
     protected override async Task OnInitializedAsync()
     {
@@ -75,11 +101,13 @@ else
                 Order = order;
         }
         items = Order.Items;
+        isPopupVisible = false;
     }
 
-    public int CalculateCredit(Item item, int quantity)
+   
+    public int CalculateCredit(Item item)
     {
-        return Convert.ToInt16((item.Price * 5 / 100) * quantity);
+        return Convert.ToInt16(item.Price * 5 / 100);
     }
 
     public void AddChanges(Item item, int quantity)
@@ -87,7 +115,11 @@ else
         foreach (var product in Order.Items)
         {
             if (item.ItemId == product.ItemId)
+            {
                 Order.Items.Remove(product);
+                break;
+            }
+                
         }
 
         if (item.Quantity - quantity > 0)
@@ -98,7 +130,7 @@ else
 
         if (Order.IsNew())
         {
-            credit += CalculateCredit(item, quantity);
+            credit += CalculateCredit(item)*quantity;
         }
     }
 
@@ -120,5 +152,13 @@ else
         {
             await Manager.ReturnOrderAsync(Order, credit);
         }
+
+        isPopupVisible = true;
+    }
+
+    public void ClosePopup()
+    {
+        isPopupVisible = false;
+        NavMgr.NavigateTo("/");
     }
 }

@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using BlazorApp1.Services;
 using BlazorApp1.Services.Contracts;
 using DataTransferObjects;
@@ -6,6 +7,7 @@ using Entities;
 using Entities.Utilities;
 using Grpc.Net.Client;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Proto;
 
 
@@ -111,6 +113,10 @@ public class Manager : IManager
         else
         {
             order.Items = CartManager.GetCartItems().Keys.ToList();
+            foreach (var orderItem in order.Items)
+            {
+                orderItem.Quantity = CartManager.GetCartItems()[orderItem];
+            }
             bool orderSuccess = await OrderManager.AddOrderAsync(order);
             if (orderSuccess)
             {

@@ -92,5 +92,6 @@ public class CartManager : ICartManager, INotifyPropertyChanged
         }
         
         cart[item] = quantity;
+        
     }
 }

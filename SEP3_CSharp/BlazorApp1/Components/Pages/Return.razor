@@ -32,9 +32,10 @@ else
         {
             <div class="col-md-3">
                 <a href="@($"/OrderDetails/{order.OrderId}")" class="card">
-                    <img src="@Manager.GetProductByIdAsync(order.Items[0].ItemId)"  class="img-fluid"/>
                     <div class="card-body">
-                        <h5>@order.Items.Count products in order</h5>
+                        <h5>Order: @order.OrderId</h5>
+                        <h5>Placed on: @order.PlacedOn</h5>
+                        <h5>@order.Items.Count product(s) in order</h5>
                     </div>
                 </a>
             </div>
