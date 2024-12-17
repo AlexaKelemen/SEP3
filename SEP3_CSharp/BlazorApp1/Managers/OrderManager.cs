@@ -115,6 +115,53 @@ public class OrderManager : IOrderManager
 
     public async Task ReturnOrderAsync(Order order, int credit)
         {
+            DateTime replacementDate = DateTime.SpecifyKind(order.PlacedOn, DateTimeKind.Utc);
+            GetReturnOrderRequest request = new GetReturnOrderRequest()
+            {
+                Order = new OrderDTO()
+                {
+                    DeliveryOption = new DeliveryOptionDTO()
+                    {
+                        Id = order.DeliveryOption.Id,
+                        Name = order.DeliveryOption.Name
+                    },
+                    OrderId = order.OrderId,
+                    PaymentMethod = new PaymentMethodDTO()
+                    {
+                        Id = order.PaymentMethod.Id,
+                        Name = order.PaymentMethod.Name
+                    },
+                    PlacedBy = order.PlacedBy,
+                    ToAddress = order.DeliveryOption.ToAddress,
+                    TotalAmount = order.Price,
+                    PlacedOn = replacementDate.ToTimestamp()
+                },
+                Credit = credit
+            };
+            order.Items.ForEach(item =>
+            {
+                ItemDTO temp = new ItemDTO()
+                {
+                    Colour = item.Colour,
+                    Description = item.Description,
+                    ItemId = item.ItemId,
+                    Name = item.Name,
+                    Price = item.Price,
+                    Quantity = item.Quantity
+                };
+                item.CategoryId.ForEach(cat =>
+                {
+                    temp.Category.Add(new CategoryDTO()
+                    {
+                        CategoryId = cat.CategoryId,
+                        Description = cat.CategoryDescription,
+                        Name = cat.CategoryName
+                    });
+                });
+                request.Order.Items.Add(temp);
+                
+            });
+            var response = await Stub.returnAnOrderAsync(request);
         }
 
         public async Task<List<Order>> GetAllOrdersForUser(string username)

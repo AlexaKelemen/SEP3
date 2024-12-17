@@ -61,6 +61,8 @@ namespace Proto {
     static readonly grpc::Marshaller<global::Proto.GetRefundOrderRequest> __Marshaller_proto_GetRefundOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetRefundOrderRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Proto.GetBooleanResponse> __Marshaller_proto_GetBooleanResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetBooleanResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Proto.GetReturnOrderRequest> __Marshaller_proto_GetReturnOrderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Proto.GetReturnOrderRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse> __Method_getUser = new grpc::Method<global::Proto.GetUserRequest, global::Proto.GetUserResponse>(
@@ -92,6 +94,14 @@ namespace Proto {
         __ServiceName,
         "refundAnOrder",
         __Marshaller_proto_GetRefundOrderRequest,
+        __Marshaller_proto_GetBooleanResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Proto.GetReturnOrderRequest, global::Proto.GetBooleanResponse> __Method_returnAnOrder = new grpc::Method<global::Proto.GetReturnOrderRequest, global::Proto.GetBooleanResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "returnAnOrder",
+        __Marshaller_proto_GetReturnOrderRequest,
         __Marshaller_proto_GetBooleanResponse);
 
     /// <summary>Service descriptor</summary>
@@ -206,6 +216,26 @@ namespace Proto {
       public virtual grpc::AsyncUnaryCall<global::Proto.GetBooleanResponse> refundAnOrderAsync(global::Proto.GetRefundOrderRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_refundAnOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetBooleanResponse returnAnOrder(global::Proto.GetReturnOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return returnAnOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Proto.GetBooleanResponse returnAnOrder(global::Proto.GetReturnOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_returnAnOrder, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetBooleanResponse> returnAnOrderAsync(global::Proto.GetReturnOrderRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return returnAnOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Proto.GetBooleanResponse> returnAnOrderAsync(global::Proto.GetReturnOrderRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_returnAnOrder, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
