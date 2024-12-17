@@ -114,9 +114,4 @@ public class Order
   {
     return orderId;
   }
-
-  public void setItems(ArrayList<Item> items)
-  {
-    this.items = items;
-  }
 }

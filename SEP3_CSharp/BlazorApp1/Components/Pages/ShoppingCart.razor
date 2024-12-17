@@ -76,6 +76,7 @@ else
                 quantity = 1; 
             }
             CartItems[item] = quantity;
+            Manager.ChangeItemQuantity(item, quantity);
         }
     }
 

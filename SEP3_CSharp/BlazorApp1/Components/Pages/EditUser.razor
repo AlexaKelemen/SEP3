@@ -15,9 +15,9 @@
 
 <AuthorizeView>
     <Authorized>
-        <h1>Hello @username</h1>
+        <h1 style="font-family: Apple chancery, cursive">Hello @username</h1>
 
-        <h3>User Information</h3>
+        <h3 style="font-family: Apple chancery, cursive">User Information</h3>
         <p><label>First name:</label>
             <input type="text" @bind="firstName"/></p>
         <p><label>Last name:</label>
@@ -27,9 +27,9 @@
         <p><label>Address:</label>
             <input type="text" @bind="address"/></p>
         <p><label>Card information:</label>
-            <label>@paymentInfo</label>  <button role="card-button" type="button"  class="btn btn-primary" @onclick="ChangeCard">Change card </button></p>
-        <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save</button>
-        <button type="button" class="btn btn-primary" @onclick="CancelEdit">Cancel</button>
+            <label>@paymentInfo</label>  <button role="card-button" type="button"  class="btn btn-primary" style="font-family: Apple chancery, cursive" @onclick="ChangeCard">Change card </button></p>
+        <button type="button" class="btn btn-primary" style="font-family: Apple chancery, cursive" @onclick="SaveChanges">Save</button>
+        <button type="button" class="btn btn-primary" style="font-family: Apple chancery, cursive" @onclick="CancelEdit">Cancel</button>
         <p><label style="color: red"> @errorLabel </label></p>
         <p><label style="color: green"> @confirmationMessage </label></p>
 
@@ -40,7 +40,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5> Change card</h5>
+                        <h5 style="font-family: Apple chancery, cursive"> Change card</h5>
                     </div>
                     <div class="modal-body">
                         <EditForm Model="user" Context="editcard">

@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using DataTransferObjects;
 using Entities;
 using Entities.Utilities;
 using Google.Protobuf.Collections;
@@ -64,6 +65,15 @@ public class OrderManager : IOrderManager
         });
         var response = await Stub.addOrderAsync(request);
         return response.Success;
+    }
+
+    public async Task RefundOrderAsync(Order order)
+    {
+        
+    }
+    public async Task ReturnOrderAsync(Order order, int credit)
+    {
+        
     }
 
     public async Task<List<Order>> GetAllOrdersForUser(string username)
