@@ -9,12 +9,7 @@ import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
 
-import proto.GetBooleanResponse;
-import proto.GetAllOrdersRequest;
-import proto.GetAllOrdersResponse;
-import proto.GetOrderRequest;
-import proto.GetOrderResponse;
-import proto.GetRefundOrderRequest;
+import proto.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -145,13 +140,51 @@ public class ManagerImpl implements ManagerInterface
     {
       Order orderToRefund = factory.fromGetRefundOrderRequest(refund);
       orderDAO.editOrder(orderToRefund);
+      ArrayList<Item> checkToDelete = itemsInOrderDAO.getAllItemsInOrder(orderToRefund.getOrderId());
       for (int i = 0; i < orderToRefund.getItems().size(); i++)
       {
-        if (orderToRefund.getItems().get(i).getQuantity() <= 0)
-        {
-          itemsInOrderDAO.deleteItemFromOrder(orderToRefund.getItems().get(i).getItemId(), orderToRefund.getOrderId());
-        }
         itemsInOrderDAO.editItemInOrder(orderToRefund.getItems().get(i), orderToRefund.getOrderId());
+        for (int j = 0; j < checkToDelete.size(); j++)
+        {
+          if(checkToDelete.get(j).getItemId() == orderToRefund.getItems().get(i).getItemId())
+          {
+            checkToDelete.remove(j);
+          }
+        }
+      }
+      for (int i = 0; i < checkToDelete.size(); i++)
+      {
+        itemsInOrderDAO.deleteItemFromOrder(checkToDelete.get(i).getItemId(), orderToRefund.getOrderId());
+      }
+      return factory.createBooleanResponse(true);
+    }
+    catch (Exception e)
+    {
+      return factory.createBooleanResponse(false);
+    }
+  }
+
+  @Override public GetBooleanResponse returnAnOrder(
+      GetReturnOrderRequest request)
+  {
+    try
+    {
+      Order orderToReturn = factory.getOrderFromGetReturnRequest(request);
+      ArrayList<Item> checkToDelete = itemsInOrderDAO.getAllItemsInOrder(orderToReturn.getOrderId());
+      for (int i = 0; i < orderToReturn.getItems().size(); i++)
+      {
+        itemsInOrderDAO.editItemInOrder(orderToReturn.getItems().get(i), orderToReturn.getOrderId());
+        for (int j = 0; j < checkToDelete.size(); j++)
+        {
+          if(checkToDelete.get(j).getItemId() == orderToReturn.getItems().get(i).getItemId())
+          {
+            checkToDelete.remove(j);
+          }
+        }
+      }
+      for (int i = 0; i < checkToDelete.size(); i++)
+      {
+        itemsInOrderDAO.deleteItemFromOrder(checkToDelete.get(i).getItemId(), orderToReturn.getOrderId());
       }
       return factory.createBooleanResponse(true);
     }

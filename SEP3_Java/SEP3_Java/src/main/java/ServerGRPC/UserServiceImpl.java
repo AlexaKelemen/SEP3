@@ -35,6 +35,13 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
 
   public void refundAnOrder(GetRefundOrderRequest request, StreamObserver<GetBooleanResponse> responseObserver)
   {
+    GetBooleanResponse response = manager.refundAnOrder(request);
+    responseObserver.onNext(response);
+    responseObserver.onCompleted();
+  }
+
+  public void returnAnOrder()
+  {
 
   }
 }

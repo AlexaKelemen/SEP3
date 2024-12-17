@@ -5,17 +5,7 @@ import Shared.Entities.Order;
 import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
-import proto.GetOrderRequest;
-import proto.ItemDTO;
-import proto.CategoryDTO;
-import proto.PaymentMethodDTO;
-import proto.DeliveryOptionDTO;
-import proto.GetOrderResponse;
-import proto.GetAllOrdersRequest;
-import proto.GetAllOrdersResponse;
-import proto.OrderDTO;
-import proto.GetRefundOrderRequest;
-import proto.GetBooleanResponse;
+import proto.*;
 
 import com.google.protobuf.Timestamp;
 
@@ -35,6 +25,16 @@ public class GRPCFactory
         fromDeliveryOptionDTO(request.getDeliveryOption()),
         request.getPlacedBy(), request.getToAddress());
 
+  }
+
+  public Order getOrderFromGetReturnRequest(GetReturnOrderRequest request)
+  {
+    return fromOrderDTO(request.getOrder());
+  }
+
+  public int getCreditFromGetReturnRequest(GetReturnOrderRequest request)
+  {
+    return request.getCredit();
   }
 
   public Order fromGetRefundOrderRequest(GetRefundOrderRequest request)
