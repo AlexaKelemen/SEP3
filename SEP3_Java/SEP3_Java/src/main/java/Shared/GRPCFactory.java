@@ -37,6 +37,16 @@ public class GRPCFactory
     return request.getCredit();
   }
 
+  public String fromCreditRequest(GetCreditRequest request)
+  {
+    return request.getUser();
+  }
+
+  public GetCreditResponse toCreditResponse(int credit)
+  {
+    return GetCreditResponse.newBuilder().setCredit(credit).build();
+  }
+
   public Order fromGetRefundOrderRequest(GetRefundOrderRequest request)
   {
     return fromOrderDTO(request.getOrder());

@@ -38,5 +38,12 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase
     responseObserver.onNext(response);
     responseObserver.onCompleted();
   }
+
+  public void getCreditForUser(GetCreditRequest request, StreamObserver<GetCreditResponse> responseObserver)
+  {
+    GetCreditResponse response = manager.getCreditForUser(request);
+    responseObserver.onNext(response);
+    responseObserver.onCompleted();
+  }
 }
 

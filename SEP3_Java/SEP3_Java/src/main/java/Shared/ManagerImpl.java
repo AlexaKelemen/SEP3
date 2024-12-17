@@ -210,6 +210,16 @@ public class ManagerImpl implements ManagerInterface
     }
   }
 
+  @Override public GetCreditResponse getCreditForUser(GetCreditRequest request)
+  {
+    int credit = creditDAO.getCredit(factory.fromCreditRequest(request));
+    if (credit <= 0)
+    {
+      return factory.toCreditResponse(0);
+    }
+    return factory.toCreditResponse(credit);
+  }
+
   private Item getCompleteItem(int itemId, int orderId)
   {
     Item result = itemDAO.getItem(itemId);

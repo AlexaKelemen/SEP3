@@ -9,4 +9,5 @@ public interface ManagerInterface
   public GetAllOrdersResponse getAllOrdersForUser(GetAllOrdersRequest user);
   public GetBooleanResponse refundAnOrder(GetRefundOrderRequest refund);
   public GetBooleanResponse returnAnOrder(GetReturnOrderRequest request);
+  public GetCreditResponse getCreditForUser(GetCreditRequest request);
 }
