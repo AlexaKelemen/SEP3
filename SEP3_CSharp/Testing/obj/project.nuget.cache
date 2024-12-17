@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jEiumH4a46A=",
+  "dgSpecHash": "AQ0ftBrKVpI=",
   "success": true,
-  "projectFilePath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
+  "projectFilePath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Testing\\Testing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kriszta\\.nuget\\packages\\anglesharp\\1.1.2\\anglesharp.1.1.2.nupkg.sha512",
     "C:\\Users\\Kriszta\\.nuget\\packages\\anglesharp.css\\1.0.0-beta.144\\anglesharp.css.1.0.0-beta.144.nupkg.sha512",

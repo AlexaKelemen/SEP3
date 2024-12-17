@@ -110,6 +110,7 @@ public class OrderManager : IOrderManager
             });
             request.Order.Items.Add(temp);
         });
+        var response = await Stub.refundAnOrderAsync(request);
     }
 
     public async Task ReturnOrderAsync(Order order, int credit)

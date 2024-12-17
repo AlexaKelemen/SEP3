@@ -5085,11 +5085,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+      "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
       "projectName": "RepositoryContracts",
-      "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+      "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
       "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-      "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+      "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5104,11 +5104,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+            "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+              "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
             },
-            "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+            "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
             }
           }
         }

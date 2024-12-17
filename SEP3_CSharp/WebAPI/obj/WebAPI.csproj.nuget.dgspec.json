@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
         "projectName": "BlazorApp1",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,17 +26,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -138,8 +138,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "projectName": "DataTransferObjects",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -220,8 +220,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -280,14 +280,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -358,14 +358,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
         "projectName": "Managers",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -380,11 +380,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -461,14 +461,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -483,11 +483,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -546,14 +546,14 @@
         }
       }
     },
-    "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
-        "outputPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -568,17 +568,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
-                "projectPath": "D:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
               }
             }
           }

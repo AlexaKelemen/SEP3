@@ -88,6 +88,8 @@ public class ManagerImpl implements ManagerInterface
         if(itemAdded == null)
         {
           itemAdded = itemDAO.addItem(itemsToSave.get(i));
+          itemAdded.setQuantity(itemsToSave.get(i).getQuantity());
+          itemAdded.setColour(itemsToSave.get(i).getColour());
         }
         ArrayList<Category> categories = itemsToSave.get(i).getCategory();
         for (int j = 0; j < categories.size(); j++)
