@@ -2,6 +2,7 @@
 @using BlazorApp1.Managers
 @using DataTransferObjects
 @using Entities.Utilities
+@using Microsoft.IdentityModel.Tokens
 @using Entities
 @inject NavigationManager NavigationManager
 @inject IManager Manager
@@ -161,12 +162,12 @@ else
     private async Task AddToCart_Click()
     {
         
-        if (itemToCart.Size == null && !Item.HasCategory("Accessories"))
+        if (itemToCart.Size.IsNullOrEmpty() && ( Item.HasCategory("Shoes")|| Item.HasCategory("Clothing")))
             errorLabel = "You need to select a size";
-        if (itemToCart.Colour == null)
+        else if (itemToCart.Colour.IsNullOrEmpty())
             errorLabel = "You need to select a colour";
         else if (quantity < 1)
-            errorLabel = "You need to select a valid amount input";
+            errorLabel = "You need to select a valid amount";
         else
         {
             Manager.AddToCart(itemToCart, quantity);
@@ -212,6 +213,11 @@ else
         else if (cat.Equals("Shoes"))
         {
             if (temp == 2)
+                return true;
+        }
+        else if (cat.Equals("Accessories"))
+        {
+            if (temp == 3)
                 return true;
         }
         

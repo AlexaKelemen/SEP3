@@ -118,7 +118,7 @@ public class ItemsInOrderDAO extends DatabaseFactory
     ArrayList<Item> response = new ArrayList<>();
     try (Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("SELECT item_quantity, item_colour, item_size\n"
+      PreparedStatement statement = connection.prepareStatement("SELECT item_id, item_quantity, item_colour, item_size\n"
           + "FROM Items_in_Order\n" + "WHERE order_id = ?;");
       statement.setInt(1, orderId);
       ResultSet rs = statement.executeQuery();

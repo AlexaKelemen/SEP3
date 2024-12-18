@@ -29,24 +29,23 @@ else
             {
                 string text;
                 float price;
-                int quant=1;
                 if (Order.IsNew())
                 {
-                    text = "Price per product: ";
-                    price = item.Price;
+                    text = "Price for refund: ";
+                    price = CalculatePrice(item, quantities[item]);
                 }
                 else
                 {
-                    text = "Credit per product: ";
-                    price = @CalculateCredit(item);
+                    text = "Credit for return: ";
+                    price = @CalculateCredit(item, quantities[item]);
                 }
                 <div class="card p-4 shadow-lg">
                     <h3 class="card-title">@item.Name</h3>
                     <p class="card-text text-muted">Size: @item.Size</p>
                     <p class="card-text text-muted">Colour: @item.Colour</p>
-                    <input type="number" @bind="quant" min="0" max="@item.Quantity"/>
+                    <input type="number" @bind="quantities[item]" min="0" max="@item.Quantity"/>
                     <p class="card-text text-muted">@text  @price</p>
-                    <Button type="button"  class="btn btn-primary btn-sm" @onclick="() => AddChanges(item, quant)" > Add changes </Button>
+                    <Button type="button"  class="btn btn-primary btn-sm" @onclick="() => AddChanges(item, quantities[item])" > Add changes </Button>
                     <div></div></div>
             }
             <Button type="button" class="btn btn-primary" @onclick="ProcessReturn"> Process Return </Button>
@@ -87,7 +86,7 @@ else
     int credit = 0;
     private Dictionary<int, String> Urls;
     private bool isPopupVisible;
-   
+    private Dictionary<Item, int> quantities;
 
     protected override async Task OnInitializedAsync()
     {
@@ -101,12 +100,21 @@ else
         }
         items = Order.Items;
         isPopupVisible = false;
+        quantities = new Dictionary<Item, int>();
+        foreach (var item in Order.Items)
+        {
+            quantities.Add(item, item.Quantity);
+        }
     }
 
-   
-    public int CalculateCredit(Item item)
+    public float CalculatePrice(Item item, int quantity)
     {
-        return Convert.ToInt16(item.Price * 5 / 100);
+        return item.Price * quantity;
+    }
+   
+    public int CalculateCredit(Item item, int quantity)
+    {
+        return Convert.ToInt16(item.Price * 5 / 100)*quantity;
     }
 
     public void AddChanges(Item item, int quantity)
@@ -129,7 +137,7 @@ else
 
         if (Order.IsNew())
         {
-            credit += CalculateCredit(item)*quantity;
+            credit += CalculateCredit(item, quantity);
         }
     }
 

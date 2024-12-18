@@ -9,7 +9,7 @@ import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
 
-import proto.*;
+
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class ManagerImpl implements ManagerInterface
     }
     return instance;
   }
-  @Override public GetOrderResponse addOrder(GetOrderRequest order)
+  @Override public proto.GetOrderResponse addOrder(proto.GetOrderRequest order)
   {
     try
     {
@@ -85,10 +85,10 @@ public class ManagerImpl implements ManagerInterface
         if(itemAdded == null)
         {
           itemAdded = itemDAO.addItem(itemsToSave.get(i));
-          itemAdded.setQuantity(itemsToSave.get(i).getQuantity());
-          itemAdded.setColour(itemsToSave.get(i).getColour());
-          itemAdded.setSize(itemsToSave.get(i).getSize());
         }
+        itemAdded.setQuantity(itemsToSave.get(i).getQuantity());
+        itemAdded.setColour(itemsToSave.get(i).getColour());
+        itemAdded.setSize(itemsToSave.get(i).getSize());
         ArrayList<Category> categories = itemsToSave.get(i).getCategory();
         for (int j = 0; j < categories.size(); j++)
         {
@@ -110,8 +110,8 @@ public class ManagerImpl implements ManagerInterface
     }
   }
 
-  @Override public GetAllOrdersResponse getAllOrdersForUser(
-      GetAllOrdersRequest user)
+  @Override public proto.GetAllOrdersResponse getAllOrdersForUser(
+      proto.GetAllOrdersRequest user)
   {
     ArrayList<Order> orders = orderDAO.getAllOrders();
     ArrayList<Order> ordersForUser = new ArrayList<>();
@@ -138,8 +138,8 @@ public class ManagerImpl implements ManagerInterface
     return factory.fromOrder(ordersForUser);
   }
 
-  @Override public GetBooleanResponse refundAnOrder(
-      GetRefundOrderRequest refund)
+  @Override public proto.GetBooleanResponse refundAnOrder(
+      proto.GetRefundOrderRequest refund)
   {
     try
     {
@@ -170,8 +170,8 @@ public class ManagerImpl implements ManagerInterface
     }
   }
 
-  @Override public GetBooleanResponse returnAnOrder(
-      GetReturnOrderRequest request)
+  @Override public proto.GetBooleanResponse returnAnOrder(
+      proto.GetReturnOrderRequest request)
   {
     try
     {
@@ -214,7 +214,8 @@ public class ManagerImpl implements ManagerInterface
     }
   }
 
-  @Override public GetCreditResponse getCreditForUser(GetCreditRequest request)
+  @Override public proto.GetCreditResponse getCreditForUser(
+      proto.GetCreditRequest request)
   {
     int credit = creditDAO.getCredit(factory.fromCreditRequest(request));
     if (credit <= 0)
@@ -224,7 +225,8 @@ public class ManagerImpl implements ManagerInterface
     return factory.toCreditResponse(credit);
   }
 
-  @Override public GetBooleanResponse setCreditForUser(SetCreditRequest request)
+  @Override public proto.GetBooleanResponse setCreditForUser(
+      proto.SetCreditRequest request)
   {
     int credit = creditDAO.getCredit(factory.getUserFromSetCreditRequest(request));
     if (credit <= 0)
