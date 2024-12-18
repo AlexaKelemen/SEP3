@@ -187,6 +187,9 @@
                 </div>
             </div>
         </div>
+        <label>
+            <input type="checkbox" @bind="credTick"/> Use credit: @credit
+        </label>
 
         <button type="button" class="btn btn-success btn-lg w-100" @onclick="HandleCheckout">Complete Checkout</button>
 
@@ -251,6 +254,7 @@
 
 @code {
     [CascadingParameter] public Task<AuthenticationState> State { get; set; }
+    private int credit;
 
     private decimal total;
     private string? cardFirstName;
@@ -269,6 +273,7 @@
     private string? deliveryZipcode;
     private string deliverySpeed = "Standard";
     private decimal baseTotal;
+    private bool credTick;
 
     private User? user;
     private Dictionary<string, string> ValidationErrors = new();
@@ -286,11 +291,16 @@
         }
 
         user = await Manager.GetUserAsync(claimsPrincipal.Identity?.Name);
+        if (user.Card != null)
+        {
         cardFirstName = user.Card.FName;
         cardLastName = user.Card.LName;
         cardCvc = user.Card.Cvc;
         cardNumber = user.Card.CardNumber;
         cardExpirationDate = user.Card.ExpirationDate;
+        }
+        credit = await Manager.GetCreditForUser(user.Username);
+        credTick = false;
     }
 
     private void OnPaymentMethodChanged(ChangeEventArgs e)
@@ -318,6 +328,22 @@
     private async Task<bool> CheckoutItems()
     {
         DeliveryOption deliveryOption;
+
+        if (credTick)
+        {
+            total -= credit;
+            if (total < 0)
+            {
+                credit = -Convert.ToInt16(total);
+                total = 0;
+            }
+            else
+            {
+                credit = 0;
+            }
+
+            await Manager.SetCreditForUser(user.Username, credit);
+        }
 
         if (selectedDeliveryOption == "HomeDelivery")
         {
