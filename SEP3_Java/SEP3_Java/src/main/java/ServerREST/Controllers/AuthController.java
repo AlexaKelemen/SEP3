@@ -39,7 +39,7 @@ public class AuthController
       System.out.println(e.getMessage());
       return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
-    if(user.getUsername().isEmpty())
+    if(user == null || user.getUsername().isEmpty())
     {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

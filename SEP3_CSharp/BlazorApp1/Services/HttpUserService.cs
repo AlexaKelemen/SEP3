@@ -26,7 +26,6 @@ public class HttpUserService:IUserService
     }
     public async Task<UserDTO> GetUserAsync(string username, bool includeCard)
     {
-        Console.WriteLine(httpClient.BaseAddress);
         HttpResponseMessage response = await httpClient.GetAsync($"users/{username}/{includeCard}");
         string responseString = await response.Content.ReadAsStringAsync();
 
