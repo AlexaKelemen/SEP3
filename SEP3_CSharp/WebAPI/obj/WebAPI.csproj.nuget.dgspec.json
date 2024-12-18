@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
         "projectName": "BlazorApp1",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,17 +26,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj"
               }
             }
           }
@@ -112,21 +112,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
         "projectName": "DatabaseConnection",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -138,8 +138,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -194,21 +194,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
         "projectName": "DataTransferObjects",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -220,8 +220,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -276,21 +276,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -354,21 +354,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
         "projectName": "Managers",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\Managers.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Managers\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\Managers.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Managers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -380,11 +380,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -457,21 +457,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
         "projectName": "RepositoryContracts",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -483,11 +483,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DatabaseConnection\\DatabaseConnection.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -542,21 +542,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
+    "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\salom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\WebAPI\\obj\\",
+        "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Kriszta\\.nuget\\packages\\",
+        "outputPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kriszta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -568,17 +568,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\BlazorApp1\\BlazorApp1.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\DataTransferObjects\\DataTransferObjects.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\Entities\\Entities.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
-                "projectPath": "C:\\Users\\salom\\OneDrive\\Desktop\\QR codes\\SEP3\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
+              "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj": {
+                "projectPath": "E:\\SEP3\\Project\\SourceCode\\SEP3_CSharp\\RepositoryContracts\\RepositoryContracts.csproj"
               }
             }
           }
@@ -640,7 +640,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

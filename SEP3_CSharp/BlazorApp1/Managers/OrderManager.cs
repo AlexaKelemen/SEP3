@@ -47,7 +47,8 @@ public class OrderManager : IOrderManager
                 ItemId = item.ItemId,
                 Name = item.Name,
                 Price = item.Price,
-                Quantity = item.Quantity
+                Quantity = item.Quantity,
+                Size = item.Size
             };
             item.CategoryId.ForEach(cat =>
             {
@@ -97,7 +98,8 @@ public class OrderManager : IOrderManager
                 ItemId = item.ItemId,
                 Name = item.Name,
                 Price = item.Price,
-                Quantity = item.Quantity
+                Quantity = item.Quantity,
+                Size = item.Size
             };
             item.CategoryId.ForEach(cat =>
             {
@@ -147,7 +149,8 @@ public class OrderManager : IOrderManager
                     ItemId = item.ItemId,
                     Name = item.Name,
                     Price = item.Price,
-                    Quantity = item.Quantity
+                    Quantity = item.Quantity,
+                    Size = item.Size
                 };
                 item.CategoryId.ForEach(cat =>
                 {
@@ -196,7 +199,8 @@ public class OrderManager : IOrderManager
                         ItemId = item.ItemId,
                         Name = item.Name,
                         Price = (float)item.Price,
-                        Quantity = item.Quantity
+                        Quantity = item.Quantity,
+                        Size = item.Size
                     });
                 }
 
