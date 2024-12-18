@@ -165,10 +165,10 @@
                         <div class="mb-3">
                             <label for="pickupLocation" class="form-label">Select Pickup Location</label>
                             <select id="pickupLocation" class="form-select" @bind="selectedPickupLocation">
-                                <option value="Location1">Central Post Office</option>
-                                <option value="Location2">City Mall</option>
-                                <option value="Location3">Train Station</option>
-                                <option value="Location4">University Campus</option>
+                                <option value="Central Post Office">Central Post Office</option>
+                                <option value="City Mall">City Mall</option>
+                                <option value="Train Station">Train Station</option>
+                                <option value="University Campus">University Campus</option>
                             </select>
                             @if (ValidationErrors.ContainsKey("PickupLocation"))
                             {
