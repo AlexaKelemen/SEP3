@@ -13,17 +13,6 @@ public class CartManager : ICartManager, INotifyPropertyChanged
     public CartManager()
     {
         cart = new Dictionary<Item, int>();
-        cart.Add(new Item()
-        {
-            CategoryId = new List<Category>(2),
-            Colour = "black",
-            Description = "AAAAAAAAAAAAA",
-            ImageURL = "none",
-            ItemId = 1,
-            Name = "kek",
-            Price = 1234,
-            Size = "M"
-        }, 6);
     }
     
     public void AddToCart(Item addedItem, int quantity)
