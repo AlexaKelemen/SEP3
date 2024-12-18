@@ -5,12 +5,19 @@ using Proto;
 
 namespace BlazorApp1.Managers;
 
+/// <summary>
+/// Defines the operations for managing items.
+/// </summary>
 public interface IItemManager
 {
-    //Task<IEnumerable <Item>> GetItemsAsync(ItemDTOs itemDtos);
+    /// <summary>
+    /// Retrieves a specific item by its ID asynchronously.
+    /// </summary>
+    /// <param name="id">The ID of the item to retrieve.</param>
     Task<ItemDTOs> GetItemAsync(int id);
-    Task <IEnumerable<ItemDTOs>> GetItemsAsync();
-  
-    
-    
+
+    /// <summary>
+    /// Retrieves a list of all items asynchronously.
+    /// </summary>
+    Task<IEnumerable<ItemDTOs>> GetItemsAsync();
 }
