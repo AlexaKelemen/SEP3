@@ -16,7 +16,7 @@ public class Order
     public bool IsNew()
     {
         DateTime temp = DateTime.Now.AddDays(30);
-        if (PlacedOn.CompareTo(temp) > 0)
+        if (PlacedOn.CompareTo(temp) < 0)
         {
             return false;
         }

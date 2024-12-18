@@ -58,11 +58,11 @@ else
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 style="font-family: Apple chancery, cursive"> Change card</h5>
+                        <h5 style="font-family: Apple chancery, cursive"> Return</h5>
                     </div>
                     <div class="modal-body">
                         <h4>Thank you for your return!</h4>
-                        <p>Your return will now be processes.</p>
+                        <p>Your return will now be processed.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" @onclick="ClosePopup">Ok</button>
@@ -119,6 +119,10 @@ else
 
     public void AddChanges(Item item, int quantity)
     {
+        if (!Order.IsNew())
+        {
+            credit += CalculateCredit(item, quantity);
+        }
         foreach (var product in Order.Items)
         {
             if (item.ItemId == product.ItemId)
@@ -126,7 +130,6 @@ else
                 Order.Items.Remove(product);
                 break;
             }
-                
         }
 
         if (item.Quantity - quantity > 0)
@@ -135,10 +138,7 @@ else
             items.Add(item);
         }
 
-        if (Order.IsNew())
-        {
-            credit += CalculateCredit(item, quantity);
-        }
+        
     }
 
     public async Task ProcessReturn()

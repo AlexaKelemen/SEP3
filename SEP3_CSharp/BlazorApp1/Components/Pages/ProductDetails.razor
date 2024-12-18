@@ -170,6 +170,10 @@ else
             errorLabel = "You need to select a valid amount";
         else
         {
+            if(!( Item.HasCategory("Shoes")|| Item.HasCategory("Clothing")))
+            {
+                itemToCart.Size = "";
+            }
             Manager.AddToCart(itemToCart, quantity);
             NavigationManager.NavigateTo("/ShoppingCart"); 
         }

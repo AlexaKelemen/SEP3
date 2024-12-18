@@ -193,7 +193,7 @@ public class ManagerImpl implements ManagerInterface
         itemsInOrderDAO.deleteItemFromOrder(checkToDelete.get(i).getItemId(), orderToReturn.getOrderId());
       }
       int credit = creditDAO.getCredit(orderToReturn.getPlacedBy());
-      if(credit <= 0)
+      if(credit < 0)
       {
         credit = factory.getCreditFromGetReturnRequest(request);
         creditDAO.addCredit(orderToReturn.getPlacedBy(), credit);
@@ -229,7 +229,7 @@ public class ManagerImpl implements ManagerInterface
       proto.SetCreditRequest request)
   {
     int credit = creditDAO.getCredit(factory.getUserFromSetCreditRequest(request));
-    if (credit <= 0)
+    if (credit < 0)
     {
       creditDAO.addCredit(factory.getUserFromSetCreditRequest(request),
           factory.getCreditFromSetCreditRequest(request));
