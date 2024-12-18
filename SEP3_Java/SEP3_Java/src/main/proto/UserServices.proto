@@ -29,6 +29,7 @@ message ItemDTO
   repeated CategoryDTO category = 5;
   int32 quantity = 6;
   string colour = 7;
+  string size = 8;
 }
 
 message CategoryDTO

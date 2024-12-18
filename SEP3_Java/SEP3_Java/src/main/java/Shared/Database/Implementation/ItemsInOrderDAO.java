@@ -39,11 +39,12 @@ public class ItemsInOrderDAO extends DatabaseFactory
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement(
-          "insert into items_in_order(item_id, order_id, item_quantity, item_colour) VALUES (?,?,?,?);");
+          "insert into Items_in_Order(item_id, order_id, item_quantity, item_colour, item_size) VALUES (?,?,?,?,?);");
       statement.setInt(1, item.getItemId());
       statement.setInt(2, orderId);
       statement.setInt(3, item.getQuantity());
       statement.setString(4, item.getColour());
+      statement.setString(5, item.getSize());
       statement.executeUpdate();
     }
     catch (SQLException e)
@@ -58,12 +59,13 @@ public class ItemsInOrderDAO extends DatabaseFactory
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement("UPDATE Items_in_Order\n"
-          + "SET  item_quantity = ?, item_colour = ?\n"
+          + "SET item_quantity = ?, item_colour = ?, item_size = ?\n"
           + "WHERE item_id = ? and order_id = ?;");
       statement.setInt(1, item.getQuantity());
       statement.setString(2, item.getColour());
-      statement.setInt(3, item.getItemId());
-      statement.setInt(4, orderId);
+      statement.setString(3, item.getSize());
+      statement.setInt(4, item.getItemId());
+      statement.setInt(5, orderId);
       statement.executeUpdate();
     }
     catch (SQLException e)
@@ -94,14 +96,14 @@ public class ItemsInOrderDAO extends DatabaseFactory
     Item response = null;
     try (Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("SELECT item_quantity, item_colour\n"
+      PreparedStatement statement = connection.prepareStatement("SELECT item_quantity, item_colour, item_size\n"
           + "FROM Items_in_Order\n" + "WHERE item_id = ? and order_id = ?;");
       statement.setInt(1, item.getItemId());
       statement.setInt(2, orderId);
       ResultSet rs = statement.executeQuery();
       while (rs.next())
       {
-        response = new Item(item.getName(), item.getCategory(), item.getPrice(), item.getItemId(), item.getDescription(), rs.getInt("item_quantity"), rs.getString("item_colour"));
+        response = new Item(item.getName(), item.getCategory(), item.getPrice(), item.getItemId(), item.getDescription(), rs.getInt("item_quantity"), rs.getString("item_colour"), rs.getString("item_size"));
       }
     }
     catch (SQLException e)
@@ -116,7 +118,7 @@ public class ItemsInOrderDAO extends DatabaseFactory
     ArrayList<Item> response = new ArrayList<>();
     try (Connection connection = super.establishConnection())
     {
-      PreparedStatement statement = connection.prepareStatement("SELECT item_id, item_quantity, item_colour\n"
+      PreparedStatement statement = connection.prepareStatement("SELECT item_quantity, item_colour, item_size\n"
           + "FROM Items_in_Order\n" + "WHERE order_id = ?;");
       statement.setInt(1, orderId);
       ResultSet rs = statement.executeQuery();
@@ -126,12 +128,13 @@ public class ItemsInOrderDAO extends DatabaseFactory
         element.setItemId(rs.getInt("item_id"));
         element.setQuantity(rs.getInt("item_quantity"));
         element.setColour(rs.getString("item_colour"));
+        element.setSize(rs.getString("item_size"));
         response.add(element);
       }
     }
     catch (SQLException e)
     {
-      throw new RuntimeException();
+      throw new RuntimeException("Something went wrong while getting items for an order from the database: " + e.getMessage());
     }
     return response;
   }

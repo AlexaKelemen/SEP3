@@ -13,6 +13,7 @@ public class Item
   private String description;
   private int quantity;
   private String colour;
+  private String size;
 
   public Item(String name, ArrayList<Category> category, double price)
   {
@@ -21,7 +22,7 @@ public class Item
     this.price = price;
   }
 
-  public Item(String name, ArrayList<Category> category, double price, int itemId, String description, int quantity, String colour)
+  public Item(String name, ArrayList<Category> category, double price, int itemId, String description, int quantity, String colour, String size)
   {
     this.name = name;
     this.category = category;
@@ -30,6 +31,7 @@ public class Item
     this.description = description;
     this.quantity = quantity;
     this.colour = colour;
+    this.size = size;
   }
 
   public Item() {}
@@ -95,4 +97,6 @@ public class Item
   public String getColour(){return colour;}
 
   public void setColour(String colour) {this.colour = colour;}
+  public String getSize(){return size;}
+  public void setSize(String size){this.size = size;}
 }

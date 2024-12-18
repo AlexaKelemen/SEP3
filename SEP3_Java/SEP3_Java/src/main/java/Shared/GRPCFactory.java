@@ -139,7 +139,8 @@ public class GRPCFactory
         .setPrice(item.getPrice()).setDescription(item.getDescription())
         .setName(item.getName())
         .addAllCategory(createCategoryDTOList(item.getCategory()))
-        .setQuantity(item.getQuantity()).setColour(item.getColour()).build();
+        .setQuantity(item.getQuantity()).setColour(item.getColour()).setSize(
+            item.getSize()).build();
   }
 
   private ArrayList<CategoryDTO> createCategoryDTOList(
@@ -174,7 +175,7 @@ public class GRPCFactory
   {
     return new Item(item.getName(), fromCategoryDTOList(item.getCategoryList()),
         item.getPrice(), item.getItemId(), item.getDescription(),
-        item.getQuantity(), item.getColour());
+        item.getQuantity(), item.getColour(), item.getSize());
   }
 
   private ArrayList<Category> fromCategoryDTOList(List<CategoryDTO> categories)
