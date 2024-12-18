@@ -12,34 +12,32 @@
 
 <AuthorizeView>
     <Authorized>
-@if (Orders.IsNullOrEmpty())
+@if (Orders.IsNullOrEmpty() || Orders.Count() == 0)
 {
     <h3>No products can be displayed right now. Sorry.</h3>
 }
 else
 {
-    var orderCount = Orders.Count();
-    @if (orderCount > 0)
-    {
         const int ordersPerRow = 4;
-        var orderRowList = new List<Order>();
-
-        @for (int i = 0; i < orderCount; i++)
-
-            orderRowList = Orders.Skip(i * ordersPerRow).Take(ordersPerRow).ToList();
-        @foreach (var order in orderRowList)
+        
+        @for (int i = 0; i < Orders.Count(); i += ordersPerRow)
         {
-            <div class="col-md-3">
-                <a href="@($"/OrderDetails/{order.OrderId}")" class="card">
-                    <div class="card-body">
-                        <h5>Order: @order.OrderId</h5>
-                        <h5>Placed on: @order.PlacedOn</h5>
-                        <h5>@order.Items.Count product(s) in order</h5>
-                    </div>
-                </a>
+            var orderRowList =  Orders.Skip(i * ordersPerRow).Take(ordersPerRow).ToList();
+            <div class="row mt-3">
+            @foreach (var order in orderRowList)
+            {
+                <div class="col-md-3">
+                    <a href="@($"/OrderDetails/{order.OrderId}")" class="card">
+                        <div class="card-body">
+                            <h5>Order: @order.OrderId</h5>
+                            <h5>Placed on: @order.PlacedOn</h5>
+                            <h5>@order.Items.Count product(s) in order</h5>
+                        </div>
+                    </a>
+                </div>
+            }
             </div>
         }
-    }
 }
     </Authorized>
     <NotAuthorized>

@@ -1,14 +1,17 @@
 package Shared;
 
 import Shared.Entities.Order;
-import proto.*;
 
 public interface ManagerInterface
 {
-  public GetOrderResponse addOrder(GetOrderRequest order);
-  public GetAllOrdersResponse getAllOrdersForUser(GetAllOrdersRequest user);
-  public GetBooleanResponse refundAnOrder(GetRefundOrderRequest refund);
-  public GetBooleanResponse returnAnOrder(GetReturnOrderRequest request);
-  public GetCreditResponse getCreditForUser(GetCreditRequest request);
-  public GetBooleanResponse setCreditForUser(SetCreditRequest request);
+  public proto.GetOrderResponse addOrder(proto.GetOrderRequest order);
+  public proto.GetAllOrdersResponse getAllOrdersForUser(
+      proto.GetAllOrdersRequest user);
+  public proto.GetBooleanResponse refundAnOrder(
+      proto.GetRefundOrderRequest refund);
+  public proto.GetBooleanResponse returnAnOrder(
+      proto.GetReturnOrderRequest request);
+  public proto.GetCreditResponse getCreditForUser(proto.GetCreditRequest request);
+  public proto.GetBooleanResponse setCreditForUser(
+      proto.SetCreditRequest request);
 }

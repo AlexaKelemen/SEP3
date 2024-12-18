@@ -5,7 +5,7 @@ import Shared.Entities.Order;
 import Shared.Entities.Utlities.Category;
 import Shared.Entities.Utlities.DeliveryOption;
 import Shared.Entities.Utlities.PaymentMethod;
-import proto.*;
+
 
 import com.google.protobuf.Timestamp;
 
@@ -16,7 +16,7 @@ import java.util.List;
 
 public class GRPCFactory
 {
-  public Order fromOrderRequest(GetOrderRequest request)
+  public Order fromOrderRequest(proto.GetOrderRequest request)
   {
     return new Order(fromItemDTOList(request.getItemsList()),
         request.getTotalAmount(), request.getOrderId(),
@@ -27,42 +27,42 @@ public class GRPCFactory
 
   }
 
-  public Order getOrderFromGetReturnRequest(GetReturnOrderRequest request)
+  public Order getOrderFromGetReturnRequest(proto.GetReturnOrderRequest request)
   {
     return fromOrderDTO(request.getOrder());
   }
 
-  public int getCreditFromGetReturnRequest(GetReturnOrderRequest request)
+  public int getCreditFromGetReturnRequest(proto.GetReturnOrderRequest request)
   {
     return request.getCredit();
   }
 
-  public String fromCreditRequest(GetCreditRequest request)
+  public String fromCreditRequest(proto.GetCreditRequest request)
   {
     return request.getUser();
   }
 
-  public String getUserFromSetCreditRequest(SetCreditRequest request)
+  public String getUserFromSetCreditRequest(proto.SetCreditRequest request)
   {
     return request.getUser();
   }
 
-  public int getCreditFromSetCreditRequest(SetCreditRequest request)
+  public int getCreditFromSetCreditRequest(proto.SetCreditRequest request)
   {
     return request.getCredit();
   }
 
-  public GetCreditResponse toCreditResponse(int credit)
+  public proto.GetCreditResponse toCreditResponse(int credit)
   {
-    return GetCreditResponse.newBuilder().setCredit(credit).build();
+    return proto.GetCreditResponse.newBuilder().setCredit(credit).build();
   }
 
-  public Order fromGetRefundOrderRequest(GetRefundOrderRequest request)
+  public Order fromGetRefundOrderRequest(proto.GetRefundOrderRequest request)
   {
     return fromOrderDTO(request.getOrder());
   }
 
-  private Order fromOrderDTO(OrderDTO order)
+  private Order fromOrderDTO(proto.OrderDTO order)
   {
     return new Order(fromItemDTOList(order.getItemsList()),
         order.getTotalAmount(), order.getOrderId(),
@@ -72,19 +72,19 @@ public class GRPCFactory
         order.getPlacedBy(), order.getToAddress());
   }
 
-  public String fromGetAllOrdersRequest(GetAllOrdersRequest request)
+  public String fromGetAllOrdersRequest(proto.GetAllOrdersRequest request)
   {
     return request.getUser();
   }
 
-  public GetAllOrdersResponse fromOrder(ArrayList<Order> order)
+  public proto.GetAllOrdersResponse fromOrder(ArrayList<Order> order)
   {
     return proto.GetAllOrdersResponse.newBuilder().addAllOrders(createListOfOrderDTOs(order)).build();
   }
 
-  private ArrayList<OrderDTO> createListOfOrderDTOs(ArrayList<Order> orders)
+  private ArrayList<proto.OrderDTO> createListOfOrderDTOs(ArrayList<Order> orders)
   {
-    ArrayList<OrderDTO> response = new ArrayList<>();
+    ArrayList<proto.OrderDTO> response = new ArrayList<>();
     for (int i = 0; i < orders.size(); i++)
     {
       response.add(createOrderDTO(orders.get(i)));
@@ -92,9 +92,9 @@ public class GRPCFactory
     return response;
   }
 
-  private OrderDTO createOrderDTO(Order order)
+  private proto.OrderDTO createOrderDTO(Order order)
   {
-    return OrderDTO.newBuilder().setPlacedOn(createTimestamp(order.getDate()))
+    return proto.OrderDTO.newBuilder().setPlacedOn(createTimestamp(order.getDate()))
         .setPaymentMethod(createPaymentMethodDTO(order.getPaymentMethod()))
         .setTotalAmount(order.getTotalAmount())
         .setDeliveryOption(createDeliveryOptionDTO(order.getDeliveryOption()))
@@ -110,22 +110,22 @@ public class GRPCFactory
         .setNanos(instant.getNano()).build();
   }
 
-  private PaymentMethodDTO createPaymentMethodDTO(PaymentMethod paymentMethod)
+  private proto.PaymentMethodDTO createPaymentMethodDTO(PaymentMethod paymentMethod)
   {
-    return PaymentMethodDTO.newBuilder().setId(paymentMethod.getId())
+    return proto.PaymentMethodDTO.newBuilder().setId(paymentMethod.getId())
         .setName(paymentMethod.getName()).build();
   }
 
-  private DeliveryOptionDTO createDeliveryOptionDTO(
+  private proto.DeliveryOptionDTO createDeliveryOptionDTO(
       DeliveryOption deliveryOption)
   {
     return proto.DeliveryOptionDTO.newBuilder().setId(deliveryOption.getId())
         .setName(deliveryOption.getName()).build();
   }
 
-  private ArrayList<ItemDTO> createItemDTOList(ArrayList<Item> items)
+  private ArrayList<proto.ItemDTO> createItemDTOList(ArrayList<Item> items)
   {
-    ArrayList<ItemDTO> response = new ArrayList<>();
+    ArrayList<proto.ItemDTO> response = new ArrayList<>();
     for (int i = 0; i < items.size(); i++)
     {
       response.add(createItemDTO(items.get(i)));
@@ -133,9 +133,9 @@ public class GRPCFactory
     return response;
   }
 
-  private ItemDTO createItemDTO(Item item)
+  private proto.ItemDTO createItemDTO(Item item)
   {
-    return ItemDTO.newBuilder().setItemId(item.getItemId())
+    return proto.ItemDTO.newBuilder().setItemId(item.getItemId())
         .setPrice(item.getPrice()).setDescription(item.getDescription())
         .setName(item.getName())
         .addAllCategory(createCategoryDTOList(item.getCategory()))
@@ -143,10 +143,10 @@ public class GRPCFactory
             item.getSize()).build();
   }
 
-  private ArrayList<CategoryDTO> createCategoryDTOList(
+  private ArrayList<proto.CategoryDTO> createCategoryDTOList(
       ArrayList<Category> categories)
   {
-    ArrayList<CategoryDTO> response = new ArrayList<>();
+    ArrayList<proto.CategoryDTO> response = new ArrayList<>();
     for (int i = 0; i < categories.size(); i++)
     {
       response.add(createCategoryDTO(categories.get(i)));
@@ -154,14 +154,14 @@ public class GRPCFactory
     return response;
   }
 
-  private CategoryDTO createCategoryDTO(Category category)
+  private proto.CategoryDTO createCategoryDTO(Category category)
   {
-    return CategoryDTO.newBuilder().setName(category.getName())
+    return proto.CategoryDTO.newBuilder().setName(category.getName())
         .setDescription(category.getDescription())
         .setCategoryId(category.getCategoryId()).build();
   }
 
-  private ArrayList<Item> fromItemDTOList(List<ItemDTO> items)
+  private ArrayList<Item> fromItemDTOList(List<proto.ItemDTO> items)
   {
     ArrayList<Item> response = new ArrayList<>();
     for (int i = 0; i < items.size(); i++)
@@ -171,14 +171,14 @@ public class GRPCFactory
     return response;
   }
 
-  private Item fromItemDTO(ItemDTO item)
+  private Item fromItemDTO(proto.ItemDTO item)
   {
     return new Item(item.getName(), fromCategoryDTOList(item.getCategoryList()),
         item.getPrice(), item.getItemId(), item.getDescription(),
         item.getQuantity(), item.getColour(), item.getSize());
   }
 
-  private ArrayList<Category> fromCategoryDTOList(List<CategoryDTO> categories)
+  private ArrayList<Category> fromCategoryDTOList(List<proto.CategoryDTO> categories)
   {
     ArrayList<Category> response = new ArrayList<>();
     for (int i = 0; i < categories.size(); i++)
@@ -188,7 +188,7 @@ public class GRPCFactory
     return response;
   }
 
-  private Category fromCategoryDTO(CategoryDTO category)
+  private Category fromCategoryDTO(proto.CategoryDTO category)
   {
     return new Category(category.getName(), category.getDescription(),
         category.getCategoryId());
@@ -200,23 +200,25 @@ public class GRPCFactory
         ZoneOffset.UTC).toLocalDate();
   }
 
-  private PaymentMethod fromPaymentMethodDTO(PaymentMethodDTO paymentMethod)
+  private PaymentMethod fromPaymentMethodDTO(
+      proto.PaymentMethodDTO paymentMethod)
   {
     return new PaymentMethod(paymentMethod.getId(), paymentMethod.getName());
   }
 
-  private DeliveryOption fromDeliveryOptionDTO(DeliveryOptionDTO deliveryOption)
+  private DeliveryOption fromDeliveryOptionDTO(
+      proto.DeliveryOptionDTO deliveryOption)
   {
     return new DeliveryOption(deliveryOption.getId(), deliveryOption.getName());
   }
 
-  public GetOrderResponse fromBoolean(boolean deliveryMade)
+  public proto.GetOrderResponse fromBoolean(boolean deliveryMade)
   {
-    return GetOrderResponse.newBuilder().setSuccess(deliveryMade).build();
+    return proto.GetOrderResponse.newBuilder().setSuccess(deliveryMade).build();
   }
 
-  public GetBooleanResponse createBooleanResponse(boolean refundMade)
+  public proto.GetBooleanResponse createBooleanResponse(boolean refundMade)
   {
-    return GetBooleanResponse.newBuilder().setSuccess(refundMade).build();
+    return proto.GetBooleanResponse.newBuilder().setSuccess(refundMade).build();
   }
 }
