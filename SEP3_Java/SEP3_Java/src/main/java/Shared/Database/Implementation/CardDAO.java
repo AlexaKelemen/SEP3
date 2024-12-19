@@ -9,13 +9,27 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
 
-public class CardDAO extends DatabaseFactory implements CardDAOInterface{
-    private static CardDAO instance;
+/**
+ * Handles database operations related to Card entities.
+ */
 
+public class CardDAO extends DatabaseFactory implements CardDAOInterface{
+    /** Singleton instance of the CardDAO class. */
+    private static CardDAO instance;
+    /**
+     * Private constructor to enforce singleton pattern.
+     * Registers the PostgreSQL driver.
+     *
+     * @throws SQLException if an error occurs during driver registration.
+     */
     private CardDAO() throws SQLException {
         DriverManager.registerDriver(new org.postgresql.Driver()); // Register PostgreSQL driver
     }
-
+    /**
+     * Returns the singleton instance of the CardDAO class.
+     *
+     * @return CardDAO instance.
+     */
     public synchronized static CardDAO getInstance() {
         try {
             if (instance == null) {
@@ -27,6 +41,12 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
             return null;
         }
     }
+    /**
+     * Adds a new card to the database.
+     *
+     * @param card the Card object to add.
+     * @return the Card object with updated card ID.
+     */
     public synchronized Card addCard(Card card) {
         try (Connection connection = super.establishConnection()) {
             PreparedStatement statement = connection.prepareStatement(
@@ -53,6 +73,12 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         }
         return getCard(card.getCardId());
     }
+    /**
+     * Updates an existing card in the database.
+     *
+     * @param card the Card object with updated details.
+     * @return the updated Card object.
+     */
     @Override
     public synchronized Card editCard(Card card) {
         try (Connection connection = super.establishConnection()) {
@@ -72,6 +98,11 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
         }
         return getCard(card.getCardId());
     }
+    /**
+     * Deletes a card from the database.
+     *
+     * @param cardId the ID of the card to delete.
+     */
     @Override
     public synchronized void deleteCard(int cardId) {
         try (Connection connection = super.establishConnection()) {
@@ -84,7 +115,12 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
             throw new RuntimeException("Probably not your fault, but still your fault. So sorry but something went wrong during deleting a card from the database.", e);
         }
     }
-
+    /**
+     * Retrieves a specific card from the database by its ID.
+     *
+     * @param cardId the ID of the card to retrieve.
+     * @return the Card object corresponding to the given ID, or null if not found.
+     */
     @Override
     public Card getCard(int cardId) {
         Card response = null;
@@ -112,7 +148,11 @@ public class CardDAO extends DatabaseFactory implements CardDAOInterface{
 
         return response;
     }
-
+    /**
+     * Retrieves all cards from the database.
+     *
+     * @return a list of all Card objects.
+     */
     @Override
     public ArrayList<Card> getAllCards()
     {

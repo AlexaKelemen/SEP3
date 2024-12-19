@@ -7,15 +7,28 @@ import Shared.Entities.User;
 
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Handles database operations related to Users
+ */
 public class UserDAO extends DatabaseFactory implements UserDAOInterface
 {
+  /** Singleton instance of the UserDAO class. */
   private static UserDAO instance;
+  /**
+   * Private constructor to enforce singleton pattern.
+   * Registers the PostgreSQL driver.
+   *
+   * @throws SQLException if an error occurs during driver registration.
+   */
   private UserDAO() throws SQLException
   {
     DriverManager.registerDriver(new org.postgresql.Driver());
   }
-
+  /**
+   * Returns the singleton instance of the UserDAO class.
+   *
+   * @return UserDAO instance.
+   */
   public synchronized static UserDAO getInstance()
   {
     try
@@ -32,6 +45,13 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
       return null;
     }
   }
+
+  /**
+   * Adds a new user to the database
+   *
+   * @param user the  User object to be added.
+   * @return the added user
+   */
   @Override public synchronized User addUser(User user)
   {
     try(Connection connection = super.establishConnection())
@@ -52,6 +72,12 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return getUser(user.getUsername());
   }
 
+  /**
+   * Edits an existing user from the database
+   *
+   * @param user the User object containing the updated information
+   * @return the user with updated information
+   */
   @Override public synchronized User editUser(UserDTO user)
   {
     try(Connection connection = super.establishConnection())
@@ -73,6 +99,11 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return getUser(user.getUsername());
   }
 
+  /**
+   * Deletes a user from the database
+   *
+   * @param username the User's username to be deleted
+   */
   @Override public synchronized void deleteUser(String username)
   {
     try(Connection connection = super.establishConnection())
@@ -88,6 +119,12 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     }
   }
 
+  /**
+   * Retrieves a user from the database using their unique id
+   *
+   * @param username the unique username of the user to retrieve.
+   * @return a requested user using their id
+   */
   @Override public User getUser(String username)
   {
     User response = null;
@@ -119,6 +156,10 @@ public class UserDAO extends DatabaseFactory implements UserDAOInterface
     return response;
   }
 
+  /**
+   * Retrieves a list with all the users from the database
+   * @return a list with all the users from the database
+   */
   @Override public ArrayList<User> getAllUsers()
   {
       ArrayList<User> allUsers = new ArrayList<>();

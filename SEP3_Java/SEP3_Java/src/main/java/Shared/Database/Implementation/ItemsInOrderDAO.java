@@ -6,17 +6,29 @@ import Shared.Entities.Item;
 
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Handles database operations related to Items in Orders.
+ */
 public class ItemsInOrderDAO extends DatabaseFactory
     implements ItemsInOrderDAOInterface
 {
+  /** Singleton instance of the ItemsInOrderDAO class. */
   public static ItemsInOrderDAO instance;
-
+  /**
+   * Private constructor to enforce singleton pattern.
+   * Registers the PostgreSQL  driver.
+   *
+   * @throws SQLException if an error occurs during driver registration.
+   */
   private ItemsInOrderDAO() throws SQLException
   {
     DriverManager.registerDriver(new org.postgresql.Driver());
   }
-
+  /**
+   * Returns the singleton instance of the ItemsInOrderDAO class.
+   *
+   * @return ItemsInOrderDAO instance.
+   */
   public static synchronized ItemsInOrderDAO getInstance()
   {
     try
@@ -34,6 +46,12 @@ public class ItemsInOrderDAO extends DatabaseFactory
     }
   }
 
+  /**
+   * Adds an item to the order
+   * @param item    the Item object to be added to the order.
+   * @param orderId the unique ID of the order to which the item will be added.
+   * @return the updated order with the new item in it
+   */
   @Override public Item addItemToOrder(Item item, int orderId)
   {
     try (Connection connection = super.establishConnection())
@@ -54,6 +72,13 @@ public class ItemsInOrderDAO extends DatabaseFactory
     return getItemInOrder(item, orderId);
   }
 
+  /**
+   * Edits the details of an item from an order in the database
+   *
+   * @param item the Item object containing updated information
+   * @param orderId the unique identifier of the order in which the item exists
+   * @return the order with the updated item in it
+   */
   @Override public Item editItemInOrder(Item item, int orderId)
   {
     try (Connection connection = super.establishConnection())
@@ -75,6 +100,13 @@ public class ItemsInOrderDAO extends DatabaseFactory
     return getItemInOrder(item, orderId);
   }
 
+  /**
+   * Deletes an item from an order in the database
+   *
+   * @param itemId the unique identifier of the item that gets deleted
+   * @param orderId the unique identifier of the order in which the item gets deleted
+   */
+
   @Override public void deleteItemFromOrder(int itemId, int orderId)
   {
     try (Connection connection = super.establishConnection())
@@ -90,6 +122,14 @@ public class ItemsInOrderDAO extends DatabaseFactory
       throw new RuntimeException("Something went wrong while deleting an item from the database: " + e.getMessage());
     }
   }
+
+  /**
+   * Retrieves an item from an order in the database using its id
+   *
+   * @param item    the  Item object to be retrieved
+   * @param orderId the unique ID of the order containing the item.
+   * @return
+   */
 
   @Override public Item getItemInOrder(Item item, int orderId)
   {
@@ -112,7 +152,12 @@ public class ItemsInOrderDAO extends DatabaseFactory
     }
     return response;
   }
-
+  /**
+   * Retrieves all items in an order from the database.
+   *
+   * @param orderId the ID of the order.
+   * @return a list of Item objects representing the items in the order.
+   */
   @Override public ArrayList<Item> getAllItemsInOrder(int orderId)
   {
     ArrayList<Item> response = new ArrayList<>();

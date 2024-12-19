@@ -10,16 +10,28 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
-
+/**
+ * Handles database operations related to Items in Orders.
+ */
 public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
 {
+  /** Singleton instance of the ItemsInOrderDAO class. */
   public static OrderDAO instance;
-
+  /**
+   * Private constructor to enforce singleton pattern.
+   * Registers the PostgreSQL driver.
+   *
+   * @throws SQLException if an error occurs during driver registration.
+   */
   private OrderDAO() throws SQLException
   {
     DriverManager.registerDriver(new org.postgresql.Driver());
   }
-
+  /**
+   * Returns the singleton instance of the ItemsInOrderDAO class.
+   *
+   * @return ItemsInOrderDAO instance.
+   */
   public static synchronized OrderDAO getInstance()
   {
     try
@@ -37,6 +49,12 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     }
   }
 
+  /**
+   * Adds a new order to the database
+   *
+   * @param order the  Order object to be added.
+   * @return the new added order
+   */
   @Override public synchronized Order addOrder(Order order)
   {
     try(Connection connection = super.establishConnection())
@@ -66,6 +84,12 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     return getOrder(order.getOrderId());
   }
 
+  /**
+   * Updates an existing order in the database
+   *
+   * @param order the Order object containing updated information.
+   * @return the updated order in the database
+   */
   @Override public synchronized Order editOrder(Order order)
   {
     try(Connection connection = super.establishConnection())
@@ -83,6 +107,10 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     return getOrder(order.getOrderId());
   }
 
+  /**
+   * Deletes an order from the database
+   * @param orderId the unique ID of the order to be deleted.
+   */
   @Override public synchronized void deleteOrder(int orderId)
   {
     try(Connection connection = super.establishConnection())
@@ -98,6 +126,11 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     }
   }
 
+  /**
+   * Retrieves an order from the database using its own identifier
+   * @param orderId the unique ID of the order to retrieve.
+   * @return the requested order using its id
+   */
   @Override public Order getOrder(int orderId)
   {
     Order response = null;
@@ -126,6 +159,10 @@ public class OrderDAO extends DatabaseFactory implements OrderDAOInterface
     return response;
   }
 
+  /**
+   * Retrieves a list from the database containing all the orders
+   * @return  a list of Item objects representing the items in the order.
+   */
   @Override public ArrayList<Order> getAllOrders()
   {
     ArrayList<Order> response = new ArrayList<>();

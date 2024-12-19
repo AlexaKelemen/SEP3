@@ -5,17 +5,30 @@ import Shared.Database.DatabaseFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Handles database operations related to the item-category relationship.
+ */
 public class ItemCategoryDAO extends DatabaseFactory implements
+    /** Singleton instance of the ItemCategoryDAO class. */
     ItemCategoryDAOInterface
 {
   public static ItemCategoryDAO instance;
-
+  /**
+   * Private constructor to enforce singleton pattern.
+   * Registers the PostgreSQL driver.
+   *
+   * @throws SQLException if an error occurs during driver registration.
+   */
   private ItemCategoryDAO() throws SQLException
   {
     DriverManager.registerDriver(new org.postgresql.Driver());
   }
 
+  /**
+   * Returns the singleton instance of the ItemCategoryDAO class.
+   *
+   * @return ItemCategoryDAO instance.
+   */
   public static synchronized ItemCategoryDAO getInstance()
   {
     try
@@ -32,6 +45,12 @@ public class ItemCategoryDAO extends DatabaseFactory implements
       return null;
     }
   }
+  /**
+   * Adds a relationship between an item and a category in the database.
+   *
+   * @param itemId the ID of the item.
+   * @param categoryId the ID of the category.
+   */
   @Override public synchronized void addItemCategory(int itemId, int categoryId)
   {
     try(Connection connection = super.establishConnection())
@@ -46,6 +65,13 @@ public class ItemCategoryDAO extends DatabaseFactory implements
       throw new RuntimeException("Something went wrong while adding into the shared item category table in the database: " + e.getMessage());
     }
   }
+
+  /**
+   *  Deletes a relationship between an item and a category from the database
+   *
+   * @param itemId the unique ID of the item.
+   * @param categoryId the unique ID of the category.
+   */
 
   @Override public void deleteItemCategory(int itemId, int categoryId)
   {
@@ -62,7 +88,13 @@ public class ItemCategoryDAO extends DatabaseFactory implements
       throw new RuntimeException("Something went wrong while deleting from the shared item category table in the database: " + e.getMessage());
     }
   }
-
+  /**
+   * Retrieves a specific item-category relationship from the database.
+   *
+   * @param itemId the ID of the item.
+   * @param categoryId the ID of the category.
+   * @return the item ID and category ID, or null if not found.
+   */
   @Override public int[] getItemCategory(int itemId, int categoryId)
   {
     int[] response = null;
@@ -87,6 +119,12 @@ public class ItemCategoryDAO extends DatabaseFactory implements
     return response;
   }
 
+  /**
+ * Retrieves all categories associated with a specific item.
+ *
+ * @param itemId the ID of the item.
+ * @return a list of arrays, each containing the item ID and category ID.
+ */
   @Override public ArrayList<int[]> getCategoriesForItem(int itemId)
   {
     ArrayList<int[]> response = new ArrayList<>();
@@ -111,6 +149,12 @@ public class ItemCategoryDAO extends DatabaseFactory implements
     return response;
   }
 
+  /**
+   * Retrieves all items associated with a specific category.
+   *
+   * @param categoryId the ID of the category.
+   * @return a list of arrays, each containing the item ID and category ID.
+   */
   @Override public ArrayList<int[]> getItemsForCategory(int categoryId)
   {
     ArrayList<int[]> response = new ArrayList<>();

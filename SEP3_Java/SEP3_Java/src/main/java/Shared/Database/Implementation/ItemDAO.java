@@ -7,16 +7,28 @@ import Shared.Entities.Item;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Handles database operations related to Items.
+ */
 public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
 {
+  /** Singleton instance of the ItemDAO class. */
   public static ItemDAO instance;
-
+  /**
+   * Private constructor to enforce singleton pattern.
+   * Registers the PostgreSQL driver.
+   *
+   * @throws SQLException if an error occurs during driver registration.
+   */
   private ItemDAO() throws SQLException
   {
     DriverManager.registerDriver(new org.postgresql.Driver());
   }
-
+  /**
+   * Returns the singleton instance of the ItemDAO class.
+   *
+   * @return ItemDAO instance.
+   */
   public static synchronized ItemDAO getInstance()
   {
     try
@@ -33,6 +45,13 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
       return null;
     }
   }
+
+  /**
+   * Adds an item to the database
+   *
+   * @param item the item to be added to the database
+   * @return the item to be added to the database
+   */
   @Override public synchronized Item addItem(Item item)
   {
     try(Connection connection = super.establishConnection())
@@ -51,6 +70,12 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
     return getItem(item.getItemId());
   }
 
+  /**
+   * Edits an existing item from the database
+   *
+   * @param item the item with the updated information
+   * @return the updated item
+   */
   @Override public synchronized Item editItem(Item item)
   {
     try(Connection connection = super.establishConnection())
@@ -70,6 +95,11 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
     return getItem(item.getItemId());
   }
 
+  /**
+   * Deletes an item from the database
+   * @param itemId the unique identifier of the object that is to be deleted from the database
+   */
+
   @Override public synchronized void deleteItem(int itemId)
   {
     try(Connection connection = super.establishConnection())
@@ -84,7 +114,12 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
       throw new RuntimeException("Something went wrong while deleting an item from the database: " + e.getMessage());
     }
   }
-
+  /**
+   * Retrieves a specific item from the database by its ID.
+   *
+   * @param itemId the ID of the item to retrieve.
+   * @return the Item object corresponding to the given ID, or null if not found.
+   */
   @Override public Item getItem(int itemId)
   {
     Item response = null;
@@ -110,6 +145,11 @@ public class ItemDAO extends DatabaseFactory implements ItemDAOInterface
     return response;
   }
 
+  /**
+   * Retrieves all items from the database.
+   *
+   * @return a list of all Item objects.
+   */
   @Override public ArrayList<Item> getAllItems()
   {
     ArrayList<Item> response = new ArrayList<>();
