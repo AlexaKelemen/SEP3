@@ -57,7 +57,7 @@ public class CategoryDAO extends DatabaseFactory implements CategoryDAOInterface
     try (Connection connection = super.establishConnection())
     {
       PreparedStatement statement = connection.prepareStatement(
-          "insert into category(category_id, category_name, description) VALUES (?, ?, ?);");
+          "insert into category(category_id, category_name, description) VALUES (?, ?, ?);", PreparedStatement.RETURN_GENERATED_KEYS);
       statement.setInt(1, category.getCategoryId());
       statement.setString(2, category.getName());
       statement.setString(3, category.getDescription());

@@ -23,9 +23,9 @@ public class Manager : IManager
     private UserService.UserServiceClient stub;
     private IUserService UserService;
     private IItemManager ItemManager;
-    private CategoryManager CategoryManager;
+    private ICategoryManager CategoryManager;
     private ICartManager CartManager;
-    private OrderManager OrderManager;
+    private IOrderManager OrderManager;
 
     /// <summary>
     /// Initializes a new instance of the "Manager" class.
