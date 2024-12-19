@@ -39,7 +39,6 @@ builder.Services.AddSingleton(channel => GrpcChannel.ForAddress("http://localhos
 builder.Services.AddScoped<IManager, Manager>();
 builder.Services.AddScoped<IUserService, HttpUserService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SimpleAuthProvider>();
-builder.Services.AddScoped<ICartService, HttpCartService>();
 builder.Services.AddScoped<IItemService, HttpItemService>();
 builder.Services.AddScoped<ICategoryService, HttpCategoryService>();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite( "Data Source=D:\\Code files\\SEP\\SEP3\\SEP3_CSharp\\DatabaseConnection\\database.db"));
