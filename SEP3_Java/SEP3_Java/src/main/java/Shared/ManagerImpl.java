@@ -83,22 +83,21 @@ public class ManagerImpl implements ManagerInterface
       PaymentMethod paymentMethod = paymentMethodDAO.getPaymentMethod(orderToSave.getPaymentMethod().getId());
 
 
-      if (deliveryOption == null)
+      if (deliveryOption == null || !deliveryOption.getName().equals(orderToSave.getDeliveryOption().getName()) )
       {
         deliveryOption = deliveryOptionDAO.addDeliveryOption(orderToSave.getDeliveryOption());
       }
-      if(paymentMethod == null)
+      if(paymentMethod == null || !paymentMethod.getName().equals(orderToSave.getPaymentMethod().getName()))
       {
         paymentMethod = paymentMethodDAO.addPaymentMethod(orderToSave.getPaymentMethod());
       }
       orderToSave.setDeliveryOption(deliveryOption);
       orderToSave.setPaymentMethod(paymentMethod);
 
-      if(user == null || deliveryOption == null || paymentMethod == null)
+      if(user == null || deliveryOption == null || paymentMethod == null || orderToSave.getPaymentMethod().getName().isEmpty() || orderToSave.getDeliveryOption().getName().isEmpty() || order.getToAddress().isEmpty() )
       {
         return factory.fromBoolean(false);
       }
-      orderDAO.addOrder(orderToSave);
       ArrayList<Item> itemsToSave = orderToSave.getItems();
       for (int i = 0; i < itemsToSave.size(); i++)
       {
@@ -118,8 +117,12 @@ public class ManagerImpl implements ManagerInterface
           {
             categoryAdded = categoryDAO.addCategory(categories.get(j));
           }
-          itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
+          if(itemCategoryDAO.getItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId()) == null)
+          {
+            itemCategoryDAO.addItemCategory(itemAdded.getItemId(), categoryAdded.getCategoryId());
+          }
         }
+        orderDAO.addOrder(orderToSave);
         itemsInOrderDAO.addItemToOrder(itemAdded, orderToSave.getOrderId());
       }
       return factory.fromBoolean(true);
