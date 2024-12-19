@@ -14,18 +14,36 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-
+/**
+ * REST controller for authentication operations.
+ */
 @RestController
 public class AuthController
 {
+  /**
+   * DAO for accessing user-related data.
+   */
   private UserDAOInterface userDAO;
+  /**
+   * Manager interface for managing user operations.
+   */
   private ManagerInterface manager;
+
+  /**
+   * Constructor for initializing AuthController
+   */
   public AuthController()
   {
     userDAO = UserDAO.getInstance();
     manager = ManagerImpl.getInstance();
   }
 
+  /**
+   * Handles user login.
+   *
+   *  @param request the login request containing username and password.
+   *  @return a ResponseEntity containing the UserDTO if successful, or an error status in case it happens otherwise
+   */
   @PostMapping("auth/login")
   public synchronized ResponseEntity<UserDTO> login(@RequestBody LoginRequestDTO request)
   {
@@ -50,6 +68,13 @@ public class AuthController
     UserDTO response = new UserDTO(user);
     return new ResponseEntity<>(response, HttpStatus.OK);
   }
+
+  /**
+   * Handles user creation
+   *
+   * @param request the user details for the new user
+   * @return  a ResponseEntity containing the userDTO if successful, or an error status in case it happens otherwise
+   */
 
   @PostMapping("auth/createUser")
   public synchronized ResponseEntity<UserDTO> createUser(@RequestBody User request)

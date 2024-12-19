@@ -13,9 +13,18 @@ import Shared.Entities.Utlities.PaymentMethod;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+/**
+ * Implements the {@code ManagerInterface} to provide functionalities for managing
+ * orders, users, items, delivery options, payment methods, and user credits.
+ *
+ * <p>The {@code ManagerImpl} class serves as a singleton and includes methods for
+ * processing orders, managing user data, and handling database interactions.
+ */
 public class ManagerImpl implements ManagerInterface
 {
+  /**
+   * Singleton instance of the {@code ManagerImpl}.
+   */
   public static ManagerImpl instance;
   private GRPCFactory factory;
   private UserDAOInterface userDAO;
@@ -27,7 +36,9 @@ public class ManagerImpl implements ManagerInterface
   private ItemCategoryDAOInterface itemCategoryDAO;
   private ItemsInOrderDAOInterface itemsInOrderDAO;
   private CreditDAOInterface creditDAO;
-
+  /**
+   * Private constructor to initialize DAOs and the factory.
+   */
   private ManagerImpl()
   {
     factory = new GRPCFactory();
@@ -41,7 +52,11 @@ public class ManagerImpl implements ManagerInterface
     itemsInOrderDAO = ItemsInOrderDAO.getInstance();
     creditDAO = CreditDAO.getInstance();
   }
-
+  /**
+   * Returns the singleton instance of {@code ManagerImpl}.
+   *
+   * @return the singleton instance of {@code ManagerImpl}
+   */
   public static synchronized ManagerImpl getInstance()
   {
     if(instance == null)
@@ -50,6 +65,12 @@ public class ManagerImpl implements ManagerInterface
     }
     return instance;
   }
+  /**
+   * Adds a new order to the system.
+   *
+   * @param order the {@code proto.GetOrderRequest} containing order details
+   * @return a {@code proto.GetOrderResponse} indicating success or failure
+   */
   @Override public proto.GetOrderResponse addOrder(proto.GetOrderRequest order)
   {
     try
@@ -109,7 +130,12 @@ public class ManagerImpl implements ManagerInterface
       return factory.fromBoolean(false);
     }
   }
-
+  /**
+   * Retrieves all orders for a specific user.
+   *
+   * @param user the {@code proto.GetAllOrdersRequest} containing user details
+   * @return a {@code proto.GetAllOrdersResponse} with the orders for the user
+   */
   @Override public proto.GetAllOrdersResponse getAllOrdersForUser(
       proto.GetAllOrdersRequest user)
   {
@@ -137,7 +163,12 @@ public class ManagerImpl implements ManagerInterface
     }
     return factory.fromOrder(ordersForUser);
   }
-
+  /**
+   * Processes a refund for a specific order.
+   *
+   * @param refund the {@code proto.GetRefundOrderRequest} containing refund details
+   * @return a {@code proto.GetBooleanResponse} indicating success or failure
+   */
   @Override public proto.GetBooleanResponse refundAnOrder(
       proto.GetRefundOrderRequest refund)
   {
@@ -168,7 +199,12 @@ public class ManagerImpl implements ManagerInterface
       e.printStackTrace();
       return factory.createBooleanResponse(false);
     }
-  }
+  }  /**
+ * Processes a return for a specific order.
+ *
+ * @param request the {@code proto.GetReturnOrderRequest} containing return details
+ * @return a {@code proto.GetBooleanResponse} indicating success or failure
+ */
 
   @Override public proto.GetBooleanResponse returnAnOrder(
       proto.GetReturnOrderRequest request)
@@ -213,7 +249,12 @@ public class ManagerImpl implements ManagerInterface
       return factory.createBooleanResponse(false);
     }
   }
-
+  /**
+   * Retrieves the credit for a specific user.
+   *
+   * @param request the {@code proto.GetCreditRequest} containing user details
+   * @return a {@code proto.GetCreditResponse} with the user's credit
+   */
   @Override public proto.GetCreditResponse getCreditForUser(
       proto.GetCreditRequest request)
   {
@@ -224,7 +265,12 @@ public class ManagerImpl implements ManagerInterface
     }
     return factory.toCreditResponse(credit);
   }
-
+  /**
+   * Sets the credit for a specific user.
+   *
+   * @param request the {@code proto.SetCreditRequest} containing user and credit details
+   * @return a {@code proto.GetBooleanResponse} indicating success or failure
+   */
   @Override public proto.GetBooleanResponse setCreditForUser(
       proto.SetCreditRequest request)
   {
@@ -238,7 +284,14 @@ public class ManagerImpl implements ManagerInterface
         factory.getCreditFromSetCreditRequest(request));
     return factory.createBooleanResponse(true);
   }
-
+  /**
+   * Retrieves the complete {@code Item} object, including its categories,
+   * for a specific item and order.
+   *
+   * @param itemId the ID of the item
+   * @param orderId the ID of the order
+   * @return the complete {@code Item} object
+   */
   private Item getCompleteItem(int itemId, int orderId)
   {
     Item result = itemDAO.getItem(itemId);

@@ -8,9 +8,17 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Configures Jackson's ObjectMapper to handle JSON serialization and deserialization.
+ */
 @Configuration
 public class JacksonConfig
 {
+  /**
+   * Bean definition for a customized ObjectMapper.
+   *
+   * @return an ObjectMapper instance with specific configurations to handle JSON.
+   */
   @Bean
   public ObjectMapper objectMapper()
   {
