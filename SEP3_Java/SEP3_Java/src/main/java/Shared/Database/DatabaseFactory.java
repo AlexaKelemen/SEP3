@@ -14,7 +14,7 @@ public class DatabaseFactory
   {
     try
     {
-      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=user_domain", "postgres", "fatcat");
+      return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres?currentSchema=user_domain", "postgres", "1234567");
         }
     catch (SQLException e)
     {
